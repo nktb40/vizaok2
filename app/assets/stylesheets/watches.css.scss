@@ -1,0 +1,81 @@
+// Place all the styles related to the watches controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.row{
+	padding-top: 50px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 50px;
+}
+
+.thumbnail{
+	background-color: transparent;
+	border: none;	
+}
+
+.thumbnail .caption {
+	color: rgb(255,255,255);
+}
+
+.thumbnail .caption h3{
+	text-align: left;
+}
+
+.bt{
+	border-top:3px solid #ccc;	
+}
+
+
+.g-btn{
+	display: inline-block;
+	padding: 5px 5px;
+	margin-bottom: 0;
+	font-family: 'CompactaBT';
+	font-size: 17px;
+	font-weight: normal;
+	line-height: 1.428571429;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 1px solid transparent;	
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;	
+	
+	color: #ffffff;
+	background-color: rgb(204, 0, 0);
+	border-color: rgb(204, 0, 0);
+}
+
+.g-btn:hover, .g-btn:focus {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.modal{
+	color: #333333;	
+}
+.modal h4{
+	color: #333333;	
+}
+.modal a{
+	color: #ccc;	
+}
+.modal a :hover{
+	color: #333333;	
+}
+.modal-content{
+	border-radius: 0;	
+}
+
+input[type=number]{
+	height: 20px;
+	width: 40px;
+	padding: 0;
+	padding-left: 3px;
+	font-size:15px;	
+}

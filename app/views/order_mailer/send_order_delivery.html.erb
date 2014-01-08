@@ -1,0 +1,21 @@
+Номер заказа: #<%= @order.id %>.<br>
+Имя: <%= @order.name %>.<br>
+Телефон: <%= @order.phone %>.<br>
+E-mail: <%= @order.email %>.<br>
+Адрес доставки: <%= @order.address %>.<br>
+<table class="table table-striped">
+<tr>
+	<th>№</td>
+	<th>Модель</td>
+	<th>Цена</td>
+</tr>
+<% @count=0 %>
+<% @items.each do |item| %>
+	<% @count+=1%>
+	<tr>
+		<td><%= @count %></td>
+		<td><%= item.product.model %></td>
+		<td><%= item.price %></td>
+	</tr>
+<% end %>
+</table>

@@ -1,0 +1,19 @@
+Добрый день <%= @order.name %>!
+Вы оформили заказ в магазине оригинальных часов G-SHOCK.
+Номер вашего заказа: <%= @order.id %>.
+<table class="table table-striped">
+<tr>
+	<th>№</td>
+	<th>Модель</td>
+	<th>Цена</td>
+</tr>
+<% @count %>
+<% @items.each do |item| %>
+	<% @count+=1%>
+	<tr>
+		<td><%= @count %></td>
+		<td><%= item.product.model %></td>
+		<td><%= item.price %></td>
+	</tr>
+<% end %>
+</table>

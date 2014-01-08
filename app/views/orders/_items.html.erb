@@ -1,0 +1,25 @@
+<table class="table table-striped">
+<thead>
+	<tr>
+		<th>Модель</th>
+		<th>Цена</th>
+		<th>Количество</th>
+		<th>Общая стоимость</th>
+		<th></th>
+	</tr>
+</thead>
+<tbody>
+<% @products.each do |p| %>
+ <% @item = @items.detect{|c| c.detect{|k,v| k=="id"&&v==p.id.to_s}}%>
+	<tr class="item" id="item<%= p.id.to_s %>" product_id="<%= p.id.to_s %>">
+		<td><%= p.model %></td>
+		<td id="price<%= p.id.to_s %>"><%= p.price %></td>
+		<td> 
+			  <%= number_field_tag "quantity"+p.id.to_s, @item["quantity"], :size=>"2x1",  :class=>"form-control quantity", :min=>"0", :max=>"100", :product_id=>p.id %>		
+		</td>
+		<td id="total_sum<%= p.id.to_s %>"><%= @item["quantity"] * p.price%> руб.</td>
+		<td><button type="button" class="close remove" product_id="<%= p.id.to_s %>" aria-hidden="true">&times;</button></td>
+	</tr>
+<% end %>
+</tbody>
+</table>

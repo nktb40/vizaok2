@@ -1,0 +1,1865 @@
+@font-face {
+    font-family: 'CompactaBT';
+    src: url('http://www.g-shock.eu/global/style/webfonts/Roboto-BoldCondensed-webfont.eot');
+    src: url('http://www.g-shock.eu/global/style/webfonts/Roboto-BoldCondensed-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://www.g-shock.eu/global/style/webfonts/Roboto-BoldCondensed-webfont.woff') format('woff'),
+         url('http://www.g-shock.eu/global/style/webfonts/Roboto-BoldCondensed-webfont.ttf') format('truetype'),
+         url('http://www.g-shock.eu/global/style/webfonts/Roboto-BoldCondensed-webfont.svg#AsapRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TitilliumBT';
+    src: url('http://www.g-shock.eu/global/style/webfonts/TitilliumText25L002-webfont.eot');
+    src: url('http://www.g-shock.eu/global/style/webfonts/TitilliumText25L002-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://www.g-shock.eu/global/style/webfonts/TitilliumText25L002-webfont.woff') format('woff'),
+         url('http://www.g-shock.eu/global/style/webfonts/TitilliumText25L002-webfont.ttf') format('truetype'),
+         url('http://www.g-shock.eu/global/style/webfonts/TitilliumText25L002-webfont.svg#AsapRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TitilliumB';
+    src: url('http://www.g-shock.eu/global/style/webfonts/TitilliumText25L003-webfont.eot');
+    src: url('http://www.g-shock.eu/global/style/webfonts/TitilliumText25L003-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://www.g-shock.eu/global/style/webfonts/TitilliumText25L003-webfont.woff') format('woff'),
+         url('http://www.g-shock.eu/global/style/webfonts/TitilliumText25L003-webfont.ttf') format('truetype'),
+         url('http://www.g-shock.eu/global/style/webfonts/TitilliumText25L003-webfont.svg#AsapRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* +++++++++++++++++++++++++++ SEITENAUFBAU +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+#fade { 	
+	display:block;
+	background: #000;
+	position: fixed; left: 0; top: 0;
+	width: 100%; height: 100%;
+	opacity: 1.0;
+	z-index: 9999;
+	text-align:center;
+}
+
+#fade div { 	
+	padding-top:300px;
+}
+	
+	
+
+body {
+	margin:0;
+	padding:0;
+	background:#333 url(background.jpg) top center no-repeat;
+	background-attachment:fixed;	
+	font-size:14px;
+	line-height:16px;
+	color:#fff;
+	font-family:'TitilliumB',Arial;
+}
+
+
+
+header {
+	position:absolute;
+	z-index:99;
+	margin:0 auto;
+}
+
+.content {
+	width:1000px;
+	margin:0 auto;
+}
+
+.content_after_banner_animiert, .content_after_banner {
+	padding-top:471px;
+}
+
+.content_without_banner {
+	padding-top:100px;
+}
+
+.content_after_banner_with_padding {
+	padding-top:491px;
+}
+
+.content_with_video {
+	padding-top: 471px;
+}
+
+/* +++++++++++++++++++++++++++ GENERELLE FORM-TAGS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+form {
+	margin:0;
+	padding:0;
+}
+
+input[type=text], select, textarea {
+	font-family:'TitilliumB',Arial;
+	font-size:14px;
+}
+
+#languages input[type=text], #footer input[type=text] {
+	background-color:#666;
+	border:1px solid #666;
+	font-family:'TitilliumB',Arial;
+	font-size:14px;
+	color:#fff;
+}
+
+#newsletter input[type=text], #newsletter select, #cms input[type=text], #cms select, #cms textarea {
+	background-color:#333;
+	border:1px solid #333;
+	font-family:'TitilliumB',Arial;
+	font-size:14px;
+	color:#fff;
+}
+
+input.btn-pfeil {	
+	background:url(pfeil_rot_gross.png) top left no-repeat;
+	background-position:0 4px;	
+	margin-left:10px;
+	width:21px;
+	border:0;
+	cursor:pointer;
+}
+
+input.btn-pfeil-value {	
+	background:url(pfeil_rot_gross.png) top left no-repeat;
+	background-position:0 4px;	
+	margin-left:10px;	
+	padding-left:25px;
+	color:#fff;
+	border:0;
+	cursor:pointer;
+	font-weight:bold;
+}
+
+
+/* +++++++++++++++++++++++++++ GENERELLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.cb { clear:both; }
+.fl { float:left; }
+.fr { float:right; }
+.dn { display:none; }
+.pa { position:absolute; }
+img { border:0; }
+.p5 { padding:5px; }
+.p10 { padding:10px; }
+.p15 { padding:15px; }
+.p25 { padding:25px; }
+.pl15 { padding-left:15px; }
+.pl20 { padding-left:20px; }
+.pl25 { padding-left:25px; }
+.pr20 { padding-right:20px; }
+.pr10 { padding-right:10px; }
+.pb5 { padding-bottom:5px; }
+.pb10 { padding-bottom:10px; }
+.pb15 { padding-bottom:15px; }
+.pb25 { padding-bottom:25px; }
+.pt5 { padding-top:5px; }
+.pt10 { padding-top:10px; }
+.pt25 { padding-top:25px; }
+.pt50 { padding-top:50px; }
+.mt5 { margin-top:5px; }
+.mt10 { margin-top:10px; }
+.mt15 { margin-top:15px; }
+.mt25 { margin-top:25px; }
+.ml25 { margin-left:25px; }
+.ml30 { margin-left:30px; }
+.ml50 { margin-left:50px; }
+.ml100 { margin-left:100px; }
+.mt50 { margin-top:50px; }
+.mb5 { margin-bottom:5px; }
+.mb15 { margin-bottom:15px; }
+.mb25 { margin-bottom:25px; }
+.mb50 { margin-bottom:50px; }
+.mr20 { margin-right:20px; }
+a {
+	color:#fff;
+}
+
+a:focus {
+	outline:none;
+}
+
+.red {
+	color:#cc0000;
+}
+
+.red-back {
+	background-color:#cc0000;
+}
+
+h1 {
+	font-family:'CompactaBT',Arial;
+	margin:0;
+	padding:0;
+	font-weight:normal;
+	font-size:52px;
+	text-transform:uppercase;	
+	line-height:60px;
+}
+
+h2 {
+	font-family:'CompactaBT',Arial;
+	margin:0;
+	padding:0;
+	font-weight:normal;
+	font-size:36px;
+	text-transform:uppercase;	
+	line-height:42px;
+}
+
+h3, h4 {
+	font-family:'CompactaBT',Arial;
+	margin:0;	
+	font-weight:normal;
+	font-size:26px;	
+	text-transform:uppercase;	
+	color:#fff;
+	line-height:30px;
+	text-decoration:none;	
+}
+
+.back {
+	font-family:'CompactaBT',Arial;
+	margin:0;
+	padding:0 0 0 30px;
+	font-weight:normal;
+	font-size:26px;	
+	
+	text-transform:uppercase;	
+	color:#fff;
+	text-decoration:none;
+	background:url(pfeil_rot_gross_links.png) center left no-repeat;
+}
+
+/* +++++++++++++++++++++++++++ NAVIGATION +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+#languages {
+	height:30px;
+	display:block;	
+	text-shadow: #333 1px 1px 1px;
+
+
+	 
+
+
+}
+
+nav {
+	background:url(navi_background.png) top center no-repeat;
+	height:40px;
+	width:1000px;
+}
+
+nav ul {
+	list-style-type:none;
+	margin:0;
+	padding:0 0 0 210px;
+}
+
+nav ul li {
+	float:left;
+}
+
+nav ul li a {
+	font-family:'TitilliumBT',Arial;
+	font-size:18px;
+	text-decoration:none;
+	color:#fff;
+	text-transform:uppercase;	 
+	/*padding:9px 25px 9px 25px;*/
+	height:40px;
+	display:block;
+}
+
+nav ul li a span {
+	/*padding:13px 25px 5px 25px;*/
+	padding:13px 23px 5px 23px;
+	display:block;
+}
+
+nav ul li:hover, nav ul li.aktiv {
+	background:url(teaser_background.jpg) top left no-repeat;	
+}
+
+
+nav ul li ul {
+	display:block;
+	padding:0;
+	padding:10px 0 0 20px;	
+}
+
+nav ul li:hover > div {
+	display:block;	
+}
+
+nav ul li div {	
+	display:none;
+	position:absolute;	
+	background:url(teaser_background.jpg) top left no-repeat;	
+	padding-bottom:20px;	
+	z-index:110;
+}
+
+
+nav ul li ul li {
+	display:block;
+	clear:both;
+	float:none;	
+	margin-bottom:10px;
+}
+
+nav ul li ul li a {
+	font-family:'TitilliumB',Arial;
+	font-size:15px;
+	text-decoration:none;
+	color:#fff;
+	text-transform:uppercase;	 
+	padding:5px 5px 5px 5px;
+	display:inline;
+	text-shadow: #333 1px 1px 1px;
+}
+
+nav ul li ul li a:hover, nav ul li ul li:hover {
+	background:none;
+	font-weight:bold;
+}
+
+#babyg, #home {
+	position:absolute;
+}
+
+#home a {
+	position:absolute;
+	width:190px;
+	border:0;
+	z-index:99;
+	height:40px;
+	display:block;	
+}
+
+a.baby-logo {
+	position:absolute;
+	/*left:940px;
+	width:40px;
+	height:40px;*/
+	height: 40px;
+    left: 926px;
+    position: absolute;
+    top: 13px;
+    width: 61px;
+	display:block;
+	background:url(babyg_logo.png) top left no-repeat;	
+}
+
+a.baby-logo:hover {
+	background:url(babyg_logo_hover.png) top left no-repeat;	
+}
+
+
+/* +++++++++++++++++++++++++++ LANGUAGES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+#header-suche {
+	float:right;
+	margin-top:4px;
+	text-transform:uppercase;
+	font-size:12px;	
+}
+
+#header-languages {
+	float:right;
+	text-transform:uppercase;
+	padding:7px 30px 0 0;
+	font-size:12px;	
+}
+
+#header-choosedlanguage {
+	float:left;
+	margin-right:10px;
+}
+
+#choose_language {
+	cursor:pointer;
+}
+
+#header-language-all a {
+	text-decoration:none;
+	margin-left:5px;	
+}
+
+
+
+/* +++++++++++++++++++++++++++ SLIDER +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+#slider {
+	position: absolute; 
+	width:100%; 
+	height: 471px; 
+	overflow: hidden; 
+	background: url() no-repeat scroll 50% 50% transparent; 
+	opacity: 1;
+}
+
+#slider-container {
+	height: 471px; 
+	position: relative;
+	width: 100%;
+}
+
+#slider_prev {
+	position:absolute;
+	z-index:29;
+	top:200px;
+	cursor:pointer;	
+}
+
+#slider_next {
+	position:absolute;
+	z-index:29;
+	top:200px;
+	right:0;
+	cursor:pointer;
+}
+
+#ul-slider {
+	list-style: none outside none;
+	height: 471px; 
+	margin: 0 0 -15px; 
+	padding:0;
+	width: 100%;
+	position:relative;
+}
+
+.li-slider {
+	position: absolute; 
+	top: 0px; 
+	left: 0px; 
+	z-index: 16; 
+	background-attachment: scroll;
+	background-clip: border-box;    
+	background-color: transparent;
+	background-origin: padding-box;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	width:100%;
+}
+
+#slider_prev_a {
+	position: relative;
+	box-shadow: 8px 8px 10px #000;
+	-moz-box-shadow: 8px 8px 10px #000;
+	-webkit-box-shadow: 8px 8px 10px #000;
+}
+
+#slider_next_a {
+	position: relative;
+	box-shadow: -8px 8px 10px #000;
+	-moz-box-shadow: -8px 8px 10px #000;
+	-webkit-box-shadow: -8px 8px 10px #000;
+}
+
+
+/* +++++++++++++++++++++++++++ HOME 3-TEASER +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.home3teaser {
+	width:332px;
+	float:left;	
+}
+
+.home3teaser-trenner {
+	background:url(trenner.jpg) top left no-repeat;
+}
+
+.home3teaser img {
+	position:absolute;
+	margin-top:-50px;
+	margin-left:58px;
+	z-index:80;	
+}
+
+.home3teaser div {
+	padding:210px 0 0 25px;
+}
+
+
+.home3teaser div a, .gshocklife-teaser div a {
+	font-family:'CompactaBT',Arial;
+	margin:0;
+	padding:0 30px 0 0;
+	font-weight:normal;
+	font-size:30px;		
+	line-height:34px;
+	text-transform:uppercase;	
+	color:#fff;
+	text-decoration:none;
+	background:url(pfeil_rot_gross.png) center right no-repeat;
+
+}
+
+
+
+/* +++++++++++++++++++++++++++ TEASER +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.teaser {
+	background:url(teaser_background.jpg) top left no-repeat;	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.teaser450 {
+	background:url(teaser_background.jpg) top left no-repeat;
+	width:450px;	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.hometeaser-trenner {
+	background:url(trenner_teaser_home.jpg) top center no-repeat;		
+}
+
+.trenner-links {
+	background:url(trenner_teaser_home.jpg) top left no-repeat;		
+}
+
+.teaser-in {
+	padding:14px 0 25px 0;
+}
+
+.teaser-3spaltig {
+	width:333px;
+}
+
+.teaser-3spaltig div {
+	padding-left:14px;
+}
+
+.teaser-3spaltig img {
+	padding-bottom:25px;
+}
+	
+
+a.teaser-text {
+	font-family:'CompactaBT',Arial;
+	margin:0;
+	padding:0 30px 0 0;
+	font-weight:normal;
+	font-size:26px;	
+	line-height:30px;
+	text-transform:uppercase;	
+	color:#fff;
+	text-decoration:none;
+	background:url(pfeil_rot_gross.png) center right no-repeat;
+}
+
+.gshocklife-teaser div {
+	padding:25px 0 43px 0;
+}
+
+/* +++++++++++++++++++++++++++ FOOTER +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+#footer {	
+	background-color:#333333;
+	-webkit-border-top-left-radius: 05px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 05px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 05px;
+	border-top-right-radius: 5px;
+	width:1000px;
+	margin:20px auto 0 auto;
+	font-size:12px;	
+}
+
+#footer-links {
+	float:left;	
+	text-transform:uppercase;
+	width:580px;
+}
+
+#footer-rechts {
+	float:right;
+	width:370px;
+}
+
+#footer-in {
+	padding:10px 25px;
+}
+
+#footer-links a, .footer-text {
+	color:#fff;
+	text-transform:uppercase;
+	text-decoration:none;
+	font-size:12px;	
+}
+
+#footer-links ul {
+	list-style-type:none;
+	margin:0 0 25px 0;
+	padding:0;
+}
+
+#footer-links li {
+	float:left;
+	margin-right:15px;
+}
+
+#footer-quicklinks, #footer-quicklinks a {	
+	font-size:11px;
+	color:#999;
+	line-height:18px;
+}
+
+#footer-facebook {
+	float:right;
+	background:url(logo_facebook.png) top left no-repeat;
+	width:11px;
+	height:20px;
+	display:block;
+	padding-right:20px;
+}
+
+#footer-youtube {
+	float:right;
+	background:url(logo_youtube.png) top left no-repeat;
+	width:56px;
+	height:20px;
+	display:block;
+	padding-right:20px;
+}
+
+#footer-appstore {
+	float:right;
+	background:url(logo_appstore.png) top left no-repeat;
+	width:59px;
+	height:20px;
+	display:block;
+}
+
+#footer-instagram {
+	float:right;
+	background:url(logo_instagram.png) top left no-repeat;
+	width:20px;
+	height:20px;
+	display:block;
+	margin-right:20px;
+	
+}
+ 
+
+#footer-newsletter {
+	margin-top:36px;
+	float:right;
+}
+
+
+/* +++++++++++++++++++++++++++ G-SHOCK LIFE - ÜBERSICHT +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.gshocklife-collaborations {
+	background:url(uebersicht_collaborations.jpg) top left no-repeat;
+}
+
+.gshocklife-events {
+	background:url(uebersicht_events.jpg) top left no-repeat;
+}
+
+.gshocklife-friends {
+	background:url(uebersicht_friends.jpg) top left no-repeat;
+}
+
+.gshocklife-promotion {
+	background:url(uebersicht_promotion.jpg) top left no-repeat;
+}
+
+.gshocklife-boutique {
+	background:url(uebersicht_boutique.jpg) top left no-repeat;
+}
+
+
+/* +++++++++++++++++++++++++++ 30 YEARD +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.thirtyears-history {
+	background:url(history.jpg) top left no-repeat;
+}
+
+.thirtyears-events {
+	background:url(events.jpg) top left no-repeat;
+}
+
+.thirtyears-redmodel {
+	background:url(redmodel.jpg) top left no-repeat;
+}
+
+.thirtyears-gsession {
+	background:url(gsession.jpg) top left no-repeat;
+}
+
+
+/* +++++++++++++++++++++++++++ WATCHES - ÜBERSICHT +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.watches-uebersicht, .gshocklife-uebersicht, .aboutgshock-uebersicht, .thirtyears-uebersicht {
+	width:1000px;
+	height:235px;
+	margin-bottom:25px;	
+}
+
+.watches-uebersicht div, .gshocklife-uebersicht div, .aboutgshock-uebersicht div, .thirtyears-uebersicht div {
+	padding:15px 25px 0 635px;
+}
+
+.watches-premium {
+	background:url(uebersicht_premium.jpg) top left no-repeat;
+}
+
+.watches-classsic {
+	background:url(uebersicht_classic.jpg) top left no-repeat;
+}
+
+.watches-limited {
+	background:url(uebersicht_limited.jpg) top left no-repeat;
+}
+
+
+
+.watches-uebersicht a, .gshocklife-uebersicht a, .aboutgshock-uebersicht a, .thirtyears-uebersicht a {
+	display:block;
+	float:right;
+	font-family:'CompactaBT',Arial;
+	margin:10px 25px 0 0;
+	padding:0 30px 0 0;
+	font-weight:normal;
+	font-size:26px;	
+	line-height:30px;
+	text-transform:uppercase;	
+	color:#fff;
+	text-decoration:none;
+	background:url(pfeil_rot_gross.png) center right no-repeat;	
+}
+.aboutgshock-uebersicht a.low_distance {
+	margin-top: 3px;
+}
+
+.watches-uebersicht-viewall, .btn-verlauf-rot {
+	background:url(pfeil_rot_verlauf.png) top right no-repeat;	
+	font-family: 'TitilliumB';
+	font-weight:bold;
+	margin:0;
+	padding:15px 50px 15px 100px;
+	font-weight:normal;
+	font-size:20px;	
+	line-height:30px;
+	text-transform:uppercase;	
+	color:#fff;
+	text-decoration:none;
+}
+.box-sizing{
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box;	
+}
+
+.watches-uebersicht-viewall.large, .btn-verlauf-rot.large {
+	font-weight: bold;
+	background:url(pfeil_rot_408.png) top right no-repeat !important;		
+	display:block;
+	width:408px;
+	text-align: right;
+	padding:7px 50px 0px 0px;
+}
+.watches-uebersicht-viewall.medium, .btn-verlauf-rot.medium{
+	font-weight: bold;
+	background:url(pfeil_rot_325.png) top right no-repeat !important;	
+	display:block;
+	text-align: right;
+	width:325px;
+	padding:7px 50px 0px 0px;
+}
+.watches-uebersicht-viewall.small, .btn-verlauf-rot.small{
+	font-weight: bold;
+	background:url(pfeil_rot_268.png) top right no-repeat !important;	
+	display:block;
+	text-align: right;
+	width: 268px;
+	padding:7px 50px 0px 0px;
+}
+/* +++++++++++++++++++++++++++ ABOUT-GSHOCK - ÜBERSICHT +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.aboutgshock-toughness {
+	background:url(../images/aboutgshock/uebersicht_toughness.jpg) top left no-repeat;
+}
+
+.aboutgshock-technology {
+	background:url(../images/aboutgshock/uebersicht_technology.jpg) top left no-repeat;
+}
+
+.aboutgshock-history {
+	background:url(../images/aboutgshock/uebersicht_history.jpg) top left no-repeat;
+}
+.aboutgshock-bluetooth {
+	background:url(../images/aboutgshock/uebersicht_bluetooth.jpg) top left no-repeat;
+}
+
+.aboutgshock-textlink {
+	font-family:'CompactaBT',Arial;
+	margin:0;
+	padding:0 0 0 30px;
+	display:block;
+	font-weight:normal;
+	font-size:36px;
+	line-height:40px;
+	text-transform:uppercase;		
+	text-decoration:none;	
+	color:#fff;
+}
+
+.aboutgshock-pfeil {
+	background:url(../images/common/pfeil_rot_gross.png) center left no-repeat;		
+	
+}
+
+.aboutgshock-pfeilunten {
+	background:url(../images/common/pfeil_rot_gross_unten.png) top left no-repeat;		
+	background-position:0 5px;
+}
+
+.aboutgshock-trenner {
+	clear:both;
+	background:url(../images/common/trenner_quer.jpg) top left no-repeat;	
+	background-position:0 20px;
+	width:940px;
+	height:50px;
+	display:block	
+}
+
+.aboutgshock-legende {
+	font-size:16px;
+	line-height:20px;
+	font-weight:bold;
+	text-transform:uppercase;
+	padding:7px 0 40px;
+}
+
+#aboutgshock h3 {
+	margin:25px 0 15px 0;
+}	
+
+
+#aboutgshock h4 {
+	margin:0 0 15px 0;
+	padding:0;
+}
+
+.aboutgshock-tech-feature {
+	width:190px;
+	float:left;
+}
+
+.aboutgshock-tech-feature-last {
+	width:140px;
+	float:left;
+}
+
+.aboutgshock-world {
+	background:url(../images/aboutgshock/technology_funk.png) top left no-repeat;	
+	background-position:0 230px;
+}
+
+.aboutgshock-30jahre {
+	background:url(../images/aboutgshock/history.png) top left no-repeat;	
+	background-position:410px 0;
+}
+
+/* +++++++++++++++++++++++++++ ABOUT-GSHOCK - BLUETOOTH +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.videoPlayer {
+	padding-left: 258px;
+	padding-bottom: 50px;
+}
+.content_with_video h3 {
+	padding-top: 30px;
+}
+h1 span, h2 span {
+	font-size: 24px;
+	vertical-align:super;
+}
+h1 span {
+	font-size: 30px;
+}
+.watchTeaserBig {
+	position: relative;
+	padding-bottom: 10px;
+}
+.watchTeaserBig p {
+	width: 295px;
+}
+.watchTeaserSubtext {
+	font-size: 12px;
+	line-height: 1.1em;
+	-moz-opacity: 0.5;
+	-webkit-opacity: 0.5;
+	opacity: 0.5;
+	margin-bottom:0;
+}
+.watchTeaserBig ul {
+	padding-left: 12px;
+	list-style-type: square;
+}
+.content_with_video .content_standard {
+	border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.watches_big {
+	position: absolute;
+	top: 81px;
+	right: 0;
+	width: 690px;
+}
+.watches_big div.watch1, .watches_big div.watch2 {
+	position: absolute;
+	z-index: 60;
+}
+.watches_big div.watch1 div, .watches_big div.watch2 div {
+	position: absolute;
+	display: block;
+	width: 205px;
+	height: 63px;
+	bottom: 43px;
+	right: 31px;
+	background: url('../images/common/bluetooth_stoerer_bt_watch.png') right top no-repeat;
+}
+.watches_big div.watch2 div {
+	bottom: 19px;
+	right: 0px;
+}
+.watches_big div.watch1 div span, .watches_big div.watch2 div span {
+	position:absolute;
+	bottom: 0;
+}
+.watches_big div.watch2 div span {
+	left: 20px
+}
+.watches_big div.watch2 {
+	left: 214px;
+	top: 26px;
+	z-index: 20;
+}
+.watches_big div.button_block {
+	position: relative;
+	width: 690px;
+	text-align: right;
+}
+.watches_big div.button_block ul {
+	width: 316px;
+	list-style: none;
+	margin:125px 0 0 374px;
+	padding:0;
+}
+.watches_big div.button_block ul li {
+	margin-bottom: 29px;
+	background:url(../images/common/pfeil_rot_big_316.png) top right no-repeat !important;
+}
+.button_block a{
+	display: block;
+	height: 55px;
+	font-family:'CompactaBT',Arial;
+	margin:0;	
+	padding-right: 38px;
+	font-weight:normal;
+	font-size:28px;	
+	text-align: right;
+	text-transform:uppercase;	
+	color:#fff;
+	line-height:55px;
+	text-decoration:none;
+	background:url(../images/common/pfeil_grau_316.png) right 50% no-repeat;
+}
+.btn-verlauf-rot span {
+	padding-left: 5px;
+	color: #333333;
+}
+ul.watch_overview {
+	list-style: none;
+	padding-left: 19px;
+	padding-top: 30px;
+	padding-bottom: 24px;
+}
+.content_with_video ul.first_row {
+	padding-top: 17px;
+}
+.content_with_video .p25 {
+	padding-bottom:0;
+}
+.content_with_video .content_standard {
+	margin-top:13px;
+}
+
+/* +++++++++++++++++++++++++++ WATCHES - RONDEL / KARUSSEL +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+#watches-rondel {
+	height:275px;
+	display:block;
+	position:relative;	
+}
+
+#watches-rondel ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+
+#watches-rondel li {
+	float:left;
+	background:url(../images/watches/brands_overview_background.png) bottom left no-repeat;		
+	text-align:center;	
+	display:block;
+}
+
+#watches-rondel li:hover, #watches-rondel .liaktiv {	
+	background:url(../images/watches/brands_overview_background_active.png) bottom left no-repeat;		
+}
+
+#watches-rondel li div {
+	padding:10px 0 20px 0;
+}
+
+#watches-rondel li div a, #content-search a, a.cms-linktext  {		
+	background:url(../images/common/pfeil_rot_klein.png) center right no-repeat;	
+	padding-right:20px;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+#watches-rondel li div span {		
+	color:#cc0000;
+	text-transform:uppercase;
+	padding-right:10px;
+}
+
+#watches-rondel-prev {
+	float:left;
+	width:25px;
+	cursor:pointer;
+	padding-top:90px;
+}
+
+#watches-rondel-next {
+	float:right;
+	width:25px;
+	cursor:pointer;
+	padding-top:90px;
+}
+
+#watches-rondel-container {
+	float:left;
+	width:950px;
+	overflow:hidden;
+	height:290px;
+}
+
+#watches-rondel-window {
+	position:absolute;
+	float:left;
+	width:950px;
+	overflow:hidden;
+	height:290px;
+	top:-25px;
+	z-index:25;
+}
+
+#watches-rondel-slider {
+	position:absolute;
+	width:958px;
+	overflow:hidden;
+	height:290px;
+	width:25000px;
+}
+
+/* +++++++++++++++++++++++++++ WATCHES - DETAILSEITE +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+#watchesdetail, .content_standard {
+	width:1000px;
+	background:#606060 url(../images/common/detailseite_background_verlauflos.jpg) top left repeat;	
+	-webkit-border-bottom-left-radius: 05px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-bottomleft: 05px;
+	-moz-border-radius-bottomright: 5px;
+	border-bottom-left-radius: 05px;
+	border-bottom-right-radius: 5px;	
+}
+
+#watchesdetail-links {
+	float:left;
+	width:500px;
+}
+
+#watchesdetail-rechts {
+	float:left;
+	width:465px;
+}
+
+#watchesdetail-main {
+	padding:30px 0 35px 0;
+	background:url(../images/watches/detail_zoom.png) bottom right no-repeat;	
+	cursor:move;
+}
+
+#watchesdetail-variation {
+	padding:0 25px 0 44px;
+}
+
+#watchesdetail-variation a {
+	padding:10px 5px 0 0;
+	float:left;
+	display:block;
+	background:url(../images/watches/variation.png) bottom right no-repeat;		
+}
+
+#watchesdetail-rechts h3 {
+	color:#cc0000;
+	margin-bottom:12px;
+}
+
+#watchesdetail-logos {
+	height:95px;
+}
+
+#watchesdetail-logos img {
+	padding-top:15px;
+	margin-right:5px;
+}
+
+#watchesdetail-features {
+	padding:20px 0;
+}
+
+#watchesdetail-features a, #watchesdetail-features div {
+	display:block;
+	/*font-family:'CompactaBT',Arial;
+	font-size:26px;	*/
+	padding-left:25px;
+	margin:0 0 5px 0;	
+	font-weight:bold;
+	font-size:18px;	
+	line-height:30px;
+	text-transform:uppercase;	
+	color:#fff;
+	text-decoration:none;	
+	background:url(../images/common/pfeil_rot_mittel.png) top left no-repeat;		
+	background-position:0 8px;
+}
+
+#watchesdetail-features div {
+	background:none;
+}
+
+#watchesdetail-features a.aktiv {
+	background:url(../images/common/pfeil_rot_mittel_hochkant.png) top left no-repeat;			
+	background-position:0 2px;
+}
+
+
+#watchesdetail-features p {
+	color:#fff;
+	padding:0 0 25px 25px;
+	margin:0;
+	display:none;	
+}
+
+/* +++++++++++++++++++++++++++ WATCHES - VIEW ALL +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.watches-viewall-filter {
+	background-color:#333;
+	margin-top: 30px;
+	padding:13px 25px 5px 25px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.watches-viewall-filter select {
+	width:100px;
+}
+
+.watches-viewall-premium {
+	background:url(../images/watches/viewall_premium.jpg) top left repeat;			
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.watches-viewall-classic {
+	background:url(../images/watches/viewall_classic.jpg) top left repeat;			
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.watches-viewall-specials {
+	background:url(../images/watches/viewall_specials.jpg) top left repeat;			
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.watches-viewall-item {
+	width:115px;
+	height:190px;
+	float:left;
+	text-align:center;
+	position:relative;
+}
+
+.watches-viewall-item-bluetooth {
+	position:absolute;
+	background:url(../images/common/bluetooth_small.png) top left repeat;		
+	display:block;
+	width:23px;
+	height:27px;
+	right:15px;	
+	top:82px;
+	cursor:pointer;
+}
+
+.watches-viewall-slider-bluetooth {
+	position:absolute;
+	background:url(../images/common/bluetooth_big.png) top left repeat;		
+	display:block;
+	width:39px;
+	height:47px;
+	right:35px;	
+	top:190px;
+	cursor:pointer;
+}
+
+
+.watches-viewall-item div {
+	padding:3px 0 20px 0;
+}
+
+.watches-viewall-item div a  {		
+	background:url(../images/common/pfeil_rot_klein.png) center right no-repeat;	
+	padding-right:20px;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+.watches-viewall-item div span {		
+	color:#cc0000;
+	text-transform:uppercase;	
+}
+
+.watches-viewall-item-aktiv {	
+	background:url(../images/watches/viewall_hover.png) top left no-repeat;		
+}
+
+
+/* +++++++++++++++++++++++++++ WATCHES - ZOOM +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.zoomPad{
+	position:relative;
+	float:left;
+	z-index:99;
+	cursor:crosshair;
+}
+
+
+.zoomPreload{
+   -moz-opacity:0.8;
+   opacity: 0.8;
+   filter: alpha(opacity = 80);
+   color: #333;
+   font-size: 12px;
+   font-family: Tahoma;
+   text-decoration: none;
+   border: 1px solid #CCC;
+   background-color: white;
+   padding: 8px;
+   text-align:center;
+   background-image: url(../images/zoomloader.gif);
+   background-repeat: no-repeat;
+   background-position: 43px 30px;
+   z-index:110;
+   width:90px;
+   height:43px;
+   position:absolute;
+   top:0px;
+   left:0px;
+    * width:100px;
+    * height:49px;
+}
+
+
+.zoomPup{
+	overflow:hidden;
+	background-color: #FFF;
+	-moz-opacity:0.6;
+	opacity: 0.6;
+	filter: alpha(opacity = 60);
+	z-index:120;
+	position:absolute;
+	border:2px solid #CC0000;
+  z-index:101;
+  cursor:crosshair;
+}
+
+.zoomOverlay{
+	position:absolute;
+	left:0px;
+	top:0px;
+	background:#FFF;
+	/*opacity:0.5;*/
+	z-index:5000;
+	width:100%;
+	height:100%;
+	display:none;
+  z-index:101;
+}
+
+.zoomWindow{
+	position:absolute;
+	left:110%;
+	top:140px;
+	background:#FFF;
+	z-index:6000;
+	height:auto;
+	border:2px solid #CC0000;
+  z-index:10000;
+  z-index:110;
+}
+.zoomWrapper{
+	position:relative;
+	border:1px solid #999;
+  z-index:110;
+}
+.zoomWrapperTitle{
+	display:block;
+	background:#999;
+	color:#FFF;
+	height:18px;
+	line-height:18px;
+	width:100%;
+  overflow:hidden;
+	text-align:center;
+	font-size:10px;
+  position:absolute;
+  top:0px;
+  left:0px;
+  z-index:120;
+  -moz-opacity:0.6;
+  opacity: 0.6;
+  filter: alpha(opacity = 60);
+}
+.zoomWrapperImage{
+	display:block;
+  position:relative;
+  overflow:hidden;
+  z-index:110;
+
+}
+.zoomWrapperImage img{
+  border:0px;
+  display:block;
+  position:absolute;
+  z-index:101;
+}
+
+.zoomIframe{
+  z-index: -1;
+  filter:alpha(opacity=0);
+  -moz-opacity: 0.80;
+  opacity: 0.80;
+  position:absolute;
+  display:block;
+}
+
+/* +++++++++++++++++++++++++++ Händlersuche +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.haendlersuche {
+	width:455px;
+	height:135px;
+	background:url(../images/teaser/haendlersuche.jpg) top left no-repeat;			
+}
+
+.haendlersuche_hoch {
+	width:455px;
+	height:184px;
+	background:url(../images/teaser/support_haendlersuche.jpg) top left no-repeat;			
+}
+
+.haendlersuche_de {
+	width:455px;
+	height:184px;
+	background:url(../images/teaser/support_haendlersuche_de.jpg) top left no-repeat;			
+}
+
+/* +++++++++++++++++++++++++++ Händlersuche Bluetooth +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.haendlersuche_leftBlock {
+	background-color: blue;
+}
+.searchWide {
+	width: 950px;
+	background:url(../images/teaser/support_haendlersuche_wide.jpg) top left no-repeat;
+}
+.show_googleMap {
+	/* float:right; 
+	padding-left: 300px;*/
+	width: 950px;
+}
+#map_canvas {
+	float:right;
+}
+.strong_bigger {
+	font-size: 16px;
+	font-weight: bold;
+}
+#distributorlist {
+	position: relative;
+	padding-top: 20px;
+}
+.distributors_table {
+	float: left;
+	width: 270px;
+}
+
+/* +++++++++++++++++++++++++++ Teaser Support +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.support-manual {
+	width:455px;
+	height:184px;
+	background:url(../images/teaser/support_manual.jpg) top left no-repeat;
+}
+
+.support-manual-form {
+	position:absolute;
+	width:160px;
+	top:6px;
+	left:300px;	
+}
+
+.support-registration {
+	width:455px;
+	height:184px;
+	background:url(../images/teaser/support_registration.jpg) top left no-repeat;
+}
+
+.support-reparatur {
+	width:455px;
+	height:184px;
+	background:url(../images/teaser/support_raparatur.jpg) top left no-repeat;
+}
+
+.support-blank {
+	width:455px;
+	height:184px;
+	background:#333 url(../images/teaser/support_blank.jpg) top left no-repeat;
+}
+
+.support-blank-unendlich {
+	width:455px;	
+	background-color:#333;
+}
+
+.support-distributor {
+	width:455px;
+	height:184px;
+	background:#333 url(../images/teaser/support_distributor.jpg) top left no-repeat;
+}
+
+
+/* +++++++++++++++++++++++++++ CMS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.error {
+	border-left:2px solid #CC0000;
+	padding-left:20px;
+}
+
+.cms_content_links {
+	float:left;
+	width:475px;
+}
+
+.cms_content_rechts {
+	float:right;
+	width:475px;
+	text-align:left;
+	background:url(../images/common/trenner_cms.jpg) top left no-repeat;
+}
+
+.cms-collection {
+	background-color:#333;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.cms-collection a {
+	text-decoration:none;
+	padding:10px 10px 3px 10px;
+	display:block;
+}
+
+.cms-collection-h1 {
+	font-family:'CompactaBT',Arial;
+	margin:0;
+	padding:0;
+	font-weight:normal;
+	font-size:38px;
+	line-height:44px;
+	text-transform:uppercase;		
+}
+
+.cms-collection-text {
+	font-family:'CompactaBT',Arial;
+	margin:0;
+	padding:0 30px 0 10px;
+	font-weight:normal;
+	font-size:24px;	
+	line-height:28px;
+	text-transform:uppercase;	
+	color:#fff;
+	text-decoration:none;
+	background:url(../images/common/pfeil_rot_gross.png) center right no-repeat;
+}
+
+.cms-panel {
+	border:1px solid #fff;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.cms-panel-release {
+	color:#333;
+	text-align:left;
+	border:2px solid #cc0000;
+	background-color:#fff;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.cms_icon {
+	font-size:12px;
+	line-height:16px;
+	padding:7px 5px 5px 28px;	
+	text-decoration:none;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin-right:5px;
+}
+
+.cms_icon:hover {
+	background-color:#444;
+}
+
+.cms_icon_headline {
+	background:#333 url(../images/cms_icons/headline.png) top left no-repeat;
+	background-position:5px 5px;	
+}
+
+.cms_icon_text {
+	background:#333 url(../images/cms_icons/text.png) top left no-repeat;
+	background-position:5px 5px;	
+}
+
+.cms_icon_image {
+	background:#333 url(../images/cms_icons/image.png) top left no-repeat;
+	background-position:5px 5px;	
+}
+
+.cms_icon_gallery {
+	background:#333 url(../images/cms_icons/galerie.png) top left no-repeat;
+	background-position:5px 5px;	
+}
+
+.cms_icon_video {
+	background:#333 url(../images/cms_icons/video.png) top left no-repeat;
+	background-position:5px 5px;	
+}
+
+.cms_icon_link {
+	background:#333 url(../images/cms_icons/link.png) top left no-repeat;
+	background-position:5px 5px;	
+}
+
+.cms_icon_quote {
+	background:#333 url(../images/cms_icons/quote.png) top left no-repeat;
+	background-position:5px 5px;	
+}
+
+.cms-input {
+	width:500px;	
+}
+
+.cmsedit {		
+	cursor:n-resize;
+}
+	
+#cms_edit_choose {
+	/*
+	height:370px;
+	overflow:auto;
+	*/
+}	
+
+#cms_edit_choose ul, #cms_edit_status ul {
+	list-style-type:none;
+	margin:0 20px 0 0;
+	padding:0;
+}
+
+.cms_edit_choose_li {
+	border:1px solid #666;
+	padding:10px;
+	margin-bottom:25px;
+}
+
+#cms_edit_status li {
+	border:1px solid #333;
+	padding:10px;
+	margin-bottom:25px;
+}
+
+#cmsgallery {
+	margin-top:25px;
+	width:950px;	
+	height:140px;
+	overflow:hidden;
+}
+
+#cmsgallery	ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+
+#cmsgallery li {
+	float:left;	
+	margin-right:5px;
+}
+
+#cmsgallery-picture {
+	width:950px;
+	height:140px;
+	overflow:hidden;
+	position:absolute;
+	z-index:90;
+}
+
+#cmsgallery-innerpicture {
+	position:absolute;
+	z-index:90;
+}
+
+.cmsgallery-btn {
+	width:30px;
+	height:30px;	
+	position:absolute;
+	z-index:92;
+	cursor:pointer;
+}
+
+#cmsgallery-prev {
+	background:url(../images/cms_icons/gallery_left.png) top left no-repeat;		
+	top:55px;
+	left:10px;
+}
+
+#cmsgallery-next {
+	background:url(../images/cms_icons/gallery_right.png) top left no-repeat;		
+	top:55px;
+	left:910px;
+}
+
+#cmstooltipp {
+	position:absolute;
+	display:none;
+	background-color:#CC0000;
+	font-size:10px;
+	line-height:12px;
+	padding:5px;
+}
+
+.cms-quote, .quote {
+	font-size:18px;
+	line-height:22px;
+	font-weight:bold;
+}
+
+.cms-freigabe {
+	background:url(../images/cms_icons/freigabe.png) top left no-repeat;	
+	background-position:5px 5px;	
+	height:40px;
+	padding-left:45px;
+	border:1px solid #008000;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin-right:5px;
+	color:#008000;
+	font-weight:bold;
+	cursor:pointer;
+}
+
+.cms-loeschen {
+	background:url(../images/cms_icons/loeschen.png) top left no-repeat;	
+	background-position:5px 5px;	
+	height:40px;
+	padding-left:45px;
+	border:1px solid #800000;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin-right:5px;
+	color:#800000;
+	font-weight:bold;
+	cursor:pointer;
+}
+
+.cms-loeschen-div {
+	background:#fff url(../images/cms_icons/loeschen.png) top left no-repeat;	
+	background-position:5px 5px;		
+	padding:5px 0 5px 45px;	
+	border:1px solid #800000;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.cms-okay-div {
+	background:#fff url(../images/cms_icons/freigabe.png) top left no-repeat;		
+	background-position:5px 5px;	
+	padding:5px 0 5px 45px;	
+	border:1px solid #008000;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+/* +++++++++++++++++++++++++++ MISC +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */	
+	
+.sortable, .fixedsortable { list-style-type: none; margin: 0; padding: 0; }
+.sortable li, .fixedsortable li { margin-bottom:15px; }
+.sortable li span, .fixedsortable li span { position: absolute;  }
+
+#tab1 td {
+	padding:0 10px 5px 0;
+}
+
+.sortablesortierungli:hover {
+	cursor:n-resize;	
+	background-color:#333;
+}
+
+a#haendlersuche {
+	display: block;
+	text-indent: -9999px;
+	background: url(../images/watches/btn_haendlersuche.png) no-repeat 0 0;
+	width:223px;
+	height:58px;
+}
+a#haendlersuche:hover{background-position: 0 -57px;}
+
+
+
+
+a.zumshop {
+	display: block;
+	text-indent: -9999px;	
+	width:249px;
+	height:58px;
+}
+a.zumshop:hover{background-position: 0 -58px;}
+
+a.zumshop_de {
+	background: url(../images/watches/btn_zum_shop.png) no-repeat 0 0;
+}
+
+a.zumshop_es {
+	background: url(../images/watches/btn_zum_shop_es.png) no-repeat 0 0;
+}
+
+a.zumshop_euro {
+	background: url(../images/watches/btn_zum_shop_euro.png) no-repeat 0 0;
+}
+
+a.zumshop_fr {
+	background: url(../images/watches/btn_zum_shop_fr.png) no-repeat 0 0;
+}
+
+a.zumshop_it {
+	background: url(../images/watches/btn_zum_shop_it.png) no-repeat 0 0;
+}
+
+a.zumshop_nl {
+	background: url(../images/watches/btn_zum_shop_nl.png) no-repeat 0 0;
+}
+
+a.zumshop_ru {
+	background: url(../images/watches/btn_zum_shop_euro.png) no-repeat 0 0;
+}
+
+
+/* ++++++++++++ Support +++++++++++++++++++++++++++ */
+#haendlersuche-list-lang {
+	background: url(../images/support/background_lang.jpg) top left no-repeat;
+	width:947px;
+	height:60px;
+	display:block;
+}
+
+#haendlersuche-list-hoch {
+	background: url(../images/support/background_lang.png) top left no-repeat;
+	width:947px;
+	height:141px;
+	display:block;
+}
+
+#haendlersuche-premium {
+	background:#d4d4d4 url(../images/support/casiopartner.png) top left no-repeat;
+	background-position:25px 15px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;	
+	color:#000;
+}
+
+.haendlersuche-links {
+	float:left;
+	width:430px;
+}
+
+.haendlersuche-rechts {
+	float:right;
+	width:450px;
+}
+
+.haendlersuche-dl {
+	float:left;
+	width:215px;
+	margin-bottom:15px;
+}
+
+.haendlersuche-10 {
+	clear:both;
+	display:block;
+	background-color:#333;
+	margin:20px 0;
+	padding:9px;
+	color:#fff;
+	text-transform:uppercase;
+}
+
+.haendlersuche-dl div {
+	padding-right:15px;
+}
+
+#haendlersuche-standard {
+	background:#2d2d2d;
+	background-position:25px 15px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;	
+	color:#fff;
+}
+
+.haendlersuche-10w {
+	clear:both;
+	display:block;
+	background-color:#6a6a6a;
+	margin:20px 0;
+	padding:9px;
+	color:#fff;
+	text-transform:uppercase;
+}

@@ -1,0 +1,52 @@
+<%= form_for(@order, :remote=>true, :html => {:class=>"form-horizontal", :role=>"form"}) do |f| %>
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+  <h4 class="modal-title" id="myModalLabel">
+  Ваш заказ
+  <%= image_tag "pfeil_rot_gross.png" %></h3>
+  </h4>
+</div>
+<div class="modal-body">
+	<% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this group from being saved:</h2>
+
+      <ul>
+      <% @order.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+	  <% end %>
+	   <div class="form-group">
+	    <%= f.label :'Ваше имя:', :class=>"col-sm-3 control-label" %>
+	    <div class="col-sm-8">
+	    	<%= f.text_field :name, :type=>"text", :class=>"form-control", :placeholder=>"Введите Ваше имя" %>	  
+		 </div>	  
+	  </div>
+	  <div class="field  form-group">
+	    <%= f.label :'Email:', :class=>"col-sm-3 control-label" %>
+	    <div class="col-sm-8">
+	    	<%= f.text_field :email, :type=>"email", :class=>"form-control", :placeholder=>"Введите Ваш e-mail" %>
+		 </div>	  
+	  </div>
+	  <div class="field  form-group">
+	    <%= f.label :'Телефон:', :class=>"col-sm-3 control-label" %>
+	    <div class="col-sm-8">
+	    	<%= f.text_field :phone, :type=>"phone", :class=>"form-control", :placeholder=>"Введите номер телефона"  %>
+		 </div>	  
+	  </div>
+	  <!--div class="actions">
+	    <%= f.submit %>
+	  </div-->
+   <div id="cart_items" class=" scrolled">
+   	<%= render 'orders/items' %>
+   </div>
+</div>
+<div class="modal-footer">
+  <button type="submit" data-loading-text="Loading..." class="g-btn submit" >Отправить</button>
+</div>
+<% end %>
+
+
+

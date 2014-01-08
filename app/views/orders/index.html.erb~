@@ -1,0 +1,2 @@
+<h3 id="orders"><%= @order_number %></h3>
+<%= link_to "add_item", add_product_orders_path(:order_number => 0), :class=>"btn btn-danger", :remote=>true %>

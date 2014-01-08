@@ -1,0 +1,37 @@
+module OrderHelper
+
+  def set_user_cookie
+    cookies.signed[:token] = {
+        :value => [].to_json,
+        :expires => 1.hour.from_now
+    }
+  end
+
+  def user_cookie_values
+    load_user_cookie_data
+  end
+
+
+  def user_cookie_exists?
+        cookies[:token].present?
+  end
+
+  def add_to_user_cookie(value)
+    current = load_user_cookie_data
+    current << value
+    cookies.signed[:token] = current.to_json
+  end
+
+  def remove_from_user_cookie(value)
+    current = load_user_cookie_data
+    current.delete(value)
+    cookies.signed[:token] = current.to_json
+  end
+
+  private
+
+  def load_user_cookie_data
+    JSON.load(cookies.signed[:token])
+  end
+
+end

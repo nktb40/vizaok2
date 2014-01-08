@@ -1,0 +1,17 @@
+<% @watches.each do |watch| %>
+	    <div class="col-xs-6 col-md-3"> 
+          <div class="thumbnail">
+            <%= image_tag watch.img_url %>
+            <div class="caption"> 
+              <%= link_to "#watch_desc", :'data-toggle'=>"collapse" do%>
+              	<h3><%= watch.model %>
+              	<%= image_tag "pfeil_rot_gross.png" %></h3>
+              <% end %>
+              <p id="watch_desc" class="collapse"><%= watch.description %></p>
+              <p class="bt"><h2 class="pull-left"><%= watch.price.round%>р.</h2>
+              <!--a href="#" class="g-btn pull-right" role="button">В корзину</a--> 
+              <%= link_to "В корзину", add_product_orders_path(:product_id => watch.id), :class=>"g-btn pull-right", :remote=>true %></p>
+            </div>
+          </div>
+        </div>
+<% end %>

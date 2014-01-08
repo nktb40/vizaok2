@@ -1,0 +1,6 @@
+class Order < ActiveRecord::Base
+	has_many :item
+	validates :name, :email, presence: true
+	validates :name, :email, absence: true
+	validates :phone, numericality: { only_integer: true }
+end

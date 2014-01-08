@@ -1,0 +1,360 @@
+
+<div id="fade">
+	<div>
+		<img src="http://www.g-shock.eu/global/images/loader_logo.png" width="200" height="32" border="0">
+		<br><br>LOADING<br>
+		<img src="http://www.g-shock.eu/global/images/loader.gif" width="32" height="32" border="0">
+	</div>
+</div>
+<div class="content">
+	<header>
+		<div id="languages">
+			
+<div id="header-suche">
+	<form method="get" action="http://www.g-shock.eu/euro/search/">
+	Search &nbsp; <input type="text" name="q" value=""> <input type="submit" class="btn-pfeil" value="">
+	</form>
+</div>
+
+<div id="header-languages">
+	<div id="header-choosedlanguage">		
+		<div class="fl dn" id="header-language-all">
+							<a href="http://www.g-shock.eu/de/" >DE</a>
+							<a href="http://www.g-shock.eu/es/" >ES</a>
+							<a href="http://www.g-shock.eu/euro/" class="red">EURO</a>
+							<a href="http://www.g-shock.eu/fr/" >FR</a>
+							<a href="http://www.g-shock.eu/it/" >IT</a>
+							<a href="http://www.g-shock.eu/nl/" >NL</a>
+							<a href="http://www.g-shock.eu/pt/" >PT</a>
+							<a href="http://www.g-shock.eu/ru/" >RU</a>
+					</div>
+		<div class="fl red" id="header-language-aktuell">euro</div>
+	</div>	
+	
+	<div id="choose_language" class="fl">Language</div>
+</div>		</div>
+		
+		<div id="babyg">
+							<a href="http://www.baby-g.eu/euro/" class="baby-logo"></a>
+					</div>
+		<div id="home">
+			<a href="http://www.g-shock.eu/euro/"></a>
+		</div>
+		
+		<nav>
+			
+
+<ul id="navigation">
+	
+	<li><a href="http://www.g-shock.eu/euro/30years/"><span>30 years</span></a></li>
+	
+	<li><a href="http://www.g-shock.eu/euro/watches/"><span>Watches</span></a>
+		<div><ul style="width:107px;">
+			<li><a href="http://www.g-shock.eu/euro/watches/premium/">G-Premium</a></li>
+			<li><a href="http://www.g-shock.eu/euro/watches/specials/">G-Specials</a></li>
+			<li><a href="http://www.g-shock.eu/euro/watches/classic/">G-Classic</a></li>			
+			<li><a href="http://www.g-shock.eu/euro/watches/viewall/">View All</a></li>
+		</ul></div>
+	</li>	
+	<li><a href="http://www.g-shock.eu/euro/aboutgshock/"><span>About G-SHOCK</span></a>
+		<div><ul style="width:161px;">
+			<!-- Bluetooth nur fuer Deutsche Version -->
+						<li><a href="http://www.g-shock.eu/euro/aboutgshock/toughness/">Toughness</a></li>
+			<li><a href="http://www.g-shock.eu/euro/aboutgshock/technology/">Technology</a></li>
+			<li><a href="http://www.g-shock.eu/euro/aboutgshock/history/">History</a></li>
+		</ul></div>		
+	</li>	
+	<li><a href="http://www.g-shock.eu/euro/gshocklife/"><span>G-SHOCK Life</span></a>
+		<div><ul style="width:160px;">
+						<li><a href="http://www.g-shock.eu/euro/gshocklife/collaborations/">Collaborations</a></li>
+			<li><a href="http://www.g-shock.eu/euro/gshocklife/events/">Events</a></li>
+			<li><a href="http://www.g-shock.eu/euro/gshocklife/friends/">Friends</a></li>
+			<li><a href="http://www.g-shock.eu/euro/gshocklife/promotion/">Style-Promotion</a></li>
+			
+		</ul></div>
+	</li>	
+	
+	<li><a href="http://www.g-shock.eu/euro/support/"><span>Support</span></a></li>
+</ul>		</nav>		
+	</header>
+</div>
+
+<section id="searchcontent">
+	<div class="content">
+		
+</div>
+<div id="slider">	
+	<div id="slider-container">
+		<div id="slider_prev"><img src="http://www.g-shock.eu/global/images/common/slider_links.png" id="slider_prev_a" onmousedown="$('#slider_prev_a').stop().animate({boxShadow: '3px 3px 3px', top: 3}, 'fast')" onmouseup="$('#slider_prev_a').stop().animate({boxShadow: '8px 8px 10px', top: 0}, 'fast')" width="26" height="38" alt=""></div>
+		<div id="slider_next"><img src="http://www.g-shock.eu/global/images/common/slider_rechts.png" id="slider_next_a" width="26" onmousedown="$('#slider_next_a').stop().animate({boxShadow: '3px 3px 3px', top: 3}, 'fast')" onmouseup="$('#slider_next_a').stop().animate({boxShadow: '-8px 8px 10px', top: 0}, 'fast')" height="38" alt=""></div>
+		
+		<ul id="ul-slider">
+								<li  id="g1" class="li-slider" style="background-image: url(http://www.g-shock.eu/global/images/banner/pb_gsessions_euro.jpg);"></li>
+									<li onclick="window.open('http://www.g-shock.eu/euro/aviation/','_blank')"  id="g2" class="li-slider" style="display:none;background-image: url(http://www.g-shock.eu/global/images/banner/pb_raf_euro.jpg);cursor:pointer;"></li>
+									<li onclick="window.open('http://www.g-shock.eu/euro/gshocklife/promotion/gold_series/','_blank')"  id="g3" class="li-slider" style="display:none;background-image: url(http://www.g-shock.eu/global/images/banner/gold_euro.jpg);cursor:pointer;"></li>
+									<li  id="g4" class="li-slider" style="display:none;background-image: url(http://www.g-shock.eu/global/images/banner/absolute_toughness_1.jpg);"></li>
+									<li  id="g5" class="li-slider" style="display:none;background-image: url(http://www.g-shock.eu/global/images/banner/absolute_toughness_3.jpg);"></li>
+									<li  id="g6" class="li-slider" style="display:none;background-image: url(http://www.g-shock.eu/global/images/banner/absolute_toughness_red.jpg);"></li>
+										
+		</ul>
+	</div>
+</div>
+
+<script type="text/javascript">
+var max_nr 	= 6;
+</script>
+
+<div class="content">
+	
+
+<div class="content_after_banner_animiert">
+	
+<div class="watches-viewall-filter">
+		<div class="filters open">
+                    <h3><span class="product-count" id="qty">189</span> styles</h3>
+                    <div class="filter-set" style="display: block; overflow: hidden;">
+                    <form>
+                    <fieldset class="filter-margin">
+                    <div id="filter-collection" class="filter-group" style="width:200px;">
+                            <h4>Collection</h4>
+                            <ul data-filter="brands" class="brandsfilter choose">
+                            
+                            <!--	<li data-page-sort="new">
+                                    <input type="checkbox" id="checkbox-1-0" name="set-1" value=".new"/>
+                                    <label for="checkbox-1-0"></label>
+                                    <a href="">Newest</a>
+                                </li>-->
+                            	<li data-page-sort="trending">
+                                    <input type="checkbox" id="checkbox-1-1" name="set-1" value=".trending">
+                                    <label for="checkbox-1-1"></label>
+                                    <a href="">Trending</a>
+                                </li>
+                                <li data-page-sort="aviation">
+                                    <input type="checkbox" id="checkbox-1-2" name="set-1" value=".aviation">
+                                    <label for="checkbox-1-2"></label>
+                                    <a href="">Aviation</a>
+                                </li>
+                                <li data-page-sort="classic">
+                                    <input type="checkbox" id="checkbox-1-3" name="set-1" value=".classic">
+                                    <label for="checkbox-1-3"></label>
+                                    <a href="">Classic</a>
+                                </li>
+                                <li data-page-sort="limited">
+                                    <input type="checkbox" id="checkbox-1-4" name="set-1" value=".limited">
+                                    <label for="checkbox-1-4"></label>
+                                    <a href="">Limited</a>
+                                </li>
+                                <li data-page-sort="masterofg">
+                                    <input type="checkbox" id="checkbox-1-5" name="set-1" value=".masterofg">
+                                    <label for="checkbox-1-5"></label>
+                                    <a href="">Master of G</a>
+                                </li>
+                                 <li data-page-sort="mt-g">
+                                    <input type="checkbox" id="checkbox-1-6" name="set-1" value=".mt-g">
+                                    <label for="checkbox-1-6"></label>
+                                    <a href="">MT-G</a>
+                                </li>
+                                <li data-page-sort="BabyG" onclick="window.open('http://www.baby-g.com')">
+                                	<img src="/resource/img/nav/babyg-logo-black.png" style="margin-left: -12px;">
+                                                                        <label for="BabyG"></label>
+                                    <a href="javascript:void(0);" onclick="window.open('http://www.baby-g.com/watches')">Baby-G Women's Watches</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="wider filter-group" id="filter-color" style="width:250px;">
+                            <h4>Color</h4>
+                                <ul class="colorFilter choose" data-filter="productType">
+                                	<li><input type="checkbox" id="checkbox-3-1" name="set-3" value=".Red">
+                                        <label for="checkbox-3-1"></label>
+                                        <div class="filterSwatch" style="background-color:#ff0000;" data-filter-value=".Red"></div>
+                                    </li>
+                                    
+                                    <li>
+                                        <input type="checkbox" id="checkbox-3-2" name="set-3" value=".Blue">
+                                        <label for="checkbox-3-2"></label>
+                                        <div class="filterSwatch" style="background-color:#1313ea;" data-filter-value=".Blue"></div>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="checkbox-3-3" name="set-3" value=".White">
+                                        <label for="checkbox-3-3"></label>
+                                        <div class="filterSwatch" style="background-color:#ffffff;" data-filter-value=".White"></div>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="checkbox-3-4" name="set-3" value=".Orange">
+                                        <label for="checkbox-3-4"></label>
+                                        <div class="filterSwatch" style="background-color:#ff9100;" data-filter-value=".Orange"></div>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="checkbox-3-5" name="set-3" value=".Purple">
+                                        <label for="checkbox-3-5"></label>
+                                        <div class="filterSwatch" style="background-color:#9430a5;" data-filter-value=".Purple"></div>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="checkbox-3-6" name="set-3" value=".Earthtones">
+                                        <label for="checkbox-3-6"></label>
+                                        <div class="filterSwatch" style="background-color:#d18d50" data-filter-value=".Earthtones">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="checkbox-3-7" name="set-3" value=".Yellow">
+                                        <label for="checkbox-3-7"></label>
+                                        <div class="filterSwatch" style="background-color:#ffe600;" data-filter-value=".Yellow"></div>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="checkbox-3-8" name="set-3" value=".Black">
+                                        <label for="checkbox-3-8"></label>
+                                        <div class="filterSwatch" style="background-color:#000000;" data-filter-value=".Black"></div>
+                                    </li>
+                                    
+                                    <li>
+                                        <input type="checkbox" id="checkbox-3-9" name="set-3" value=".Clear">
+                                        <label for="checkbox-3-9"></label>
+                                        <div class="filterSwatch" style="background-color:#eceefd;" data-filter-value=".Clear"></div>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="checkbox-3-10" name="set-3" value=".Green">
+                                        <label for="checkbox-3-10"></label>
+                                        <div class="filterSwatch" style="background-color:#24931b;" data-filter-value=".Green"></div>
+                                    </li>
+                                    <li><input type="checkbox" id="checkbox-3-11" name="set-3" value=".Grey">
+                                        <label for="checkbox-3-11"></label>
+                                        <div class="filterSwatch" style="background-color:#a8a8a8;" data-filter-value=".Grey"></div>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="checkbox-3-12" name="set-3" value=".Multi">
+                                        <label for="checkbox-3-12"></label>
+                                        <div class="filterSwatch" style="border-top:0;background: url(/resource/img/multi.png) no-repeat; background-position:top; " data-filter-value=".Multi"></div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="filter-price" class="filter-group" style="width:150px;">
+                            <h4>Price</h4>
+                            <ul data-filter="sizes" class="choose">
+                                <li>
+                                    <input type="checkbox" id="checkbox-2-1" name="set-2" value=".teir1">
+                                    <label for="checkbox-2-1"></label>
+                                    <a href="#">Under $100</a>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="checkbox-2-2" name="set-2" value=".teir2">
+                                    <label for="checkbox-2-2"></label>
+                                    <a href="#">$100 - $200</a>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="checkbox-2-3" name="set-2" value=".teir3">
+                                    <label for="checkbox-2-3"></label>
+                                    <a href="#">$200 - 300</a>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="checkbox-2-4" name="set-2" value=".teir4">
+                                    <label for="checkbox-2-4"></label>
+                                    <a href="#">$300 +</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                            <div class="sort-by filter-group" id="filter-sort" style="width:200px;">
+                                <h4>Sort By</h4>
+                                <ul>
+                                <div id="filter-newest" class="filter-group" style="margin: 0; padding: 0; height: 25px;">
+                            	<ul style="margin-top: 0px;">
+                            		<li>
+	                                    <input type="checkbox" id="checkbox-5-1" name="set-5" value=".new">
+	                                    <label for="checkbox-5-1"></label>
+	                                    <a href="#">Newest</a>
+                                	</li>
+                            	</ul>
+                            </div>
+                                    <!--<li>
+                                        <input type="radio" id="checkbox-4-1" name="set-4" checked='checked' data-sort="original-order" checked/>
+                                        <label for="checkbox-4-1" data-sort="user-rating"></label>
+                                        <a href="">Newest</a>
+                                    </li>-->
+                                                                       <li>
+                                        <input type="radio" id="checkbox-4-3" name="set-4" data-sort="price" data-order="reverse">
+                                        <label for="checkbox-4-3"></label>
+                                        <a href="">Price $$-$</a>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="checkbox-4-4" name="set-4" data-sort="price">
+                                        <label for="checkbox-4-4"></label>
+                                        <a href="">Price $-$$</a>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="checkbox-4-5" name="set-4" checked="checked" data-sort="original-order">
+                                        <label for="checkbox-4-5"></label>
+                                        <a href="">VIEW ALL</a>
+                                    </li>
+                                </ul>
+                            </div>
+                           <!-- <div id="filter-newest" class="filter-group">
+                            	<ul>
+                            		<li>
+	                                    <input type="checkbox" id="checkbox-5-1" name="set-5" value=".new"/>
+	                                    <label for="checkbox-5-1"></label>
+	                                    <a href="#">Newest</a>
+                                	</li>
+                            	</ul>
+                            </div> -->
+                            
+                        </fieldset>
+                    </form>
+
+                </div> <!-- /filter-set -->
+                <a href="javascript:void(0)" class="filter-options">Hide Filters</a>
+            </div>
+		<div class="cb"></div>
+	</div>
+
+<!--watches-->
+<div class="teaser mt50"> 
+	<div class="row">
+		<%= render :partial=>"products" %>
+	</div>
+</div>	
+<!--end-watches-end-->
+
+</div>
+</section>
+
+<footer>
+	<div id="footer">
+	<div id="footer-in">
+		
+		<div id="footer-links">
+			<ul>
+			<li><a href="http://www.g-shock.eu/euro/">Home</a></li>
+		<li><a href="http://www.g-shock.eu/euro/watches/">Watches</a></li>
+		<li><a href="http://www.g-shock.eu/euro/aboutgshock/">About G-SHOCK</a></li>
+		<li><a href="http://www.g-shock.eu/euro/gshocklife/">G-SHOCK Life</a></li>
+		<li><a href="http://www.g-shock.eu/euro/support/">Support</a></li>
+		
+	<li><a href="http://www.g-shock.eu/euro/imprint/">Imprint</a></li>
+	<li><a href="http://www.casio-europe.com/euro/corporate/">About CASIO</a></li>
+</ul>
+All Rights Reserved, Copyright &copy; CASIO Europe GmbH
+<div id="footer-quicklinks" class="pt25">
+	
+			More CASIO Brands: <a href="http://www.casio-europe.com/euro/">CASIO Europe</a> | <a href="http://www.baby-g.eu/euro/">Baby-G</a><br>
+		<a href="http://www.exilim.eu/euro/">EXILIM</a> | <a href="http://www.casio-projectors.eu/euro/">CASIO Projectors</a> | 		
+		<a href="http://www.celviano.eu/euro/">CELVIANO</a> | <a href="http://www.privia-instruments.com/euro/">PRIVIA Instruments</a>
+		
+		
+</div>
+
+		</div>
+		
+		<div id="footer-rechts">
+			<h3>Bookmark & Share:  <!--a id="footer-appstore" href="https://itunes.apple.com/de/app/tryme-by-casio/id319508605?mt=8"></a--> <a id="footer-youtube" href="http://www.youtube.com/user/gshockeu"></a> <a id="footer-facebook" href="https://www.facebook.com/CASIO.GSHOCK"></a></h3>
+
+	<div id="footer-newsletter" class="footer-text">
+		<form method="post" action="http://www.g-shock.eu/euro/newsletter/">
+		Newsletter &nbsp; <input type="text" name="email"> <input type="submit" class="btn-pfeil" value="">
+		</form>
+	</div>
+		</div>
+		
+		<div class="cb"></div>		
+	</div>
+</div></footer>
