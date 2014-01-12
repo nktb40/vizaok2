@@ -1,17 +1,20 @@
 GShockShop::Application.routes.draw do
+  get "questions/index"
+  get "questions/create"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'products#index'
-   resources :orders , only: [:index, :create] do
+  root 'products#index'
+  # root 'orders#index
+   resources :orders , only: [:index, :new, :create] do
    	collection do
    		match 'add_product', via: :all
    		match 'show_cart', via: :all
    	end
    	
    end 
-   
+   resources :questions , only: [:create]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

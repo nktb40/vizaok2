@@ -1,0 +1,14 @@
+<%= form_for(@question, :remote=>true, :html => {:class=>"questions_form"}) do |f| %>
+		 <div class="questions_cell first_child">
+	    		<%= f.text_field :name, :type=>"text", :placeholder=>"Ваше имя" %>  
+	    		<%= f.text_field :email, :type=>"email", :placeholder=>"Ваш email" %>
+	    </div>
+	    <div class="questions_cell">
+	    		<%= f.text_area :question, :type=>"text", :class=>"form-control", :cols=>"40", :rows=>"10", :placeholder=>"Ваш вопрос" %>
+	    </div>
+	    <div>
+	     		<button id="send_order" class="btn_grey" data-toggle="modal" data-target="#myModal" >Отправить</button>
+	    </div>
+<% end %>
+
+

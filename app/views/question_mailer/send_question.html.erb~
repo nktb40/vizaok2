@@ -1,0 +1,2 @@
+Новый вопрос от <%= @question.name %>, email: <%= @question.email %> </br>
+Текст вопроса: <%= @question.question %>.<br>

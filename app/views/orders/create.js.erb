@@ -1,1 +1,2 @@
-$('#myModal').modal('hide')
+$('.modal-content').html("<%= j(render :partial=> 'info/info') %>");
+$('.modal-body').html("<h3>Ваш заказ принят!</h3> <br> <h3>Мы скоро с Вами свяжемся!</h3>");

@@ -1,54 +1,20 @@
 <!DOCTYPE html>
-<!--[if IE 7]><html class="no-js ie7 oldie" lang="de"><![endif]-->
-<!--[if IE 8]><html class="no-js ie8 oldie" lang="de"><![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js" lang="de"><!--<![endif]-->
 <html>
 <head>
-  <title>GShockShop</title>
+  <title>Card Sharp</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <script>
-	$('#quantity').live('change', function (e) {
-			alert('Hello');
-        });
-	});
+$(document).ready(function() {
+  $('#nav').onePageNav();
+  
+});
 </script>
-<body onload="siteReady();">
+<body>
 
 <%= yield %>
 
 </body>
-</html>
-
-<!--ProgressBar-->
-<div id="ajax-progress">
-	<div><img src="http://www.g-shock.eu/global/images/loader.gif" width="32" height="32" border="0"></div>
-</div>
-
-<!--  -->
-<div id="topBar" style="width:56px; height:137px; background:#cc0000; z-index:900000; cursor:pointer; font-size: 30px; padding: 10px;">
- 	<%= link_to show_cart_orders_path, :'data-toggle'=>"modal", :'data-target'=>"#myModal", :remote=>true do%>	
-	<span class="glyphicon glyphicon-shopping-cart"></span>
-	<h3 id="count">(<%=@order_number%>)</h3>
-	<% end %>
-</div>
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-<!--div id="topBar" style="width:56px; height:137px; background:#cc0000; z-index:900000; cursor:pointer;">
-	<img src="http://www.g-shock.eu/global/images/home/share/icon_1_fb.jpg" id="icon1" alt=""/>
-	<img src="http://www.g-shock.eu/global/images/home/share/icon_2_insta.jpg" id="icon2" alt=""/>
-	<img src="http://www.g-shock.eu/global/images/home/share/icon_3_youtube.jpg" id="icon3" alt=""/>
-	<img src="http://www.g-shock.eu/global/images/home/share/icon_4_appstore.jpg" id="icon4" alt=""/>
-	<img src="http://www.g-shock.eu/global/images/home/share/icon_gshock.jpg" alt="" style="display:none; position:absolute;" id="iconGS"/>
-</div-->
 </html>

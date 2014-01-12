@@ -1,3 +1,4 @@
+# encoding: utf-8
 class OrdersController < ApplicationController
 	include OrdersHelper
 	
@@ -5,24 +6,20 @@ class OrdersController < ApplicationController
 		@order_number = 0
 	end
 	
+	def new
+		@order = Order.new
+	end
+	
 	def create
-		@order = Order.new(order_param)
+		@order = Order.new(order_params)
 		if(@order.save)
-			@items = load_user_cookie_data
-			@items.each do |i|
-				@item = Item.new
-				@item.order_id = @order.id
-				@item.product_id = i["id"]
-				@item.price = Product.find(i["id"]).price
-				@item.save
-			end
-			
-			
 			OrderMailer.send_order_customer(@order).deliver
 			OrderMailer.send_order_delivery(@order).deliver
+			logger.info "saving success"
 		else
 			logger.info "error when saving"
 		end
+		
 	end
 	
 	def add_product 
@@ -60,7 +57,7 @@ class OrdersController < ApplicationController
 	end
 	
 	private 
- 	def order_param  
+ 	def order_params 
   		params.require(:order).permit(:name, :email, :phone, :address)  
  	end 
 end

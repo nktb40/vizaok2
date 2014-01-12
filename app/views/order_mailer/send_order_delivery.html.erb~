@@ -1,4 +1,4 @@
-Номер заказа: <%= @order.id %>.<br>
+Номер заказа: #<%= @order.id %>.<br>
 Имя: <%= @order.name %>.<br>
 Телефон: <%= @order.phone %>.<br>
 E-mail: <%= @order.email %>.<br>
