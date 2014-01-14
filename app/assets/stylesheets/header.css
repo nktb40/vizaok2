@@ -1945,7 +1945,6 @@ a .icon-flip-vertical:before {
   z-index: 6;
   display: none;
   background: white;
-  filter: alpha(opacity=0);
   opacity: 0;
 }
 

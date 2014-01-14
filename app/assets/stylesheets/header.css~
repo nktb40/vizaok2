@@ -2047,7 +2047,7 @@ a .icon-flip-vertical:before {
 
 @media screen and (min-width: 800px) {
   .js #nav {
-    position: relative;
+    /*position: relative;*/
   }
 
   .js #nav.closed {
