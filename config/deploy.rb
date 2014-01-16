@@ -1,6 +1,6 @@
 require "bundler/capistrano"
 
-server "162.218.236.44", :web, :app, :db, primary: true
+server "162.218.235.172", :web, :app, :db, primary: true
 
 set :application, "allmynotes"
 set :user, "deployer"
