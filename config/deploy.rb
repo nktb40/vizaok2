@@ -45,7 +45,7 @@ namespace :deploy do
   %w[start stop restart].each do |command|
     desc "#{command} unicorn server"
     task command, roles: :app, except: {no_release: true} do
-      run "#{sudo 'c72858nik472'} /etc/init.d/unicorn_#{application} #{command}"
+      run "#{sudo} chown deployer:c72858nik472 /etc/init.d/unicorn_#{application} #{command}"
     end
   end
 
