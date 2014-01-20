@@ -495,7 +495,7 @@ input[type=submit] {
 
 #register_slider {
 	/*background:#614932; /* slider background color in old browsers */
-	background: image-url("image_slider_bg.jpg") center center fixed ;
+	background: url(image_path("image_slider_bg.jpg")) center center fixed ;
 	overflow: hidden;
 	margin-top: 70px;
 	padding: 60px 0 60px;
@@ -503,7 +503,7 @@ input[type=submit] {
 
 #register_slider1 {
 	/*background:#614932; /* slider background color in old browsers */
-	background:#5f2c5c url("image_slider_bg.jpg") center center fixed ;
+	background:#5f2c5c url(image_path("image_slider_bg.jpg")) center center fixed ;
 	background: -moz-radial-gradient(center, ellipse cover, #855f3b 0%, #614932 100%); /* FF3.6+ */
 	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#855f3b), color-stop(100%,#614932)); /* Chrome,Safari4+ */
 	background: -webkit-radial-gradient(center, ellipse cover, #855f3b 0%,#614932 100%); /* Chrome10+,Safari5.1+ */

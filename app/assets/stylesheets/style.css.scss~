@@ -738,7 +738,7 @@ input[type=submit] {
 /*---------- DOWNLOAD SLIDER BEGIN ----------*/
 
 #download_slider_box {
-	background:#14a5e0 url(download_slider_bg.png) fixed center center; /* slider background color change here */
+	background:#14a5e0 image-url("download_slider_bg.png") fixed center center; /* slider background color change here */
 	background-size:cover;
 	padding: 70px 0 50px;
 	overflow: hidden;
@@ -1564,7 +1564,7 @@ input[type=submit] {
 }
 
 .settings_link {
-	background:#666 url(settings_link.png) no-repeat center center; 
+	background:#666 url("settings_link.png") no-repeat center center; 
 	width: 35px; 
 	height: 40px; 
 	display: block; 
@@ -1620,7 +1620,7 @@ input[type=submit] {
 }
 
 .switch {
-	background: image-url(switch.png) no-repeat 0 0; 
+	background: image-url("switch.png") no-repeat 0 0; 
 	width: 40px; 
 	height: 20px;  
 	float: left; 
@@ -1645,7 +1645,7 @@ input[type=submit] {
 }
 
 .switch b {
-	background: image-url(switcher.png) no-repeat 0 0;
+	background: image-url("switcher.png") no-repeat 0 0;
 	width: 20px;
 	height: 20px;
 	position: absolute;
@@ -1663,7 +1663,7 @@ input[type=checkbox]:not(.default){
 }
 
 input[type=checkbox]:not(.default)+span:before{
-	background: image-url(checkbox.png) no-repeat 0 0;
+	background: image-url("checkbox.png") no-repeat 0 0;
 	content:'';
 	width:15px;
 	height:15px;
@@ -1673,7 +1673,7 @@ input[type=checkbox]:not(.default)+span:before{
 }
 
 input[type=checkbox]:not(.default):checked+span:before{
-	background: image-url(checkbox.png) no-repeat 0 -15px;
+	background: image-url("checkbox.png") no-repeat 0 -15px;
 }
 
 input[type=radio]:not(.default){
@@ -2187,7 +2187,7 @@ input[type=radio].dark:not(.default):checked+span:before{
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
 	
 	.header .logo {
-		background: image-url(x2/logo.png) no-repeat 0 0;
+		background: image-url("x2/logo.png") no-repeat 0 0;
 		background-size: 97px 120px;
 	}
 	
@@ -2216,22 +2216,22 @@ input[type=radio].dark:not(.default):checked+span:before{
 	}
 	
 	.reviews_text .review_arrow {
-		background: image-url(x2/review_arrow.png) no-repeat 0 0; 
+		background: image-url("x2/review_arrow.png") no-repeat 0 0; 
 		background-size: 20px 20px;
 	}
 	
 	.settings_link {
-		background:#666 url(x2/settings_link.png) no-repeat center center;
+		background:#666 url("x2/settings_link.png") no-repeat center center;
 		background-size: 15px 16px; 
 	}
 	
 	.switch {
-		background: image-url(x2/switch.png) no-repeat 0 0; 
+		background: image-url("x2/switch.png") no-repeat 0 0; 
 		background-size: 40px 40px;
 	}
 	
 	.switch b {
-		background: image-url(x2/switcher.png) no-repeat 0 0;
+		background: image-url("x2/switcher.png") no-repeat 0 0;
 		background-size: 17px 18px;
 	}
 
