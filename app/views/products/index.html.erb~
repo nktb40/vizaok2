@@ -49,7 +49,7 @@
                         			<%= image_tag("sharp/7.png", :width=>"550", :height=>"350") %>
                             		<span>Completely <b>responsive</b></span>
                             </div><div class="slide" id="download2" style="width: 550px;">
-                            		<%= image_tag("sharp/4.png", :width=>"359", :height=>"350") %>
+                            		<%= image_tag("sharp/5.png", :width=>"359", :height=>"350") %>
                                 <span><b>Light and neat</b>, so light it can fly away</span>
                             </div></div></div>
                         <div id="pager3" class="pager" style="display: block;">
@@ -148,14 +148,14 @@
                     
                     	<!-- Benefit 1-->
                         <div class="benefit">
-                            <%= image_tag("sharp/plus1.png") %>
+                            <%= image_url("sharp/plus1.png") %>
                             <h3>Легкость и тонкость</h3>
                             <p>Вес всего 13 граммов, толщина 2,2 мм (как две кредитки)</p>
                         </div>
                         
                         <!-- Benefit 2-->
                         <div class="benefit">
-                            <%= image_tag("sharp/plus2.png") %>
+                            <%= image_url("sharp/plus2.png") %>
                             <h3>Острота</h3>
                             <p>Тончайшее лезвине хирургической стали</p>
                         </div>
