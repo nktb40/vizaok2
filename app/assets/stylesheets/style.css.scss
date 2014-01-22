@@ -957,13 +957,21 @@ input[type=submit] {
 }
 
 .benefit {
-	width: 225px; 
-	height: 165px; 
+	width: 255px; 
+	height: 300px; 
 	float: left;  
 	margin: 15px 0 20px 0; 
-	padding-left: 75px; 
+	margin-left: 0;
+	padding-left: 3px; 
 	padding-right: 13px; 
+	padding-bottom: 20px;
 	position: relative; 
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+}
+
+.benefit img{
+	margin-left: 20px;
 }
 
 .benefit > span {
@@ -988,7 +996,7 @@ input[type=submit] {
 /*---------- VIDEO BLOCK BEGIN ----------*/
 
 .video_info {
-	width: 303px; 
+	width: 260px; 
 	float: right;
 }
 
@@ -997,17 +1005,11 @@ input[type=submit] {
 }
 
 .video_box {
-	width: 600px; 
-	height: 338px; 
+	width: 640px; 
+	height: 360px; 
 	float: left; 
 	overflow: hidden;
 	background-color:#cccccc;
-}
-
-.video_box iframe{
-	border:0px; 
-	width:100%; 
-	height:100%;
 }
 
 /*---------- VIDEO BLOCK END ----------*/
@@ -1923,7 +1925,7 @@ input[type=radio].dark:not(.default):checked+span:before{
 		width: 220px;
 		margin: 0 20px 20px 0;
 		text-align: left;
-		float: none;
+		float: left;
 	}
 	 
     .subscribe_box h3 {

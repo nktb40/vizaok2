@@ -9,15 +9,15 @@
 					<div class="inner small">
 			
 						<div class="logo">
-							<%= image_tag("logo.png", :height=>"55px", :width=>"140px") %>
+							<%= image_tag("logo2.png", :height=>"60px", :width=>"300px") %>
 						</div>
 			
 						<nav  class="closed" style="-webkit-transition: max-height 400ms; " aria-hidden="false">
 							<ul id="nav">
-								<li class="current"><a href="#packages">Home</a></li>
-								<li class=""><a href="#benefits">About</a></li>
-								<li class=""><a href="#video">Team</a></li>
-								<li><a href="#contact_us">Contact</a></li>
+								<li class="current"><a href="#packages">Купить</a></li>
+								<li class=""><a href="#benefits">О ножах</a></li>
+								<li class=""><a href="#video">Видео</a></li>
+								<li><a href="#contact_us">Контакты</a></li>
 							</ul>
 						</nav><a href="#" id="nav-toggle" aria-hidden="true"><i class="icon-reorder">​</i>​</a>
 			
@@ -49,10 +49,13 @@
                         			<%= image_tag("sharp/7.png", :width=>"550", :height=>"350") %>
                             		<span>Completely <b>responsive</b></span>
                             </div><div class="slide" id="download2" style="width: 550px;">
-                            		<%= image_tag("sharp/3.jpg", :width=>"359", :height=>"350") %>
+                            		<%= image_tag("sharp/4.png", :width=>"359", :height=>"350") %>
                                 <span><b>Light and neat</b>, so light it can fly away</span>
                             </div></div></div>
-                        <div id="pager3" class="pager" style="display: block;"><a href="http://multifour.com/projects/entry/constructor/index.html#" class=""><span>1</span></a><a href="http://multifour.com/projects/entry/constructor/index.html#" class=""><span>2</span></a><a href="http://multifour.com/projects/entry/constructor/index.html#" class="selected"><span>3</span></a></div>
+                        <div id="pager3" class="pager" style="display: block;">
+                        <a href="#" class=""><span>1</span></a>
+                        <a href="#" class=""><span>2</span></a>
+                        <a href="#" class="selected"><span>3</span></a></div>
                     </div>
                 </div>
             </section>
@@ -145,44 +148,44 @@
                     
                     	<!-- Benefit 1-->
                         <div class="benefit">
-                            <span class="fa fa-desktop"></span>
-                            <h3>Responsible design</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur aditpiscing elit. Etiam dictum auctor interdum. Aenean egestas vehicula purus in euismod. Quisque gravida commodo velit, eget porta leo sagittis vel.</p>
+                            <%= image_tag("sharp/plus1.png") %>
+                            <h3>Легкость и тонкость</h3>
+                            <p>Вес всего 13 граммов, толщина 2,2 мм (как две кредитки)</p>
                         </div>
                         
                         <!-- Benefit 2-->
                         <div class="benefit">
-                            <span>x3</span>
-                            <h3>3 examples</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur aditpiscing elit. Etiam dictum auctor interdum. Aenean egestas vehicula purus in euismod. Quisque gravida commodo velit, eget porta leo sagittis vel.</p>
+                            <%= image_tag("sharp/plus2.png") %>
+                            <h3>Острота</h3>
+                            <p>Тончайшее лезвине хирургической стали</p>
                         </div>
                         
                         <!-- Benefit 3-->
                         <div class="benefit">
-                            <span class="fa fa-html5"></span>
-                            <h3>HTML5 &amp; CSS3</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur aditpiscing elit. Etiam dictum auctor interdum. Aenean egestas vehicula purus in euismod. Quisque gravida commodo velit, eget porta leo sagittis vel.</p>
+                            <%= image_tag("sharp/plus3.png") %>
+                            <h3>Безопасность</h3>
+                            <p>Замок не даст ножу раскрыться произвольно</p>
                         </div>
                         
                         <!-- Benefit 4-->
                         <div class="benefit">
-                            <span class="fa fa-file"></span>
-                            <h3>PSD included</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur aditpiscing elit. Etiam dictum auctor interdum. Aenean egestas vehicula purus in euismod. Quisque gravida commodo velit, eget porta leo sagittis vel.</p>
+                            <%= image_tag("sharp/plus4.png") %>
+                            <h3>Оригинальность</h3>
+                            <p>Нож легко помещается в кошелек</p>
                         </div>
                         
                         <!-- Benefit 5-->
                         <div class="benefit">
-                            <span class="fa fa-leaf"></span>
-                            <h3>Light and clean</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur aditpiscing elit. Etiam dictum auctor interdum. Aenean egestas vehicula purus in euismod. Quisque gravida commodo velit, eget porta leo sagittis vel.</p>
+                            <%= image_tag("sharp/plus5.png") %>
+                            <h3>Удобство</h3>
+                            <p>Нож функционален, но, как и все гениальное, прост</p>
                         </div>
                         
                         <!-- Benefit 6-->
                         <div class="benefit">
-                            <span class="fa fa-flask"></span>
-                            <h3>Customizible code</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur aditpiscing elit. Etiam dictum auctor interdum. Aenean egestas vehicula purus in euismod. Quisque gravida commodo velit, eget porta leo sagittis vel.</p>
+                            <%= image_tag("sharp/plus6.png") %>
+                            <h3>Надежность</h3>
+                            <p>Корпус из полипропилена устойчив к сгибаниям!</p>
                         </div>
                     </div>
                 </div>
@@ -218,7 +221,7 @@
                         <div class="caroufredsel_wrapper" style="display: block; text-align: start; float: none; position: relative; top: auto; right: auto; bottom: auto; left: auto; z-index: auto; width: 790px; height: 141px; margin: 0px; overflow: hidden;"><div id="screenshots_slider" style="text-align: left; float: none; position: absolute; top: 0px; right: auto; bottom: auto; left: 33px; margin: 0px; width: 3690px; height: 141px;">
                         
                             <div class="slide" style="margin-right: 12px;">
-                            	 <%= link_to image_tag("02_s.jpg", :class=>"image_shadow", :width=>"130", :height=>"130"), "http://multifour.com/projects/entry/constructor/images/screens/02.jpg", :data=> {:'fancybox-group'=>"gallery"}, :class=>"fancybox" %>  
+                            	 <%= link_to image_tag("02_s.jpg", :class=>"image_shadow", :width=>"130", :height=>"130"), image_url("sharp/5.png"), :data=> {:'fancybox-group'=>"gallery"}, :class=>"fancybox" %>  
                             </div>
                             <div class="slide" style="margin-right: 12px;">
                             	 <%= link_to image_tag("03_s.jpg", :class=>"image_shadow", :width=>"130", :height=>"130"), "http://multifour.com/projects/entry/constructor/images/screens/03.jpg", :data=> {:'fancybox-group'=>"gallery"}, :class=>"fancybox" %>  
