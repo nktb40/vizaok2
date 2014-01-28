@@ -42,14 +42,14 @@
                             
                             
                             <div class="slide" id="download3" style="width: 550px;">
-                            	  <%= image_tag("sharp/5.png", :width=>"550", :height=>"350") %>
+                            	  <%= image_tag("sharp/01_t.png", :width=>"300", :height=>"300") %>
                                 <span><b>3 examples</b> with different targets</span>
                             </div>
                         	 <div class="slide" id="download1" style="width: 550px;">
                         			<%= image_tag("sharp/7.png", :width=>"550", :height=>"350") %>
                             		<span>Completely <b>responsive</b></span>
                             </div><div class="slide" id="download2" style="width: 550px;">
-                            		<%= image_tag("sharp/5.png", :width=>"359", :height=>"350") %>
+                            		<%= image_tag("sharp/5.png", :width=>"550", :height=>"350") %>
                                 <span><b>Light and neat</b>, so light it can fly away</span>
                             </div></div></div>
                         <div id="pager3" class="pager" style="display: block;">
