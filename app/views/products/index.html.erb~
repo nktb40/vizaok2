@@ -41,21 +41,34 @@
                         <div class="caroufredsel_wrapper" style="display: block; text-align: start; float: none; position: relative; top: auto; right: auto; bottom: auto; left: auto; z-index: auto; width: 550px; height: 350px; margin: 0px; overflow: hidden;"><div id="download_slider" style="text-align: left; float: none; position: absolute; top: 0px; right: auto; bottom: auto; left: 0px; margin: 0px; width: 3850px; height: 350px; opacity: 1; z-index: auto;">
                             
                             
-                            <div class="slide" id="download3" style="width: 550px;">
+                            <div class="slide" id="download1" style="width: 350px;">
                             	  <%= image_tag("sharp/01_t.png", :width=>"300", :height=>"300") %>
-                                <span><b>3 examples</b> with different targets</span>
+                                <span><b>Компактный</b> </span>
                             </div>
-                        	 <div class="slide" id="download1" style="width: 550px;">
-                        			<%= image_tag("sharp/7.png", :width=>"550", :height=>"350") %>
+                        	 <div class="slide" id="download2" style="width: 350px;">
+                        			<%= image_tag("sharp/02_t.png", :width=>"350", :height=>"350") %>
                             		<span>Completely <b>responsive</b></span>
-                            </div><div class="slide" id="download2" style="width: 550px;">
-                            		<%= image_tag("sharp/5.png", :width=>"550", :height=>"350") %>
+                            </div>
+                            <div class="slide" id="download3" style="width: 550px;">
+                            		<%= image_tag("sharp/03_t.png", :width=>"350", :height=>"350") %>
                                 <span><b>Light and neat</b>, so light it can fly away</span>
-                            </div></div></div>
+                            </div>
+                            <div class="slide" id="download4" style="width: 550px;">
+                            		<%= image_tag("sharp/04.png", :width=>"450", :height=>"250") %>
+                                <span><b>Компактный</b>, so light it can fly away</span>
+                            </div>
+                            <div class="slide" id="download5" style="width: 550px;">
+                            		<%= image_tag("sharp/05_t.png", :width=>"350", :height=>"350") %>
+                                <span><b>Light and neat</b>, so light it can fly away</span>
+                            </div>
+                            </div></div>
                         <div id="pager3" class="pager" style="display: block;">
-                        <a href="#" class=""><span>1</span></a>
+                        <a href="#" class="selected"><span>1</span></a>
                         <a href="#" class=""><span>2</span></a>
-                        <a href="#" class="selected"><span>3</span></a></div>
+                        <a href="#" class=""><span>3</span></a>
+                        <a href="#" class=""><span>4</span></a>
+                        <a href="#" class=""><span>5</span></a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -95,7 +108,7 @@
                                     </ul>
                                 </div>
                                 <div class="try">
-                                    <p class="price">330<span> руб.</span></p>
+                                    <p class="price">990<span> руб.</span></p>
                                     <%= link_to "Купить!", new_order_path, :class=>"btn", :data=>{:toggle=>"modal", :target=>"#myModal", :remote=>true} %>
                                 </div>
                             </div>
@@ -112,7 +125,7 @@
                                     </ul>
                                 </div>
                                 <div class="try">
-                                    <p class="price">290<span> руб.</span></p>
+                                    <p class="price">1450<span> руб.</span></p>
                                     <%= link_to "Купить!", new_order_path, :class=>"btn", :data=>{:toggle=>"modal", :target=>"#myModal", :remote=>true} %>
                                 </div>
                             </div>
@@ -129,7 +142,7 @@
                                     </ul>
                                 </div>
                                 <div class="try">
-                                    <p class="price">250<span> руб.</span></p>
+                                    <p class="price">200<span> руб/шт</span></p>
                                     <%= link_to "Купить!", new_order_path, :class=>"btn", :data=>{:toggle=>"modal", :target=>"#myModal", :remote=>true} %>
                                 </div>
                             </div>
@@ -221,32 +234,27 @@
                         <div class="caroufredsel_wrapper" style="display: block; text-align: start; float: none; position: relative; top: auto; right: auto; bottom: auto; left: auto; z-index: auto; width: 790px; height: 141px; margin: 0px; overflow: hidden;"><div id="screenshots_slider" style="text-align: left; float: none; position: absolute; top: 0px; right: auto; bottom: auto; left: 33px; margin: 0px; width: 3690px; height: 141px;">
                         
                             <div class="slide" style="margin-right: 12px;">
-                            	 <%= link_to image_tag("02_s.jpg", :class=>"image_shadow", :width=>"130", :height=>"130"), image_url("sharp/5.png"), :data=> {:'fancybox-group'=>"gallery"}, :class=>"fancybox" %>  
+                            	 <%= link_to image_tag("sharp/07_s.jpg", :class=>"image_shadow", :width=>"130", :height=>"130"), image_url("sharp/07.jpg"), :data=> {:'fancybox-group'=>"gallery"}, :class=>"fancybox" %>  
                             </div>
                             <div class="slide" style="margin-right: 12px;">
-                            	 <%= link_to image_tag("03_s.jpg", :class=>"image_shadow", :width=>"130", :height=>"130"), "http://multifour.com/projects/entry/constructor/images/screens/03.jpg", :data=> {:'fancybox-group'=>"gallery"}, :class=>"fancybox" %>  
+                            	 <%= link_to image_tag("sharp/09_s.jpg", :class=>"image_shadow", :width=>"130", :height=>"130"), image_url("sharp/09.jpg"), :data=> {:'fancybox-group'=>"gallery"}, :class=>"fancybox" %>  
                             </div>
                             <div class="slide" style="margin-right: 12px;">
-                            	 <%= link_to image_tag("04_s.jpg", :class=>"image_shadow", :width=>"130", :height=>"130"), "http://multifour.com/projects/entry/constructor/images/screens/04.jpg", :data=> {:'fancybox-group'=>"gallery"}, :class=>"fancybox" %>  
+                            	 <%= link_to image_tag("sharp/10_s.jpg", :class=>"image_shadow", :width=>"130", :height=>"130"), image_url("sharp/10.jpg"), :data=> {:'fancybox-group'=>"gallery"}, :class=>"fancybox" %>  
                             </div>
                             <div class="slide" style="margin-right: 12px;">
-                            	 <%= link_to image_tag("05_s.jpg", :class=>"image_shadow", :width=>"130", :height=>"130"), "http://multifour.com/projects/entry/constructor/images/screens/05.jpg", :data=> {:'fancybox-group'=>"gallery"}, :class=>"fancybox" %>  
+                            	 <%= link_to image_tag("sharp/11_s.jpg", :class=>"image_shadow", :width=>"130", :height=>"130"), image_url("sharp/11.jpg"), :data=> {:'fancybox-group'=>"gallery"}, :class=>"fancybox" %>  
                             </div>
                             <div class="slide" style="margin-right: 12px;">
-                            	 <%= link_to image_tag("06_s.jpg", :class=>"image_shadow", :width=>"130", :height=>"130"), "http://multifour.com/projects/entry/constructor/images/screens/06.jpg", :data=> {:'fancybox-group'=>"gallery"}, :class=>"fancybox" %>  
+                            	 <%= link_to image_tag("sharp/12_s.jpg", :class=>"image_shadow", :width=>"130", :height=>"130"), image_url("sharp/12.jpg"), :data=> {:'fancybox-group'=>"gallery"}, :class=>"fancybox" %>  
                             </div>
                             <div class="slide" style="margin-right: 12px;">
-                            	 <%= link_to image_tag("07_s.jpg", :class=>"image_shadow", :width=>"130", :height=>"130"), "http://multifour.com/projects/entry/constructor/images/screens/07.jpg", :data=> {:'fancybox-group'=>"gallery"}, :class=>"fancybox" %>  
+                            	 <%= link_to image_tag("sharp/13_s.jpg", :class=>"image_shadow", :width=>"130", :height=>"130"), image_url("sharp/13.jpg"), :data=> {:'fancybox-group'=>"gallery"}, :class=>"fancybox" %>  
                             </div>
                             <div class="slide" style="margin-right: 12px;">
-                            	 <%= link_to image_tag("08_s.jpg", :class=>"image_shadow", :width=>"130", :height=>"130"), "http://multifour.com/projects/entry/constructor/images/screens/08.jpg", :data=> {:'fancybox-group'=>"gallery"}, :class=>"fancybox" %>  
+                            	 <%= link_to image_tag("sharp/14_s.jpg", :class=>"image_shadow", :width=>"130", :height=>"130"), image_url("sharp/14.jpg"), :data=> {:'fancybox-group'=>"gallery"}, :class=>"fancybox" %>  
                             </div>
-                            <div class="slide" style="margin-right: 12px;">
-                            	 <%= link_to image_tag("09_s.jpg", :class=>"image_shadow", :width=>"130", :height=>"130"), "http://multifour.com/projects/entry/constructor/images/screens/09.jpg", :data=> {:'fancybox-group'=>"gallery"}, :class=>"fancybox" %>  
-                            </div>
-                            <div class="slide" style="margin-right: 12px;">
-                            	 <%= link_to image_tag("10_s.jpg", :class=>"image_shadow", :width=>"130", :height=>"130"), "http://multifour.com/projects/entry/constructor/images/screens/10.jpg", :data=> {:'fancybox-group'=>"gallery"}, :class=>"fancybox" %>  
-                            </div>
+    
                            
                         </div></div>
                         <a href="http://multifour.com/projects/entry/constructor/index.html#" id="prev2" class="fa fa-caret-left" style="display: block;"></a>
@@ -274,10 +282,9 @@
                     <h2>Контакты</h2>
                     <div class="contact_info" itemscope="" itemtype="http://schema.org/Organization">
                         <ul>
-                            <li itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"><span class="fa fa-map-marker"></span> <span itemprop="streetAddress">Address</span>, <span itemprop="postalCode">Postal code</span>, <span itemprop="addressLocality">City, Country</span></li>
-                            <li itemprop="email"><span class="fa fa-envelope"></span> entry@email.com</li>
-                            <li itemprop="telephone"><span class="fa fa-phone"></span> (234) 789-4356</li>
-                            <li><span class="fa fa-skype"></span> entry_skype</li>
+                            <li itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"><span class="fa fa-map-marker"></span> <span itemprop="streetAddress">Россия</span>, <span itemprop="postalCode">г. Томск</span>, <span itemprop="addressLocality">634000</span></li>
+                            <li itemprop="email"><span class="fa fa-envelope"></span> cardsharp70@gmail.com</li>
+                            <li itemprop="telephone"><span class="fa fa-phone"></span> 8(923)431-60-06</li>
                         </ul>
                     </div>
                  </div>
