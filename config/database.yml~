@@ -15,7 +15,7 @@ development:
   pool: 5
   host: localhost
   username: cardsharp
-  password: c72858nik472
+  password: password
 
 
 # Warning: The database defined as "test" will be erased and

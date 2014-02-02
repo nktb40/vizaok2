@@ -11,10 +11,10 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: cardsharp_development
+  database: visaok_development
   pool: 5
   host: localhost
-  username: cardsharp
+  username: visaok
   password: password
 
 
@@ -24,17 +24,17 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: cardsharp_test
+  database: visaok_test
   pool: 5
   host: localhost
-  username: cardsharp
+  username: visaok
   password: c72858nik472
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: cardsharp_production
+  database: visaok_production
   pool: 5
   host: localhost
-  username: cardsharp
+  username: visaok
   password: c72858nik472
