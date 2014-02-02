@@ -4,5 +4,6 @@ $.magnificPopup.open({
     type: 'inline'
   }
 });
-$( '#phone_error' ).text('sdsd');
+$('#question_submit').val('Отправить');
 $('.error').text('');
+$('input:text').val('');

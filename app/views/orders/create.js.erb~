@@ -5,4 +5,5 @@ $.magnificPopup.open({
   }
 });
 $('#order_submit').val('Отправить');
-$('.error').val('');
+$('.error').text('');
+$('input:text').val('');
