@@ -1,11 +1,11 @@
 upstream unicorn {
-  server unix:/tmp/unicorn.allmynotes.sock fail_timeout=0;
+  server unix:/tmp/unicorn.cardsharp.sock fail_timeout=0;
 }
 
 server {
   listen 80 default deferred;
   # server_name example.com;
-  root /home/deployer/apps/allmynotes/current/public;
+  root /home/deployer/apps/cardsharp/current/public;
 
   location ^~ /assets/ {
     gzip_static on;

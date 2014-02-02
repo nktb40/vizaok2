@@ -2,7 +2,7 @@ require "bundler/capistrano"
 
 server "162.218.235.172", :web, :app, :db, primary: true
 
-set :application, "cardsharp"
+set :application, "visaok"
 set :user, "deployer"
 set :deploy_to, "/home/#{user}/apps/#{application}"
 set :deploy_via, :remote_cache
