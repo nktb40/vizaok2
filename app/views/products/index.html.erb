@@ -1,326 +1,249 @@
-    
-    	
-        
-        <div id="wrap">
-        
-<!-- HEADER LOGIN BEGIN -->   
-     
-            <header>
-					<div class="inner small">
+<div id="home"></div>
+
+	<header>
+		<div class="inner small">
+
+			<div class="logo">
+				<a href=""><i class="fa fa-location-arrow"></i>VisaOK</a>
+			</div>
+
+			<nav id="nav" class="closed" style="-webkit-transition: max-height 400ms; position: relative;" aria-hidden="false">
+				<ul class="nav">
+					<li class="current"><a href="#home">Заявка</a></li>
+					<li class=""><a href="#about">Документы</a></li>
+					<li class=""><a href="#team">Отзывы</a></li>
+					<li class=""><a href="#contact">Контакты</a></li>
+				</ul>
+			</nav><a href="#" id="nav-toggle" aria-hidden="true"><i class="icon-reorder">​</i>​</a>
+
+		</div>
+	</header>
+
+	<section id="intro" class="intro" style="position: relative; z-index: 0; background-image: none; background-position: initial initial; background-repeat: initial initial;">
+		<div class="inner small">
+
+			<div class="cage">		
+
+			<div class="text">
+			<h2>Звоните: +7(916)230-71-16</h2></br>
+				<h2>Америка рядом!</h2>
+
+				<p>Америка - страна свободы и демократии, визовый режим которой считается одним из наиболее строгих в мире.
+				Однако, несмотря на это, ежегодно в Америку приезжают 44 миллиона туристов! </p>
+				<p>Мы поможем Вам стать одним из этих счастливчиков!</p>
+
+			</div>
 			
-						<div class="logo">
-							<%= image_tag("logo2.png", :height=>"60px", :width=>"300px") %>
-						</div>
+			<div class="col-lg-5">
+				<div class="form-wrapper">
+					<%= render :partial=>'orders/form' %>
+				</div>
+			</div>			
+
+		</div>
+	<div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 550px; width: 1200px; z-index: -999998; position: absolute;">
+	<%= image_tag("header.jpg", :style=>"position: absolute; margin: 0px; padding: 0px; border: none; width: 1200px; height: 640px; max-height: none; max-width: none; z-index: -999999; left: 0px; top: -45px;") %>
+	</div>
+	</div>	
+	</section>
+
+	<section class="row service">
+		<div class="inner small">
+
+			<div class="column three">
+				<i class="fa fa-clock-o fa-4"></i>
+
+				<h3>Быстро</h3> 
+				<p>Мы поможем Вам подготовить все необходимые документы в максимально короткие сроки. Срок получения виды составляет от 5 до 7 дней</p></div>
+
+			<div class="column three">
+				<i class="fa fa-money"></i>
+
+				<h3>Дешево</h3>
+				<p>Стоимость наших услуг всего 2900 рулей.  Оплата производится после получения визы </p>
+				</div>	
 			
-						<nav  class="closed" style="-webkit-transition: max-height 400ms; " aria-hidden="false">
-							<ul id="nav">
-								<li class="current"><a href="#packages">Купить</a></li>
-								<li class=""><a href="#benefits">О ножах</a></li>
-								<li class=""><a href="#video">Видео</a></li>
-								<li><a href="#contact_us">Контакты</a></li>
-							</ul>
-						</nav><a href="#" id="nav-toggle" aria-hidden="true"><i class="icon-reorder">​</i>​</a>
+			<div class="column three last">
+				<i class="fa fa-desktop"></i>
+
+				<h3>Удаленно</h3>
+				<p>Оформление без личного присутствия в консульстве, работаем с регионами </p>
+			</div>		
+			</div>
 			
-					</div>
-				</header>
-            
- <!-- HEADER LOGIN END -->
-<!-- SLIDER REGISTER BEGIN -->
+	</section>
+	
+	<section id="about" class="row about">
+		<div class="inner small">
 
-            <section id="register_slider">
-                <div class="center">
-                	<!-- Register form -->
-                    <div class="form_register">
-                        <h2>Закажи сейчас
-                        И получи скидку!</h2>
-                        <h3><span>&nbsp;&nbsp;Дней&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Часов&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Минут&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Секунд</span></h3>
-                        <div id="flipcountdownbox"></div>
-                        <%= image_tag("sale.png", :height=>"180px", :width=>"280px", :style=>"float: right;") %>
-                    </div>
-                     <div class="download_slider_box">
-                        <div class="caroufredsel_wrapper" style="display: block; text-align: start; float: none; position: relative; top: auto; right: auto; bottom: auto; left: auto; z-index: auto; width: 550px; height: 350px; margin: 0px; overflow: hidden;"><div id="download_slider" style="text-align: left; float: none; position: absolute; top: 0px; right: auto; bottom: auto; left: 0px; margin: 0px; width: 3850px; height: 350px; opacity: 1; z-index: auto;">
-                            
-                            
-                            <div class="slide" id="download1" style="width: 350px;">
-                            	  <%= image_tag("sharp/01_t.png", :width=>"300", :height=>"300") %>
-                                <span><b>Компактный</b> </span>
-                            </div>
-                        	 <div class="slide" id="download2" style="width: 350px;">
-                        			<%= image_tag("sharp/02_t.png", :width=>"350", :height=>"350") %>
-                            		<span>Completely <b>responsive</b></span>
-                            </div>
-                            <div class="slide" id="download3" style="width: 550px;">
-                            		<%= image_tag("sharp/03_t.png", :width=>"350", :height=>"350") %>
-                                <span><b>Light and neat</b>, so light it can fly away</span>
-                            </div>
-                            <div class="slide" id="download4" style="width: 550px;">
-                            		<%= image_tag("sharp/04.png", :width=>"450", :height=>"250") %>
-                                <span><b>Компактный</b>, so light it can fly away</span>
-                            </div>
-                            <div class="slide" id="download5" style="width: 550px;">
-                            		<%= image_tag("sharp/05_t.png", :width=>"350", :height=>"350") %>
-                                <span><b>Light and neat</b>, so light it can fly away</span>
-                            </div>
-                            </div></div>
-                        <div id="pager3" class="pager" style="display: block;">
-                        <a href="#" class="selected"><span>1</span></a>
-                        <a href="#" class=""><span>2</span></a>
-                        <a href="#" class=""><span>3</span></a>
-                        <a href="#" class=""><span>4</span></a>
-                        <a href="#" class=""><span>5</span></a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-<!-- SLIDER REGISTER END --> 
-<!-- PACKAGES BLOCK BEGIN -->
+			<div class="column two-three">
+				<h2>Список необходимых документов:</h2>
+				<p><i class="icon-check"></i>
+					Копия заграничного паспорта – все страницы (4 разворота паспорта на листе формата А4 с двух сторон) 
+				</p>
+				<p><i class="icon-check"></i>
+				   Копия гражданского паспорта - первые две страницы
+ 				</p>
+				<p><i class="icon-check"></i>
+                   -Фотография 5 х 5 цветная на белом фоне, 80% лица 
+ 				</p>
+				<p><i class="icon-check"></i>
+				Справка с места работы с указанием должности и оклада:</br>
+                         <span style="margin-left: 25px;">- для студентов (копия студенческого билета);</span></br>
+                         <span style="margin-left: 25px;">- для пенсионеров (копия пенсионного удостоверения);</span></br>
+                         <span style="margin-left: 25px;">- для безработных и детей (спонсорское письмо);</span> </br>
+				</p>
+				<p><i class="icon-check"></i>
+                  Выписка из банковского счёта из расчёта 150 000 руб. на человека; 
+            </p>
+				<p><i class="icon-check"></i>
+                   Копия документов о наличии движимого и недвижимого имущества;
+            </p>
 
-            <section id="packages" class="box">
-                <div class="center">
-                    <div class="pack_box">
-                    
-                    	<!-- Pack 1-->
-                        <div class="pack">
-                            <div>
-                                <h3>Один нож</h3>
-                                <div class="pack_list">
-                                    <ul>
-                                        <li><span class="fa fa-check"></span> Нож-кредитка - 1 шт.</li>
-                                        <li><span class="fa fa-check"></span> Доставка - 100 руб.</li>
-                                    </ul>
-                                </div>
-                                <div class="try">
-                                    <p class="price">490<span> руб.</span></p>
-                                    <%= link_to "Купить!", new_order_path, :class=>"btn", :data=>{:toggle=>"modal", :target=>"#myModal", :remote=>true} %>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Pack 2-->
-                        <div class="pack">
-                            <div>
-                                <h3>Три ножа</h3>
-                                <div class="pack_list">
-                                    <ul>
-                                        <li><span class="fa fa-check"></span> Нож-кредитка - 3 шт.</li>
-                                        <li><span class="fa fa-check"></span> Доставка - бесплатно.</li>
-                                    </ul>
-                                </div>
-                                <div class="try">
-                                    <p class="price">990<span> руб.</span></p>
-                                    <%= link_to "Купить!", new_order_path, :class=>"btn", :data=>{:toggle=>"modal", :target=>"#myModal", :remote=>true} %>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Pack 3-->
-                        <div class="pack">
-                            <div>
-                                <h3>Пять ножей</h3>
-                                <div class="pack_list">
-                                    <ul>
-                                    	<li><span class="fa fa-check"></span> Нож-кредитка - 5 шт.</li>
-                                       <li><span class="fa fa-check"></span> Доставка - бесплатно.</li>
-                                    </ul>
-                                </div>
-                                <div class="try">
-                                    <p class="price">1450<span> руб.</span></p>
-                                    <%= link_to "Купить!", new_order_path, :class=>"btn", :data=>{:toggle=>"modal", :target=>"#myModal", :remote=>true} %>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Pack 4-->
-                        <div class="pack">
-                            <div>
-                                <h3>От 50шт.</h3>
-                                <div class="pack_list">
-                                    <ul>
-                                        <li><span class="fa fa-check"></span> Нож-кредитка > 50 шт.</li>
-                                        <li><span class="fa fa-check"></span> Доставка - бесплатно.</li>
-                                    </ul>
-                                </div>
-                                <div class="try">
-                                    <p class="price">200<span> руб/шт</span></p>
-                                    <%= link_to "Купить!", new_order_path, :class=>"btn", :data=>{:toggle=>"modal", :target=>"#myModal", :remote=>true} %>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+				<h3>
+					Если у вас возникли трудности с оформлением документов свяжитесь с нами:
+					<span style="color: #3B3131;">+7(916)230-71-16</span>
+				</h3> 
+			</div>
 
-<!-- PACKAGES BLOCK END -->
-<!-- BENEFITS BLOCK BEGIN -->
+			<div class="column one-three last">
+				<%= image_tag ("tablet.png") %>
+			</div>
 
-            <section id="benefits" class="box">
-                <div class="center">
-                    <h2>Что такое Card Sharp ?</h2>
-                    <div class="benefits_box">
-                    
-                    	<!-- Benefit 1-->
-                        <div class="benefit">
-                            <%= image_tag("sharp/plus1.png") %>
-                            <h3>Легкость и тонкость</h3>
-                            <p>Вес всего 13 граммов, толщина 2,2 мм (как две кредитки)</p>
-                        </div>
-                        
-                        <!-- Benefit 2-->
-                        <div class="benefit">
-                            <%= image_tag("sharp/plus2.png") %>
-                            <h3>Острота</h3>
-                            <p>Тончайшее лезвине хирургической стали</p>
-                        </div>
-                        
-                        <!-- Benefit 3-->
-                        <div class="benefit">
-                            <%= image_tag("sharp/plus3.png") %>
-                            <h3>Безопасность</h3>
-                            <p>Замок не даст ножу раскрыться произвольно</p>
-                        </div>
-                        
-                        <!-- Benefit 4-->
-                        <div class="benefit">
-                            <%= image_tag("sharp/plus4.png") %>
-                            <h3>Оригинальность</h3>
-                            <p>Нож легко помещается в кошелек</p>
-                        </div>
-                        
-                        <!-- Benefit 5-->
-                        <div class="benefit">
-                            <%= image_tag("sharp/plus5.png") %>
-                            <h3>Удобство</h3>
-                            <p>Нож функционален, но, как и все гениальное, прост</p>
-                        </div>
-                        
-                        <!-- Benefit 6-->
-                        <div class="benefit">
-                            <%= image_tag("sharp/plus6.png") %>
-                            <h3>Надежность</h3>
-                            <p>Корпус из полипропилена устойчив к сгибаниям!</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+		</div>
+	</section>	
 
-<!-- BENEFITS BLOCK END -->
-<!-- VIDEO BLOCK BEGIN -->
+	<section id="team" class="row team colored">
+		<div class="inner small">
 
-            <section id="video" class="box">
-                <div class="center">
-                    <div class="video_info">
-                        <h2>Card Sharp 2</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dictum auctor interdum. Aenean egestas vehicula purus in euismod. Quisque gravida commodo velit, eget porta leo sagittis vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dictum auctor interdum. Aenean egestas vehicula purus in euismod. Quisque gravida commodo velit, eget porta leo sagittis vel.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                    </div>
-                    <div class="video_box">
-                    	<!-- Video iframe code -->
-                        <%= render :partial=>'video' %>
-                    </div>
-                </div>
-            </section>
+			<div class="column four">
+				<%= image_tag ("team1.jpg") %>
 
-<!-- VIDEO BLOCK END -->
+				<h3>Pottie Scippen</h3>
+				<p>Founder/CEO</p>
 
-<!-- SCREENSHOTS BLOCK BEGIN -->
+				<p>Все было быстро и оперативно, спасибо вам огромное!</p>
+			</div>
 
-            <section id="screenshots" class="box">
-                <div class="center">
-                    <h2>Еще изображения</h2>
-                    <div class="screenshots_box">
-                    
-                    	<!-- Fancybox slider -->
-                        <div class="caroufredsel_wrapper" style="display: block; text-align: start; float: none; position: relative; top: auto; right: auto; bottom: auto; left: auto; z-index: auto; width: 790px; height: 141px; margin: 0px; overflow: hidden;"><div id="screenshots_slider" style="text-align: left; float: none; position: absolute; top: 0px; right: auto; bottom: auto; left: 33px; margin: 0px; width: 3690px; height: 141px;">
-                        
-                            <div class="slide" style="margin-right: 12px;">
-                            	 <%= link_to image_tag("sharp/07_s.jpg", :class=>"image_shadow", :width=>"130", :height=>"130"), image_url("sharp/07.jpg"), :data=> {:'fancybox-group'=>"gallery"}, :class=>"fancybox" %>  
-                            </div>
-                            <div class="slide" style="margin-right: 12px;">
-                            	 <%= link_to image_tag("sharp/09_s.jpg", :class=>"image_shadow", :width=>"130", :height=>"130"), image_url("sharp/09.jpg"), :data=> {:'fancybox-group'=>"gallery"}, :class=>"fancybox" %>  
-                            </div>
-                            <div class="slide" style="margin-right: 12px;">
-                            	 <%= link_to image_tag("sharp/10_s.jpg", :class=>"image_shadow", :width=>"130", :height=>"130"), image_url("sharp/10.jpg"), :data=> {:'fancybox-group'=>"gallery"}, :class=>"fancybox" %>  
-                            </div>
-                            <div class="slide" style="margin-right: 12px;">
-                            	 <%= link_to image_tag("sharp/11_s.jpg", :class=>"image_shadow", :width=>"130", :height=>"130"), image_url("sharp/11.jpg"), :data=> {:'fancybox-group'=>"gallery"}, :class=>"fancybox" %>  
-                            </div>
-                            <div class="slide" style="margin-right: 12px;">
-                            	 <%= link_to image_tag("sharp/12_s.jpg", :class=>"image_shadow", :width=>"130", :height=>"130"), image_url("sharp/12.jpg"), :data=> {:'fancybox-group'=>"gallery"}, :class=>"fancybox" %>  
-                            </div>
-                            <div class="slide" style="margin-right: 12px;">
-                            	 <%= link_to image_tag("sharp/13_s.jpg", :class=>"image_shadow", :width=>"130", :height=>"130"), image_url("sharp/13.jpg"), :data=> {:'fancybox-group'=>"gallery"}, :class=>"fancybox" %>  
-                            </div>
-                            <div class="slide" style="margin-right: 12px;">
-                            	 <%= link_to image_tag("sharp/14_s.jpg", :class=>"image_shadow", :width=>"130", :height=>"130"), image_url("sharp/14.jpg"), :data=> {:'fancybox-group'=>"gallery"}, :class=>"fancybox" %>  
-                            </div>
-    
-                           
-                        </div></div>
-                        <a href="http://multifour.com/projects/entry/constructor/index.html#" id="prev2" class="fa fa-caret-left" style="display: block;"></a>
-                        <a href="http://multifour.com/projects/entry/constructor/index.html#" id="next2" class="fa fa-caret-right" style="display: block;"></a>
-                    </div>
-                </div>
-            </section>
-            
-<!-- SCREENSHOTS BLOCK END -->
-<!-- QUESTIONS BLOCK BEGIN -->
 
-            <section id="questions" class="box">
-                <div class="center">
-                    <h2>Есть вопросы?</h2>
-                    <p></p>
-                    <%= render :partial=>"questions/form" %>
-                </div>
-            </section>
+			<div class="column four">
+				<%= image_tag ("team2.jpg") %>
 
-<!-- QUESTIONS BLOCK END -->
-<!-- CONTACT US BLOCK BEGIN -->
+				<h3>Marl Kalone</h3>
+				<p>Team Manager</p>
 
-            <section id="contact_us" class="box">
-                <div class="center">
-                    <h2>Контакты</h2>
-                    <div class="contact_info" itemscope="" itemtype="http://schema.org/Organization">
-                        <ul>
-                            <li itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"><span class="fa fa-map-marker"></span> <span itemprop="streetAddress">Россия</span>, <span itemprop="postalCode">г. Томск</span>, <span itemprop="addressLocality">634000</span></li>
-                            <li itemprop="email"><span class="fa fa-envelope"></span> cardsharp70@gmail.com</li>
-                            <li itemprop="telephone"><span class="fa fa-phone"></span> +7(923)431-60-06</li>
-                        </ul>
-                    </div>
-                 </div>
-            </section>
-            
-<!-- CONTACT US BLOCK END -->
+				<p>Визу получил даже быстрее, чем мне было обещано. Молодцы работают быстро, грамотно и видно что есть опыт.Спасибо большое! Дай им Бог здоровья.</p>		
+			</div>
 
-            <div class="footerHeight"></div>
-        </div><!--id="wrap"--> 
-     
 
-<!-- FOOTER BLOCK BEGIN -->
-        
-        <footer id="footer">
-            <div class="center">
-            	<!-- Social icons -->
-                <div class="socials">
-                    <ul>
-                    	<li><a href="http://dribbble.com/" target="_blank" title="Dribbble" class="fa fa-dribbble"></a></li>
-                        <li><a href="https://plus.google.com/" target="_blank" title="Google+" class="fa fa-google-plus"></a></li>
-                        <li><a href="https://www.facebook.com/" target="_blank" title="Facebook" class="fa fa-facebook"></a></li>
-                        <li><a href="https://twitter.com/" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
-                    </ul>
-                </div>
-                <div class="copyright">
-                    <p>© Copyright 2014.  <br>
-						Все права защищены.</p>
-                </div>
-            </div>
-        </footer>
-        
-<!-- FOOTER BLOCK BEGIN --> 
-      
-<div id="myModal" class="modal hide fade in" tabindex="-1" role="dialog" aria-hidden="false">
-  <div class="modal-dialog">
-  		<div class="modal-content"></div>
-  		</div>
-  </div>
- </div>
+			<div class="column four">
+				<%= image_tag ("team3.jpg") %>
+
+				<h3>Христофор Колумб</h3>
+				<p>Мореплаватель</p>
+
+				<p>Все понравилось, оформление заняло небольшое время и минимум документов. Спасибо огромное, успел открыть континент!</p>			
+			</div>
+
+
+			<div class="column four last">
+				<%= image_tag ("team4.jpg") %>
+
+				<h3>Barry Lird</h3>
+				<p>UI/UX Designer</p>
+
+				<p>Должен сказать огромное спасибо тем людям, которые занимаются оформлением виз в США, сам я человек занятой, а тут ребята сделали всю работу за меня</p>			
+			</div>						
+		</div>
+	</section>	
+
+	
+
+	<section class="row contact extra" id="contact">
+		<div class="inner small">
+
+			<%= render :partial=>'questions/form' %>											
+					
+		</div>
+	</section>		
+
+	<footer class="row footer extra-dark">
+		<div class="inner small">
+
+			<div class="column three">
+				<p><strong>VisaOK</strong><br>
+				г. Москва и Московская область<br>
+				visaok@gmail.com<br>
+				+7(916)230-71-16</p>
+		</p>
+			</div>
+
+			<div class="column three">
+				<p><strong>О нас</strong><br>
+				Мы стремимся максимально упростить жизнь наших клентов, предоставляя им возможность получить визу в США за минимально озможный срок, с первого раза!</p>
+			</div>
+
+			<div class="column three last">
+				<p>Copyright 2014 © Все права защищены VisaOK</p>
+
+				<a class="instagram" href=""><i class="icon-envelope"></i></a>
+				<a class="twitter" href=""><i class="fa fa-vk"></i></a>
+				<a class="facebook" href=""><i class="icon-facebook"></i></a>
+			</div>
+
+		</div>
+	</footer>				
+		
+
+	<script type="text/javascript">
+	
+	
+	$(document).ready(function(){
+	
+	$( "#new_order" ).submit(function( event ) {
+		if ( $( "#order_name" ).val() ) {
+				if ( $( "#order_phone" ).val()) {
+	  				$('#order_submit').val('Подождите...');
+	  				return;
+	  			}
+	  		$( "#phone_error" ).text("Укажите Ваш номер телефона");
+	  		return false;
+	  	}
+	  	$( "#name_error" ).text("Укажите Ваше имя");
+	  	return false;
+	});
+	
+	$( "#new_question" ).submit(function( event ) {
+		if ( $( "#question_name" ).val() ) {
+	  		if ( $( "#question_email" ).val() ) {
+	  			if ( $( "#question_question" ).val() ) {
+	  				$('#question_submit').val('Подождите...');
+	  				return;
+	  			}
+	  			$( "#question_question" ).attr("placeholder","Напишите Ваш вопрос");
+	  			return false;
+	  		}
+	  		$( "#question_email" ).attr("placeholder","Укажите Ваш e-mail");
+	  		return false;
+	  	}
+	  	$( "#question_name" ).attr("placeholder","Укажите Ваше имя");
+  		return false;
+	});
+
+		$('.nav').onePageNav();	
+		
+		var nav = responsiveNav("#nav", { // Selector
+		  animate: true, // Boolean: Use CSS3 transitions, true or false
+		  transition: 400, // Integer: Speed of the transition, in milliseconds
+		  label: "<i class='icon-reorder'>​</i>​", // String: Label for the navigation toggle
+		  insert: "after", // String: Insert the toggle before or after the navigation
+		  customToggle: "", // Selector: Specify the ID of a custom toggle
+		  openPos: "relative", // String: Position of the opened nav, relative or static
+		  jsClass: "js", // String: 'JS enabled' class which is added to <html> el
+		  init: function(){}, // Function: Init callback
+		  open: function(){}, // Function: Open callback
+		  close: function(){} // Function: Close callback
+		});
+
+	});
+	</script>

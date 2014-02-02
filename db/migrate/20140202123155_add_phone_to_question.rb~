@@ -1,0 +1,4 @@
+class AddPhoneToQuestion < ActiveRecord::Migration
+  def change
+  end
+end

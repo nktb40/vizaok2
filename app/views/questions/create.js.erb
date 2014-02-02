@@ -1,6 +1,8 @@
-$('#question_name').val("");
-$('#question_email').val("");
-$('#question_question').val("");
-alert("Ваш вопрос принят! Ответ вы получите по почте!");
-//$('.modal-content').html("<%= j(render :partial=> 'info/info') %>");
-//$('.modal-body').html("<h3>Ваш вопрос принят!</h3> <br> <h3>Ответ вы получите по почте!</h3>");
+$.magnificPopup.open({
+  items: {
+    src: '<div class="white-popup"><h3>Спасибо за вопрос!</h3><p>Скоро мы с Вами свяжемся!</p></div>', 
+    type: 'inline'
+  }
+});
+$('#question_submit').val('Отправить');
+$('.error').text('');

@@ -11,6 +11,6 @@ class QuestionsController < ApplicationController
   end
   
   def question_params 
-  		params.require(:question).permit(:name, :email, :question)  
+  		params.require(:question).permit(:name, :email, :phone, :question)  
   end 
 end

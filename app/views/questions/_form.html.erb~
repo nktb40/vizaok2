@@ -1,14 +1,13 @@
-<%= form_for(@question, :remote=>true, :html => {:class=>"questions_form"}) do |f| %>
-		 <div class="questions_cell first_child">
-	    		<%= f.text_field :name, :type=>"text", :placeholder=>"Ваше имя" %>  
-	    		<%= f.text_field :email, :type=>"email", :placeholder=>"Ваш email" %>
-	    </div>
-	    <div class="questions_cell">
-	    		<%= f.text_area :question, :type=>"text", :class=>"form-control", :cols=>"40", :rows=>"10", :placeholder=>"Ваш вопрос" %>
-	    </div>
-	    <div>
-	     		<button id="send_order" class="btn_grey" data-toggle="modal" data-target="#myModal" >Отправить</button>
-	    </div>
+<%= form_for(@question, :remote=>true) do |f| %>
+	<h3>Остались вопросы?</h3> </br>
+	<h3> Оставте заявку, и мы перезвоним Вам!</h3>	
+			<span id='q_name_error' class='error' style ='color: red;'></span>
+	    		<%= f.text_field :name, :type=>"text", :placeholder=>"Ваше имя..." %>  
+	    	<span id='q_email_error' class='error' style ='color: red;'></span>	
+	    		<%= f.text_field :email, :type=>"text", :placeholder=>"Ваш e-mail..." %>
+	    	
+	    		<%= f.text_field :phone, :type=>"text", :placeholder=>"Номер телефона..." %>
+			<span id='q_question_error' class='error' style ='color: red;'></span>	    		
+	    		<%= f.text_area :question, :type=>"text", :placeholder=>"Ваш вопрос..." %>
+	     		<%= f.submit :'Отправить', :id=>'question_submit', :style=>"text-align: center" %>
 <% end %>
-
-

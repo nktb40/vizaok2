@@ -1,1 +1,8 @@
-alert("<h3>Ваш вопрос принят!</h3> <br> <h3>Ответ Вы получите на почту!</h3>");
+$.magnificPopup.open({
+  items: {
+    src: '<div class="white-popup"><h3>Ваша заявка принята!</h3><p>Скоро мы с Вами свяжемся!</p></div>', 
+    type: 'inline'
+  }
+});
+$('#order_submit').val('Отправить');
+$('.error').val('');

@@ -3,6 +3,6 @@ class QuestionMailer < ActionMailer::Base
 	def send_question(question)
 		@question = question
 		email = "nktb40@gmail.com"
-		mail :to =>  email, :from => "CARDSHARP", :subject => "Вопрос от #{question.email}"
+		mail :to =>  email, :from => "VISAOK", :subject => "Вопрос от #{question.email}"
 	end
 end

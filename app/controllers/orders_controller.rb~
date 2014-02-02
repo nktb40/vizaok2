@@ -19,7 +19,7 @@ class OrdersController < ApplicationController
 		else
 			logger.info "error when saving"
 		end
-		@info = <h3>Ваш заказ принят!</h3> <br> <h3>В ближайщее время мы свяжемся с Вами!</h3>
+		
 	end
 	
 	def add_product 

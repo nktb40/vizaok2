@@ -2,11 +2,12 @@
 class OrderMailer < ActionMailer::Base
 	def send_order_delivery(order)
 		@order = order
-		mail :to =>  "nktb40@gmail.com", :from => "CARDSHARP", :subject => "Заказ на доставку №#{order.id}"
+		email = "nktb40@gmail.com"
+		mail :to =>  email, :from => "VISAOK", :subject => "Заявка visaOK №#{order.id}"
 	end
 	
 	def send_order_customer(order)
 		@order = order
-		mail :to =>  @order.email, :from => "CARDSHARP", :subject => "Заказ на доставку №#{order.id}"
+		mail :to =>  @order.email, :from => "VISAOK", :subject => "Заказ на доставку №#{order.id}"
 	end
 end

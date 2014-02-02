@@ -1,16 +1,24 @@
-<div class="modal-header">
-  	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-   <h3 class="modal-title" id="myModalLabel">Оформление заказа</h3>
-</div>
-<%= form_for(@order, :remote=>true, :html => {:class=>"reg_form"}) do |f| %>
-<div class="modal-body">
-		<%= f.text_field :name, :type=>"text", :class=>"form-control", :placeholder=>"Имя" %>	  
-	   <%= f.text_field :email, :type=>"email", :class=>"form-control", :placeholder=>"Email" %>
-	   <%= f.text_field :phone, :type=>"text", :class=>"form-control", :placeholder=>"Номер телефона"  %>
-	   <%= f.text_area :address, :type=>"text", :class=>"form-control", :placeholder=>"Адрес"  %>
-</div>
-<div class="modal-footer">
-     <div class="center"><button id="send_order" class="btn" >Отправить</button></div>
-</div>
+<%= form_for(@order, :remote=>true) do |f| %>
+<fieldset>
+		<legend>Оставьте заявку, и мы свяжемся с Вами!</legend>
+		<div class="form-group">
+			<%= f.label :'Ваше имя*' %>
+			<span id='name_error' class='error' style ='color: red;'></span>
+			<%= f.text_field :name, :type=>"text", :class=>"form-control", :placeholder=>"Введите Ваше имя" %>	
+		</div>
+		<div class="form-group">
+	   	<%= f.label :'Номер телефона*' %>
+	   	<span id='phone_error' class='error' style ='color: red;'></span>
+	   	<%= f.text_field :phone, :type=>"text", :class=>"form-control", :placeholder=>"Номер телефона"  %>
+	   </div>
+ 		<div class="form-group">
+ 			<%= f.label :'E-mail' %>
+ 			<span id='email_error' style ='color: red;'></span>
+	   	<%= f.text_field :email, :type=>"text", :class=>"form-control", :placeholder=>"Email" %>
+	   </div>
+	   <div class="form-group last">
+     		<%= f.submit :'Отправить', :class=>"btn", :id=>"order_submit" %>
+		</div>
+</fieldset>
 <% end %>
 
