@@ -11,30 +11,11 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: visaok_development
+  database: vizaok_development
   pool: 5
   host: localhost
-  username: visaok
+  username: vizaok
   password: password
 
 
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
-test:
-  adapter: postgresql
-  encoding: unicode
-  database: visaok_test
-  pool: 5
-  host: localhost
-  username: visaok
-  password: c72858nik472
 
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: visaok_production
-  pool: 5
-  host: localhost
-  username: visaok
-  password: C72858nik472

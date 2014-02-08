@@ -4,7 +4,9 @@
 		<div class="inner small">
 
 			<div class="logo">
-				<a href=""><i class="fa fa-location-arrow"></i>VisaOK</a>
+				<a href=""><i class="fa fa-location-arrow"></i>VizaOK
+				<p>оформление виз в США и Европу</p>
+				</a>
 			</div>
 
 			<nav id="nav" class="closed" style="-webkit-transition: max-height 400ms; position: relative;" aria-hidden="false">
@@ -142,12 +144,12 @@
 				<h3>Теодор Рузвельт</h3>
 				<p>26-й президент США</p>
 
-				<p>Все понравилось, оформление заняло небольшое время и минимум документов. Спасибо огромное, успел открыть континент!</p>			
+				<p>Все понравилось, оформление заняло небольшое время и минимум документов. Спасибо огромное!</p>			
 			</div>
 
 
 			<div class="column four last">
-				<%= image_tag ("team4.jpg") %>
+				<%= image_tag ("team4.png") %>
 
 				<h3>Авраам Линкольн</h3>
 				<p>16-й президент США</p>
@@ -171,9 +173,9 @@
 		<div class="inner small">
 
 			<div class="column three">
-				<p><strong>VisaOK</strong><br>
+				<p><strong>VizaOK</strong><br>
 				г. Москва и Московская область<br>
-				visaok@gmail.com<br>
+				vizaok@gmail.com<br>
 				+7(916)230-71-16</p>
 		</p>
 			</div>
@@ -184,7 +186,7 @@
 			</div>
 
 			<div class="column three last">
-				<p>Copyright 2014 © Все права защищены VisaOK</p>
+				<p>Copyright 2014 © Все права защищены VizaOK</p>
 
 				<a class="instagram" href=""><i class="icon-envelope"></i></a>
 				<a class="twitter" href=""><i class="fa fa-vk"></i></a>
@@ -247,3 +249,31 @@
 
 	});
 	</script>
+	
+	<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter23900710 = new Ya.Metrika({id:23900710,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/23900710" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
