@@ -2,7 +2,7 @@ require "bundler/capistrano"
 
 server "162.218.234.110", :web, :app, :db, primary: true
 
-set :application, "visaok"
+set :application, "vizaok"
 set :user, "deployer"
 set :deploy_to, "/home/#{user}/apps/#{application}"
 set :deploy_via, :remote_cache
