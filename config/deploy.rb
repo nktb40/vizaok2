@@ -1,6 +1,6 @@
 require "bundler/capistrano"
 
-server "162.218.236.44", :web, :app, :db, primary: true
+server "162.218.234.110", :web, :app, :db, primary: true
 
 set :application, "visaok"
 set :user, "deployer"
