@@ -14,10 +14,11 @@ GShockShop::Application.routes.draw do
    	end
    	
    end 
+   resources :products , only: [:d917148ce012]
    resources :questions , only: [:create]
 
   # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+    get 'd917148ce012' => 'products#d917148ce012'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

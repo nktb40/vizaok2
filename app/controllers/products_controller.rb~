@@ -2,5 +2,9 @@ class ProductsController < ApplicationController
 	include OrdersHelper
 	def index
 		@order = Order.new
+		@question = Question.new
+	end
+	
+	def yandex
 	end
 end
