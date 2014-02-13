@@ -2,14 +2,14 @@ require "bundler/capistrano"
 
 server "162.218.234.110", :web, :app, :db, primary: true
 
-set :application, "vizaok"
+set :application, "visaok"
 set :user, "deployer"
 set :deploy_to, "/home/#{user}/apps/#{application}"
 set :deploy_via, :remote_cache
-set :use_sudo, false
+set :use_sudo, true
 
 set :scm, "git"
-set :repository, "git@github.com:nktb40/#{application}.git"
+set :repository, "git@github.com:nktb40/vizaok.git"
 set :branch, "master"
 
 default_run_options[:shell] = '/bin/bash --login' 
@@ -27,8 +27,8 @@ namespace :deploy do
   end
 
   task :setup_config, roles: :app do
-    "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
-    "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
+    sudo "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
+    sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
     run "mkdir -p #{shared_path}/config"
     put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
     puts "Now edit the config files in #{shared_path}."
