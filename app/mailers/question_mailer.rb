@@ -1,8 +1,7 @@
 # encoding: utf-8
 class QuestionMailer < ActionMailer::Base
-	def send_question(question)
+	def send_question(question, email)
 		@question = question
-		email = "nktb40@gmail.com"
-		mail :to =>  email, :from => "VISAOK", :subject => "Вопрос от #{question.email}"
+		mail :to =>  email, :from => "vizaOK", :subject => "Вопрос от #{question.email}"
 	end
 end

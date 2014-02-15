@@ -14,7 +14,8 @@ class OrdersController < ApplicationController
 		@order = Order.new(order_params)
 		if(@order.save)
 			#OrderMailer.send_order_customer(@order).deliver
-			OrderMailer.send_order_delivery(@order).deliver
+			OrderMailer.send_order_delivery(@order,"help@vizaok.ru").deliver
+			OrderMailer.send_order_delivery(@order,"nktb40@gmail.com").deliver
 			logger.info "saving success"
 		else
 			logger.info "error when saving"

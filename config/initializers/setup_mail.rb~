@@ -1,10 +1,8 @@
 ActionMailer::Base.delivery_method = :smtp
 ActionMailer::Base.smtp_settings = {
-	  :address        => 'smtp.gmail.com',
-	  :port           => 587,
-	  :domain         => 'nktb40@gmail.com',
-	  :user_name      => 'nktb40',
-	  :password       => 'c72858nik472',
-	  :authentication => 'plain',
-     :enable_starttls_auto => true
+	  :address        => 'smtp.yandex.ru',
+	  :port           => 25,
+	  :domain         => 'vizaok.ru',
+	  :user_name      => 'help',
+	  :password       => '#YqMff95As'
 }

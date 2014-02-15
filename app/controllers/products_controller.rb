@@ -4,7 +4,4 @@ class ProductsController < ApplicationController
 		@order = Order.new
 		@question = Question.new
 	end
-	
-	def d917148ce012
-	end
 end
