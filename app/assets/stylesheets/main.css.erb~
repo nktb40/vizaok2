@@ -3681,7 +3681,7 @@ header .inner nav ul li a:hover {
 	width: 60%;
 }
 .intro .cage .text {
-	padding-left: 20px;
+	padding-left: 0px;
 }
 .intro .cage .text, .intro .cage .image {
   display: table-cell;

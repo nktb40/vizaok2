@@ -17,6 +17,13 @@
 	padding: 0 30px;
 }
 
+.viza_item .row .inner .column, h2{
+  color: #5eb36f;
+  font-weight: 400;
+  font-family: "Arimo", sans-serif;	
+}
+
+
 .item_1{
 	background-color: #2e8b57;	
 }
