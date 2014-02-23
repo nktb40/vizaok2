@@ -59,7 +59,7 @@
 				<i class="fa fa-money"></i>
 
 				<h3>Дешево</h3>
-				<p>Стоимость наших услуг всего <b>2900 рублей</b>.  Оплата производится после получения визы </p>
+				<p>Стоимость наших услуг фиксирована: <b>3500 рублей</b> за все типы виз.  Оплата производится после получения визы </p>
 				</div>	
 			
 			<div class="column three last">
@@ -72,45 +72,101 @@
 			
 	</section>
 	
-	<section id="about" class="row about">
-		<div class="inner small">
-
-			<div class="column two-three">
-				<h2>Список необходимых документов:</h2>
-				<p><i class="icon-check"></i>
-					Копия заграничного паспорта – все страницы (4 разворота паспорта на листе формата А4 с двух сторон) 
-				</p>
-				<p><i class="icon-check"></i>
-				   Копия гражданского паспорта - первые две страницы
- 				</p>
-				<p><i class="icon-check"></i>
-                   -Фотография 5 х 5 цветная на белом фоне, 80% лица 
- 				</p>
-				<p><i class="icon-check"></i>
-				Справка с места работы с указанием должности и оклада:</br>
-                         <span style="margin-left: 25px;">- для студентов (копия студенческого билета);</span></br>
-                         <span style="margin-left: 25px;">- для пенсионеров (копия пенсионного удостоверения);</span></br>
-                         <span style="margin-left: 25px;">- для безработных и детей (спонсорское письмо);</span> </br>
-				</p>
-				<p><i class="icon-check"></i>
-                  Выписка из банковского счёта из расчёта 150 000 руб. на человека; 
-            </p>
-				<p><i class="icon-check"></i>
-                   Копия документов о наличии движимого и недвижимого имущества;
-            </p>
-
-				<h3>
-					Если у вас возникли трудности с оформлением документов свяжитесь с нами:
-					<span style="color: #3B3131;">+7(916)230-71-16</span>
-				</h3> 
+	<section id="visa_types" class="row colored viza_types">
+		<div class="inner title">
+			<div class="column one">
+				<h1>Визы</h1>
+				<p>Для въезда в США могут быть использованы различные виды виз. Информацию о каждой из них Вы можете найти ниже. 
+				Свяжитесь с нами, и мы поможем выбрать подходящий для Вас вариант.</p>
 			</div>
-
-			<div class="column one-three last">
-				<%= image_tag ("tablet.png") %>
-			</div>
-
 		</div>
-	</section>	
+		<div class="row viza_item item_1">
+			<div data-collapse>
+				<h1><i class="icon-caret-right"></i> Туристические визы</h1>
+				<div class="row about">
+				<div class="inner small">
+
+						<div class="column two-three">
+							<h2>Список необходимых документов:</h2>
+							<p><i class="icon-check"></i>
+								Копия заграничного паспорта – все страницы (4 разворота паспорта на листе формата А4 с двух сторон) 
+							</p>
+							<p><i class="icon-check"></i>
+							   Копия гражданского паспорта - первые две страницы
+			 				</p>
+							<p><i class="icon-check"></i>
+			                   -Фотография 5 х 5 цветная на белом фоне, 80% лица 
+			 				</p>
+							<p><i class="icon-check"></i>
+							Справка с места работы с указанием должности и оклада:</br>
+			                         <span style="margin-left: 25px;">- для студентов (копия студенческого билета);</span></br>
+			                         <span style="margin-left: 25px;">- для пенсионеров (копия пенсионного удостоверения);</span></br>
+			                         <span style="margin-left: 25px;">- для безработных и детей (спонсорское письмо);</span> </br>
+							</p>
+							<p><i class="icon-check"></i>
+			                  Выписка из банковского счёта из расчёта 150 000 руб. на человека; 
+			            </p>
+							<p><i class="icon-check"></i>
+			                   Копия документов о наличии движимого и недвижимого имущества;
+			            </p>
+			
+							<h3>
+								Если у вас возникли трудности с оформлением документов свяжитесь с нами:
+								<span style="color: #3B3131;">+7(916)230-71-16</span>
+							</h3> 
+						</div>
+			
+						<div class="column one-three last">
+							<%= image_tag ("tablet.png") %>
+						</div>
+			
+					</div>
+				</div>		
+			</div>
+		</div>
+		<div class="row viza_item item_2">
+			<div data-collapse>
+				<h1 class="inner"><i class="icon-caret-right"></i> Студенческие визы</h1>	
+				<div class="inner row about">
+
+						<div class="column two-three">
+							<h2>Список необходимых документов:</h2>
+							<p><i class="icon-check"></i>
+								Копия заграничного паспорта – все страницы (4 разворота паспорта на листе формата А4 с двух сторон) 
+							</p>
+							<p><i class="icon-check"></i>
+							   Копия гражданского паспорта - первые две страницы
+			 				</p>
+							<p><i class="icon-check"></i>
+			                   -Фотография 5 х 5 цветная на белом фоне, 80% лица 
+			 				</p>
+							<p><i class="icon-check"></i>
+							Справка с места работы с указанием должности и оклада:</br>
+			                         <span style="margin-left: 25px;">- для студентов (копия студенческого билета);</span></br>
+			                         <span style="margin-left: 25px;">- для пенсионеров (копия пенсионного удостоверения);</span></br>
+			                         <span style="margin-left: 25px;">- для безработных и детей (спонсорское письмо);</span> </br>
+							</p>
+							<p><i class="icon-check"></i>
+			                  Выписка из банковского счёта из расчёта 150 000 руб. на человека; 
+			            </p>
+							<p><i class="icon-check"></i>
+			                   Копия документов о наличии движимого и недвижимого имущества;
+			            </p>
+			
+							<h3>
+								Если у вас возникли трудности с оформлением документов свяжитесь с нами:
+								<span style="color: #3B3131;">+7(916)230-71-16</span>
+							</h3> 
+						</div>
+			
+						<div class="column one-three last">
+							<%= image_tag ("tablet.png") %>
+						</div>
+			
+					</div>	
+			</div>		
+		</div>
+	</section>
 
 	<section id="team" class="row team colored">
 		<div class="inner small">
@@ -199,7 +255,7 @@
 	
 	$(document).ready(function(){
 	
-	$(".intro").backstretch("<%= image_path 'header.jpg' %>");
+	$(".intro").backstretch("<%= asset_path 'header.jpg' %>");
 	
 	$( "#new_order" ).submit(function( event ) {
 		if ( $( "#order_name" ).val() ) {
