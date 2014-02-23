@@ -30,6 +30,10 @@
 	background-color: #5eb36f;
 }
 
+.title .column p{
+	color: white;
+}
+
 .viza_types .inner .column, h1, h1 a, h2, h3{
   color: white;
   font-weight: 400;
@@ -44,6 +48,6 @@
   font-size: 28px;
 }
 
-.viza_types .inner .column, h3, p
+.viza_types .inner .column, h3, p{
   font-size: 20px;
 }
