@@ -12,8 +12,8 @@
 			<nav id="nav" class="closed" style="-webkit-transition: max-height 400ms; position: relative;" aria-hidden="false">
 				<ul class="nav">
 					<li class="current"><a href="#home">Заявка</a></li>
-					<li class=""><a href="#about">Туристические</a></li>
-					<li class=""><a href="#about">Студенческие</a></li>
+					<li class=""><a href="#traveling" onClick="collapse1.open(0);">Туристические</a></li>
+					<li class=""><a href="#students" onClick="collapse2.open(0);">Студенческие</a></li>
 					<li class=""><a href="#team">Отзывы</a></li>
 					<li class=""><a href="#contact">Контакты</a></li>
 				</ul>
@@ -50,87 +50,97 @@
 	<section class="row service">
 		<div class="inner small">
 
-			<div class="column three">
-				<i class="fa fa-clock-o fa-4"></i>
-
-				<h3>Быстро</h3> 
-				<p>Мы поможем Вам подготовить все необходимые документы в максимально короткие сроки. Срок получения виды составляет от 5 до 7 дней</p></div>
-
-			<div class="column three">
-				<i class="fa fa-money"></i>
-
-				<h3>Дешево</h3>
-				<p>Стоимость наших услуг фиксирована: <b>3500 рублей</b> за все типы виз.  Оплата производится после получения визы </p>
-				</div>	
-			
-			<div class="column three last">
-				<i class="fa fa-desktop"></i>
-
-				<h3>Удаленно</h3>
-				<p>Оформление без личного присутствия в консульстве. Работаем с регионами </p>
-			</div>		
-			</div>
-			
+			<div class="column one">
+				<h1>
+				<i class="icon-money"></i>
+				<span style="vertical-align:40%">Стоимость наших услуг</span></h1>
+				<p>Мы поможем Вам подготовить все необходимые документы в максимально короткие сроки. Срок получения виды составляет от 5 до 7 дней</p></div>		
 	</section>
 	
 	<section id="visa_types" class="row colored viza_types">
 		<div class="inner title">
 			<div class="column one">
-				<h1>Визы</h1>
+				<h1>
+				<i class="icon-copy"></i>
+				<span style="vertical-align:40%">Виды и категории виз</span></h1>
 				<p>Для въезда в США могут быть использованы различные виды виз. Информацию о каждой из них Вы можете найти ниже. 
 				Свяжитесь с нами, и мы поможем выбрать подходящий для Вас вариант.</p>
 			</div>
 		</div>
 		<div class="row viza_item item_1">
-			<div data-collapse>
-				<h1><i class="icon-caret-right"></i> Туристические визы</h1>
+			<div id="traveling">
+				<h1><i class="icon-suitcase"></i> Туристические визы(B1, B2)</h1>
 				<div class="row about">
 					<div class="inner small">
-						<div class="column two-three">
-							<h2>Список необходимых документов:</h2>
-							<p><i class="icon-check"></i>
-								Копия заграничного паспорта – все страницы (4 разворота паспорта на листе формата А4 с двух сторон) 
+						<div class="column one">
+							<h2>Виды туристических виз:</h2>
+							<p>
+								<b>1. Деловая визы (B1 Visa -Visitor for Business)</b> предназначеныа для тех, кто намерен поехать в США с деловым визитом. 
+								Обычно это поездки с целью заключение сделок с американскими компаниями или посещение торговой выставки. 
+								Обращающиеся за деловыми визами должны доказать, что планируемая поездка действительно является легальной деловой поездкой. 
+								Их могут попросить представить информацию о месте работы, их компании и ее связях в США.
 							</p>
-							<p><i class="icon-check"></i>
-							   Копия гражданского паспорта - первые две страницы
+							<p>
+								<b>2. Туристическая виза (B2 Visa - Visitor for Pleasure)</b> предназначена для тех, кто намерен поехать в США для развлечения. 
+								Поездка, в ходе которой планируется посетить друзей или родных в США, попадает в эту категорию. 
+								Обращающиеся за туристическими визами должны объяснить цель своей поездки, наличие достаточных средств для поездки и намерение затем вернуться домой.
+							</p>
+							<h2>Время получения визы</h2>
+							<p>
+								 Время от сдачи нам всех документов до собеседования в посольстве США составляет от одной до трех недель, в зависимости от сезона, летом больше времени, зимой меньше.
+								 После собеседования максимум через три дня получаете свой паспорт(лично или курьером) с туристической визой в США.
+							</p>
+							<h2>Стоимость туристической визы</h2>
+							<p><b>$160</b> - консульский сбор (оплачивается обязательно)
+							<br><b>&emsp; +</b>
+							<br><b>$100</b> - наши услуги (оплачивается только в случае успешного получения визы)</p>
+							<p><b>Итого: $260</b></p>
+						</div>
+						<div class="column one">
+							<h2>Список необходимых документов:</h2>
+							<p>
+								<b>1. Копия заграничного паспорта</b> – все страницы (4 разворота паспорта на листе формата А4 с двух сторон).
+								Паспорт должен быть со сроком действия не менее 6 месяцев с даты предполагаемого въезда в США;
+							</p>
+							<p>
+							   <b>2. Копия гражданского паспорта</b> - первые две страницы;
 			 				</p>
-							<p><i class="icon-check"></i>
-			                   -Фотография 5 х 5 цветная на белом фоне, 80% лица 
+							<p> 
+			               <b>3. Фотография 5 х 5</b> цветная на белом фоне, 80% лица;
 			 				</p>
-							<p><i class="icon-check"></i>
-							Справка с места работы с указанием должности и оклада:</br>
+							<p>
+								<b>4. Справка с места работы</b> с указанием должности и оклада:</br>
 			                         <span style="margin-left: 25px;">- для студентов (копия студенческого билета);</span></br>
 			                         <span style="margin-left: 25px;">- для пенсионеров (копия пенсионного удостоверения);</span></br>
 			                         <span style="margin-left: 25px;">- для безработных и детей (спонсорское письмо);</span> </br>
 							</p>
-							<p><i class="icon-check"></i>
-			                  Выписка из банковского счёта из расчёта 150 000 руб. на человека; 
+							<p>
+			               <b>5. Выписка из банковского счёта </b> из расчёта 150 000 руб. на человека; 
 			            </p>
-							<p><i class="icon-check"></i>
-			                   Копия документов о наличии движимого и недвижимого имущества;
+							<p>
+			               <b>6. Копия документов о наличии движимого и недвижимого имущества;</b>
 			            </p>
-			
-							<h3>
-								Если у вас возникли трудности с оформлением документов свяжитесь с нами:
-								<span style="color: #3B3131;">+7(916)230-71-16</span>
-							</h3> 
+			             <p>
+			                <b>7. Сведения о семье</b> - копии свидетельства о браке, о рождении детей;
+			            </p>
+							
 						</div>
 			
-						<div class="column one-three last">
+						<!-- div class="column one-three last">
 							<%= image_tag ("tablet.png") %>
-						</div>
+						</div -->
 			
 					</div>
 				</div>		
 			</div>
 		</div>
 		<div class="row viza_item item_2">
-			<div data-collapse>
-				<h1 class="inner"><i class="icon-caret-right"></i> Студенческие визы (F,M)</h1>	
+			<div id="students">
+				<h1 class="inner"><i class="icon-book"></i> Студенческие визы (F,M)</h1>	
 				<div class="row about">
 					<div class="inner small">
 							<div class="column one">
-							<h2>Типы виз:</h2>
+							<h2>Виды студенческих виз:</h2>
 							<p><b>1. Виза категории F</b> - предназначена для студентов, которые были зачислены в колледж или университет США, 
 								частную общеобразовательную школу, или же направляющиеся для изучения английского языка в рамках соответствующих программ.
 							</p>
@@ -143,20 +153,24 @@
 								но также планируете пройти обучение по сокращенной программе (менее 18 часов в неделю), 
 								Вы можете ехать по туристической визе В2.
 							</p>
-							<h2>Сколько стоит?</h2>
-						   <p>$160 (консульский сбор) + $200 (оплата SEVIS - обязательная для всех студентов) + $100 (наши услуги)</p>
-						   <p>Итого: 460$</p>
+							<h2>Сколько стоит студенческая виза?</h2>
+						   <p><b>$160</b> - консульский сбор 
+						   	<br><b>&emsp; +</b> 
+						   	<br><b>$200</b> - оплата SEVIS (обязательно для всех студентов)
+						   	<br><b>&emsp; +</b> 
+						   	<br><b>$100</b> - наши услуги (оплачиваются только в случае успешного получения визы)</p>
+						   	<p><b>Итого: $460</b></p>
 						   <p>Примечание: Консульский сбор и оплату SEVIS вы можете совершить самостоятельно <%= link_to "здесь", "https://www.fmjfee.com/i901fee/index.jsp" %> или через нас.</p>
 							<div data-collapse>							
 								<h3 style="color: #aaa">Что такое SEVIS?</h3>
-								<p style="background-color: #ccc">SEVIS (Student and Exchange Visitor Information System) – это специально разработанная информационная система, общая база данных, используемая правительством Соединенных Штатов для контроля за студентами и участниками обменных программ, въезжающих на территорию США по визе J (Work and Travel) или F, M (Students). 
+								<p style="padding: 10px; background-color: #ccc">SEVIS (Student and Exchange Visitor Information System) – это специально разработанная информационная система, общая база данных, используемая правительством Соединенных Штатов для контроля за студентами и участниками обменных программ, въезжающих на территорию США по визе J (Work and Travel) или F, M (Students). 
 									Для регистрации в системе необходимо оплатить обязательный сбор SEVIS Fee, который составляет 200$. 
 									Это необходимо сделать до подачи заявления на студенческую визу или визу по программе Work and Travel.
 								</p>
 							</div>
 							</div>
-							<div class="column two-three">
-							<h2>Список необходимых документов:</h2>
+							<div class="column one">
+							<h2>Список необходимых документов для оформления студенческой визы:</h2>
 							<p>
 								<b>2. Копия заграничного паспорта</b> – все страницы (4 разворота паспорта на листе формата А4 с двух сторон) 
 							</p>
@@ -189,17 +203,70 @@
 			            </p>
 						</div>
 			
-						<div class="column one-three last">
+						<!--div class="column one-three last">
 							<%= image_tag ("tablet.png") %>
-						</div>
+						</div -->
 			
 					</div>
 				</div>		
-			</div>		
+			</div>	
 		</div>
+		<div class="row viza_item item_2">
+			<div id="working">
+				<h1><i class="icon-desktop"></i> Рабочие визы (H, L, O, P, Q, R)</h1>
+				<div class="row about">
+					<div class="inner small">
+						<div class="column one">
+						<h2>Когда используется виза</h2>
+							<p><b>Рабочие визы (H, L, O, P, Q, R Visas)</b> выдаются при оформлении разрешения на временную работу. 
+							</p>
+						<h2>Как получить</h2>
+						<p>
+							Разрешения на временную работу выдаются на основе петиций, поданных в Службу U.S. Citizenship and Immigration Services (USCIS) в США потенциальным работодателем. 
+							Обращающиеся за разрешением на временную работу должны попросить своего будущего работодателя в США связаться с ближайшим региональным офисом INS для подачи петиции. 
+							Визовое собеседование в Консульстве будет назначено только после того, как INS одобрит такую петицию.
+						</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row viza_item item_2">
+			<div id="wedding">
+				<h1><i class="icon-heart-empty"></i>Визы Женихов и Невест (K1)</h1>
+				<div class="row about">
+					<div class="inner small">
+						<div class="column one">
+						<h2>Когда используется виза</h2>
+							<p><b>Визы Женихов и Невест (K1 Visa - Fiance/Fiancee of a U.S. Citizen)</b> предназначены для тех, кто собирается ехать в США, чтобы вступить в брак с американским гражданином/гражданкой и затем поселиться там постоянно.
+							</p>
+						<h2>Как получить</h2>
+							<p>Визы для женихов и невест, как и все остальные категории иммиграционных виз, не выдаются в Консульствах по регионам России. 
+							Жители России должны обращаться за такими визами в Посольство в Москве. 
+							Эти визы выдаются на основе петиций, поданных в Службу Иммиграции и Натурализации в США потенциальными американскими супругами. 
+							Обращающиеся за визами для женихов и невест должны попросить своих будущих супругов в США связаться с ближайшим региональным офисом INS для подачи петиции. 
+							Визовое собеседование в Консульстве будет назначено только после того, как INS одобрит такую петицию.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" style="background-color: #2e8b57;">
+		<div class="column one">
+		<h1 style="text-align: left">
+			<i class="icon-phone"></i>
+			<span style="vertical-align:40%; font-size: 40px;">
+			<b>+7(916)230-71-16</b>
+			</span>
+			<br>Если у вас возникли трудности со сбором или оформлением документов
+			свяжитесь с нами
+		</h1> 
+		</div>
+		</div>	
 	</section>
 
-	<section id="team" class="row team colored">
+	<section id="team" class="row team">
 		<div class="inner small">
 
 			<div class="column four">
@@ -245,7 +312,7 @@
 
 	
 
-	<section class="row contact extra" id="contact">
+	<section class="row contact extra">
 		<div class="inner small">
 
 			<%= render :partial=>'questions/form' %>											
@@ -254,7 +321,7 @@
 	</section>		
 
 	<footer class="row footer extra-dark">
-		<div class="inner small">
+		<div id="contact" class="inner small">
 
 			<div class="column three">
 				<p><strong>VizaOK</strong><br>
@@ -271,16 +338,48 @@
 
 			<div class="column three last">
 				<p>Copyright 2014 © Все права защищены VizaOK</p>
-
-				<a class="instagram" href=""><i class="icon-google-plus"></i></a>
-				<a class="twitter" href="http://vk.com/groups/vizaok"><i class="fa fa-vk"></i></a>
+				<a class="twitter" href="http://vk.com/vizaok"><i class="fa fa-vk"></i></a>
 				<a class="facebook" href=""><i class="icon-facebook"></i></a>
 			</div>
 
 		</div>
 	</footer>				
 		
-
+  <script>
+  		
+        var collapse1 = new jQueryCollapse($("#traveling"), {
+          open: function() {
+            this.slideDown(150);
+          },
+          close: function() {
+            this.slideUp(150);
+          }
+        });
+        var collapse2 = new jQueryCollapse($("#students"), {
+          open: function() {
+            this.slideDown(150);
+          },
+          close: function() {
+            this.slideUp(150);
+          }
+        });
+        var collapse3 = new jQueryCollapse($("#working"), {
+          open: function() {
+            this.slideDown(150);
+          },
+          close: function() {
+            this.slideUp(150);
+          }
+        });
+        var collapse3 = new jQueryCollapse($("#wedding"), {
+          open: function() {
+            this.slideDown(150);
+          },
+          close: function() {
+            this.slideUp(150);
+          }
+        });
+   </script>
 	<script type="text/javascript">
 	
 	
@@ -365,3 +464,16 @@
 </script>
 <noscript><div><img src="//mc.yandex.ru/watch/23900710" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+
+<!-- GoogleAnalytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48380429-1', 'vizaok.ru');
+  ga('send', 'pageview');
+
+</script>
+<!-- GoogleAnalytics -->
