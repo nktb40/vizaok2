@@ -215,16 +215,3 @@ margin-top: 20px;
 	font-size: 18px;
   font-family: "Arimo", sans-serif;
 }
-
-.load {
-  position: relative;
-  background: none;
-  width: auto;
-  max-width: 50px;
-  margin: 20px auto;
-}
-
-.load img{
-height: 40px;
-width: 40px;	
-	}
