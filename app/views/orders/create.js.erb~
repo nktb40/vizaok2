@@ -6,4 +6,6 @@ $.magnificPopup.open({
 });
 $('#order_submit').val('Отправить');
 $('.error').text('');
-$('input:text').val('');
+$('input:text, textarea').val('');
+$('#order_submit').attr("disabled", false);
+$('#question_submit').css('background-image', 'none');	

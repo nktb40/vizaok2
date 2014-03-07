@@ -258,7 +258,7 @@
 						   	<br><b>&emsp; +</b> 
 						   	<br><b>$100</b> - наши услуги (оплачиваются только в случае успешного получения визы)</p>
 						   	<p><b>Итого: $460</b></p>
-						   <p>* оплату консульского сбора Вы можете совершить самостоятельно по адресу <%= link_to "https://payusvisafee.rsb.ru", "https://payusvisafee.rsb.ru" %> или мы можем сделать это за Вас.</p>
+						   <p>* оплату консульского сбора Вы можете совершить самостоятельно по адресу <%= link_to "https://payusvisafee.rsb.ru", "https://payusvisafee.rsb.ru",:target => 'blank' %> или мы можем сделать это за Вас.</p>
 							<div data-collapse>						
 								<h3 style="color: #aaa">** Что такое SEVIS? >></h3>
 								<p style="padding: 10px; background-color: #ccc">SEVIS (Student and Exchange Visitor Information System) – это специально разработанная информационная система, общая база данных, используемая правительством Соединенных Штатов для контроля за студентами и участниками обменных программ, въезжающих на территорию США по визе J (Work and Travel) или F, M (Students). 
@@ -495,7 +495,10 @@
 		if ( $( "#order_name" ).val() ) {
 				if ( $( "#order_phone" ).val()) {
 					if ( $( "#order_email" ).val()) {
-	  					$('#order_submit').val('Подождите...');
+					   $('#order_submit').attr("disabled", true);
+					   $('#order_submit').css('background-image', 'url(<%=asset_url("load_o.gif") %>)');
+					   $('#order_submit').fadeIn();	
+	  					$('#order_submit').val('Подождите');
 	  					return;
 	  				}
 	  				$( "#email_error" ).text("Укажите Ваш e-mail");
@@ -512,7 +515,10 @@
 		if ( $( "#question_name" ).val() ) {
 	  		if ( $( "#question_email" ).val() ) {
 	  			if ( $( "#question_question" ).val() ) {
-	  				$('#question_submit').val('Подождите...');
+	  			   $('#question_submit').attr("disabled", true);
+	  				$('#question_submit').css('background-image', 'url(<%=asset_url("load_q.gif") %>)');
+					$('#question_submit').fadeIn();	
+					$('#question_submit').val('Подождите...');  				
 	  				return;
 	  			}
 	  			$( "#question_question" ).attr("placeholder","Напишите Ваш вопрос");
