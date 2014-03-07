@@ -175,7 +175,7 @@
 							<br><b>&emsp; +</b>
 							<br><b>$100</b> - наши услуги (оплачивается только в случае успешного получения визы)</p>
 							<p><b>Итого: $260</b></p></br>
-							<p>* консульский сбор можно оплатить самостоятельно по адресу <%= link_to "https://payusvisafee.rsb.ru", "https://payusvisafee.rsb.ru" %> или мы можем сделать это за Вас.</p>
+							<p>* консульский сбор можно оплатить самостоятельно по адресу <%= link_to "https://payusvisafee.rsb.ru", "https://payusvisafee.rsb.ru", :target => 'blank' %> или мы можем сделать это за Вас.</p>
 						</div>
 						
 						<div class="column one">
@@ -266,7 +266,7 @@
 									Это необходимо сделать до подачи заявления на студенческую визу или визу по программе Work and Travel.
 								</p>
 							</div>
-							<p>*** оплату SEVIS вы можете совершить самостоятельно по адресу <%= link_to "https://www.fmjfee.com/i901fee/index.jsp", "https://www.fmjfee.com/i901fee/index.jsp" %> или через нас.</p>
+							<p>*** оплату SEVIS вы можете совершить самостоятельно по адресу <%= link_to "https://www.fmjfee.com/i901fee/index.jsp", "https://www.fmjfee.com/i901fee/index.jsp", :target => 'blank' %> или через нас.</p>
 						   
 							</div>
 							<div class="column one">
@@ -499,6 +499,7 @@
 	  					return;
 	  				}
 	  				$( "#email_error" ).text("Укажите Ваш e-mail");
+	  				return false;
 	  			}
 	  		$( "#phone_error" ).text("Укажите Ваш номер телефона");
 	  		return false;
