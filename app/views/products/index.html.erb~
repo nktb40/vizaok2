@@ -218,7 +218,7 @@
 						   с остальными документами в посольство США.
 						   </p>	
 							<p> Анкету на русском языке можно скачать по ссылке:
-							<%= link_to "Анкета DS-160.", "https://docs.google.com/feeds/download/documents/Export?exportFormat=docx&id=16lW7nWSw69tvXyfz9zbvnh6o0wNyip9v25hpF1RCmLM" %>
+							<%= link_to "Анкета DS-160(туристическая/деловая)", "https://docs.google.com/feeds/download/documents/Export?exportFormat=docx&id=16lW7nWSw69tvXyfz9zbvnh6o0wNyip9v25hpF1RCmLM" %>
 							</p>					
 						</div>
 			
@@ -272,35 +272,46 @@
 							<div class="column one">
 							<h2>Список необходимых документов для оформления студенческой визы:</h2>
 							<p>
-								<b>2. Копия заграничного паспорта</b> – все страницы (4 разворота паспорта на листе формата А4 с двух сторон) 
+								<b>1. Копия заграничного паспорта</b> – все страницы (4 разворота паспорта на листе формата А4 с двух сторон) 
 							</p>
 							<p>
-							   <b>3. Копия гражданского паспорта</b> - первые две страницы
+							   <b>2. Копия гражданского паспорта</b> - первые две страницы
 			 				</p>
 							<p>
-			               <b>4. Фотография</b> 5 х 5 цветная на белом фоне, 80% лица 
+			               <b>3. Фотография</b> 5 х 5 цветная на белом фоне, 80% лица 
 			 				</p>
 							<p>
-								<b>5. Справка с места работы</b> с указанием должности и оклада:</br>
+								<b>4. Справка с места работы</b> с указанием должности и оклада:</br>
 			                         <span style="margin-left: 25px;">- для студентов (копия студенческого билета);</span></br>
 			                         <span style="margin-left: 25px;">- для пенсионеров (копия пенсионного удостоверения);</span></br>
 			                         <span style="margin-left: 25px;">- для безработных и детей (спонсорское письмо);</span> </br>
 							</p>
 							<p>
-			                <b>6. Копия I-20;</b> 
+			                <b>5. Копия I-20;</b> 
 			            </p>
 			            <p>
-			                <b>7. Копия SevisFee;</b> 
+			                <b>6. Копия SevisFee;</b> 
 			            </p>
 							<p>
-			                <b>8. Выписка из банковского счёта</b> из расчёта 150 000 руб. на человека; 
+			                <b>7. Выписка из банковского счёта</b> из расчёта 150 000 руб. на человека; 
 			            </p>
 							<p>
-			                <b>9. Копия документов о наличии движимого и недвижимого имущества;</b>
+			                <b>8. Копия документов о наличии движимого и недвижимого имущества;</b>
 			            </p>
 			            <p>
-			                <b>10. Сведения о семье</b> - копии свидетельства о браке, о рождении детей;
+			                <b>9. Сведения о семье</b> - копии свидетельства о браке, о рождении детей;
 			            </p>
+						</div>
+						<div class="column one">
+							<h2>Анкета для получения студенческой визы</h2>
+						   <p>Скачайте и заполните анкету на русском языке,  
+						   после чего отправьте ее нам на адрес help@vizaok.ru. 
+						   Мы переведем анкету на английский язык и отправим вместе 
+						   с остальными документами в посольство США.
+						   </p>	
+							<p> Анкету на русском языке можно скачать по ссылке:
+							<%= link_to "Анкета DS-160(Студенческая).", "https://docs.google.com/feeds/download/documents/Export?exportFormat=docx&id=1MWA9SGKDuPV2k1FQr-0cJYLSchlRue54MN-A-WMO6-s" %>
+							</p>					
 						</div>
 			
 						<!--div class="column one-three last">
@@ -328,6 +339,18 @@
 							Обращающиеся за разрешением на временную работу должны попросить своего будущего работодателя в США связаться с ближайшим региональным офисом INS для подачи петиции. 
 							Визовое собеседование в Консульстве будет назначено только после того, как INS одобрит такую петицию.
 						</p>
+						</div>
+						
+						<div class="column one">
+							<h2>Анкета для получения рабочей визы</h2>
+						   <p>Скачайте и заполните анкету на русском языке,  
+						   после чего отправьте ее нам на адрес help@vizaok.ru. 
+						   Мы переведем анкету на английский язык и отправим вместе 
+						   с остальными документами в посольство США.
+						   </p>	
+							<p> Анкету на русском языке можно скачать по ссылке:
+							<%= link_to "Анкета DS-160(Рабочая).", "https://docs.google.com/feeds/download/documents/Export?exportFormat=docx&id=1MWA9SGKDuPV2k1FQr-0cJYLSchlRue54MN-A-WMO6-s" %>
+							</p>					
 						</div>
 					</div>
 				</div>
@@ -497,7 +520,7 @@
 					if ( $( "#order_email" ).val()) {
 					   $('#order_submit').attr("disabled", true);
 					   $('#order_submit').css('background-image', 'url(<%=asset_url("load_o.gif") %>)');
-					   $('#order_submit').fadeIn();	
+					   $('#order_submit').fadeIn(10);	
 	  					$('#order_submit').val('Подождите');
 	  					return;
 	  				}
@@ -517,11 +540,14 @@
 	  			if ( $( "#question_question" ).val() ) {
 	  			   $('#question_submit').attr("disabled", true);
 	  				$('#question_submit').css('background-image', 'url(<%=asset_url("load_q.gif") %>)');
-					$('#question_submit').fadeIn();	
-					$('#question_submit').val('Подождите...');  				
+					$('#question_submit').fadeIn(10);	
+					$('#question_submit').val('Подождите');  				
 	  				return;
 	  			}
-	  			$( "#question_question" ).attr("placeholder","Напишите Ваш вопрос");
+	  			//$( "#question_question" ).attr("placeholder","Напишите Ваш вопрос");
+	  			//$( "#question_question" ).css("-webkit-input-placeholder","red");
+	  			//$( "#question_question" ).css("-moz-placeholder","red");
+	  			//$( "#question_question" ).css("-ms-input-placeholder","red");
 	  			return false;
 	  		}
 	  		$( "#question_email" ).attr("placeholder","Укажите Ваш e-mail");

@@ -1,2 +1,10 @@
-Новый вопрос от <%= @question.name %>, email: <%= @question.email %> <br>
-Текст вопроса: <%= @question.question %>.<br>
+<h3 style="text-decoration: underline; text-align: center;">
+	Новый вопрос
+</h3> 
+<p>
+	<b>от:</b> <%= @question.name %>
+</p> 
+<p><b>email:</b> <%= @question.email %></p>
+<p><b>номер телефона:</b> <%= @question.phone %></p>
+<p><b>Текст вопроса:</b><br> 
+<%= @question.question %></p>

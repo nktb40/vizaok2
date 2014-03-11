@@ -1,6 +1,6 @@
 $.magnificPopup.open({
   items: {
-    src: '<div class="white-popup"><h3>Спасибо за вопрос!</h3><p>Скоро мы с Вами свяжемся!</p></div>', 
+    src: '<div class="white-popup"><h3>Спасибо за вопрос!</h3><p>Скоро мы с Вами свяжемся!</p> <%= link_to "OK", "#", :class=>"btn" %></div>', 
     type: 'inline'
   }
 });
@@ -8,4 +8,4 @@ $('#question_submit').val('Отправить');
 $('.error').text('');
 $('input:text, textarea').val('');
 $('#question_submit').attr("disabled", false);
-//$('#question_submit').css('background-image', 'none');  				
+$('#question_submit').css('background-image', 'none');  				
