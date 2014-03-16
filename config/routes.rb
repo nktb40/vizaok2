@@ -16,6 +16,10 @@ GShockShop::Application.routes.draw do
    end 
    resources :products , only: [:d917148ce012]
    resources :questions , only: [:create]
+   
+   get "products/download_turist_doc"
+   get "products/download_student_doc"
+   get "products/download_work_doc"
 
   # Example of regular route:
   #  get 'd917148ce012' => 'products#d917148ce012'

@@ -130,7 +130,7 @@
 			<div class="column two">
 				<h1>Стоимость наших услуг:
 				<span style="color: #3B3131; font-size: 40px;">
-				<b>3500 рублей</b></span></h1>
+				<b>$100</b></span></h1>
 				<p style="margin-left: 30px;">Плата взымается только в случае успешного получния визы</p>
 			</div>
 		</div>
@@ -218,13 +218,9 @@
 						   с остальными документами в посольство США.
 						   </p>	
 							<p> Анкету на русском языке можно скачать по ссылке:
-							<%= link_to "Анкета DS-160(туристическая/деловая)", "https://docs.google.com/feeds/download/documents/Export?exportFormat=docx&id=16lW7nWSw69tvXyfz9zbvnh6o0wNyip9v25hpF1RCmLM" %>
+							<%= link_to "Анкета DS-160 (Туристическая/деловая виза)", products_download_turist_doc_url %>
 							</p>					
 						</div>
-			
-						<!-- div class="column one-three last">
-							<%= image_tag ("tablet.png") %>
-						</div -->
 			
 					</div>
 				</div>		
@@ -310,13 +306,9 @@
 						   с остальными документами в посольство США.
 						   </p>	
 							<p> Анкету на русском языке можно скачать по ссылке:
-							<%= link_to "Анкета DS-160(Студенческая).", "https://docs.google.com/feeds/download/documents/Export?exportFormat=docx&id=1MWA9SGKDuPV2k1FQr-0cJYLSchlRue54MN-A-WMO6-s" %>
+							<%= link_to "Анкета DS-160 (Студенческая виза)", products_download_student_doc_url %>							
 							</p>					
 						</div>
-			
-						<!--div class="column one-three last">
-							<%= image_tag ("tablet.png") %>
-						</div -->
 			
 					</div>
 				</div>		
@@ -349,7 +341,7 @@
 						   с остальными документами в посольство США.
 						   </p>	
 							<p> Анкету на русском языке можно скачать по ссылке:
-							<%= link_to "Анкета DS-160(Рабочая).", "https://docs.google.com/feeds/download/documents/Export?exportFormat=docx&id=1MWA9SGKDuPV2k1FQr-0cJYLSchlRue54MN-A-WMO6-s" %>
+							<%= link_to "Анкета DS-160 (Рабочая виза)", products_download_work_doc_url %>								
 							</p>					
 						</div>
 					</div>

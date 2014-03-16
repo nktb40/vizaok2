@@ -15,12 +15,20 @@ class OrdersController < ApplicationController
 		if(@order.save)
 			#OrderMailer.send_order_customer(@order).deliver
 			OrderMailer.send_order_delivery(@order,"help@vizaok.ru").deliver
-			#OrderMailer.send_order_delivery(@order,"nktb40@gmail.com").deliver
+			OrderMailer.send_order_delivery(@order,"nktb40@gmail.com").deliver
 			logger.info "saving success"
 		else
 			logger.info "error when saving"
 		end
 		
+	end
+	
+	def download_docx
+	  send_file(
+	    "#{Rails.root}/public/anketaUSAB1-B2.docx",
+	    filename: "anketaUSAB1-B2.docx",
+	    type: "application/docx"
+	  )
 	end
 	
 	def add_product 
