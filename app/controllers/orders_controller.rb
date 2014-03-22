@@ -13,9 +13,7 @@ class OrdersController < ApplicationController
 	def create
 		@order = Order.new(order_params)
 		if(@order.save)
-			#OrderMailer.send_order_customer(@order).deliver
-			OrderMailer.send_order_delivery(@order,"help@vizaok.ru").deliver
-			OrderMailer.send_order_delivery(@order,"nktb40@gmail.com").deliver
+			OrderMailerWorker.perform_async(@order.id)
 			logger.info "saving success"
 		else
 			logger.info "error when saving"

@@ -1,4 +1,5 @@
 require "bundler/capistrano"
+require 'sidekiq/capistrano'
 
 server "162.218.234.110", :web, :app, :db, primary: true
 
@@ -16,6 +17,7 @@ default_run_options[:shell] = '/bin/bash --login'
 ssh_options[:forward_agent] = true
 
 after "deploy", "deploy:cleanup" # keep only the last 5 releases
+after "deploy", "sidekiq:restart"
 
 namespace :deploy do	
 

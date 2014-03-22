@@ -1,4 +1,5 @@
 require "bundler/capistrano"
+require 'sidekiq/capistrano'
 
 server "162.218.234.110", :web, :app, :db, primary: true
 
@@ -6,10 +7,10 @@ set :application, "visaok"
 set :user, "deployer"
 set :deploy_to, "/home/#{user}/apps/#{application}"
 set :deploy_via, :remote_cache
-set :use_sudo, false
+set :use_sudo, true
 
 set :scm, "git"
-set :repository, "git@github.com:nktb40/#{application}.git"
+set :repository, "git@github.com:nktb40/vizaok.git"
 set :branch, "master"
 
 default_run_options[:shell] = '/bin/bash --login' 
@@ -19,30 +20,6 @@ after "deploy", "deploy:cleanup" # keep only the last 5 releases
 
 namespace :deploy do	
 
-	namespace :assets do
-
-    task :precompile, :roles => :web do
-      from = source.next_revision(current_revision)
-      if capture("cd #{latest_release} && #{source.local.log(from)} vendor/assets/ lib/assets/ app/assets/ | wc -l").to_i > 0
-        run_locally("rake assets:clean && rake assets:precompile")
-        run_locally "cd public && tar -jcf assets.tar.bz2 assets"
-        top.upload "public/assets.tar.bz2", "#{shared_path}", :via => :scp
-        run "cd #{shared_path} && tar -jxf assets.tar.bz2 && rm assets.tar.bz2"
-        run_locally "rm public/assets.tar.bz2"
-        run_locally("rake assets:clean")
-      else
-        logger.info "Skipping asset precompilation because there were no asset changes"
-      end
-    end
-
-    task :symlink, roles: :web do
-      run ("rm -rf #{latest_release}/public/assets &&
-            mkdir -p #{latest_release}/public &&
-            mkdir -p #{shared_path}/assets &&
-            ln -s #{shared_path}/assets #{latest_release}/public/assets")
-    end
-  end
-
   %w[start stop restart].each do |command|
     desc "#{command} unicorn server"
     task command, roles: :app, except: {no_release: true} do
@@ -51,8 +28,8 @@ namespace :deploy do
   end
 
   task :setup_config, roles: :app do
-    "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
-    "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
+    sudo "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
+    sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
     run "mkdir -p #{shared_path}/config"
     put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
     puts "Now edit the config files in #{shared_path}."

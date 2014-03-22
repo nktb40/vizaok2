@@ -23,14 +23,6 @@ class OrdersController < ApplicationController
 		
 	end
 	
-	def download_docx
-	  send_file(
-	    "#{Rails.root}/public/anketaUSAB1-B2.docx",
-	    filename: "anketaUSAB1-B2.docx",
-	    type: "application/docx"
-	  )
-	end
-	
 	def add_product 
 	   if !user_cookie_exists?
 			set_user_cookie 
