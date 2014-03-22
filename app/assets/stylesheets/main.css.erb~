@@ -3729,7 +3729,7 @@ header .inner nav ul li a:hover {
   text-align: center;
   color: white;
   font-size: 80px;
-  margin-bottom: 50px;
+  //margin-bottom: 50px;
   webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   border-radius: 100%;
