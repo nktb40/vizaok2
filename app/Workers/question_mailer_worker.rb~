@@ -1,9 +1,9 @@
 class QuestionMailerWorker
   include Sidekiq::Worker
   
-  def perform(order_id)
-  	   @order = Order.find(order_id)
-    	OrderMailer.send_order_delivery(@order,"help@vizaok.ru").deliver
-	 	OrderMailer.send_order_delivery(@order,"nktb40@gmail.com").deliver
+  def perform(question_id)
+  	   @question = Question.find(order_id)
+  			QuestionMailer.send_question(@question, "help@vizaok.ru").deliver
+			QuestionMailer.send_question(@question, "nktb40@gmail.com").deliver
   end
 end
