@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
 	def index
 		@order = Order.new
 		@question = Question.new
+		#@remote_ip = request.env["HTTP_X_FORWARDED_FOR"]
 	end
 	
 		
@@ -24,7 +25,7 @@ class ProductsController < ApplicationController
 	
 	def download_work_doc
 	  send_file(
-	    "#{Rails.root}/public/documents/Анкета DS-160 (рабочие визы).docx",
+	    "#{Rails.root}/public/documents/Анкета DS-160 (Рабочая виза).docx",
 	    filename: "Анкета DS-160 (Рабочая виза).docx",
 	    type: "application/docx"
 	  )

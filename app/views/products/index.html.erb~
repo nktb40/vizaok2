@@ -135,13 +135,6 @@
 			</div>
 		</div>
 	</section>
-	<section class="row services">
-		<div class="inner small">
-			<div class="column one">
-				<%= image_tag ("map.png") %>			
-			</div>
-		</div>
-   </section>
 	<section id="visa_types" class="row colored viza_types">
 		<div class="inner title">
 			<div class="column one">
@@ -506,6 +499,18 @@
           }
         });
    </script>
+   
+   <script type="text/javascript" >
+		function httpGet()
+		{
+		    var xmlHttp = null;
+		
+		    xmlHttp = new XMLHttpRequest();
+		    xmlHttp.open( "GET", "http://bits.wikimedia.org/geoiplookup", false );
+		    xmlHttp.send( null );
+		    return xmlHttp.responseText;
+		}
+	</script>
 	<script type="text/javascript">
 	
 	
@@ -521,6 +526,8 @@
 					   $('#order_submit').css('background-image', 'url(<%=asset_url("load_o.gif") %>)');
 					   $('#order_submit').fadeIn(10);	
 	  					$('#order_submit').val('Подождите');
+	  					var geo = httpGet();
+	  					alert(geo);
 	  					return;
 	  				}
 	  				$( "#email_error" ).text("Укажите Ваш e-mail");

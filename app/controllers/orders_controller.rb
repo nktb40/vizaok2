@@ -13,7 +13,9 @@ class OrdersController < ApplicationController
 	def create
 		@order = Order.new(order_params)
 		if(@order.save)
-			OrderMailerWorker.perform_async(@order.id)
+		   @remote_ip = request.env["HTTP_X_FORWARDED_FOR"]
+		   #@remote_ip = request.env["REMOTE_ADDR"]
+			OrderMailerWorker.perform_async(@order.id, @remote_ip)
 			logger.info "saving success"
 		else
 			logger.info "error when saving"
