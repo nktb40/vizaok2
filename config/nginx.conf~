@@ -6,6 +6,11 @@ server {
   listen 80 default deferred;
   # server_name example.com;
   root /home/deployer/apps/visaok/current/public;
+  
+  location / {
+	#---- cut -----
+	fastcgi_param REMOTE_ADDR $remote_addr;
+  }
 
   location ^~ /assets/ {
     gzip_static on;

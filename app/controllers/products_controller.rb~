@@ -3,7 +3,8 @@ class ProductsController < ApplicationController
 	def index
 		@order = Order.new
 		@question = Question.new
-		#@remote_ip = request.env["HTTP_X_FORWARDED_FOR"]
+	   @city = request.location.city
+	   logger.info @city
 	end
 	
 		

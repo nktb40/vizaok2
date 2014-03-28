@@ -47,3 +47,4 @@ gem 'capistrano', '2.13.5'
 # gem 'debugger', group: [:development, :test]
 
 gem 'sidekiq'
+gem "font-awesome-rails"
