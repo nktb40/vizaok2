@@ -14,10 +14,10 @@ class OrdersController < ApplicationController
 		@order = Order.new(order_params)
 		if(@order.save)
 		   @remote_ip = request.env["HTTP_X_FORWARDED_FOR"]
-         @city = request.location.city
+         #@city = request.location.city
          
 		   #@remote_ip = request.env["REMOTE_ADDR"]
-			OrderMailerWorker.perform_async(@order.id, @remote_ip, @city)
+			OrderMailerWorker.perform_async(@order.id, @remote_ip)
 			logger.info "saving success"
 		else
 			logger.info "error when saving"
