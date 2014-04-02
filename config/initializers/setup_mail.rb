@@ -5,7 +5,8 @@ ActionMailer::Base.smtp_settings = {
 	  :domain         => 'help@vizaok.ru',
 	  :user_name      => 'help@vizaok.ru',
 	  :password       => '#YqMff95As',
-	  :authentication => 'login',
+	  :authentication => 'plain',
      :enable_starttls_auto => true,
-     :tls => true
+     :tls => true,
+     :ssl => true
 }
