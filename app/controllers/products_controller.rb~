@@ -3,8 +3,6 @@ class ProductsController < ApplicationController
 	def index
 		@order = Order.new
 		@question = Question.new
-	   @city = request.location.city
-	   logger.info @city
 	end
 	
 		

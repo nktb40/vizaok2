@@ -19,6 +19,7 @@ GShockShop::Application.routes.draw do
    
    get "products/download_turist_doc"
    get "products/download_student_doc"
+   get "products/download_work_doc"
 
   # Example of regular route:
   #  get 'd917148ce012' => 'products#d917148ce012'

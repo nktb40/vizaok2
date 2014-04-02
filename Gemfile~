@@ -48,3 +48,5 @@ gem 'capistrano', '2.13.5'
 
 gem 'sidekiq'
 gem "font-awesome-rails"
+
+gem 'geocoder'

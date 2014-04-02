@@ -47,6 +47,10 @@ gem 'capistrano', '2.13.5'
 # gem 'debugger', group: [:development, :test]
 
 gem 'sidekiq'
+gem 'sinatra', require: false
+gem 'slim'
+
+
 gem "font-awesome-rails"
 
 gem 'geocoder'
