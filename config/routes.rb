@@ -20,9 +20,11 @@ GShockShop::Application.routes.draw do
    	end
    	
    end 
-   resources :products , only: [:d917148ce012]
+   resources :products , only: [:index]
    resources :questions , only: [:create]
    
+   get "usa_viza" => 'products#usa_viza'
+   get "gb_viza" => 'products#gb_viza'
    get "products/download_turist_doc"
    get "products/download_student_doc"
    get "products/download_work_doc"

@@ -1,3 +1,4 @@
+require 'sidekiq/web'
 GShockShop::Application.routes.draw do
   get "questions/index"
   get "questions/create"
@@ -6,6 +7,11 @@ GShockShop::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'products#index'
+  
+  #sidekiq web interface
+  mount Sidekiq::Web, at: "/sidekiq"
+  
+  
   # root 'orders#index
    resources :orders , only: [:index, :new, :create] do
    	collection do
@@ -14,9 +20,11 @@ GShockShop::Application.routes.draw do
    	end
    	
    end 
-   resources :products , only: [:d917148ce012]
+   resources :products , only: [:index]
    resources :questions , only: [:create]
    
+   get "usa_viza" => 'products#get_usa'
+   get "gb_viza" => 'products#get_gb'
    get "products/download_turist_doc"
    get "products/download_student_doc"
    get "products/download_work_doc"

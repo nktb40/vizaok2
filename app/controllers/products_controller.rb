@@ -6,6 +6,15 @@ class ProductsController < ApplicationController
 		@question = Question.new
 	end
 	
+	def usa_viza
+		@order = Order.new
+		@question = Question.new
+	end
+	
+	def gb_viza
+		@order = Order.new
+		@question = Question.new
+	end
 		
 	def download_turist_doc
 	  send_file(
