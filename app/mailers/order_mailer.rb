@@ -1,8 +1,7 @@
 # encoding: utf-8
 class OrderMailer < ActionMailer::Base
-	def send_order_delivery(order, email, ip)
+	def send_order_delivery(order, email)
 		@order = order
-		@ip = ip
 		mail :to =>  email, :from => "help@vizaok.ru", :subject => "Заявка №#{order.id}, от #{order.email}"
 	end
 	

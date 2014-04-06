@@ -2,3 +2,5 @@
 <p><b>Имя:</b> <%= @order.name %></p>
 <p><b>Телефон:</b> <%= @order.phone %></p>
 <p><b>E-mail:</b> <%= @order.email %></p>
+<p><b>Skype:</b> <%= @order.skype %></p>
+<p><b>IP:</b> <%= @order.user_ip %></p>

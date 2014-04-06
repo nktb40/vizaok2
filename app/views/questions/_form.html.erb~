@@ -9,8 +9,5 @@
 	    		<%= f.text_field :phone, :type=>"text", :placeholder=>"Номер телефона..." %>
 			<span id='q_question_error' class='error' style ='color: red;'></span>	    		
 	    		<%= f.text_area :question, :type=>"text", :placeholder=>"Ваш вопрос..." %>
-	     		<%= f.submit :'Отправить', :id=>'question_submit', 
-	     		:style=>"text-align: center" do%>
-	     		<%= image_tag("load_q.gif")%>
-	     		<% end %>
+	     		<%= f.submit :'Отправить', :id=>'question_submit', :style=>"text-align: center" %>
 <% end %>

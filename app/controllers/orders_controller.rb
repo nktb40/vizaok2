@@ -12,12 +12,9 @@ class OrdersController < ApplicationController
 	
 	def create
 		@order = Order.new(order_params)
+		@order.user_ip = request.env["HTTP_X_FORWARDED_FOR"]
 		if(@order.save)
-		   @remote_ip = request.env["HTTP_X_FORWARDED_FOR"]
-         #@city = request.location.city
-         
-		   #@remote_ip = request.env["REMOTE_ADDR"]
-			OrderMailerWorker.perform_async(@order.id, @remote_ip)
+			OrderMailerWorker.perform_async(@order.id)
 			logger.info "saving success"
 		else
 			logger.info "error when saving"
@@ -61,6 +58,7 @@ class OrdersController < ApplicationController
 	
 	private 
  	def order_params 
-  		params.require(:order).permit(:name, :email, :phone, :address)  
+  		params.require(:order).permit(:name, :email, :phone, :address, 
+  		:visa_country, :skype, :user_ip, :visa_type)  
  	end 
 end

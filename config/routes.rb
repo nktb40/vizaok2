@@ -23,8 +23,8 @@ GShockShop::Application.routes.draw do
    resources :products , only: [:index]
    resources :questions , only: [:create]
    
-   get "usa_viza" => 'products#usa_viza'
-   get "gb_viza" => 'products#gb_viza'
+   get "usa_visa" => 'products#usa_visa'
+   get "uk_visa" => 'products#uk_visa'
    get "products/download_turist_doc"
    get "products/download_student_doc"
    get "products/download_work_doc"
