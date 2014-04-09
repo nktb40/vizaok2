@@ -4,19 +4,19 @@ class ProductsController < ApplicationController
 	def index
 		@order = Order.new
 		@question = Question.new
-		@visa_country = 'usa'
+		@visa_country = 'США'
 	end
 	
 	def usa_visa
 		@order = Order.new
 		@question = Question.new
-		@visa_country = 'usa'
+		@visa_country = 'США'
 	end
 	
 	def uk_visa
 		@order = Order.new
 		@question = Question.new
-		@visa_country = 'uk'
+		@order.visa_country = 'Великобритания'
 	end
 		
 	def download_turist_doc

@@ -16,6 +16,7 @@ class OrdersController < ApplicationController
 		if(@order.save)
 			OrderMailerWorker.perform_async(@order.id)
 			logger.info "saving success"
+			logger.info @order.user_ip 
 		else
 			logger.info "error when saving"
 		end

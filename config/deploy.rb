@@ -1,7 +1,8 @@
 require "bundler/capistrano"
 require 'sidekiq/capistrano'
 
-server "162.218.234.110", :web, :app, :db, primary: true
+#server "162.218.234.110", :web, :app, :db, primary: true
+server "cardsharp-tomsk.tk", :web, :app, :db, primary: true
 
 set :application, "visaok"
 set :user, "deployer"
@@ -13,7 +14,8 @@ set :scm, "git"
 set :repository, "git@github.com:nktb40/vizaok.git"
 set :branch, "master"
 
-default_run_options[:shell] = '/bin/bash --login' 
+#default_run_options[:shell] = '/bin/bash --login' 
+default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 
 after "deploy", "deploy:cleanup" # keep only the last 5 releases
@@ -24,15 +26,15 @@ namespace :deploy do
   %w[start stop restart].each do |command|
     desc "#{command} unicorn server"
     task command, roles: :app, except: {no_release: true} do
-      run "/etc/init.d/unicorn_#{application} #{command}"
+      sudo "/etc/init.d/unicorn_#{application} #{command}"
     end
   end
 
   task :setup_config, roles: :app do
     sudo "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
     sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
-    sudo "chmod a+x #{current_path}/config/unicorn_init.sh"
-    run "mkdir -p #{shared_path}/config"
+    #sudo "chmod a+x #{current_path}/config/unicorn_init.sh"
+    sudo "mkdir -p #{shared_path}/config"
     put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
     puts "Now edit the config files in #{shared_path}."
   end
