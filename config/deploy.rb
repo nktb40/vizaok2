@@ -14,7 +14,7 @@ set :scm, "git"
 set :repository, "git@github.com:nktb40/vizaok.git"
 set :branch, "master"
 
-#default_run_options[:shell] = '/bin/bash --login' 
+default_run_options[:shell] = '/bin/bash --login' 
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 
@@ -26,7 +26,7 @@ namespace :deploy do
   %w[start stop restart].each do |command|
     desc "#{command} unicorn server"
     task command, roles: :app, except: {no_release: true} do
-      sudo "/etc/init.d/unicorn_#{application} #{command}"
+      run "/etc/init.d/unicorn_#{application} #{command}"
     end
   end
 

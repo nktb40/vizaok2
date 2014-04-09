@@ -1,4 +1,4 @@
-upstream unicorn2 {
+upstream unicorn_visaok {
   server unix:/tmp/unicorn.visaok.sock fail_timeout=0;
 }
 
