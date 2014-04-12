@@ -1,8 +1,8 @@
 require "bundler/capistrano"
 require 'sidekiq/capistrano'
 
-#server "162.218.234.110", :web, :app, :db, primary: true
-server "cardsharp-tomsk.tk", :web, :app, :db, primary: true
+server "162.218.234.110", :web, :app, :db, primary: true
+#server "cardsharp-tomsk.tk", :web, :app, :db, primary: true
 
 set :application, "visaok"
 set :user, "deployer"
