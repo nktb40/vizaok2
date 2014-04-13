@@ -10,7 +10,7 @@
   <meta name="document-state" content="Dynamic" />
   <meta name="robots" content="all" />
   <meta http-equiv="content-language" content="ru" />
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "application_uk", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -73,7 +73,7 @@
 			</div>		
 			<div class="column one hand-down" style="margin-left: 70px;">
 					<br>
-					<p><i class="icon-hand-down"></i></p>
+					
 			</div>
 			<!--row1-->
 			<div class="column three circle">
@@ -83,7 +83,7 @@
 			</div>
 			<div class="column four hand">
 				<br>
-				<p><i class="icon-hand-right"></i></p>
+				
 			</div>
 			<div class="column three circle">
 				<br>
@@ -92,7 +92,7 @@
 			</div>
 			<div class="column four hand">
 				<br>
-				<p><i class="icon-hand-right"></i></p>
+				
 			</div>
 			<div class="column three circle">
 				<br>
@@ -102,8 +102,7 @@
 			
 			<!--row2-->
 				<div class="column one hand-down">
-					<br>
-					<p><i class="icon-hand-down" style="margin-left: 680px;"></i></p>
+					<br>		
 				</div>
 			<!--row3-->
 			<br>
@@ -114,7 +113,7 @@
 			</div>
 			<div class="column four hand">
 				<br>
-				<p><i class="icon-hand-left"></i></p>
+				
 			</div>
 			<div class="column three circle">
 				<br>
@@ -123,7 +122,7 @@
 			</div>
 			<div class="column four hand">
 				<br>
-				<p><i class="icon-hand-left"></i></p>
+				
 			</div>
 			<div class="column three circle">
 				<br>
@@ -132,7 +131,7 @@
 			</div>
 			<div class="column one hand-down">
 					<br>
-					<p><i class="icon-hand-down"style="margin-left: 70px;"></i></p>
+					
 			</div>
 			
 			<div class="column two-three circle">
@@ -142,7 +141,7 @@
 			</div>
 			<div class="column four hand">
 				<br>
-				<p><i class="icon-hand-right"></i></p>
+				
 			</div>
 			<div class="column two">
 				<h1>Стоимость наших услуг:
@@ -164,7 +163,7 @@
 		</div>
 		<div class="row viza_item item_1">
 			<div id="traveling">
-				<h1><i class="icon-suitcase"></i> Визы для туристических поездок 
+				<h1><i class="icon-suitcase"></i> Туристические визы в Великобританию
 				<span style="font-size: 18px">подробнее...</span></h1>
 				<div class="row about">
 					<div class="inner small">
@@ -467,7 +466,7 @@
 
 			<div class="column three">
 				<p><strong>О нас</strong><br>
-				Мы стремимся максимально упростить жизнь наших клентов, предоставляя им возможность получить визу в США за минимально возможный срок, с первого раза!</p>
+				Мы стремимся максимально упростить жизнь наших клентов, предоставляя им возможность получить визу в Великобританию за минимально возможный срок, с первого раза!</p>
 			</div>
 
 			<div class="column three last">

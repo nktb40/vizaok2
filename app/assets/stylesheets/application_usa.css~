@@ -10,7 +10,8 @@
  *
  *= require font-awesome
  *= require_self
- *= require_tree .
+ *= require_tree ./all
+ *= require_tree ./usa
  */
 @font-face {
   font-family: 'Roboto';
