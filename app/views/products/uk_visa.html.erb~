@@ -10,7 +10,7 @@
   <meta name="document-state" content="Dynamic" />
   <meta name="robots" content="all" />
   <meta http-equiv="content-language" content="ru" />
-  <%= stylesheet_link_tag    "application_uk", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -146,14 +146,14 @@
 			<div class="column two">
 				<h1>Стоимость наших услуг:
 				<span style="color: #3B3131; font-size: 40px;">
-				<b>£75</b></span></h1>
+				<b>$100</b></span></h1>
 				<p style="margin-left: 30px;">В случае отказа деньги возвращаются</p>
 			</div>
 		</div>
 	</section>
 	<section id="visa_types" class="row colored viza_types">
 		<div class="inner title">
-			<div class="column one">
+			<div class="column one types">
 				<h1>
 				<i class="icon-copy"></i>
 				<span style="vertical-align:40%">Виды и категории виз</span></h1>
@@ -162,9 +162,48 @@
 			</div>
 		</div>
 		<div class="row viza_item item_1">
+			<div id="visa_nav" class="inner">
+				<div class="column four square">
+				      <a href="#traveling" onClick="collapse1.open(0);">
+				      	<i class="icon-suitcase"></i>
+				      </a> 
+						<h2>Туристическая виза</h2>			
+				</div>	
+				<div class="column four square">
+				      <a href="#traveling" onClick="close_all(); collapse2.open(1);">
+				      	<i class="icon-book"></i>
+				      </a>
+						<h2>Студенческая виза</h2>			
+				</div>	
+				<div class="column four square">
+				      <a href="#traveling" onClick="collapse1.open(0);">
+				      	<i class="icon-desktop"></i>
+				      </a>
+						<h2>Деловые поездки</h2>			
+				</div>	
+				<div class="column four square">
+						<a href="#traveling" onClick="collapse1.open(0);">
+				      	<i class="icon-desktop"></i>
+				      </a>
+						<h2>Рабочая виза</h2>			
+				</div>
+				<div class="column four square">
+						<a href="#traveling" onClick="collapse1.open(0);">
+				      	<i class="icon-desktop"></i>
+				      </a>
+						<h2>Для посещения родственников</h2>			
+				</div>
+				<div class="column four square">
+						<a href="#traveling" onClick="collapse1.open(0);">
+				      	<i class="icon-desktop"></i>
+				      </a>
+						<h2>Для посещения друзей</h2>			
+				</div>			
+			</div>
+		</div>
+		<div class="row viza_item item_1">
 			<div id="traveling">
-				<h1><i class="icon-suitcase"></i> Туристические визы в Великобританию
-				<span style="font-size: 18px">подробнее...</span></h1>
+				<h1></h1>
 				<div class="row about">
 					<div class="inner small">
 						<div class="column one">
@@ -241,24 +280,17 @@
 		</div>
 		<div class="row viza_item item_2">
 			<div id="students">
-				<h1 class="inner"><i class="icon-book">
-				</i> Студенческие визы (F,M)
-				<span style="font-size: 18px">подробнее...</span></h1>	
+				<h1></h1>	
 				<div class="row about">
 					<div class="inner small">
 							<div class="column one">
 							<h2>Виды студенческих виз:</h2>
-							<p><b>1. Виза категории F</b> - предназначена для студентов, которые были зачислены в колледж или университет США, 
-								частную общеобразовательную школу, или же направляющиеся для изучения английского языка в рамках соответствующих программ.
-							</p>
-							<p><b>2. Виза категории M</b> - предназначена для студентов, 
-							направляющихся в США для неакадемического или профессионального обучения.
-							</p>
-							<h2>Как выбрать?</h2>
-							<p> Проконсультируйтесь с Вашим учебным заведением относительно того, 
-								какой тип визы требуется в Вашем случае. Если Вы направляетесь в США как турист, 
-								но также планируете пройти обучение по сокращенной программе (менее 18 часов в неделю), 
-								Вы можете ехать по туристической визе В2.
+							<p><b>1. Tier4. Студенческя виза</b> - предназначена для тех, кто хочет получить образование в Великобритании, 
+							обучаясь на длительном курсе (свыше 6 месяцев) в учебном заведении, имеющем лицензию United Kingdom Border Agency (UKBA). 
+							<b>Подойдет Вам, если собираетесь получить высшее образование в  Англии и отправить ребенка обучаться в Английской школе.</b></p>
+							<p><b>2. Виза Student visitorM</b> - предназначена для тех, кто хочет пройти краткий курс обучения (до 11 месяцев) в Великобритании. 
+							Это могут быть курсы обучения английскому языку или работа, связанная с обучением. <b>Если Вы собираете обучаться английскому на курсах в Великобритании, 
+							то эта виза для Вас.</b> 
 							</p>
 							<h2>Сколько стоит студенческая виза?</h2>
 						   <p><b>$160</b> - консульский сбор (обязательно для всех)*
@@ -327,7 +359,7 @@
 				</div>		
 			</div>	
 		</div>
-		<div class="row viza_item item_2">
+		<!--div class="row viza_item item_2">
 			<div id="working">
 				<h1><i class="icon-desktop">
 				</i> Рабочие визы (H, L, O, P, Q, R)
@@ -383,9 +415,9 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div-->
 		<div class="row" style="background-color: #2e8b57;">
-		<div class="column one">
+		<div class="column one phone">
 		<h1 style="text-align: left">
 			<i class="icon-phone"></i>
 			<span style="vertical-align:40%; font-size: 40px;">
@@ -504,7 +536,7 @@
             this.slideUp(150);
           }
         });
-        var collapse3 = new jQueryCollapse($("#wedding"), {
+        var collapse4 = new jQueryCollapse($("#wedding"), {
           open: function() {
             this.slideDown(150);
           },
@@ -577,6 +609,24 @@
 		  open: function(){}, // Function: Open callback
 		  close: function(){} // Function: Close callback
 		});
+		
+		$('#visa_nav').onePageNav({
+		    currentClass: 'current',
+		    changeHash: false,
+		    scrollSpeed: 350,
+		    scrollThreshold: 0.5,
+		    filter: '',
+		    easing: 'swing',
+		    begin: function() {
+		        //I get fired when the animation is starting
+		    },
+		    end: function() {
+		        //I get fired when the animation is ending
+		    },
+		    scrollChange: function($currentListItem) {
+		        //I get fired when you enter a section and I pass the list item of the section
+			 }		    
+		    });	
 
 	});
 	
