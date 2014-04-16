@@ -146,9 +146,8 @@
 			<div class="column two">
 				<h1>Стоимость наших услуг:
 				<span style="color: #3B3131; font-size: 40px;">
-				<b>$100</b></span></h1>
-				<p style="margin-left: 30px;">В случае отказа деньги возвращаются</p>
-			</div>
+				<b>$120</b></span></h1>
+				<p style="margin-left: 30px;">Плата взымается после того как Вы получите подтверждение из Консульства о получении визы</p></div>
 		</div>
 	</section>
 	<section id="visa_types" class="row colored viza_types">
@@ -170,7 +169,7 @@
 						<h2>Туристическая виза</h2>			
 				</div>	
 				<div class="column four square">
-				      <a href="#traveling" onClick="close_all(); collapse2.open(1);">
+				      <a href="#traveling" onClick="close_all(); collapse2.open(0);">
 				      	<i class="icon-book"></i>
 				      </a>
 						<h2>Студенческая виза</h2>			
