@@ -3609,9 +3609,9 @@ header {
   width: 100%;
   z-index: 500;
 }
-header .inner .logo {
+header .inner .logo{
   float: left;
-}
+  }
 header .inner .logo a {
   font-size: 26px;
   line-height: 43px;
@@ -3627,12 +3627,19 @@ header .inner .logo a i {
   display: inline-block;
 }
 
-header .inner .logo a p{
+header .inner .sub_logo {
+  float: left;
+  }
+
+header .inner .sub_logo p{
 	font-size: 14px; 
 	color: #888; 
-	text-align: right; 
+	text-align: left; 
 	margin: 0;
-	margin-left: 30px;
+	margin-left: 10px;
+	margin-top: 12px;
+	width: 180px;
+	
 }
 
 header .inner nav {
@@ -3641,7 +3648,7 @@ header .inner nav {
 header .inner nav ul li {
   display: block;
   float: left;
-  margin-left: 25px;
+  margin-left: 10px;
 }
 header .inner nav ul li:first-child {
   margin-left: 0;
@@ -3653,7 +3660,7 @@ header .inner nav ul li.current a {
 }
 header .inner nav ul li a {
   display: block;
-  padding: 10px 20px;
+  padding: 10px 10px;
   font-size: 14px;
   color: #888;
   font-weight: 400;
@@ -3670,7 +3677,7 @@ header .inner nav ul li a:hover {
 
 /* --- intro --- */
 .intro {
-  margin-top: 90px;
+  margin-top: 50px;
   height: 550px;
   position: relative;
   overflow: hidden;

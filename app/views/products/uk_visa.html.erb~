@@ -22,9 +22,11 @@
 
 			<div class="logo">
 				<a href=""><i class="fa fa-location-arrow"></i>VizaOK
-				<p>визы в Великобританию</p>
 				</a>
 			</div>
+			<div class="sub_logo">
+					<p>визы в Великобританию</p>
+			</div>							
 
 			<nav id="nav" class="closed" style="-webkit-transition: max-height 400ms; position: relative;" aria-hidden="false">
 				<ul class="nav">
@@ -64,104 +66,19 @@
 	</div>	
 	</section>
 
-	<section class="row service">
-		<div class="inner small" style="width:820px; margin:0 auto;">
-			<div class="column one">
-				<h1>
-				<i class="icon-cogs"></i>
-				<span style="vertical-align:40%">Чем мы помогаем?</span></h1>
-			</div>		
-			<div class="column one hand-down" style="margin-left: 70px;">
-					<br>
-					
-			</div>
-			<!--row1-->
-			<div class="column three circle">
-				<br>
-				<i class="icon-ok-sign"></i>
-				<p>Поможем выбрать правильный тип визы<p>
-			</div>
-			<div class="column four hand">
-				<br>
-				
-			</div>
-			<div class="column three circle">
-				<br>
-				<i class="icon-paste"></i>
-				<p>Заполним анкету на английском языке<p>
-			</div>
-			<div class="column four hand">
-				<br>
-				
-			</div>
-			<div class="column three circle">
-				<br>
-				<i class="icon-folder-open-alt"></i>
-				<p>Подскажем какие документы собирать<p>
-			</div>
-			
-			<!--row2-->
-				<div class="column one hand-down">
-					<br>		
-				</div>
-			<!--row3-->
-			<br>
-			<div class="column three circle">
-				<br>
-				<i class="icon-comment-alt"></i>
-				<p>Запишем Вас на собеседование и подготовим к нему<p>
-			</div>
-			<div class="column four hand">
-				<br>
-				
-			</div>
-			<div class="column three circle">
-				<br>
-				<i class="icon-envelope-alt"></i>
-				<p>Сдадим за Вас все документы в посольство<p>
-			</div>
-			<div class="column four hand">
-				<br>
-				
-			</div>
-			<div class="column three circle">
-				<br>
-				<i class="icon-edit"></i>
-				<p>Переведём все документы<p>
-			</div>
-			<div class="column one hand-down">
-					<br>
-					
-			</div>
-			
-			<div class="column two-three circle">
-				<br>
-				<i class="icon-truck"></i>
-				<p>Отправим Вам готовые документы курьером<p>
-			</div>
-			<div class="column four hand">
-				<br>
-				
-			</div>
-			<div class="column two">
-				<h1>Стоимость наших услуг:
-				<span style="color: #3B3131; font-size: 40px;">
-				<b>$120</b></span></h1>
-				<p style="margin-left: 30px;">Плата взымается после того как Вы получите подтверждение из Консульства о получении визы</p></div>
-		</div>
-	</section>
+
 	<section id="visa_types" class="row colored viza_types">
 		<div class="inner title">
 			<div class="column one types">
 				<h1>
 				<i class="icon-copy"></i>
 				<span style="vertical-align:40%">Виды и категории виз</span></h1>
-				<p>Существет несколько типов виз в Великобританию, которые различаются по цели пребывания в стране. Информацию о каждой из них Вы можете найти ниже. 
-				Свяжитесь с нами, и мы поможем выбрать подходящий для Вас вариант.</p>
+				<!--p>Существет несколько типов виз в Великобританию, которые различаются по цели пребывания в стране. Информацию о каждой из них Вы можете найти ниже. 
+				Свяжитесь с нами, и мы поможем выбрать подходящий для Вас вариант.</p-->
 			</div>
 		</div>
-		<div class="row viza_item item_1">
-			<div id="visa_nav" class="inner">
+		<div class="inner visa_types">
+			<div id="visa_nav" class="inner" style="width:820px; margin:0 auto;">
 				<div class="column four square">
 				      <a href="#traveling" onClick="collapse1.open(0);">
 				      	<i class="icon-suitcase"></i>
@@ -428,7 +345,92 @@
 		</div>
 		</div>	
 	</section>
-
+	<section class="row service">
+		<div class="inner small" style="width:820px; margin:0 auto;">
+			<div class="column one">
+				<h1>
+				<i class="icon-cogs"></i>
+				<span style="vertical-align:40%">Чем мы помогаем?</span></h1>
+			</div>		
+			<div class="column one hand-down" style="margin-left: 70px;">
+					<br>
+					
+			</div>
+			<!--row1-->
+			<div class="column three circle">
+				<br>
+				<i class="icon-ok-sign"></i>
+				<p>Поможем выбрать правильный тип визы<p>
+			</div>
+			<div class="column four hand">
+				<br>
+				
+			</div>
+			<div class="column three circle">
+				<br>
+				<i class="icon-paste"></i>
+				<p>Заполним анкету на английском языке<p>
+			</div>
+			<div class="column four hand">
+				<br>
+				
+			</div>
+			<div class="column three circle">
+				<br>
+				<i class="icon-folder-open-alt"></i>
+				<p>Подскажем какие документы собирать<p>
+			</div>
+			
+			<!--row2-->
+				<div class="column one hand-down">
+					<br>		
+				</div>
+			<!--row3-->
+			<br>
+			<div class="column three circle">
+				<br>
+				<i class="icon-comment-alt"></i>
+				<p>Запишем Вас на собеседование и подготовим к нему<p>
+			</div>
+			<div class="column four hand">
+				<br>
+				
+			</div>
+			<div class="column three circle">
+				<br>
+				<i class="icon-envelope-alt"></i>
+				<p>Сдадим за Вас все документы в посольство<p>
+			</div>
+			<div class="column four hand">
+				<br>
+				
+			</div>
+			<div class="column three circle">
+				<br>
+				<i class="icon-edit"></i>
+				<p>Переведём все документы<p>
+			</div>
+			<div class="column one hand-down">
+					<br>
+					
+			</div>
+			
+			<div class="column two-three circle">
+				<br>
+				<i class="icon-truck"></i>
+				<p>Отправим Вам готовые документы курьером<p>
+			</div>
+			<div class="column four hand">
+				<br>
+				
+			</div>
+			<div class="column two">
+				<h1>Стоимость наших услуг:
+				<span style="color: #3B3131; font-size: 40px;">
+				<b>$120</b></span></h1>
+				<p style="margin-left: 30px;">Плата взымается после того как Вы получите подтверждение из консульства о получении визы</p></div>
+		</div>
+	</section>
 	<section id="team" class="row team">
 		<div class="inner small">
 
