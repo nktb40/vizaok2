@@ -68,52 +68,52 @@
 
 
 	<section id="visa_types" class="row colored viza_types">
-		<div class="inner title">
+		<!--div class="inner title">
 			<div class="column one types">
 				<h1>
 				<i class="icon-copy"></i>
 				<span style="vertical-align:40%">Виды и категории виз</span></h1>
-				<!--p>Существет несколько типов виз в Великобританию, которые различаются по цели пребывания в стране. Информацию о каждой из них Вы можете найти ниже. 
-				Свяжитесь с нами, и мы поможем выбрать подходящий для Вас вариант.</p-->
+				<p>Существет несколько типов виз в Великобританию, которые различаются по цели пребывания в стране. Информацию о каждой из них Вы можете найти ниже. 
+				Свяжитесь с нами, и мы поможем выбрать подходящий для Вас вариант.</p>
 			</div>
-		</div>
+		</div-->
 		<div class="inner visa_types">
 			<div id="visa_nav" class="inner" style="width:820px; margin:0 auto;">
 				<div class="column four square">
 				      <a href="#traveling" onClick="collapse1.open(0);">
-				      	<i class="icon-suitcase"></i>
+				      	<i class="icon-globe"></i>
 				      </a> 
 						<h2>Туристическая виза</h2>			
 				</div>	
 				<div class="column four square">
 				      <a href="#traveling" onClick="close_all(); collapse2.open(0);">
-				      	<i class="icon-book"></i>
+				      	<i class="icon-comments"></i>
 				      </a>
 						<h2>Студенческая виза</h2>			
+				</div>
+			  <div class="column four square">
+				      <a href="#traveling" onClick="close_all(); collapse2.open(0);">
+				      	<i class="icon-book"></i>
+				      </a>
+						<h2>Студенческая виза TIER4</h2>			
 				</div>	
 				<div class="column four square">
 				      <a href="#traveling" onClick="collapse1.open(0);">
-				      	<i class="icon-desktop"></i>
+				      	<i class="icon-bar-chart"></i>
 				      </a>
-						<h2>Деловые поездки</h2>			
+						<h2>Бизнес поездки</h2>			
 				</div>	
 				<div class="column four square">
 						<a href="#traveling" onClick="collapse1.open(0);">
-				      	<i class="icon-desktop"></i>
+				      	<i class="icon-calendar"></i>
 				      </a>
 						<h2>Рабочая виза</h2>			
 				</div>
 				<div class="column four square">
 						<a href="#traveling" onClick="collapse1.open(0);">
-				      	<i class="icon-desktop"></i>
+				      	<i class="icon-heart"></i>
 				      </a>
-						<h2>Для посещения родственников</h2>			
-				</div>
-				<div class="column four square">
-						<a href="#traveling" onClick="collapse1.open(0);">
-				      	<i class="icon-desktop"></i>
-				      </a>
-						<h2>Для посещения друзей</h2>			
+						<h2>Для женихов и невест</h2>			
 				</div>			
 			</div>
 		</div>
