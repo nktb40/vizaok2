@@ -68,56 +68,56 @@
 
 
 	<section id="visa_types" class="row colored viza_types">
-		<!--div class="inner title">
-			<div class="column one types">
+		<div class="inner title">
+			<div class="column two-three types">
 				<h1>
 				<i class="icon-copy"></i>
 				<span style="vertical-align:40%">Виды и категории виз</span></h1>
-				<p>Существет несколько типов виз в Великобританию, которые различаются по цели пребывания в стране. Информацию о каждой из них Вы можете найти ниже. 
-				Свяжитесь с нами, и мы поможем выбрать подходящий для Вас вариант.</p>
+				<p>Существет несколько типов виз в Великобританию, которые различаются по цели пребывания в стране. 
+				Информацию о каждой из них Вы можете найти ниже. </p>
 			</div>
-		</div-->
-		<div class="inner visa_types">
-			<div id="visa_nav" class="inner" style="width:820px; margin:0 auto;">
+		</div>
+		<div id="visa_menu" class="inner item_1 viza_types">
+			<div id="visa_nav" class="inner" style="width:720px; margin:0 auto;">
 				<div class="column four square">
-				      <a href="#traveling" onClick="collapse1.open(0);">
+				      <a href="" onClick="close_all(); collapse1.open(0); $.scrollTo('#traveling',500);">
 				      	<i class="icon-globe"></i>
-				      </a> 
-						<h2>Туристическая виза</h2>			
+				      	<h2>Туристическая виза</h2>	
+				      </a> 					
 				</div>	
 				<div class="column four square">
-				      <a href="#traveling" onClick="close_all(); collapse2.open(0);">
+				      <a href="" onClick="close_all(); collapse2.open(0); $.scrollTo('#students',500);">
 				      	<i class="icon-comments"></i>
-				      </a>
-						<h2>Студенческая виза</h2>			
+				      	<h2>Студенческая виза</h2>
+				      </a>			
 				</div>
 			  <div class="column four square">
-				      <a href="#traveling" onClick="close_all(); collapse2.open(0);">
+				      <a href="" onClick="close_all(); collapse2.open(0); $.scrollTo('#students',500);">
 				      	<i class="icon-book"></i>
-				      </a>
-						<h2>Студенческая виза TIER4</h2>			
+				      	<h2>Студенческая виза TIER4</h2>	
+				      </a>		
 				</div>	
 				<div class="column four square">
-				      <a href="#traveling" onClick="collapse1.open(0);">
+				      <a href="" onClick="close_all(); collapse1.open(0); $.scrollTo('#traveling',500);">
 				      	<i class="icon-bar-chart"></i>
-				      </a>
-						<h2>Бизнес поездки</h2>			
+				      	<h2>Бизнес поездки</h2>	
+				      </a>		
 				</div>	
 				<div class="column four square">
-						<a href="#traveling" onClick="collapse1.open(0);">
+						<a href="" onClick="close_all(); collapse3.open(0); $.scrollTo('#working',500);">
 				      	<i class="icon-calendar"></i>
-				      </a>
-						<h2>Рабочая виза</h2>			
+				      	<h2>Рабочая виза</h2>	
+				      </a>		
 				</div>
 				<div class="column four square">
-						<a href="#traveling" onClick="collapse1.open(0);">
+						<a href="" onClick="close_all(); collapse4.open(0); $.scrollTo('#wedding',500);">
 				      	<i class="icon-heart"></i>
-				      </a>
-						<h2>Для женихов и невест</h2>			
+				      	<h2>Для женихов и невест</h2>	
+				      </a>		
 				</div>			
 			</div>
 		</div>
-		<div class="row viza_item item_1">
+		<div class="row viza_item">
 			<div id="traveling">
 				<h1></h1>
 				<div class="row about">
@@ -194,7 +194,7 @@
 				</div>		
 			</div>
 		</div>
-		<div class="row viza_item item_2">
+		<div class="row viza_item">
 			<div id="students">
 				<h1></h1>	
 				<div class="row about">
@@ -275,11 +275,9 @@
 				</div>		
 			</div>	
 		</div>
-		<!--div class="row viza_item item_2">
+		<div class="row viza_item">
 			<div id="working">
-				<h1><i class="icon-desktop">
-				</i> Рабочие визы (H, L, O, P, Q, R)
-				<span style="font-size: 18px">подробнее...</span></h1>
+				<h1></h1>
 				<div class="row about">
 					<div class="inner small">
 						<div class="column one">
@@ -309,11 +307,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="row viza_item item_2">
+		<div class="row viza_item">
 			<div id="wedding">
-				<h1><i class="icon-heart-empty">
-				</i>Визы для женихов и невест (K1)
-				<span style="font-size: 18px">подробнее...</span></h1>
+				<h1></h1>
 				<div class="row about">
 					<div class="inner small">
 						<div class="column one">
@@ -331,7 +327,7 @@
 					</div>
 				</div>
 			</div>
-		</div-->
+		</div>
 		<div class="row" style="background-color: #2e8b57;">
 		<div class="column one phone">
 		<h1 style="text-align: left">
@@ -350,7 +346,7 @@
 			<div class="column one">
 				<h1>
 				<i class="icon-cogs"></i>
-				<span style="vertical-align:40%">Чем мы помогаем?</span></h1>
+				<span>Чем мы помогаем?</span></h1>
 			</div>		
 			<div class="column one hand-down" style="margin-left: 70px;">
 					<br>
@@ -515,41 +511,39 @@
   		
         var collapse1 = new jQueryCollapse($("#traveling"), {
           open: function() {
+            collapse2.close();
             this.slideDown(150);
-          },
-          close: function() {
-            this.slideUp(150);
           }
         });
         var collapse2 = new jQueryCollapse($("#students"), {
           open: function() {
             this.slideDown(150);
-          },
-          close: function() {
-            this.slideUp(150);
           }
         });
         var collapse3 = new jQueryCollapse($("#working"), {
           open: function() {
             this.slideDown(150);
-          },
-          close: function() {
-            this.slideUp(150);
           }
         });
         var collapse4 = new jQueryCollapse($("#wedding"), {
           open: function() {
             this.slideDown(150);
-          },
-          close: function() {
-            this.slideUp(150);
           }
         });
+        
+        function close_all(){
+				collapse1.close();
+				collapse2.close();
+				collapse3.close();
+				collapse4.close();
+        };
    </script>
 	<script type="text/javascript">
 	
 	
 	$(document).ready(function(){
+	
+	$.scrollTo(0);
 	
 	$(".intro").backstretch("<%= asset_path 'header_gb3.jpg' %>");
 	

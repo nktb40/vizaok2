@@ -30,8 +30,10 @@
 
 			<div class="logo">
 				<a href=""><i class="fa fa-location-arrow"></i>VizaOK
-				<p>оформление виз в США</p>
 				</a>
+			</div>
+			<div class="sub_logo">
+					<p>визы в Великобританию</p>
 			</div>
 
 			<nav id="nav" class="closed" style="-webkit-transition: max-height 400ms; position: relative;" aria-hidden="false">

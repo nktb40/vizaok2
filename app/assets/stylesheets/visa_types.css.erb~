@@ -10,12 +10,13 @@
 
 .viza_item{
 	padding: 0px;
-	min-height: 70px;
+	//min-height: 70px;
+	background-color: #2e8b57;
 }
 
 .viza_item div h1{
-	margin: 15px auto;
-	padding: 0 30px;
+	//margin: 15px auto;
+	//padding: 0 30px;
 }
 
 .viza_item .row .inner .column h2{
@@ -30,13 +31,14 @@
 	background-color: #2e8b57;
 	//min-height: 150px;
 	border-bottom: 1px solid white;
+	padding-top: 50px;
 }
 
 
 .item_2{
 	//background-color: #177245;	
 	background-color: #2e8b57;
-	border-bottom: 1px solid white;
+	//border-bottom: 1px solid white;
 	//border-bottom: 3px dashed white;
 }
 
@@ -147,21 +149,21 @@
 }
 
 
-.square a i:hover{
-	color: #5eb36f;
+.square:hover i{
+	color: #2e8b57;
 	background-color: white;
 }
 
 .square a{
 	color: white;
-	background-color: #5eb36f;
+	background-color: #2e8b57;
 }
 
 .square a i{
 //margin-bottom: 30px;
   width: 120px;
   height: 120px;
-  line-height: 126px;
+  line-height: 120px;
   display: inline-block;
   text-align: center;
   font-size: 80px;
