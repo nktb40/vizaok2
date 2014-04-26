@@ -146,6 +146,7 @@
 	height: 220px;
 	width: 220px;
 	text-align: center;
+	margin-right: 5%;
 	
 }
 
@@ -184,7 +185,8 @@
 }
 
 .intro1{
-	background-color: #333;
+	//background-color: #333;
+	background: url("<%= asset_path 'form-bg.png' %>") repeat 0 0;
 	padding-bottom: 50px;
 	height: 100%;
 }
@@ -269,7 +271,6 @@
 
 
 .box_head h1{
-	opacity: 0.9;
 	margin: 0;
 	text-align: center;	
 	padding: 10px;
@@ -277,12 +278,11 @@
 }
 
 .box_logo{
-	border-bottom: 1px solid #ccc;	
+	border-bottom: 1px solid white;	
 }
 
 .box_logo h1{
 	color: white;
-	opacity: 0.8;
 	-webkit-transition: 0.5s ease;
   -moz-transition: 0.5s ease;
   -o-transition: 0.5s ease;
@@ -298,4 +298,8 @@
 }
 .color_white{
 	background: #ccc;	
+}
+
+.color_green{
+	background: #5eb36f;	
 }
