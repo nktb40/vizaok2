@@ -15,8 +15,8 @@
 }
 
 .viza_item div h1{
-	//margin: 15px auto;
-	//padding: 0 30px;
+	margin: 15px auto;
+	padding: 0 30px;
 }
 
 .viza_item .row .inner .column h2{
@@ -32,6 +32,7 @@
 	//min-height: 150px;
 	border-bottom: 1px solid white;
 	padding-top: 50px;
+	padding-bottom: 50px;
 }
 
 
@@ -66,7 +67,7 @@
 }
 
 .viza_types .inner .column, h3, p{
-  font-size: 20px;
+  //font-size: 20px;
 }
 
 .types h1 i {
@@ -119,7 +120,7 @@
 .circle p{
 	color: white;
 	text-align: center;
-	font-size: 20px;
+	//font-size: 20px;
 	margin: 0;
 }
 .circle i{
