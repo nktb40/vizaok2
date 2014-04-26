@@ -36,7 +36,7 @@
 					<h1>Мы предоставляем помощь в оформлении виз:</h1>
 			   </div>
 			</div>
-			<div class="inner small four-five">
+			<div class="inner small one">
 				<div class="column two box box_usa">
 					<%= link_to usa_visa_path do%>
 						<%= image_tag("header_s.jpg") %>

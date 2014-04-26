@@ -165,40 +165,38 @@
 		</div>
 		<div id="visa_menu" class="inner item_1 viza_types">
 			<div id="visa_nav" class="inner one">
-				<div class="column four square">
-				      <a href="" onClick="close_all(); collapse1.open(0); $.scrollTo('#traveling',500);">
+				<div class="column three square">
+				      <a href="" onClick="event.preventDefault(); close_all(); collapse1.open(0); $.scrollTo('#traveling',500);">
 				      	<i class="icon-globe"></i>
 				      	<h2>Туристическая виза</h2>	
 				      </a> 					
 				</div>	
-				<div class="column four square">
-				      <a href="" onClick="close_all(); collapse2.open(0); $.scrollTo('#students',500);">
+				<div class="column three square">
+				      <a href="" onClick="event.preventDefault(); close_all(); collapse2.open(0); $.scrollTo('#students',500);">
 				      	<i class="icon-comments"></i>
 				      	<h2>Студенческая виза</h2>
 				      </a>			
 				</div>
-			  <div class="column four square">
-				      <a href="" onClick="close_all(); collapse2.open(0); $.scrollTo('#students',500);">
+			  <div class="column three square">
+				      <a href="" onClick="event.preventDefault(); close_all(); collapse2.open(0); $.scrollTo('#students',500);">
 				      	<i class="icon-book"></i>
 				      	<h2>Студенческая виза TIER4</h2>	
 				      </a>		
 				</div>	
-				<div class="column four square">
+				<div class="column three square">
 				      <a href="" onClick="close_all(); collapse1.open(0); $.scrollTo('#traveling',500);">
 				      	<i class="icon-bar-chart"></i>
 				      	<h2>Бизнес поездки</h2>	
 				      </a>		
 				</div>
-		</div>
-		<div id="visa_nav" class="inner one">	
-				<div class="column four square">
-						<a href="" onClick="close_all(); collapse3.open(0); $.scrollTo('#working',500);">
+				<div class="column three square">
+						<a href="" onClick="event.preventDefault(); close_all(); collapse3.open(0); $.scrollTo('#working',500);">
 				      	<i class="icon-calendar"></i>
 				      	<h2>Рабочая виза</h2>	
 				      </a>		
 				</div>
-				<div class="column four square">
-						<a href="" onClick="close_all(); collapse4.open(0); $.scrollTo('#wedding',500);">
+				<div class="column three square">
+						<a href="" onClick="event.preventDefault(); close_all(); collapse4.open(0); $.scrollTo('#wedding',500);">
 				      	<i class="icon-heart"></i>
 				      	<h2>Для женихов и невест</h2>	
 				      </a>		
@@ -434,41 +432,25 @@
 
 			<div class="column four">
 				<%= image_tag ("Qween.jpg") %>
-
-				<h3>Джордж Вашингтон</h3>
-				<p style="color: #ccc;">Первый президент США</p>
-
 				<p>Все было быстро и оперативно, спасибо вам огромное!</p>
 			</div>
 
 
 			<div class="column four">
 				<%= image_tag ("Lenon.jpg") %>
-
-				<h3>Томас Джефферсон</h3>
-				<p style="color: #ccc;">Третий президент США</p>
-
 				<p>Визу получил даже быстрее, чем мне было обещано. Молодцы работают быстро, грамотно и видно что есть опыт.Спасибо большое! Дай им Бог здоровья.</p>		
 			</div>
 
 
 			<div class="column four">
 				<%= image_tag ("Churchill.jpg") %>
-
-				<h3>Теодор Рузвельт</h3>
-				<p style="color: #ccc;">26-й президент США</p>
-
 				<p>Все понравилось, оформление заняло небольшое время и минимум документов. Спасибо огромное!</p>			
 			</div>
 
 
 			<div class="column four last">
 				<%= image_tag ("stiven.jpg") %>
-
-				<h3>Авраам Линкольн</h3>
-				<p style="color: #ccc;">16-й президент США</p>
-
-				<p>Должен сказать огромное спасибо тем людям, которые занимаются оформлением виз в США, сам я человек занятой, а тут ребята сделали всю работу за меня</p>			
+				<p>Должен сказать огромное спасибо тем людям, которые занимаются оформлением виз. Cам я человек занятой, а тут ребята сделали всю работу за меня</p>			
 			</div>						
 		</div>
 	</section>	

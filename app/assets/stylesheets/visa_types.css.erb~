@@ -188,6 +188,7 @@
 	//background-color: #333;
 	padding-bottom: 50px;
 	min-height: 100%;
+	padding-left: 30px;
 }
 
 .box{
@@ -195,6 +196,7 @@
 	min-width: 350px;
 	//width: 45%;
 	position: relative;
+	
 }
 
 .box a img{
@@ -250,7 +252,7 @@
 	color: white;
 	font-size: 25px;
 	position: absolute;
-	top: 20%;
+	top: 17%;
 	text-align: center;
 	width: 100%;
 }
