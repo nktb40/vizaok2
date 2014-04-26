@@ -82,7 +82,6 @@ html {
  */
 body {
   margin: 0;
-  background: url("<%= asset_path 'body_bg.png' %>") repeat 0 0;
 }
 
 html, body {
