@@ -21,8 +21,9 @@
 		<div class="inner small">
 
 			<div class="logo">
-				<a href=""><i class="fa fa-location-arrow"></i>VizaOK
-				</a>
+				<%= link_to root_path do %>				
+				 	<i class="fa fa-location-arrow"></i>VizaOK
+				<% end %>
 			</div>
 			<div class="sub_logo">
 					<p>визы в Великобританию</p>
@@ -35,6 +36,7 @@
 					<li class=""><a href="#students" onClick="close_all(); collapse2.open(0);">Студенческие</a></li>
 					<li class=""><a href="#team">Отзывы</a></li>
 					<li class=""><a href="#contact">Контакты</a></li>
+					<li class=""><%= link_to "Другие визы", root_path %></li>
 				</ul>
 			</nav><a href="#" id="nav-toggle" aria-hidden="true"><i class="icon-reorder">​</i>​</a>
 
@@ -430,7 +432,7 @@
 		<div class="inner small">
 
 			<div class="column four">
-				<%= image_tag ("qween.jpg") %>
+				<%= image_tag ("Qween.jpg") %>
 
 				<h3>Джордж Вашингтон</h3>
 				<p style="color: #ccc;">Первый президент США</p>
@@ -440,7 +442,7 @@
 
 
 			<div class="column four">
-				<%= image_tag ("lenon.jpg") %>
+				<%= image_tag ("Lenon.jpg") %>
 
 				<h3>Томас Джефферсон</h3>
 				<p style="color: #ccc;">Третий президент США</p>
@@ -450,7 +452,7 @@
 
 
 			<div class="column four">
-				<%= image_tag ("churchill.jpg") %>
+				<%= image_tag ("Churchill.jpg") %>
 
 				<h3>Теодор Рузвельт</h3>
 				<p style="color: #ccc;">26-й президент США</p>
@@ -472,7 +474,7 @@
 
 	
 
-	<section class="row contact extra">
+	<section class="row contact color_blue extra">
 		<div class="inner small">
 
 			<%= render :partial=>'questions/form' %>											

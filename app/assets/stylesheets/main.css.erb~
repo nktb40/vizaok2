@@ -3677,7 +3677,7 @@ header .inner nav ul li a:hover {
 
 /* --- intro --- */
 .intro {
-  margin-top: 90px;
+  margin-top: 50px;
   height: 550px;
   position: relative;
   overflow: hidden;
@@ -3970,7 +3970,7 @@ header .inner nav ul li a:hover {
 }
 
 .contact {
-  background: #407eb8;
+  //background: #407eb8;
 }
 .contact .inner {
   text-align: center;

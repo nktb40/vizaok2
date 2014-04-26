@@ -29,8 +29,9 @@
 		<div class="inner small">
 
 			<div class="logo">
-				<a href=""><i class="fa fa-location-arrow"></i>VizaOK
-				</a>
+				<%= link_to root_path do %>				
+				 	<i class="fa fa-location-arrow"></i>VizaOK
+				<% end %>
 			</div>
 			<div class="sub_logo">
 					<p>оформление виз в США</p>
@@ -43,6 +44,7 @@
 					<li class=""><a href="#students" onClick="collapse2.open(0);">Студенческие</a></li>
 					<li class=""><a href="#team">Отзывы</a></li>
 					<li class=""><a href="#contact">Контакты</a></li>
+					<li class=""><%= link_to "Другие визы", root_path %></li>
 				</ul>
 			</nav><a href="#" id="nav-toggle" aria-hidden="true"><i class="icon-reorder">​</i>​</a>
 
@@ -173,7 +175,7 @@
 		</div>
 		<div class="row viza_item item_2">
 			<div id="traveling">
-				<h1><i class="icon-suitcase"></i> Туристические визы(B1, B2) 
+				<h1 style="margin-left: 20%;"><i class="icon-suitcase"></i> Туристические визы(B1, B2) 
 				<span style="font-size: 18px">подробнее...</span></h1>
 				<div class="row about">
 					<div class="inner small">
@@ -253,7 +255,7 @@
 		</div>
 		<div class="row viza_item item_2">
 			<div id="students">
-				<h1 class="inner"><i class="icon-book">
+				<h1 style="margin-left: 20%;"><i class="icon-book">
 				</i> Студенческие визы (F,M)
 				<span style="font-size: 18px">подробнее...</span></h1>	
 				<div class="row about">
@@ -342,7 +344,7 @@
 		</div>
 		<div class="row viza_item item_2">
 			<div id="working">
-				<h1><i class="icon-desktop">
+				<h1 style="margin-left: 20%;"><i class="icon-desktop">
 				</i> Рабочие визы (H, L, O, P, Q, R)
 				<span style="font-size: 18px">подробнее...</span></h1>
 				<div class="row about">
@@ -376,7 +378,7 @@
 		</div>
 		<div class="row viza_item item_2">
 			<div id="wedding">
-				<h1><i class="icon-heart-empty">
+				<h1 style="margin-left: 20%;"><i class="icon-heart-empty">
 				</i>Визы для женихов и невест (K1)
 				<span style="font-size: 18px">подробнее...</span></h1>
 				<div class="row about">
@@ -398,7 +400,7 @@
 			</div>
 		</div>
 		<div class="row" style="background-color: #2e8b57;">
-		<div class="column one phone">
+		<div class="column two-three phone">
 		<h1 style="text-align: left">
 			<i class="icon-phone"></i>
 			<span style="vertical-align:40%; font-size: 40px;">
@@ -457,7 +459,7 @@
 
 	
 
-	<section class="row contact extra">
+	<section class="row contact color_blue extra">
 		<div class="inner small">
 
 			<%= render :partial=>'questions/form' %>											

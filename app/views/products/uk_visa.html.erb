@@ -21,8 +21,9 @@
 		<div class="inner small">
 
 			<div class="logo">
-				<a href=""><i class="fa fa-location-arrow"></i>VizaOK
-				</a>
+				<%= link_to root_path do %>				
+				 	<i class="fa fa-location-arrow"></i>VizaOK
+				<% end %>
 			</div>
 			<div class="sub_logo">
 					<p>визы в Великобританию</p>
@@ -472,7 +473,7 @@
 
 	
 
-	<section class="row contact extra">
+	<section class="row contact color_blue extra">
 		<div class="inner small">
 
 			<%= render :partial=>'questions/form' %>											

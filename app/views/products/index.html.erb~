@@ -25,444 +25,34 @@
 <body>
 <div id="home"></div>
 
-	<header>
-		<div class="inner small">
-
-			<div class="logo">
-				<a href=""><i class="fa fa-location-arrow"></i>VizaOK
-				<p>оформление виз в США</p>
+	<section class="intro1">
+			<div class= "inner small one box_logo" >
+				<a href="#" >
+					<h1><i class="fa fa-location-arrow"></i> VizaOK</h1>			
 				</a>
 			</div>
-
-			<nav id="nav" class="closed" style="-webkit-transition: max-height 400ms; position: relative;" aria-hidden="false">
-				<ul class="nav">
-					<li class="current"><a href="#home">Заявка</a></li>
-					<li class=""><a href="#traveling" onClick="collapse1.open(0);">Туристические</a></li>
-					<li class=""><a href="#students" onClick="collapse2.open(0);">Студенческие</a></li>
-					<li class=""><a href="#team">Отзывы</a></li>
-					<li class=""><a href="#contact">Контакты</a></li>
-				</ul>
-			</nav><a href="#" id="nav-toggle" aria-hidden="true"><i class="icon-reorder">​</i>​</a>
-
-		</div>
-	</header>
-
-	<section id="intro" class="intro">
-		<div class="inner small">
-
-			<div class="cage">		
-
-			<div class="text">
-			<h2>Оформление виз в США</h2></br>
-				<h2>Америка рядом!</h2>
-
-				<p>Америка - страна свободы и демократии, визовый режим которой считается одним из наиболее строгих в мире.
-				Однако, несмотря на это, ежегодно в Америку приезжают 44 миллиона туристов! </p>
-				<p>Мы поможем Вам стать одним из этих счастливчиков!</p>
-
+			<div class="inner small two-three">
+				<div class="box_head">
+					<h1>Мы предоставляем помощь в оформлении виз:</h1>
+			   </div>
 			</div>
-			
-			<div class="col-lg-5">
-				<div class="form-wrapper">
-					<%= render :partial=>'orders/form' %>
+			<div class="inner small four-five">
+				<div class="column box box_usa">
+					<%= link_to usa_visa_path do%>
+						<%= image_tag("header_s.jpg") %>
+						<h1><b>Америка</b></h1>
+						<i class="icon-circle-arrow-right"></i>
+					<% end %>
 				</div>
-			</div>			
-
-			</div>
-	</div>	
-	</section>
-
-	<section class="row service">
-		<div class="inner small" style="width:820px; margin:0 auto;">
-			<div class="column one">
-				<h1>
-				<i class="icon-cogs"></i>
-				<span style="vertical-align:40%">Чем мы помогаем?</span></h1>
-			</div>		
-			<div class="column one hand-down" style="margin-left: 70px;">
-					<br>
-					<p><i class="icon-hand-down"></i></p>
-			</div>
-			<!--row1-->
-			<div class="column three circle">
-				<br>
-				<i class="icon-ok-sign"></i>
-				<p>Поможем выбрать правильный тип визы<p>
-			</div>
-			<div class="column four hand">
-				<br>
-				<p><i class="icon-hand-right"></i></p>
-			</div>
-			<div class="column three circle">
-				<br>
-				<i class="icon-paste"></i>
-				<p>Заполним анкету на английском языке<p>
-			</div>
-			<div class="column four hand">
-				<br>
-				<p><i class="icon-hand-right"></i></p>
-			</div>
-			<div class="column three circle">
-				<br>
-				<i class="icon-folder-open-alt"></i>
-				<p>Подскажем какие документы собирать<p>
-			</div>
-			
-			<!--row2-->
-				<div class="column one hand-down">
-					<br>
-					<p><i class="icon-hand-down" style="margin-left: 680px;"></i></p>
-				</div>
-			<!--row3-->
-			<br>
-			<div class="column three circle">
-				<br>
-				<i class="icon-comment-alt"></i>
-				<p>Запишем Вас на собеседование и подготовим к нему<p>
-			</div>
-			<div class="column four hand">
-				<br>
-				<p><i class="icon-hand-left"></i></p>
-			</div>
-			<div class="column three circle">
-				<br>
-				<i class="icon-envelope-alt"></i>
-				<p>Сдадим за Вас все документы в посольство США<p>
-			</div>
-			<div class="column four hand">
-				<br>
-				<p><i class="icon-hand-left"></i></p>
-			</div>
-			<div class="column three circle">
-				<br>
-				<i class="icon-edit"></i>
-				<p>Переведём все документы<p>
-			</div>
-			<div class="column one hand-down">
-					<br>
-					<p><i class="icon-hand-down"style="margin-left: 70px;"></i></p>
-			</div>
-			
-			<div class="column two-three circle">
-				<br>
-				<i class="icon-truck"></i>
-				<p>Отправим Вам готовые документы курьером<p>
-			</div>
-			<div class="column four hand">
-				<br>
-				<p><i class="icon-hand-right"></i></p>
-			</div>
-			<div class="column two">
-				<h1>Стоимость наших услуг:
-				<span style="color: #3B3131; font-size: 40px;">
-				<b>$120</b></span></h1>
-				<p style="margin-left: 30px;">Плата взымается после того как Вы получите подтверждение от консульства о получении визы</p>
-			</div>
-		</div>
-	</section>
-	<section id="visa_types" class="row colored viza_types">
-		<div class="inner title">
-			<div class="column one">
-				<h1>
-				<i class="icon-copy"></i>
-				<span style="vertical-align:40%">Виды и категории виз</span></h1>
-				<p>Для въезда в США могут быть использованы различные виды виз. Информацию о каждой из них Вы можете найти ниже. 
-				Свяжитесь с нами, и мы поможем выбрать подходящий для Вас вариант.</p>
-			</div>
-		</div>
-		<div class="row viza_item item_1">
-			<div id="traveling">
-				<h1><i class="icon-suitcase"></i> Туристические визы(B1, B2) 
-				<span style="font-size: 18px">подробнее...</span></h1>
-				<div class="row about">
-					<div class="inner small">
-						<div class="column one">
-							<h2>Виды туристических виз:</h2>
-							<p>
-								<b>1. Деловая визы (B1 Visa -Visitor for Business)</b> предназначеныа для тех, кто намерен поехать в США с деловым визитом. 
-								Обычно это поездки с целью заключение сделок с американскими компаниями или посещение торговой выставки. 
-								Обращающиеся за деловыми визами должны доказать, что планируемая поездка действительно является легальной деловой поездкой. 
-								Их могут попросить представить информацию о месте работы, их компании и ее связях в США.
-							</p>
-							<p>
-								<b>2. Туристическая виза (B2 Visa - Visitor for Pleasure)</b> предназначена для тех, кто намерен поехать в США для развлечения. 
-								Поездка, в ходе которой планируется посетить друзей или родных в США, попадает в эту категорию. 
-								Обращающиеся за туристическими визами должны объяснить цель своей поездки, наличие достаточных средств для поездки и намерение затем вернуться домой.
-							</p>
-							<h2>Время получения визы</h2>
-							<p>
-								 Время от сдачи нам всех документов до собеседования в посольстве США составляет от одной до трех недель, в зависимости от сезона, летом больше времени, зимой меньше.
-								 После собеседования максимум через три дня получаете свой паспорт(лично или курьером) с туристической визой в США.
-							</p>
-							<h2>Стоимость туристической/деловой визы</h2>
-							<p><b>$160</b> - консульский сбор (оплачивается обязательно)*
-							<br><b>&emsp; +</b>
-							<br><b>$120</b> - наши услуги (оплачивается только в случае успешного получения визы)</p>
-							<p><b>Итого: $280</b></p></br>
-							<p>* консульский сбор можно оплатить самостоятельно по адресу <%= link_to "https://payusvisafee.rsb.ru", "https://payusvisafee.rsb.ru", :target => 'blank' %> или мы можем сделать это за Вас.</p>
-						</div>
-						
-						<div class="column one">
-							<h2>Список необходимых документов:</h2>
-							<p>
-								<b>1. Копия заграничного паспорта</b> – 1 и 2 страница. 
-								Паспорт должен быть со сроком действия не менее 6 месяцев с даты предполагаемого въезда в США;
-							</p>
-							<p>
-							   <b>2. Копия гражданского паспорта</b> – первые две страницы;
-			 				</p>
-							<p> 
-			               <b>3. Фотография 5 х 5</b> цветная на белом фоне, 80% лица;
-			 				</p>
-							<p>
-								<b>4. Справка с места работы</b> с указанием должности и оклада:</br>
-			                         <span style="margin-left: 25px;">- для студентов (копия студенческого билета);</span></br>
-			                         <span style="margin-left: 25px;">- для пенсионеров (копия пенсионного удостоверения);</span></br>
-			                         <span style="margin-left: 25px;">- для безработных и детей (спонсорское письмо);</span> </br>
-							</p>
-							<p>
-			               <b>5. Выписка из банковского счёта </b> из расчёта $4500 на человека; 
-			            </p>
-							<p>
-			               <b>6. Копия документов о наличии движимого и недвижимого имущества;</b>
-			            </p>
-			             <p>
-			                <b>7. Сведения о семье</b> - копии свидетельства о браке, о рождении детей;
-			            </p>
-			            <p>
-			                <b>8. Анкета DS-160</b> - на английском языке;
-			            </p>
-							
-						</div>
-						<div class="column one">
-							<h2>Анкета для получения туристической/деловой визы</h2>
-						   <p>Скачайте и заполните анкету на русском языке,  
-						   после чего отправьте ее нам на адрес help@vizaok.ru. 
-						   Мы переведем анкету на английский язык и отправим вместе 
-						   с остальными документами в посольство США.
-						   </p>	
-							<p> Анкету на русском языке можно скачать по ссылке:
-							<%= link_to "Анкета DS-160 (Туристическая/деловая виза)", products_download_turist_doc_url %>
-							</p>					
-						</div>
-			
-					</div>
-				</div>		
-			</div>
-		</div>
-		<div class="row viza_item item_2">
-			<div id="students">
-				<h1 class="inner"><i class="icon-book">
-				</i> Студенческие визы (F,M)
-				<span style="font-size: 18px">подробнее...</span></h1>	
-				<div class="row about">
-					<div class="inner small">
-							<div class="column one">
-							<h2>Виды студенческих виз:</h2>
-							<p><b>1. Виза категории F</b> - предназначена для студентов, которые были зачислены в колледж или университет США, 
-								частную общеобразовательную школу, или же направляющиеся для изучения английского языка в рамках соответствующих программ.
-							</p>
-							<p><b>2. Виза категории M</b> - предназначена для студентов, 
-							направляющихся в США для неакадемического или профессионального обучения.
-							</p>
-							<h2>Как выбрать?</h2>
-							<p> Проконсультируйтесь с Вашим учебным заведением относительно того, 
-								какой тип визы требуется в Вашем случае. Если Вы направляетесь в США как турист, 
-								но также планируете пройти обучение по сокращенной программе (менее 18 часов в неделю), 
-								Вы можете ехать по туристической визе В2.
-							</p>
-							<h2>Сколько стоит студенческая виза?</h2>
-						   <p><b>$160</b> - консульский сбор (обязательно для всех)*
-						   	<br><b>&emsp; +</b> 
-						   	<br><b>$200</b> - оплата SEVIS** (обязательно для всех студентов)***
-						   	<br><b>&emsp; +</b> 
-						   	<br><b>$120</b> - наши услуги (оплачиваются только в случае успешного получения визы)</p>
-						   	<p><b>Итого: $480</b></p>
-						   <p>* оплату консульского сбора Вы можете совершить самостоятельно по адресу <%= link_to "https://payusvisafee.rsb.ru", "https://payusvisafee.rsb.ru",:target => 'blank' %> или мы можем сделать это за Вас.</p>
-							<div data-collapse>						
-								<h3 style="color: #aaa">** Что такое SEVIS? >></h3>
-								<p style="padding: 10px; background-color: #ccc">SEVIS (Student and Exchange Visitor Information System) – это специально разработанная информационная система, общая база данных, используемая правительством Соединенных Штатов для контроля за студентами и участниками обменных программ, въезжающих на территорию США по визе J (Work and Travel) или F, M (Students). 
-									Для регистрации в системе необходимо оплатить обязательный сбор SEVIS Fee, который составляет 200$. 
-									Это необходимо сделать до подачи заявления на студенческую визу или визу по программе Work and Travel.
-								</p>
-							</div>
-							<p>*** оплату SEVIS вы можете совершить самостоятельно по адресу <%= link_to "https://www.fmjfee.com/i901fee/index.jsp", "https://www.fmjfee.com/i901fee/index.jsp", :target => 'blank' %> или через нас.</p>
-						   
-							</div>
-							<div class="column one">
-							<h2>Список необходимых документов для оформления студенческой визы:</h2>
-							<p>
-								<b>1. Копия заграничного паспорта</b> – 1 и 2 страница. 
-								Паспорт должен быть со сроком действия не менее 6 месяцев с даты предполагаемого въезда в США
-							</p>
-							<p>
-							   <b>2. Копия гражданского паспорта</b> – первые две страницы
-			 				</p>
-							<p>
-			               <b>3. Фотография</b> 5 х 5 цветная на белом фоне, 80% лица 
-			 				</p>
-							<p>
-								<b>4. Справка с места работы</b> с указанием должности и оклада:</br>
-			                         <span style="margin-left: 25px;">- для студентов (копия студенческого билета);</span></br>
-			                         <span style="margin-left: 25px;">- для пенсионеров (копия пенсионного удостоверения);</span></br>
-			                         <span style="margin-left: 25px;">- для безработных и детей (спонсорское письмо);</span> </br>
-							</p>
-							<p>
-			                <b>5. Копия I-20;</b> 
-			            </p>
-			            <p>
-			                <b>6. Копия SevisFee;</b> 
-			            </p>
-							<p>
-			                <b>7. Выписка из банковского счёта</b> из расчёта $4500 на человека; 
-			            </p>
-							<p>
-			                <b>8. Копия документов о наличии движимого и недвижимого имущества;</b>
-			            </p>
-			            <p>
-			                <b>9. Сведения о семье</b> - копии свидетельства о браке, о рождении детей;
-			            </p>
-						</div>
-						<div class="column one">
-							<h2>Анкета для получения студенческой визы</h2>
-						   <p>Скачайте и заполните анкету на русском языке,  
-						   после чего отправьте ее нам на адрес help@vizaok.ru. 
-						   Мы переведем анкету на английский язык и отправим вместе 
-						   с остальными документами в посольство США.
-						   </p>	
-							<p> Анкету на русском языке можно скачать по ссылке:
-							<%= link_to "Анкета DS-160 (Студенческая виза)", products_download_student_doc_url %>							
-							</p>					
-						</div>
-			
-					</div>
-				</div>		
-			</div>	
-		</div>
-		<div class="row viza_item item_2">
-			<div id="working">
-				<h1><i class="icon-desktop">
-				</i> Рабочие визы (H, L, O, P, Q, R)
-				<span style="font-size: 18px">подробнее...</span></h1>
-				<div class="row about">
-					<div class="inner small">
-						<div class="column one">
-						<h2>Когда используется виза</h2>
-							<p><b>Рабочие визы (H, L, O, P, Q, R Visas)</b> выдаются при оформлении разрешения на временную работу. 
-							</p>
-						<h2>Как получить</h2>
-						<p>
-							Разрешения на временную работу выдаются на основе петиций, поданных в Службу U.S. Citizenship and Immigration Services (USCIS) в США потенциальным работодателем. 
-							Обращающиеся за разрешением на временную работу должны попросить своего будущего работодателя в США связаться с ближайшим региональным офисом INS для подачи петиции. 
-							Визовое собеседование в Консульстве будет назначено только после того, как INS одобрит такую петицию.
-						</p>
-						</div>
-						
-						<div class="column one">
-							<h2>Анкета для получения рабочей визы</h2>
-						   <p>Скачайте и заполните анкету на русском языке,  
-						   после чего отправьте ее нам на адрес help@vizaok.ru. 
-						   Мы переведем анкету на английский язык и отправим вместе 
-						   с остальными документами в посольство США.
-						   </p>	
-							<p> Анкету на русском языке можно скачать по ссылке:
-							<%= link_to "Анкета DS-160 (Рабочая виза)", products_download_work_doc_url %>								
-							</p>					
-						</div>
-					</div>
+			   <div class="column box box_uk">	
+			   	<%= link_to usa_visa_path do%>
+						<%= image_tag("header_gb2_s.jpg") %>
+						<h1><b>Великобритания</b></h1>
+						<i class="icon-circle-arrow-right"></i>
+					<% end %>	
 				</div>
 			</div>
-		</div>
-		<div class="row viza_item item_2">
-			<div id="wedding">
-				<h1><i class="icon-heart-empty">
-				</i>Визы для женихов и невест (K1)
-				<span style="font-size: 18px">подробнее...</span></h1>
-				<div class="row about">
-					<div class="inner small">
-						<div class="column one">
-						<h2>Когда используется виза</h2>
-							<p><b>Визы для женихов и невест (K1 Visa - Fiance/Fiancee of a U.S. Citizen)</b> предназначены для тех, кто собирается ехать в США, чтобы вступить в брак с американским гражданином/гражданкой и затем поселиться там постоянно.
-							</p>
-						<h2>Как получить</h2>
-							<p>Визы для женихов и невест, как и все остальные категории иммиграционных виз, не выдаются в Консульствах по регионам России. 
-							Жители России должны обращаться за такими визами в Посольство в Москве. 
-							Эти визы выдаются на основе петиций, поданных в Службу Иммиграции и Натурализации в США потенциальными американскими супругами. 
-							Обращающиеся за визами для женихов и невест должны попросить своих будущих супругов в США связаться с ближайшим региональным офисом INS для подачи петиции. 
-							Визовое собеседование в Консульстве будет назначено только после того, как INS одобрит такую петицию.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row" style="background-color: #2e8b57;">
-		<div class="column one">
-		<h1 style="text-align: left">
-			<i class="icon-phone"></i>
-			<span style="vertical-align:40%; font-size: 40px;">
-			<b>+7(915)347-51-48</b>
-			</span>
-			<br>Если у вас возникли трудности со сбором или оформлением документов
-			свяжитесь с нами
-		</h1> 
-		</div>
-		</div>	
-	</section>
-
-	<section id="team" class="row team">
-		<div class="inner small">
-
-			<div class="column four">
-				<%= image_tag ("team1.jpg") %>
-
-				<h3>Джордж Вашингтон</h3>
-				<p style="color: #ccc;">Первый президент США</p>
-
-				<p>Все было быстро и оперативно, спасибо вам огромное!</p>
-			</div>
-
-
-			<div class="column four">
-				<%= image_tag ("team2.png") %>
-
-				<h3>Томас Джефферсон</h3>
-				<p style="color: #ccc;">Третий президент США</p>
-
-				<p>Визу получил даже быстрее, чем мне было обещано. Молодцы работают быстро, грамотно и видно что есть опыт.Спасибо большое! Дай им Бог здоровья.</p>		
-			</div>
-
-
-			<div class="column four">
-				<%= image_tag ("team3.png") %>
-
-				<h3>Теодор Рузвельт</h3>
-				<p style="color: #ccc;">26-й президент США</p>
-
-				<p>Все понравилось, оформление заняло небольшое время и минимум документов. Спасибо огромное!</p>			
-			</div>
-
-
-			<div class="column four last">
-				<%= image_tag ("team4.png") %>
-
-				<h3>Авраам Линкольн</h3>
-				<p style="color: #ccc;">16-й президент США</p>
-
-				<p>Должен сказать огромное спасибо тем людям, которые занимаются оформлением виз в США, сам я человек занятой, а тут ребята сделали всю работу за меня</p>			
-			</div>						
-		</div>
 	</section>	
-
-	
-
-	<section class="row contact extra">
-		<div class="inner small">
-
-			<%= render :partial=>'questions/form' %>											
-					
-		</div>
-	</section>		
 
 	<footer class="row footer extra-dark">
 		<div id="contact" class="inner small">
@@ -478,7 +68,7 @@
 
 			<div class="column three">
 				<p><strong>О нас</strong><br>
-				Мы стремимся максимально упростить жизнь наших клентов, предоставляя им возможность получить визу в США за минимально возможный срок, с первого раза!</p>
+				Мы стремимся максимально упростить жизнь наших клентов, предоставляя им возможность получать визы за минимально возможный срок, с первого раза!</p>
 			</div>
 
 			<div class="column three last">
@@ -490,67 +80,13 @@
 		</div>
 	</footer>				
 		
-  <script>
-  		
-        var collapse1 = new jQueryCollapse($("#traveling"), {
-          open: function() {
-            this.slideDown(150);
-          },
-          close: function() {
-            this.slideUp(150);
-          }
-        });
-        var collapse2 = new jQueryCollapse($("#students"), {
-          open: function() {
-            this.slideDown(150);
-          },
-          close: function() {
-            this.slideUp(150);
-          }
-        });
-        var collapse3 = new jQueryCollapse($("#working"), {
-          open: function() {
-            this.slideDown(150);
-          },
-          close: function() {
-            this.slideUp(150);
-          }
-        });
-        var collapse3 = new jQueryCollapse($("#wedding"), {
-          open: function() {
-            this.slideDown(150);
-          },
-          close: function() {
-            this.slideUp(150);
-          }
-        });
-   </script>
 	<script type="text/javascript">
 	
 	
 	$(document).ready(function(){
 	
-	$(".intro").backstretch("<%= asset_path 'header.jpg' %>");
-	
-	$( "#new_order" ).submit(function( event ) {
-		if ( $( "#order_name" ).val() ) {
-				if ( $( "#order_phone" ).val()) {
-					if ( $( "#order_email" ).val()) {
-					   $('#order_submit').attr("disabled", true);
-					   $('#order_submit').css('background-image', 'url(<%=asset_url("load_o.gif") %>)');
-					   $('#order_submit').fadeIn(10);	
-	  					$('#order_submit').val('Подождите');
-	  					return;
-	  				}
-	  				$( "#email_error" ).text("Укажите Ваш e-mail");
-	  				return false;
-	  			}
-	  		$( "#phone_error" ).text("Укажите Ваш номер телефона");
-	  		return false;
-	  	}
-	  	$( "#name_error" ).text("Укажите Ваше имя");
-	  	return false;
-	});
+	$("#intro_usa").backstretch("<%= asset_path 'header.jpg' %>");
+	$("#intro_uk").backstretch("<%= asset_path 'header_gb2.jpg' %>");
 	
 	$( "#new_question" ).submit(function( event ) {
 		if ( $( "#question_name" ).val() ) {
