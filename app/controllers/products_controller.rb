@@ -43,4 +43,28 @@ class ProductsController < ApplicationController
 	  )
 	end
 	
+	def download_turist_uk_doc
+	  send_file(
+	    "#{Rails.root}/public/documents/anketa_turizm.doc",
+	    filename: "Анкета для туристической визы.doc",
+	    type: "application/doc"
+	  )
+	end
+	
+	def download_student_uk_doc
+	  send_file(
+	    "#{Rails.root}/public/documents/anketa_student.doc",
+	    filename: "Анкета для студенческой визы.doc",
+	    type: "application/doc"
+	  )
+	end
+	
+	def download_biznes_uk_doc
+	  send_file(
+	    "#{Rails.root}/public/documents/anketa_biznes.doc",
+	    filename: "Анкета для бизнес визы.doc",
+	    type: "application/doc"
+	  )
+	end
+	
 end

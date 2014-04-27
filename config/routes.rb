@@ -24,10 +24,14 @@ GShockShop::Application.routes.draw do
    resources :questions , only: [:create]
    
    get "usa_visa" => 'products#usa_visa'
-   get "uk_visa" => 'products#uk_visa'
    get "products/download_turist_doc"
    get "products/download_student_doc"
    get "products/download_work_doc"
+   
+   get "uk_visa" => 'products#uk_visa'
+   get "products/download_turist_uk_doc"
+   get "products/download_student_uk_doc"
+   get "products/download_biznes_uk_doc"
 
   # Example of regular route:
   #  get 'd917148ce012' => 'products#d917148ce012'

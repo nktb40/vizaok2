@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>VizaOK - Оформление визы в США | Онлайн оформление визы в США</title>
+  <title>VizaOK - Оформление визы в США и Великобританию</title>
   <%= favicon_link_tag(source='favicon.png', :rel=>"shortcut icon", :type=>"image/x-icon") %>
   <%= favicon_link_tag(source='favicon.png', :rel=>"icon", :type=>"image/x-icon") %>
   <meta name="description" content="Онлайн оформление визы в США, 
@@ -39,14 +39,14 @@
 			<div class="inner small one">
 				<div class="column two box box_usa">
 					<%= link_to usa_visa_path do%>
-						<%= image_tag("header_s.jpg") %>
+						<!--%= image_tag("header_s.jpg") %-->
 						<h1><b>Америка</b></h1>
 						<i class="icon-circle-arrow-right"></i>
 					<% end %>
 				</div>
 			   <div class="column two box box_uk">	
 			   	<%= link_to uk_visa_path do%>
-						<%= image_tag("header_gb2_s.jpg") %>
+						<!-- image_tag("header_gb2_s.jpg") %-->
 						<h1><b>Великобритания</b></h1>
 						<i class="icon-circle-arrow-right"></i>
 					<% end %>	

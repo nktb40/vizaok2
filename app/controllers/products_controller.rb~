@@ -16,7 +16,7 @@ class ProductsController < ApplicationController
 	def uk_visa
 		@order = Order.new
 		@question = Question.new
-		@order.visa_country = 'Великобритания'
+		@visa_country = 'Великобритания'
 	end
 		
 	def download_turist_doc
@@ -40,6 +40,22 @@ class ProductsController < ApplicationController
 	    "#{Rails.root}/public/documents/Анкета DS-160 (Рабочая виза).docx",
 	    filename: "Анкета DS-160 (Рабочая виза).docx",
 	    type: "application/docx"
+	  )
+	end
+	
+	def download_turist_uk_doc
+	  send_file(
+	    "#{Rails.root}/public/documents/anketa_turizm.doc",
+	    filename: "Анкета для туристической визы.doc",
+	    type: "application/doc"
+	  )
+	end
+	
+	def download_student_uk_doc
+	  send_file(
+	    "#{Rails.root}/public/documents/anketa_student.doc",
+	    filename: "Анкета для студенческой визы.doc",
+	    type: "application/doc"
 	  )
 	end
 	
