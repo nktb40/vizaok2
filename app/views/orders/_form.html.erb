@@ -19,6 +19,7 @@
 	   <div class="form-group last">
      		<%= f.submit :'Отправить', :class=>"btn", :id=>"order_submit" %>
 		</div>
+		<%= f.hidden_field(:visa_country, :value => @visa_country) %>
 </fieldset>
 <% end %>
 
