@@ -3358,7 +3358,7 @@ input[type="text"] {
 }
 
 .one {
-  width: 100%;
+  //width: 100%;
   margin-right: 2%;
   margin-left: 2%;
 }
@@ -3366,6 +3366,7 @@ input[type="text"] {
 .two {
   width: 49%;
   margin-right: 2%;
+  margin-left: 2%;
 }
 
 .three {
@@ -3534,8 +3535,9 @@ input[type="text"] {
 }
 
 .row {
-  width: 100%;
-  padding: 50px 0;
+  //width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
   position: relative;
   background: white;
 }
@@ -4031,7 +4033,7 @@ header .inner nav ul li a:hover {
   font-weight: 700;
 }
 footer{
-	padding: 10px;
+	padding: 10px 0;
 }
 footer .inner .column {
   margin-bottom: 0;

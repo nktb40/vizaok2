@@ -1,4 +1,6 @@
-
+.in_center{
+	
+}
 .viza_types{	
 	padding: 0px;
 }
@@ -144,9 +146,9 @@
 .square{
    border: none;
 	height: 220px;
-	width: 220px;
+	//width: 220px;
 	text-align: center;
-	margin-right: 5%;
+	//margin-right: 5%;
 	
 }
 
@@ -188,12 +190,11 @@
 	//background-color: #333;
 	padding-bottom: 50px;
 	min-height: 100%;
-	padding-left: 30px;
 }
 
 .box{
 	min-height: 350px;
-	min-width: 350px;
+	//min-width: 350px;
 	//width: 45%;
 	position: relative;
 	

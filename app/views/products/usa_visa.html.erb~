@@ -193,7 +193,7 @@
 				      	<h2>Рабочая виза</h2>	
 				      </a>		
 				</div>
-				<div class="column four square">
+				<div class="column four square last">
 						<a href="" onClick="event.preventDefault(); close_all(); collapse4.open(0); $.scrollTo('#wedding',500);">
 				      	<i class="icon-heart"></i>
 				      	<h2>Для женихов и невест</h2>	
@@ -374,7 +374,7 @@
 				<div class="row about">
 					<div class="inner small">
 						<div class="column one">
-						<h2>Рабочие визы в США</h2>
+						<h2>Рабочие визы в США:</h2>
 							<p><b>Рабочие визы (H, L, O, P, Q, R Visas)</b> выдаются при оформлении разрешения на временную работу. 
 							</p>
 						<h2>Как получить</h2>
@@ -406,7 +406,7 @@
 				<div class="row about">
 					<div class="inner small">
 						<div class="column one">
-						<h2>Визы для женихов и невест</h2>
+						<h2>Визы для женихов и невест:</h2>
 							<p><b>Визы для женихов и невест (K1 Visa - Fiance/Fiancee of a U.S. Citizen)</b> предназначены для тех, кто собирается ехать в США, чтобы вступить в брак с американским гражданином/гражданкой и затем поселиться там постоянно.
 							</p>
 						<h2>Как получить</h2>
