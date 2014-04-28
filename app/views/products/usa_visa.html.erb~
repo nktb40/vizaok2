@@ -5,11 +5,7 @@
   <%= favicon_link_tag(source='favicon.png', :rel=>"shortcut icon", :type=>"image/x-icon") %>
   <%= favicon_link_tag(source='favicon.png', :rel=>"icon", :type=>"image/x-icon") %>
   <meta name="description" content="Онлайн оформление визы в США, 
-  виза в сша анкета на русском, Помощь в оформлении виз в США, 
-  эмиграция в сша,американская виза,получить визу,визы в сша, туризм в сша, получение визы сша, оформление визы сша, получить визу сша, анкета для визы в сша, рабочие визы в сша
-порядок получения визы в сша, как получить визу в сша,  получение визы в сша,получить визу в сша,документы необходимые для получения визы в сша, визу в сша, виз в сша,документы для визы в сша,иммиграционные визы в сша
-туристические визы в сша,виза в сша анкета,стоимость визы в сша,купить визу в сша,оформить визу в сша,как сделать визу,анкета на визу в сша,получить рабочую визу в сша,помощь в получении визы сша,документы для получения визы сша,как получить визу в америку
-получить визу в америку,как сделать визу в америку,оформление гостевой визы в сша"/>
+  виза в сша анкета на русском, Помощь в оформлении туристических виз, студенческих виз, деловых виз, рабочих виз, виз для женихов и невест в США"/>
   
  <meta name="keywords" content="эмиграция в сша,американская виза,получить визу,визы в сша, туризм в сша, получение визы сша, оформление визы сша, получить визу сша, анкета для визы в сша, рабочие визы в сша
 порядок получения визы в сша, как получить визу в сша,  получение визы в сша,получить визу в сша,документы необходимые для получения визы в сша, визу в сша, виз в сша,документы для визы в сша,иммиграционные визы в сша
@@ -75,87 +71,65 @@
 	</div>	
 	</section>
 
-	<section class="row service">
-		<div class="inner small" style="width:820px; margin:0 auto;">
+<section class="row service">
+		<div class="inner small" style="padding-left: 6%; margin-bottom: 3%;">
 			<div class="column one">
 				<h1>
 				<i class="icon-cogs"></i>
 				<span style="vertical-align:40%">Чем мы помогаем?</span></h1>
-			</div>		
-			<div class="column one hand-down" style="margin-left: 70px;">
+			</div>
+		</div>
+		<div class="inner small">		
+			<div class="column three">
+				<div class="circle in_center">
 					<br>
-					<p><i class="icon-hand-down"></i></p>
+					<i class="icon-ok-sign"></i>
+					<p>Поможем выбрать правильный тип визы<p>
+				</div>				
 			</div>
-			<!--row1-->
-			<div class="column three circle">
-				<br>
-				<i class="icon-ok-sign"></i>
-				<p>Поможем выбрать правильный тип визы<p>
-			</div>
-			<div class="column four hand">
-				<br>
-				<p><i class="icon-hand-right"></i></p>
-			</div>
-			<div class="column three circle">
-				<br>
-				<i class="icon-paste"></i>
-				<p>Заполним анкету на английском языке<p>
-			</div>
-			<div class="column four hand">
-				<br>
-				<p><i class="icon-hand-right"></i></p>
-			</div>
-			<div class="column three circle">
-				<br>
-				<i class="icon-folder-open-alt"></i>
-				<p>Подскажем какие документы собирать<p>
-			</div>
-			
-			<!--row2-->
-				<div class="column one hand-down">
+			<div class="column three">
+				<div class="circle in_center">
 					<br>
-					<p><i class="icon-hand-down" style="margin-left: 680px;"></i></p>
-				</div>
-			<!--row3-->
-			<br>
-			<div class="column three circle">
-				<br>
-				<i class="icon-comment-alt"></i>
-				<p>Запишем Вас на собеседование и подготовим к нему<p>
+					<i class="icon-paste"></i>
+					<p>Заполним анкету на английском языке<p>
+				</div>				
 			</div>
-			<div class="column four hand">
-				<br>
-				<p><i class="icon-hand-left"></i></p>
+			<div class="column three">
+				<div class="circle in_center">
+					<br>	
+					<i class="icon-folder-open-alt"></i>
+					<p>Подскажем какие документы собирать<p>
+				</div>				
 			</div>
-			<div class="column three circle">
-				<br>
-				<i class="icon-envelope-alt"></i>
-				<p>Сдадим за Вас все документы в посольство США<p>
-			</div>
-			<div class="column four hand">
-				<br>
-				<p><i class="icon-hand-left"></i></p>
-			</div>
-			<div class="column three circle">
-				<br>
-				<i class="icon-edit"></i>
-				<p>Переведём все документы<p>
-			</div>
-			<div class="column one hand-down">
+			<div class="column three">
+				<div class="circle in_center">
 					<br>
-					<p><i class="icon-hand-down"style="margin-left: 70px;"></i></p>
+					<i class="icon-comment-alt"></i>
+					<p>Запишем Вас на собеседование и подготовим к нему<p>
+				</div>				
 			</div>
-			
-			<div class="column two-three circle">
-				<br>
-				<i class="icon-truck"></i>
-				<p>Отправим Вам готовые документы курьером<p>
+			<div class="column three">
+				<div class="circle in_center">
+					<br>
+					<i class="icon-envelope-alt"></i>
+					<p>Сдадим за Вас все документы в посольство<p>
+				</div>				
 			</div>
-			<div class="column four hand">
-				<br>
-				<p><i class="icon-hand-right"></i></p>
+			<div class="column three">
+				<div class="circle in_center">
+					<br>
+					<i class="icon-edit"></i>
+					<p>Переведём все документы<p>
+				</div>				
 			</div>
-			<div class="column two">
+			<div class="column three">
+				<div class="circle in_center">
+					<br>
+					<i class="icon-truck"></i>
+					<p>Отправим Вам готовые документы курьером<p>
+				</div>				
+			</div>
+			<div class="column two" style="padding-top: 2%;">
 				<h1>Стоимость наших услуг:
 				<span style="color: #3B3131; font-size: 40px;">
 				<b>$120</b></span></h1>

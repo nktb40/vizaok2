@@ -39,14 +39,14 @@
 			<div class="inner small one">
 				<div class="column two box box_usa">
 					<%= link_to usa_visa_path do%>
-						<!--%= image_tag("header_s.jpg") %-->
+						<%= image_tag("header_s.jpg") %>
 						<h1><b>Америка</b></h1>
 						<i class="icon-circle-arrow-right"></i>
 					<% end %>
 				</div>
 			   <div class="column two box box_uk">	
 			   	<%= link_to uk_visa_path do%>
-						<!-- image_tag("header_gb2_s.jpg") %-->
+						<%= image_tag("header_gb2_s.jpg") %>
 						<h1><b>Великобритания</b></h1>
 						<i class="icon-circle-arrow-right"></i>
 					<% end %>	
