@@ -1,1 +1,68 @@
-<%= yield %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Academica4you</title>
+  <%= favicon_link_tag(source='favicon.png', :rel=>"shortcut icon", :type=>"image/x-icon") %>
+  <%= favicon_link_tag(source='favicon.png', :rel=>"icon", :type=>"image/x-icon") %>
+  <meta name="description" content=""/>
+  
+  <meta name="keywords" content=""/>
+  <meta name="document-state" content="Dynamic" />
+  <meta name="robots" content="all" />
+  <meta http-equiv="content-language" content="ru" />
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="main-container">
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">           
+            <span class="sr-only">Academica4you</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%= link_to root_path, :class=>"navbar-brand" do %>
+          	<span class="glyphicon glyphicon-globe"> </span>
+          	Academica4you
+          <% end %>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+          <ul class="nav navbar-nav">
+            <li class="active"><%= link_to "Главная", root_path %></li>
+            <li><%= link_to "Поиск курсов", "" %></li>
+            <li><%= link_to "Все школы", "" %></li>
+            <li><%= link_to "Визовая поддержка", "" %></li>
+            <li><%= link_to "Как мы работаем", root_path %></li>
+            <li><%= link_to "Контакты", "" %></li>
+          </ul>
+			 <form class="navbar-form navbar-right" role="search">
+			   <div class="form-group">
+			     <input type="text" class="form-control" placeholder="Поиск по сайту">
+			   </div>
+			   <button type="submit" class="btn btn-info">
+					<span class="glyphicon glyphicon-search"></span>			   
+			   </button>
+			 </form>
+        </div>
+      </div>
+    </div>
+    
+
+	<div id="body-container">
+      <!-- Example row of columns -->
+
+        <%= yield %>
+   </div>
+  <div id="footer-container" class="panel-footer">
+  		<p>© Company 2014</p>
+  </div>
+  </div>
+</body>
+ <script type="text/javascript" >
+		$('.selectpicker').selectpicker();
+ </script>
+</html>

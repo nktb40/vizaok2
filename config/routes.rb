@@ -22,6 +22,7 @@ GShockShop::Application.routes.draw do
    end 
    resources :products , only: [:index]
    resources :questions , only: [:create]
+   resources :visas, only: [:index]
    
    get "usa_visa" => 'products#usa_visa'
    get "products/download_turist_doc"

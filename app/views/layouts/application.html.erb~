@@ -1,20 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>VizaOK - Оформление визы в США | Онлайн оформление визы в США</title>
+  <title>Academica4you</title>
   <%= favicon_link_tag(source='favicon.png', :rel=>"shortcut icon", :type=>"image/x-icon") %>
   <%= favicon_link_tag(source='favicon.png', :rel=>"icon", :type=>"image/x-icon") %>
-  <meta name="description" content="Онлайн оформление визы в США, 
-  виза в сша анкета на русском, Помощь в оформлении виз в США, 
-  эмиграция в сша,американская виза,получить визу,визы в сша, туризм в сша, получение визы сша, оформление визы сша, получить визу сша, анкета для визы в сша, рабочие визы в сша
-порядок получения визы в сша, как получить визу в сша,  получение визы в сша,получить визу в сша,документы необходимые для получения визы в сша, визу в сша, виз в сша,документы для визы в сша,иммиграционные визы в сша
-туристические визы в сша,виза в сша анкета,стоимость визы в сша,купить визу в сша,оформить визу в сша,как сделать визу,анкета на визу в сша,получить рабочую визу в сша,помощь в получении визы сша,документы для получения визы сша,как получить визу в америку
-получить визу в америку,как сделать визу в америку,оформление гостевой визы в сша"/>
+  <meta name="description" content=""/>
   
- <meta name="keywords" content="эмиграция в сша,американская виза,получить визу,визы в сша, туризм в сша, получение визы сша, оформление визы сша, получить визу сша, анкета для визы в сша, рабочие визы в сша
-порядок получения визы в сша, как получить визу в сша,  получение визы в сша,получить визу в сша,документы необходимые для получения визы в сша, визу в сша, виз в сша,документы для визы в сша,иммиграционные визы в сша
-туристические визы в сша,виза в сша анкета,стоимость визы в сша,купить визу в сша,оформить визу в сша,как сделать визу,анкета на визу в сша,получить рабочую визу в сша,помощь в получении визы сша,документы для получения визы сша,как получить визу в америку
-получить визу в америку,как сделать визу в америку,оформление гостевой визы в сша"/>
+  <meta name="keywords" content=""/>
   <meta name="document-state" content="Dynamic" />
   <meta name="robots" content="all" />
   <meta http-equiv="content-language" content="ru" />
@@ -23,8 +15,54 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="main-container">
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">           
+            <span class="sr-only">Academica4you</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%= link_to root_path, :class=>"navbar-brand" do %>
+          	<span class="glyphicon glyphicon-globe"> </span>
+          	Academica4you
+          <% end %>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+          <ul class="nav navbar-nav">
+            <li class="active"><%= link_to "Главная", root_path %></li>
+            <li><%= link_to "Поиск курсов", search_path %></li>
+            <li><%= link_to "Все школы", schools_path %></li>
+            <li><%= link_to "Визовая поддержка", visas_path %></li>
+            <li><%= link_to "Как мы работаем", root_path(:anchor => "how-we-work") %></li>
+            <li><%= link_to "Контакты", contacts_path %></li>
+          </ul>
+			 <form class="navbar-form navbar-right" role="search">
+			   <div class="form-group">
+			     <input type="text" class="form-control" placeholder="Поиск по сайту">
+			   </div>
+			   <button type="submit" class="btn btn-info">
+					<span class="glyphicon glyphicon-search"></span>			   
+			   </button>
+			 </form>
+        </div>
+      </div>
+    </div>
+    
 
-<%= yield %>
+	<div id="body-container">
+      <!-- Example row of columns -->
 
+        <%= yield %>
+   </div>
+  <div id="footer-container" class="panel-footer">
+  		<p>© Company 2014</p>
+  </div>
+  </div>
 </body>
+ <script type="text/javascript" >
+		$('.selectpicker').selectpicker();
+ </script>
 </html>
