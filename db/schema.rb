@@ -11,10 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140406175119) do
+ActiveRecord::Schema.define(version: 20140704220810) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "countries", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "country_cd"
+  end
+
+  create_table "documents", force: true do |t|
+    t.integer  "visa_id"
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "orders", force: true do |t|
     t.string   "name"
@@ -40,6 +55,26 @@ ActiveRecord::Schema.define(version: 20140406175119) do
     t.text     "address"
     t.string   "visa_country"
     t.string   "skype"
+  end
+
+  create_table "visas", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "country_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "country_cd"
+    t.string   "type_cd"
+    t.integer  "type_id"
+    t.string   "visa_cd"
+  end
+
+  create_table "visatypes", force: true do |t|
+    t.string   "name"
+    t.text     "subtype"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "type_cd"
   end
 
 end
