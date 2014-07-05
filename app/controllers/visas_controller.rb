@@ -3,5 +3,6 @@ class VisasController < ApplicationController
 	end
 	
 	def show
+		@visa = Visa.find(params[:id])
 	end
 end
