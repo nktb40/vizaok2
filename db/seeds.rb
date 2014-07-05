@@ -27,12 +27,18 @@ CSV.foreach("data/vizaok2 - documents.csv", :headers => true) do |row|
   Document.create(visa_id: Visa.where(:visa_cd => row['visa_cd']).first.id, 
   name: row['name'], description: row['description'])
 end
-=end
+
 
 Price.delete_all
 CSV.foreach("data/vizaok2 - prices.csv", :headers => true) do |row|
   Price.create(visa_id: Visa.where(:visa_cd => row['visa_cd']).first.id, 
   name: row['name'], description: row['description'], price: row['price'], currency: row['currency'])
+end
+=end
+Addinfo.delete_all
+CSV.foreach("data/vizaok2 - addinfo.csv", :headers => true) do |row|
+  Addinfo.create(visa_id: Visa.where(:visa_cd => row['visa_cd']).first.id, 
+  name: row['name'], description: row['description'])
 end
 
 =begin

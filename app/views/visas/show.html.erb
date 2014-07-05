@@ -4,6 +4,7 @@
 		<div class="panel panel-default">
 	       <div class="panel-heading">
 	       <h3>
+	       	 <span class="glyphicon glyphicon-globe"> </span>
 		       <%= link_to "Виза в "+@visa.country.name, "" %> /
 		       <%= link_to @visa.visatype.name, "" %> /
 		       <%= link_to @visa.visatype.subtype, "" %>
@@ -15,9 +16,13 @@
        	 			</div>
        	 			<p><b class="text-underline">Описание</b>: <%= @visa.description %></p>
 						<p>
-							<%= link_to "", :class=>"btn btn-info" do %>
+							<%= link_to "", :class=>"btn btn-success" do %>
+								<span class="glyphicon glyphicon-envelope"></span>	
+								Оставить заявку		
+					       <% end %> 
+							<%= link_to "", :class=>"btn btn-warning" do %>
 								<span class="glyphicon glyphicon-save"></span>	
-								Скачать черновик анкеты для визы		
+								Черновик анкеты		
 					       <% end %> 
 						</p>
 	       	 </div>
@@ -63,16 +68,15 @@
     	   </div>
     	   <div class="panel panel-default">
 	       	<div class="panel-heading">
-					<h3><span class="glyphicon glyphicon-ok"></span>&nbsp; Дополнительная информация</h3></div>
+					<h3><span class="glyphicon glyphicon-paperclip"></span>&nbsp; Дополнительная информация</h3></div>
 	       	<div class="panel-body">
 	       		<table class="table table-striped">
 				      <tbody>
 				      	<% @cnt = 0 %>
-				      	<% @visa.prices.each  do |cost| %>
+				      	<% @visa.addinfos.each  do |info| %>
 				      		<% @cnt += 1 %>
 				      		<tr class="font-s-17">
-					           <td class="col-lg-10"><b><%= @cnt %>. <%= cost.name %>:</b> <%= raw cost.description %></td>
-					           <td class="col-lg-2"><b><%= cost.price %> <%= cost.currency %></b></td>
+					           <td class="col-lg-10"><b><%= @cnt %>. <%= info.name %></b></br> <%= raw info.description %></td>
 					         </tr>
 				      	<% end %>
 				      </tbody>
@@ -81,19 +85,112 @@
     	   </div>
  	</div>
 	<div class="col-lg-3">
-       <%= link_to "", :class=>"btn btn-success btn-lg btn-block" do %>
-			<span class="glyphicon glyphicon-shopping-cart"></span>			
-       	Корзина
- 			<sup><span class="badge">2</span></sup>      	
-       <% end %> 
-       <%= link_to "", :class=>"btn btn-warning btn-lg btn-block" do %>
-			<span class="glyphicon glyphicon-comment"></span>
-       	Связаться с нами						
-       <% end %> 
-	    <%= link_to "", :class=>"btn btn-info btn-lg btn-block" do %>
-			<span class="glyphicon glyphicon-save"></span>	
-			Скачать брошюру		
-       <% end %>      
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3>Визы</h3>
+			</div>
+			<div class="panel-group" id="accordion">
+			  <div class="panel panel-grey2">
+			    <div class="panel-heading">
+			      <h4 class="panel-title">
+			        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+			          США
+			        </a>
+			      </h4>
+			    </div>
+			    <div id="collapseOne" class="panel-collapse collapse in">
+			      <div>
+			        	<ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
+						  <li>
+						  		<%= link_to "" do %>
+						  			Студенческая
+						  			<span class="glyphicon glyphicon-chevron-right pull-right"></span>
+						  		<% end %>
+						  </li>
+						  <li class="active">
+						  		<%= link_to "" do %>
+						  			Деловая
+						  			<span class="glyphicon glyphicon-chevron-right pull-right"></span>
+						  		<% end %>
+						  </li>
+						  <li>
+								<%= link_to "" do %>
+						  			Рабочая
+						  			<span class="glyphicon glyphicon-chevron-right pull-right"></span>
+						  		<% end %>						  
+						  </li>
+						</ul>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="panel panel-grey2">
+			    <div class="panel-heading">
+			      <h4 class="panel-title">
+			        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+			          Великобритания
+			        </a>
+			      </h4>
+			    </div>
+			    <div id="collapseTwo" class="panel-collapse collapse">
+			      <div>
+			        	<ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
+						   <li class="active">
+						  		<%= link_to "" do %>
+						  			Студенческая
+						  			<span class="glyphicon glyphicon-chevron-right pull-right"></span>
+						  		<% end %>
+						  </li>
+						  <li>
+						  		<%= link_to "" do %>
+						  			Деловая
+						  			<span class="glyphicon glyphicon-chevron-right pull-right"></span>
+						  		<% end %>
+						  </li>
+						  <li>
+								<%= link_to "" do %>
+						  			Рабочая
+						  			<span class="glyphicon glyphicon-chevron-right pull-right"></span>
+						  		<% end %>						  
+						  </li>
+						</ul>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="panel panel-grey2">
+			    <div class="panel-heading">
+			      <h4 class="panel-title">
+			        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+			          Канада
+			        </a>
+			      </h4>
+			    </div>
+			    <div id="collapseThree" class="panel-collapse collapse">
+			      <div>
+			        	<ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
+						   <li class="active">
+						  		<%= link_to "" do %>
+						  			Студенческая
+						  			<span class="glyphicon glyphicon-chevron-right pull-right"></span>
+						  		<% end %>
+						  </li>
+						  <li>
+						  		<%= link_to "" do %>
+						  			Деловая
+						  			<span class="glyphicon glyphicon-chevron-right pull-right"></span>
+						  		<% end %>
+						  </li>
+						  <li>
+								<%= link_to "" do %>
+						  			Рабочая
+						  			<span class="glyphicon glyphicon-chevron-right pull-right"></span>
+						  		<% end %>						  
+						  </li>
+						</ul>
+			      </div>
+			    </div>
+			  </div>
+		</div>
+		</div>
  	</div> 
  </div>
 </div>
