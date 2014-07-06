@@ -13,6 +13,7 @@
  *= require bootstrap
  *= require_self
  *= require custom
+ *= 
  */
 @font-face {
     font-family: 'Glyphicons Halflings';

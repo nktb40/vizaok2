@@ -33,6 +33,8 @@ GShockShop::Application.routes.draw do
    get "products/download_turist_uk_doc"
    get "products/download_student_uk_doc"
    get "products/download_biznes_uk_doc"
+   
+   get 'search' => 'visas#search', as: :search_visas
 
   # Example of regular route:
   #  get 'd917148ce012' => 'products#d917148ce012'

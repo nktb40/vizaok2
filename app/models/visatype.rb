@@ -1,3 +1,3 @@
 class Visatype < ActiveRecord::Base
-	has_many :visas
+	has_many :subtypes
 end

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  visatype_id: 1
+  name: MyString
+  subtype_cd: MyString
+
+two:
+  visatype_id: 1
+  name: MyString
+  subtype_cd: MyString

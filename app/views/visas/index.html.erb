@@ -1,54 +1,74 @@
-<div class="menu_holder content_page">
-	<div class="container">
-		<div class="row">
-			<div class="grid_12">
-				<nav>
-					<ul class="sf-menu header_menu sf-js-enabled">
-						<li id="first-li"><%= link_to companies_path do %>Компании<strong></strong><% end %></a></li>
-						<li><%= link_to schools_path do %>Школы<strong></strong><% end %></li>
-						<li class="current"><%= link_to courses_path do %> Курсы<strong></strong><% end %></li>
-						<li><%= link_to residences_path do %> Проживание<strong></strong><% end %></li>
-						<li id="last-li"><%= link_to others_path do %> Прочее<strong></strong><% end %></li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="container">
- 	<div class="row">
-		<div class="grid_2">
-			<%= link_to "Добавить", new_course_path, :class=>"more_btn", :remote=>true %>
-		</div> 	
- 	</div>
-	<div id="new_course_form" class="grid_8 hline3 marg-left-0"></div>
- 	<div class="wrapper hline2">
-			<div class="title-box1 v2">
-				<h3>Курсы</h3>
-			</div>
-			<div class="title-box2">
-				<span class="mar3">ID</span>
-				<span class="mar3">Название</span>
-				<span>Описание</span>
+<div class="container pad-top-bot-50">
+	<div class="row">
+		<div class="col-lg-3">
+			<div class="panel panel-default">
+				<div class="panel-heading">Параметры</div>
+				<div class="panel-body">
+					<div class="form-group">
+						<%= select_tag :country_id, 
+		       			options_for_select([ "Все страны", "США", "Великобритания","Канада", "Юар" ]), 
+		       				:class=>"selectpicker", :data=>{:style=>"btn-info"} %>
+					</div>	
+					<div class="form-group">				
+						<%= select_tag :immigration_id, 
+		       			options_for_select([ "Неиммиграционные визы", "Иммиграционные визы"], "Неиммиграционные визы"), 
+		       				:class=>"selectpicker", :data=>{:style=>"btn-info"} %>				
+					</div>					
+					<div class="form-group">				
+						<%= select_tag :visatype_id, 
+		       			options_for_select([ "Все типы виз", "Туристические визы", "Для деловых поездок" ]), 
+		       				:class=>"selectpicker", :data=>{:style=>"btn-info"} %>				
+					</div>	
+					<%= form_tag search_visas_path, :method => "get", :remote => true do %>
+						<div class="form-group">
+							<%= select_tag :immigration_id, 
+			       			options_for_select([ "Неиммиграционные визы", "Иммиграционные визы"], "Неиммиграционные визы"), 
+			       				:class=>"selectpicker", :data=>{:style=>"btn-info"}, :onchange => "this.form.submit();" %>				
+						</div>
+					<% end %>		
+				</div>
 			</div>		
-			<ul class="listWithMarker">			
-				<% @courses.each do |course| %>
-					<li>
-						<div class="grid_1">
-							<span class="rank_num"><%= course.id %></span>					
-						</div>
-						<div class="grid_2"><%= course.name %></div>
-						<div class="grid_6"><%= course.description %></div>
-						<div class="grid_2">
-							<%= link_to edit_course_path(course), :remote=>true do %> 
-								<i class="fa fa-edit"></i>
-						 	<% end %>
-						 	<%= link_to course_path(course), :method => 'delete', data: { confirm: 'Удалить курс "'+course.name+'"?' } do %> 
-								<i class="fa fa-trash-o"></i>
-						 	<% end %>		
-						</div>
-					</li>	
-				<% end %>
-			</ul>
- 	</div>
+		</div>
+		<div class="col-lg-9">
+			<div class="panel panel-default">
+				<div class="panel-heading">Школы</div>
+				<div class="panel-body">
+					<% @visas.each  do |visa| %>	
+					<div class="media">
+						<a class="pull-left" href="#">
+							<%= image_tag('00.jpg', :style=>"width: 100%;") %>	
+						</a>
+				      <div class="media-body">
+				      	<div class="col-lg-9">
+				      		<%= link_to "" do %>
+				      			<h4 class="media-heading"><%= visa.name %></h4>
+				      		<% end %>
+						        <p>
+						        	  <%= truncate(visa.description, :length => 200, :separator => ' ') %>
+							     </p>
+							     		<%= link_to "" do %>
+							     			<span class="glyphicon glyphicon-map-marker"> </span>
+							     			Лондон, Великобритания
+							     		<% end %>
+							     <p>
+															     
+							     </p>
+				      	</div>
+				      	<div class="col-lg-3">
+							    <%= link_to "" do %>
+				          			<h4 class="mar-left-15">
+				          				<span class="label label-success">
+				          					Все программы
+				          					<span class="glyphicon glyphicon-share-alt"></span>
+				          				</span>
+				          			</h4>
+							    <% end %>	
+				      	</div>
+				      </div>
+				    </div>
+				    <% end %>
+				</div>
+			</div>		
+		</div>
+	</div>	
 </div>

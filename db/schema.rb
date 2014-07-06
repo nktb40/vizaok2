@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140705201300) do
+ActiveRecord::Schema.define(version: 20140706185955) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,14 @@ ActiveRecord::Schema.define(version: 20140705201300) do
     t.integer  "visa_id"
     t.string   "name"
     t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "links", force: true do |t|
+    t.integer  "visa_id"
+    t.string   "name"
+    t.text     "link"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -75,6 +83,14 @@ ActiveRecord::Schema.define(version: 20140705201300) do
     t.string   "skype"
   end
 
+  create_table "subtypes", force: true do |t|
+    t.integer  "visatype_id"
+    t.string   "name"
+    t.string   "subtype_cd"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "visas", force: true do |t|
     t.string   "name"
     t.text     "description"
@@ -83,16 +99,16 @@ ActiveRecord::Schema.define(version: 20140705201300) do
     t.datetime "updated_at"
     t.string   "country_cd"
     t.string   "type_cd"
-    t.integer  "visatype_id"
+    t.integer  "subtype_id"
     t.string   "visa_cd"
   end
 
   create_table "visatypes", force: true do |t|
     t.string   "name"
-    t.text     "subtype"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "type_cd"
+    t.string   "migration"
   end
 
 end
