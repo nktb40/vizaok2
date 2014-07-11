@@ -22,6 +22,7 @@ GShockShop::Application.routes.draw do
    end 
    resources :products , only: [:index]
    resources :questions , only: [:create]
+   resources :countries, only: [:index, :show]
    resources :visas, only: [:index, :show]
    
    get "usa_visa" => 'products#usa_visa'
@@ -34,7 +35,7 @@ GShockShop::Application.routes.draw do
    get "products/download_student_uk_doc"
    get "products/download_biznes_uk_doc"
    
-   get 'search' => 'visas#search', as: :search_visas
+   post 'visas/search' => 'visas#search', as: :search
 
   # Example of regular route:
   #  get 'd917148ce012' => 'products#d917148ce012'

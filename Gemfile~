@@ -51,3 +51,9 @@ gem 'capistrano', '2.13.5'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'sidekiq'
+gem 'sinatra', require: false
+gem 'slim'
+
+gem "select2-rails"

@@ -11,9 +11,10 @@
  * file per style scope.
  *
  *= require bootstrap
+ *= require bootstrap-select
+  *= require select2-bootstrap
  *= require_self
  *= require custom
- *= 
  */
 @font-face {
     font-family: 'Glyphicons Halflings';

@@ -55,3 +55,5 @@ gem 'capistrano', '2.13.5'
 gem 'sidekiq'
 gem 'sinatra', require: false
 gem 'slim'
+
+gem "select2-rails"
