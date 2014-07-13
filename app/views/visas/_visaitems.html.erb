@@ -1,11 +1,13 @@
 <% @visas.each  do |visa| %>	
 	<div class="col-sm-6 col-md-4 col-lg-4">
     <div class="thumbnail">
-      <img data-src="holder.js/300x300" alt="...">
+      <%= link_to image_tag("USA_STD_ACDM.jpg"), visa_path(visa.id) %>
       <div class="caption">
-        <h3><%= visa.name %></h3>
-        <p>...</p>
-        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+        <h3><%= link_to visa.name, visa_path(visa.id) %></h3>
+        <p class="height-80"><%= truncate(visa.shortdesc, :length => 80) %></p>
+        <p>
+        		<%= link_to "Подробнее", visa_path(visa.id), :class => "btn btn-success btn-block" %>
+        <p>
       </div>
     </div>
   </div>

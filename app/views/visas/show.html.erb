@@ -5,29 +5,32 @@
 	       <div class="panel-heading">
 	       <h3>
 	       	 <span class="glyphicon glyphicon-globe"> </span>
-		       <%= link_to "Виза в "+@visa.country.name, "" %> /
-		       <%= link_to @visa.visatype.name, "" %> /
-		       <%= link_to @visa.visatype.subtype, "" %>
+		       <%= link_to "Виза в "+@visa.country.name, "" %>
 	       </h3></div>
 	       <div class="panel-body panel-grey">
 	       	 <div class="row col-lg-6 mar-left-0">
 	       	 		<div class="well pad-0 panel-grey">
     	 					<h3 class="mar-0"><span class="text-underline" ><%= @visa.name %></span></h3>
        	 			</div>
+       	 			<p><b class="text-underline">Когда используется</b>:
+							<% @purposes.each do |purpose| %>
+								<span class="label label-info"><b><%= purpose.name %></b></span>
+							<% end %>       	 			
+       	 			</p>
        	 			<p><b class="text-underline">Описание</b>: <%= @visa.description %></p>
-						<p>
-							<%= link_to "", :class=>"btn btn-success" do %>
+	       	 </div>
+	       	 <div class="row col-lg-6 mar-left-20">
+				   	<p><%= image_tag "USA_STD_ACDM.jpg", :class=>"img-responsive" %></p>
+				   	<p>
+							<%= link_to "", :class=>"btn btn-success btn-block" do %>
 								<span class="glyphicon glyphicon-envelope"></span>	
 								Оставить заявку		
 					       <% end %> 
-							<%= link_to "", :class=>"btn btn-warning" do %>
+							<%= link_to "", :class=>"btn btn-warning btn-block" do %>
 								<span class="glyphicon glyphicon-save"></span>	
 								Черновик анкеты		
 					       <% end %> 
 						</p>
-	       	 </div>
-	       	 <div class="row col-lg-6 mar-left-20">
-				   	<p><%= image_tag "USA_STD_ACDM.jpg", :class=>"img-responsive" %></p>
 				 </div>
 	       </div>
 	    </div>
@@ -72,11 +75,9 @@
 	       	<div class="panel-body">
 	       		<table class="table table-striped">
 				      <tbody>
-				      	<% @cnt = 0 %>
 				      	<% @visa.addinfos.each  do |info| %>
-				      		<% @cnt += 1 %>
 				      		<tr class="font-s-17">
-					           <td class="col-lg-10"><b><%= @cnt %>. <%= info.name %></b></br> <%= raw info.description %></td>
+					           <td class="col-lg-10"><b> <%= info.name %></b></br> <%= raw info.description %></td>
 					         </tr>
 				      	<% end %>
 				      </tbody>

@@ -6,7 +6,7 @@ GShockShop::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'products#index'
+  root 'pages#index'
   
   #sidekiq web interface
   mount Sidekiq::Web, at: "/sidekiq"
@@ -36,6 +36,9 @@ GShockShop::Application.routes.draw do
    get "products/download_biznes_uk_doc"
    
    post 'visas/search' => 'visas#search', as: :search
+   
+   post 'start_search' => 'visas#start_search', as: :start_search
+   
 
   # Example of regular route:
   #  get 'd917148ce012' => 'products#d917148ce012'

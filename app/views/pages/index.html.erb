@@ -1,0 +1,122 @@
+<div id="intro" class="intro">
+	<div class="container">		
+		<div class="row">
+			<div class="col-lg-2"></div>
+			<div class="col-lg-8">			
+				<div class="intro-form">
+					<div class="row">
+						<h1><span class="glyphicon glyphicon-globe"> </span> VizaOk.ru</h1>
+						<h2>Путешествуйте вместе с нами</h2>
+					</div>
+					 <%= form_tag start_search_path, :class=>"form-inline h-center" do %>
+						<div class="form-group">
+							<%= select_tag "countries", options_from_collection_for_select(@countries, "id", "name"),
+		        				:class=>"selectpicker", :data=>{:style=>"btn-info btn-lg"}, 
+		        				include_blank: true, prompt: "Все страны" %>
+						</div>	
+						<div class="form-group">
+							<%= select_tag "purposes", options_from_collection_for_select(@purposes, "id", "name"),
+		        				:class=>"selectpicker", :data=>{:style=>"btn-info btn-lg"}, 
+		        				include_blank: true, prompt: "Все типы виз" %>	        						
+						</div>
+						<%= submit_tag "Начать поиск", :class=>"btn btn-success btn-lg" %>
+					  <% end %>
+				 </div>		
+			</div>
+			<div class="col-lg-2"></div>
+		</div>
+	</div>
+</div>
+<div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row mar-bot-100 pad-top-bot-50 panel-grey">
+        <div class="col-lg-4">
+          <img class="img-circle" data-src="holder.js/140x140" alt="140x140" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDAiIGhlaWdodD0iMTQwIj48cmVjdCB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iI2VlZSI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjcwIiB5PSI3MCIgc3R5bGU9ImZpbGw6I2FhYTtmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZToxMnB4O2ZvbnQtZmFtaWx5OkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmO2RvbWluYW50LWJhc2VsaW5lOmNlbnRyYWwiPjE0MHgxNDA8L3RleHQ+PC9zdmc+" style="width: 140px; height: 140px;">
+          <h2>Безопасно</h2>
+          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" data-src="holder.js/140x140" alt="140x140" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDAiIGhlaWdodD0iMTQwIj48cmVjdCB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iI2VlZSI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjcwIiB5PSI3MCIgc3R5bGU9ImZpbGw6I2FhYTtmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZToxMnB4O2ZvbnQtZmFtaWx5OkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmO2RvbWluYW50LWJhc2VsaW5lOmNlbnRyYWwiPjE0MHgxNDA8L3RleHQ+PC9zdmc+" style="width: 140px; height: 140px;">
+          <h2>Оперативно</h2>
+          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" data-src="holder.js/140x140" alt="140x140" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDAiIGhlaWdodD0iMTQwIj48cmVjdCB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iI2VlZSI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjcwIiB5PSI3MCIgc3R5bGU9ImZpbGw6I2FhYTtmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZToxMnB4O2ZvbnQtZmFtaWx5OkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmO2RvbWluYW50LWJhc2VsaW5lOmNlbnRyYWwiPjE0MHgxNDA8L3RleHQ+PC9zdmc+" style="width: 140px; height: 140px;">
+          <h2>Без лишних сборов</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+		<div id="how-we-work"  class="anchor">
+		</div>
+      <div class="page-header">
+		  <h1>Как мы работаем?</h1>
+		</div>
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Шаг 1. <span class="text-muted">Подбор программы.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+        	 <%= image_tag "how_work1.jpg", :class=>"featurette-image img-responsive" %>
+         </div> 
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-5">
+        		<%= image_tag "how_work2.jpg", :class=>"featurette-image img-responsive" %> 
+        </div>
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Шаг 2. <span class="text-muted">Заключение договора и внесение предоплаты.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Шаг 3. <span class="text-muted">Оформление визы и бронирование авиабилета.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+        		<%= image_tag "how_work3.jpg", :class=>"featurette-image img-responsive" %>  
+        </div>
+      </div>
+      
+      <div class="row featurette">
+        <div class="col-md-5">
+        		<%= image_tag "how_work3.jpg", :class=>"featurette-image img-responsive" %>  
+        </div>
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Шаг 4. <span class="text-muted">Оплата счета за обучение.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+      </div>
+      <hr class="featurette-divider">
+      
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Шаг 5. <span class="text-muted">Передача необходимых документов для поездки.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+        		<%= image_tag "how_work3.jpg", :class=>"featurette-image img-responsive" %>  
+        </div>
+      </div>
+      <!-- /END THE FEATURETTES -->
+
+    </div>
+ <script type="text/javascript" >
+	 $("#intro").backstretch("<%= asset_path 'bg-image2.jpg' %>");
+</script>

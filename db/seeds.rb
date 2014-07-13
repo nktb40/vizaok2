@@ -7,6 +7,7 @@ CSV.foreach("data/vizaok2 - countries.csv", :headers => true) do |row|
   Country.create(name: row['country_name'], country_cd: row['country_code'])
 end
 
+=begin
 Visatype.delete_all
 CSV.foreach("data/vizaok2 - visa_types.csv", :headers => true) do |row|
   #puts row['type_name']+row['subtype']+row['code']
@@ -18,14 +19,27 @@ CSV.foreach("data/vizaok2 - subtypes.csv", :headers => true) do |row|
   Subtype.create(visatype_id: Visatype.where(:type_cd => row['visa_type_cd']).first.id, 
   name: row['subtype'], subtype_cd: row['code'])
 end
+=end
 
 Visa.delete_all
 CSV.foreach("data/vizaok2 - visas.csv", :headers => true) do |row|
-  #puts row['visa_name']+Subtype.where(:subtype_cd => row['subtype_cd']).first.name
   Visa.create(visa_cd: row['visa_cd'], name: row['visa_name'], 
-  subtype_id: Subtype.where(:subtype_cd => row['subtype_cd']).first.id, 
   country_id: Country.where(:country_cd => row['country_cd']).first.id, 
-  description: row['description'], country_cd: row['country_cd'])
+  description: row['description'], shortdesc: row['brief_description'])
+end
+
+Purpose.delete_all
+CSV.foreach("data/vizaok2 - purposes.csv", :headers => true) do |row|
+  Purpose.create(purpose_cd: row['purpose_cd'], name: row['name'], 
+  description: row['description'])
+end
+
+LnkVisaPurpose.delete_all
+CSV.foreach("data/vizaok2 - visa purposes.csv", :headers => true) do |row|
+  #puts row['purpose_cd']+' '+Purpose.where(:purpose_cd => row['purpose_cd']).first.name+'  '+row['visa_cd']
+  LnkVisaPurpose.create(
+  visa_id: Visa.where(:visa_cd => row['visa_cd']).first.id,
+  purpose_id: Purpose.where(:purpose_cd => row['purpose_cd']).first.id)
 end
 
 Document.delete_all

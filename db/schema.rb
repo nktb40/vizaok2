@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140706185955) do
+ActiveRecord::Schema.define(version: 20140713142429) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,13 @@ ActiveRecord::Schema.define(version: 20140706185955) do
     t.datetime "updated_at"
   end
 
+  create_table "lnk_visa_purposes", force: true do |t|
+    t.integer  "visa_id"
+    t.integer  "purpose_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "orders", force: true do |t|
     t.string   "name"
     t.string   "email"
@@ -68,6 +75,14 @@ ActiveRecord::Schema.define(version: 20140706185955) do
     t.string   "currency"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "purposes", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "purpose_cd"
   end
 
   create_table "questions", force: true do |t|
@@ -101,6 +116,7 @@ ActiveRecord::Schema.define(version: 20140706185955) do
     t.string   "type_cd"
     t.integer  "subtype_id"
     t.string   "visa_cd"
+    t.string   "shortdesc"
   end
 
   create_table "visatypes", force: true do |t|
