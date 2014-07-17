@@ -1,6 +1,5 @@
-<%= form_for(@order, :remote=>true) do |f| %>
-<fieldset>
-		<legend>Оставьте заявку, и мы свяжемся с Вами!</legend>
+<%= form_for @order do |f| %>
+<fieldset >
 		<div class="form-group">
 			<%= f.label :'Ваше имя*' %>
 			<span id='name_error' class='error' style ='color: red;'></span>
@@ -17,9 +16,31 @@
 	   	<%= f.text_field :email, :type=>"text", :class=>"form-control", :placeholder=>"Email" %>
 	   </div>
 	   <div class="form-group last">
-     		<%= f.submit :'Отправить', :class=>"btn", :id=>"order_submit" %>
+     		<%= f.submit :'Отправить заявку', :class=>"btn btn-success", :id=>"order_submit" %>
 		</div>
 		<%= f.hidden_field(:visa_country, :value => @visa_country) %>
 </fieldset>
 <% end %>
 
+<script type="text/javascript" >
+		$( "#new_order" ).submit(function( event ) {
+			$('.error').text('');
+		if ( $( "#order_name" ).val() ) {
+				if ( $( "#order_phone" ).val()) {
+					if ( $( "#order_email" ).val()) {
+					   $('#order_submit').attr("disabled", true);
+					   $('#order_submit').css('background-image', 'url(<%=asset_url("load_o.gif") %>)');
+					   $('#order_submit').fadeIn(10);	
+	  					$('#order_submit').val('Подождите');
+	  					return;
+	  				}
+	  				$( "#email_error" ).text("Укажите Ваш e-mail");
+	  				return false;
+	  			}
+	  		$( "#phone_error" ).text("Укажите Ваш номер телефона");
+	  		return false;
+	  	}
+	  	$( "#name_error" ).text("Укажите Ваше имя");
+	  	return false;
+	});
+</script>

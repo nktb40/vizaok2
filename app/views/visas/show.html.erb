@@ -22,7 +22,7 @@
 	       	 <div class="row col-lg-6 mar-left-20">
 				   	<p><%= image_tag "USA_STD_ACDM.jpg", :class=>"img-responsive" %></p>
 				   	<p>
-							<%= link_to "", :class=>"btn btn-success btn-block" do %>
+							<%= link_to new_order_path, :class=>"btn btn-success btn-block" do %>
 								<span class="glyphicon glyphicon-envelope"></span>	
 								Оставить заявку		
 					       <% end %> 
@@ -62,7 +62,7 @@
 				      		<% @cnt += 1 %>
 				      		<tr class="font-s-17">
 					           <td class="col-lg-10"><b><%= @cnt %>. <%= cost.name %>:</b> <%= raw cost.description %></td>
-					           <td class="col-lg-2"><b><%= cost.price %> <%= cost.currency %></b></td>
+					           <td class="col-lg-2"><b><%= number_with_precision(cost.price,strip_insignificant_zeros: true) %> <%= cost.currency %></b></td>
 					         </tr>
 				      	<% end %>
 				      </tbody>
