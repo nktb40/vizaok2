@@ -39,7 +39,8 @@ GShockShop::Application.routes.draw do
    
    post 'start_search' => 'visas#start_search', as: :start_search
    
-
+	get "migration_to_usa" => 'pages#migration', as: :migration
+	
   # Example of regular route:
   #  get 'd917148ce012' => 'products#d917148ce012'
 

@@ -1,0 +1,115 @@
+<div class="container  pad-top-bot-50">
+ <div class="row"> 
+ 	<div class="col-lg-9">
+ 		<div class="panel panel-default">
+			<div class="panel-heading"><h1>Миграция в США</h1></div>
+			<div class="panel-body">
+				 <div class="row col-lg-6">
+					 <div class="thumbnail panel-grey video-thumb">
+			          <%= link_to "www.youtube.com/watch?v=wlaF3dVBJuM", :class => "fancybox-media" do %>
+			          	<%= image_tag "ghb-video.jpg", :class=>"img-responsive" %>						
+							<span class="glyphicon glyphicon-play"></span>
+							<p><b>GHB & CO LAW, INC - юридическая фирма</b></p>	
+			          <% end %>
+			        </div>				 
+				 </div>
+				 <div class="row col-lg-6 mar-left-20">
+				   	<div class="well pad-0 panel-grey">
+    	 					<h1 class="mar-0"><span class="text-underline" >Миграционные визы в США</span></h1>
+       	 			</div>
+       	 			<p>Check requirements for the different types of work or business related visas. 
+       	 				Get expert advice on the best visa for your needs and assistance throughout the process.
+       	 			</p>
+				 </div>				
+			</div> 		
+ 		</div>
+ 		<div class="panel panel-default">
+			<div class="panel-heading"><h2>Сотрудничество с юридической фирмой GHB-LAW (Флорида, США)</h2></div>
+			<div class="panel-body">
+				<p><b>Почему GHB-LAW</b></p>
+				<p>
+					GHB & Co. is a US-based law firm specializing exclusively in immigration law. We offer professional, 
+					top quality legal services and support to people who wish to obtain a US Visa through various programs and opportunities. 
+					Our firm focuses solely on immigration law and related services and has built comprehensive expertise in this area..				
+				</p>	
+				<p><b>Почему GHB-LAW</b></p>
+				<p>
+					With more than a decade of experience, GHB & Co. has successfully helped thousands of people from many countries obtain US Visas, 
+					Green Cards and citizenship and made their dream for a better future and life come true.				
+				</p>
+				<p><b>Почему GHB-LAW</b></p>	
+				<ul>
+					<li>Full service provider taking care of all your US visa and immigration needs</li>
+					<li>We can file petitions for people who wish to reside in any state; it does not have to be Florida.</li>
+					<li>We have a legal secretary who is fluent in Russian. We have helped many people obtain their visas and permanent resident cards.</li>
+					<li>We have catered to hundreds of clients.</li>
+					<li>We give a person the feeling that they are not alone in this process and we guide them from the beginning until the end.</li>
+					<li>We cannot guarantee the outcome of any legal process. We do guarantee that we will perform in the most professional manner and do whatever is 
+					legally necessary in order to help our clients obtain their visas or permanent resident cards.</li>
+				</ul>
+			</div> 		
+ 		</div>
+ 		<div class="panel panel-default">
+			<div class="panel-heading"><h2>Сертификаты</h2></div>
+			<div class="panel-body">			
+				<div class="row">
+				  <div class="col-xs-6 col-md-3">
+				  		<%= link_to image_tag("Certificate_1.jpg", :class=>"img-responsive img-bordered"), 
+				  				image_url("Certificate_1.jpg"), :class=>"certificate", 
+				  				:title=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit." %>
+				  </div>
+				  <div class="col-xs-6 col-md-3">
+				  		<%= link_to image_tag("Certificate_2.jpg", :class=>"img-responsive img-bordered"), image_url("Certificate_2.jpg"), :class=>"certificate" %>
+				  </div>
+				  <div class="col-xs-6 col-md-3">
+				  		<%= link_to image_tag("Certificate_3.jpg", :class=>"img-responsive img-bordered"), image_url("Certificate_3.jpg"), :class=>"certificate" %>
+				  </div>
+				  <div class="col-xs-6 col-md-3">
+				  		<%= link_to image_tag("Certificate_4.jpg", :class=>"img-responsive img-bordered"), image_url("Certificate_4.jpg"), :class=>"certificate" %>
+				  </div>
+				</div>
+			</div> 		
+ 		</div>
+ 		<div class="panel panel-default">
+			<div class="panel-heading"><h2>Виды миграциооных виз США</h2></div>
+			<div class="panel-body">
+				<%= render :partial => "visas/visaitems" %>		
+			</div> 		
+ 		</div>
+ 	</div>
+ 	<div class="col-lg-3">
+		<div class="panel panel-default">
+			<div class="panel-heading"><h3>Оставьте заявку</h3></div>
+			<div class="panel-body">
+				<%= render :partial => "orders/form" %>	
+			</div>		
+		</div> 	
+ 	</div>
+ </div>
+</div>
+
+<script type="text/javascript" >
+	$(document).ready(function() {
+  		$(".certificate").fancybox({
+	  		helpers : {
+					title : {
+						type : 'over'
+					}
+				}
+		});
+	});
+	$('.fancybox-media')
+				.attr('rel', 'media-gallery')
+				.fancybox({
+					openEffect : 'none',
+					closeEffect : 'none',
+					prevEffect : 'none',
+					nextEffect : 'none',
+
+					arrows : false,
+					helpers : {
+						media : {},
+						buttons : {}
+					}
+				});
+</script>

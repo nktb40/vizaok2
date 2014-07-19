@@ -10,14 +10,14 @@
 	       <div class="panel-body panel-grey">
 	       	 <div class="row col-lg-6 mar-left-0">
 	       	 		<div class="well pad-0 panel-grey">
-    	 					<h3 class="mar-0"><span class="text-underline" ><%= @visa.name %></span></h3>
+    	 					<h1 class="mar-0"><span class="text-underline" ><%= @visa.name %></span></h1>
        	 			</div>
        	 			<p><b class="text-underline">Когда используется</b>:
-							<% @purposes.each do |purpose| %>
+							<% @purposes.where("visa_id = ?", @visa.id).each do |purpose| %>
 								<span class="label label-info"><b><%= purpose.name %></b></span>
 							<% end %>       	 			
        	 			</p>
-       	 			<p><b class="text-underline">Описание</b>: <%= @visa.description %></p>
+       	 			<p><b class="text-underline">Описание</b>: <%= raw @visa.description %></p>
 	       	 </div>
 	       	 <div class="row col-lg-6 mar-left-20">
 				   	<p><%= image_tag "USA_STD_ACDM.jpg", :class=>"img-responsive" %></p>
@@ -91,105 +91,31 @@
 				<h3>Визы</h3>
 			</div>
 			<div class="panel-group" id="accordion">
+			 <% @countries.each do |country| %>
 			  <div class="panel panel-grey2">
 			    <div class="panel-heading">
 			      <h4 class="panel-title">
-			        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-			          США
+			        <a data-toggle="collapse" data-parent="#accordion" href="#collapse<%= country.country_cd %>">
+			          <%= country.name %>
 			        </a>
 			      </h4>
 			    </div>
-			    <div id="collapseOne" class="panel-collapse collapse in">
+			    <div id="collapse<%= country.country_cd %>" class="panel-collapse collapse <%= case country.id when @visa.country_id then 'in' end %>" >
 			      <div>
 			        	<ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
-						  <li>
-						  		<%= link_to "" do %>
-						  			Студенческая
+						  <% country.visas.each do |visa| %>
+						  <li <%= case visa.id when @visa.id then 'class=active' end %> >
+						  		<%= link_to visa_path(visa.id), :title => visa.name do %>
+						  			<%= truncate(visa.name, :length => 25) %>
 						  			<span class="glyphicon glyphicon-chevron-right pull-right"></span>
 						  		<% end %>
 						  </li>
-						  <li class="active">
-						  		<%= link_to "" do %>
-						  			Деловая
-						  			<span class="glyphicon glyphicon-chevron-right pull-right"></span>
-						  		<% end %>
-						  </li>
-						  <li>
-								<%= link_to "" do %>
-						  			Рабочая
-						  			<span class="glyphicon glyphicon-chevron-right pull-right"></span>
-						  		<% end %>						  
-						  </li>
+						  <% end %>
 						</ul>
 			      </div>
 			    </div>
 			  </div>
-			  <div class="panel panel-grey2">
-			    <div class="panel-heading">
-			      <h4 class="panel-title">
-			        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-			          Великобритания
-			        </a>
-			      </h4>
-			    </div>
-			    <div id="collapseTwo" class="panel-collapse collapse">
-			      <div>
-			        	<ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
-						   <li class="active">
-						  		<%= link_to "" do %>
-						  			Студенческая
-						  			<span class="glyphicon glyphicon-chevron-right pull-right"></span>
-						  		<% end %>
-						  </li>
-						  <li>
-						  		<%= link_to "" do %>
-						  			Деловая
-						  			<span class="glyphicon glyphicon-chevron-right pull-right"></span>
-						  		<% end %>
-						  </li>
-						  <li>
-								<%= link_to "" do %>
-						  			Рабочая
-						  			<span class="glyphicon glyphicon-chevron-right pull-right"></span>
-						  		<% end %>						  
-						  </li>
-						</ul>
-			      </div>
-			    </div>
-			  </div>
-			  <div class="panel panel-grey2">
-			    <div class="panel-heading">
-			      <h4 class="panel-title">
-			        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-			          Канада
-			        </a>
-			      </h4>
-			    </div>
-			    <div id="collapseThree" class="panel-collapse collapse">
-			      <div>
-			        	<ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
-						   <li class="active">
-						  		<%= link_to "" do %>
-						  			Студенческая
-						  			<span class="glyphicon glyphicon-chevron-right pull-right"></span>
-						  		<% end %>
-						  </li>
-						  <li>
-						  		<%= link_to "" do %>
-						  			Деловая
-						  			<span class="glyphicon glyphicon-chevron-right pull-right"></span>
-						  		<% end %>
-						  </li>
-						  <li>
-								<%= link_to "" do %>
-						  			Рабочая
-						  			<span class="glyphicon glyphicon-chevron-right pull-right"></span>
-						  		<% end %>						  
-						  </li>
-						</ul>
-			      </div>
-			    </div>
-			  </div>
+			 <% end %>
 		</div>
 		</div>
  	</div> 
