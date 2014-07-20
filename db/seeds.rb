@@ -36,6 +36,8 @@ end
 
 LnkVisaPurpose.delete_all
 CSV.foreach("data/vizaok2 - visa purposes.csv", :headers => true) do |row|
+  #puts row['visa_cd']
+  #puts Visa.where(:visa_cd => row['visa_cd']).first.name
   #puts row['purpose_cd']+' '+Purpose.where(:purpose_cd => row['purpose_cd']).first.name+'  '+row['visa_cd']
   LnkVisaPurpose.create(
   visa_id: Visa.where(:visa_cd => row['visa_cd']).first.id,
@@ -61,13 +63,13 @@ CSV.foreach("data/vizaok2 - addinfo.csv", :headers => true) do |row|
   name: row['name'], description: row['description'])
 end
 
+=begin
 Link.delete_all
 CSV.foreach("data/vizaok2 - links.csv", :headers => true) do |row|
   Link.create(visa_id: Visa.where(:visa_cd => row['visa_cd']).first.id, 
   name: row['name'], link: row['link'])
 end
 
-=begin
 countries = Country.create(name: 'Америка')
 types = VisaTypes.create(name: 'Студенческая виза для академического обучения')
 Visa.create(name: '', type: type.where(:name=>'Студенческая виза для академического обучения'))

@@ -16,6 +16,16 @@ class VisasController < ApplicationController
 		#@purposes = Purpose.joins(:lnk_visa_purposes).where("lnk_visa_purposes.visa_id = ?", @visa.id)
 	end
 	
+	def visas_by_country
+		@visas = Visa.joins(:country).where('countries.country_cd = ?', params[:country_cd]).order("visas.name").uniq
+		@selected_country = Country.where('country_cd = ?', params[:country_cd]).first.id
+		@selected_purpose = nil
+		@purposes = Purpose.all
+		@countries = Country.all	
+		@current_country = params[:country_cd]
+		render :index
+	end
+	
 	def search
 		if params[:purposes].blank? and !params[:countries].blank?
 			@visas = Visa.joins("LEFT JOIN lnk_visa_purposes vp ON vp.visa_id = visas.id").where('visas.country_id = ?', params[:countries]).uniq
@@ -48,6 +58,7 @@ class VisasController < ApplicationController
 	   	@selected_country = nil
 			@selected_purpose = nil
 	   end
+	   @visas = @visas.joins(:country).order("countries.name, visas.name")
 		@purposes = Purpose.all
 		@countries = Country.all		
 		render :index

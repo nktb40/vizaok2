@@ -25,12 +25,10 @@ GShockShop::Application.routes.draw do
    resources :countries, only: [:index, :show]
    resources :visas, only: [:index, :show]
    
-   get "usa_visa" => 'products#usa_visa'
    get "products/download_turist_doc"
    get "products/download_student_doc"
    get "products/download_work_doc"
    
-   get "uk_visa" => 'products#uk_visa'
    get "products/download_turist_uk_doc"
    get "products/download_student_uk_doc"
    get "products/download_biznes_uk_doc"
@@ -40,6 +38,11 @@ GShockShop::Application.routes.draw do
    post 'start_search' => 'visas#start_search', as: :start_search
    
 	get "migration_to_usa" => 'pages#migration', as: :migration
+	
+	post "visas_by_country" => "visas#visas_by_country", as: :visas_by_country
+	
+	get "visas_usa" => "visas#get_usa_visas", as: :usa_visas 	
+	get "visas_kanada" => "visas#get_kanada_visas", as: :kanada_visas 
 	
   # Example of regular route:
   #  get 'd917148ce012' => 'products#d917148ce012'
