@@ -1,8 +1,8 @@
 require "bundler/capistrano"
 require 'sidekiq/capistrano'
 
-server "162.218.234.110", :web, :app, :db, primary: true
-#server "cardsharp-tomsk.tk", :web, :app, :db, primary: true
+#server "162.218.234.110", :web, :app, :db, primary: true
+server "cardsharp-tomsk.tk", :web, :app, :db, primary: true
 
 set :application, "visaok"
 set :user, "deployer"
@@ -11,7 +11,7 @@ set :deploy_via, :remote_cache
 set :use_sudo, true
 
 set :scm, "git"
-set :repository, "git@github.com:nktb40/vizaok.git"
+set :repository, "git@github.com:nktb40/vizaok2.git"
 set :branch, "master"
 
 default_run_options[:shell] = '/bin/bash --login' 
