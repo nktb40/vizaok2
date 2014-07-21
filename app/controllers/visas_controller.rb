@@ -1,3 +1,4 @@
+# encoding: utf-8
 class VisasController < ApplicationController
 	respond_to :html, :json, only: [:index, :show, :search]
 	def index

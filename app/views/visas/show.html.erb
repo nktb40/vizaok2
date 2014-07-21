@@ -20,7 +20,7 @@
        	 			<p><b class="text-underline">Описание</b>: <%= raw @visa.description %></p>
 	       	 </div>
 	       	 <div class="row col-lg-6 mar-left-20">
-				   	<p><%= image_tag "USA_STD_ACDM.jpg", :class=>"img-responsive" %></p>
+				   	<p><%= image_tag @visa.visa_cd+".jpg", :class=> "img-responsive" %></p>
 				   	<p>
 							<%= link_to new_order_path, :class=>"btn btn-success btn-block" do %>
 								<span class="glyphicon glyphicon-envelope"></span>	
