@@ -20,4 +20,7 @@
 //= require select2
 //= require select2_locale_ru
 //= require fancybox
+//= require parallax-1.1.3
+//= require scrollto
+//= require localscroll
 

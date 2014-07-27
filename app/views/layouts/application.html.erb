@@ -35,7 +35,8 @@
             <li <%= if current_page?(root_path) then 'class=active' end %> ><%= link_to "Главная", root_path %></li>
 				<li <%= case @current_country when 'USA' then 'class=active' end %> ><%= link_to "Визы в США", visas_by_country_path(:country_cd => 'USA'), :method => 'POST' %></li>  
 				<li <%= case @current_country when 'CA' then 'class=active' end %> ><%= link_to "Визы в Канаду", visas_by_country_path(:country_cd => 'CA'), :method => 'POST' %></li>    
-				<li <%= case @current_country when 'AU' then 'class=active' end %> ><%= link_to "Визы в Австралию", visas_by_country_path(:country_cd => 'AU'), :method => 'POST' %></li>     
+				<li <%= case @current_country when 'AU' then 'class=active' end %> ><%= link_to "Визы в Австралию", visas_by_country_path(:country_cd => 'AU'), :method => 'POST' %></li>
+				<li <%= case @current_country when 'UK' then 'class=active' end %> ><%= link_to "Визы в Великобританию", visas_by_country_path(:country_cd => 'UK'), :method => 'POST' %></li>     
             <li class="migration">
             	<%= link_to migration_path do %>
 						<b>Миграция в США</b>  

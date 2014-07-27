@@ -1,5 +1,12 @@
-<div id="intro" class="intro">
-	<div class="container">		
+<div class="slide-nav"> 
+ <ol class="nav carousel-indicators">
+    <li><a href="#usa-features"></a></li>
+    <li><a href="#uk-features"></a></li>
+    <li><a href="#au-features"></a></li>
+    <li><a href="#ca-features"></a></li>
+  </ol>
+</div>
+<div id="intro"class="container-fluid">		
 		<div class="row">
 			<div class="col-lg-2"></div>
 			<div class="col-lg-8">			
@@ -24,15 +31,14 @@
 				 </div>		
 			</div>
 			<div class="col-lg-2"></div>
-		</div>
-	</div>
+	 </div>	
 </div>
-<div class="container marketing">
+<div class="container-fluid marketing panel-grey">
 
       <!-- Three columns of text below the carousel -->
-      <div class="row mar-bot-100 pad-top-bot-50 panel-grey">
+      <div class="row pad-top-bot-50">
         <div class="col-lg-4">
-          <img class="img-circle" data-src="holder.js/140x140" alt="140x140" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDAiIGhlaWdodD0iMTQwIj48cmVjdCB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iI2VlZSI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjcwIiB5PSI3MCIgc3R5bGU9ImZpbGw6I2FhYTtmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZToxMnB4O2ZvbnQtZmFtaWx5OkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmO2RvbWluYW50LWJhc2VsaW5lOmNlbnRyYWwiPjE0MHgxNDA8L3RleHQ+PC9zdmc+" style="width: 140px; height: 140px;">
+          <img class="img-circle" data-src="holder.js/140x140" alt="140x140" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDAiIGhlaWdodD0iMTQwIj48cmVjdCB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iI2VlZSI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjcwIiB5PSI3MCIgc3R5bGU9ImZpbGw6I2FhYTtmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZToxMnB4O2ZvbnQtZmFtaWx5OkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmO2RvbWluYW50LWJhc2VsaW5lOmNlbnRyYWwiPjE0MHgxNDA8L3RleHQ+PC9zdmc+" style="width: 140px; height: 140px;">        
           <h2>Безопасно</h2>
           <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
           <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
@@ -50,73 +56,114 @@
           <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
-
-
-      <!-- START THE FEATURETTES -->
-
+</div>
+<div id="usa-features" class="container-fluid features" >
 		<div id="how-we-work"  class="anchor">
 		</div>
-      <div class="page-header">
-		  <h1>Как мы работаем?</h1>
+		<div class="col-lg-6 feature-text2">
+	      <div class="page-header">
+			  <h1>США</h1>
+			</div>
+	          <h2 class="featurette-heading">Шаг 1. <span class="text-muted">Подбор программы.</span></h2>
+	          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, 
+	          vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      </div>
+      <div class="col-lg-5 flag">
+			<%= image_tag "flag-usa.jpg", :class=>"img-responsive" %>     
+      </div>
+</div>
+<div class="container-fluid panel-grey" >
+	   <div class="page-header">
+			  <h1>Визы в США</h1>
 		</div>
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Шаг 1. <span class="text-muted">Подбор программы.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-        	 <%= image_tag "how_work1.jpg", :class=>"featurette-image img-responsive" %>
-         </div> 
+		<div class="row pad-top-bot-50">
+			<%= render :partial => "visas/visaitems2" %>	
+		</div>
+</div>
+<div id="uk-features" class="container-fluid features" >
+		<div id="how-we-work"  class="anchor">
+		</div>
+		<div class="col-lg-6 feature-text2">
+	      <div class="page-header">
+			  <h1>Великобритания</h1>
+			</div>
+	          <h2 class="featurette-heading">Шаг 1. <span class="text-muted">Подбор программы.</span></h2>
+	          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, 
+	          vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
       </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-5">
-        		<%= image_tag "how_work2.jpg", :class=>"featurette-image img-responsive" %> 
-        </div>
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Шаг 2. <span class="text-muted">Заключение договора и внесение предоплаты.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
+       <div class="col-lg-5 flag">
+			<%= image_tag "flag-uk.jpg", :class=>"img-responsive" %>     
       </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Шаг 3. <span class="text-muted">Оформление визы и бронирование авиабилета.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-        		<%= image_tag "how_work3.jpg", :class=>"featurette-image img-responsive" %>  
-        </div>
+</div>
+<div class="container-fluid panel-grey" >
+	   <div class="page-header">
+			  <h1>Визы в Великобританию</h1>
+		</div>
+		<div class="row pad-top-bot-50">
+			<%= render :partial => "visas/visaitems2" %>	
+		</div>
+</div>
+<div id="au-features" class="container-fluid features" >
+		<div id="how-we-work"  class="anchor">
+		</div>
+		<div class="col-lg-6 feature-text2">
+	      <div class="page-header">
+			  <h1>Австралия</h1>
+			</div>
+	          <h2 class="featurette-heading">Шаг 1. <span class="text-muted">Подбор программы.</span></h2>
+	          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, 
+	          vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
       </div>
-      
-      <div class="row featurette">
-        <div class="col-md-5">
-        		<%= image_tag "how_work3.jpg", :class=>"featurette-image img-responsive" %>  
-        </div>
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Шаг 4. <span class="text-muted">Оплата счета за обучение.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
+      <div class="col-lg-5 flag">
+			<%= image_tag "flag-au.jpg", :class=>"img-responsive" %>     
       </div>
-      <hr class="featurette-divider">
-      
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Шаг 5. <span class="text-muted">Передача необходимых документов для поездки.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-        		<%= image_tag "how_work3.jpg", :class=>"featurette-image img-responsive" %>  
-        </div>
+</div>
+<div class="container-fluid panel-grey" >
+		<div class="page-header">
+			  <h1>Визы в Австралию</h1>
+		</div>
+		<div class="row pad-top-bot-50">
+			<%= render :partial => "visas/visaitems2" %>	
+		</div>
+</div>
+<div id="ca-features" class="container-fluid features" >
+		<div id="how-we-work"  class="anchor">
+		</div>
+		<div class="col-lg-6 feature-text2">
+	      <div class="page-header">
+			  <h1>Канада</h1>
+			</div>
+	          <h2 class="featurette-heading">Шаг 1. <span class="text-muted">Подбор программы.</span></h2>
+	          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, 
+	          vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
       </div>
-      <!-- /END THE FEATURETTES -->
-
-    </div>
+      <div class="col-lg-5 flag">
+			<%= image_tag "flag-ca.jpg", :class=>"img-responsive" %>     
+      </div>
+</div>
+<div class="container-fluid panel-grey" >
+		<div class="page-header">
+			  <h1>Визы в Канаду</h1>
+		</div>
+		<div class="row pad-top-bot-50">
+			<%= render :partial => "visas/visaitems2" %>	
+		</div>
+</div>
  <script type="text/javascript" >
+	 //$('#intro').parallax("50%", 0.1);
 	 $("#intro").backstretch("<%= asset_path 'bg-image2.jpg' %>");
+	 $('#usa-features').parallax("50%", 0.1);
+	 $('#uk-features').parallax("50%", 0.1);
+	 $('#au-features').parallax("5%", 0.1);
+	 $('#ca-features').parallax("50%", 0.1);
+	 $('#nz-features').parallax("50%", 0.1);
+    $(function ($) {  
+     	var vH = $(window).height();
+     	$('#intro').css('height', vH-50);
+     	$('.features').css('height', vH);
+     });   
+     $('body').scrollspy({ target: '.slide-nav' });
+     $('.slide-nav').localScroll({
+           target:'body'
+     });
 </script>
