@@ -37,7 +37,9 @@ GShockShop::Application.routes.draw do
    
    post 'start_search' => 'visas#start_search', as: :start_search
    
-	get "migration_to_usa" => 'pages#migration', as: :migration
+	get "migration_to_usa" => 'pages#usa_migration', as: :usa_migration
+	
+	get "migration_to_australia" => 'pages#au_migration', as: :au_migration
 	
 	post "visas_by_country" => "visas#visas_by_country", as: :visas_by_country
 	

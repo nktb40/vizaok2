@@ -59,6 +59,7 @@ end
 
 Addinfo.delete_all
 CSV.foreach("data/vizaok2 - addinfo.csv", :headers => true) do |row|
+  puts row['name']||' '||row['description']
   Addinfo.create(visa_id: Visa.where(:visa_cd => row['visa_cd']).first.id, 
   name: row['name'], description: row['description'])
 end
