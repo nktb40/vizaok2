@@ -27,6 +27,43 @@ class VisasController < ApplicationController
 		render :index
 	end
 	
+	
+	def get_usa_visas
+		@visas = Visa.joins(:country).where('countries.country_cd = ?', 'USA').order("visas.name").uniq
+		@selected_country = Country.where('country_cd = ?', 'USA').first.id
+		@selected_purpose = nil
+		@purposes = Purpose.all
+		@countries = Country.all	
+		render :index
+	end
+	
+	def get_ca_visas
+		@visas = Visa.joins(:country).where('countries.country_cd = ?', 'CA').order("visas.name").uniq
+		@selected_country = Country.where('country_cd = ?', 'CA').first.id
+		@selected_purpose = nil
+		@purposes = Purpose.all
+		@countries = Country.all	
+		render :index	
+	end
+	
+	def get_au_visas
+		@visas = Visa.joins(:country).where('countries.country_cd = ?', 'AU').order("visas.name").uniq
+		@selected_country = Country.where('country_cd = ?', 'AU').first.id
+		@selected_purpose = nil
+		@purposes = Purpose.all
+		@countries = Country.all	
+		render :index	
+	end
+	
+	def get_uk_visas
+		@visas = Visa.joins(:country).where('countries.country_cd = ?', 'UK').order("visas.name").uniq
+		@selected_country = Country.where('country_cd = ?', 'UK').first.id
+		@selected_purpose = nil
+		@purposes = Purpose.all
+		@countries = Country.all	
+		render :index	
+	end
+	
 	def search
 		if params[:purposes].blank? and !params[:countries].blank?
 			@visas = Visa.joins("LEFT JOIN lnk_visa_purposes vp ON vp.visa_id = visas.id").where('visas.country_id = ?', params[:countries]).uniq
