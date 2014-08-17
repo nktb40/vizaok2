@@ -1,11 +1,3 @@
-<div class="slide-nav"> 
- <ol class="nav carousel-indicators">
-    <li><a href="#usa-features"></a></li>
-    <li><a href="#uk-features"></a></li>
-    <li><a href="#au-features"></a></li>
-    <li><a href="#ca-features"></a></li>
-  </ol>
-</div>
 <div id="intro"class="container-fluid">		
 		<div class="row">
 			<div class="col-lg-2"></div>
@@ -34,7 +26,6 @@
 	 </div>	
 </div>
 <div class="container-fluid marketing panel-grey">
-
       <!-- Three columns of text below the carousel -->
       <div class="row pad-top-bot-50">
         <div class="col-lg-4">
@@ -57,7 +48,7 @@
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
 </div>
-<div class="container-fluid" >
+<div class="container" >
 		<div class="row pad-top-bot-50 border-bot">
 			<div class="col-md-3 border-right1">
 				<%= image_tag "flag-usa.jpg", :class=>"image_responsive center-block img-circle size-200" %>	   	
@@ -69,28 +60,20 @@
 				<p class="lead mar-top-30">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, 
 	          vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
 	         </p>
-	         <div class="row">
-				  <div class="col-xs-6 col-md-2">
-				    <a href="#" class="thumbnail">
-				      <%= image_tag "CANADA_TRV.jpg",  :class=>"size-150" %>	
-				    </a>
-				  </div>
-				  <div class="col-xs-6 col-md-2">
-				    <a href="#" class="thumbnail">
-				      <%= image_tag "CANADA_TRV.jpg",  :class=>"size-150" %>	
-				    </a>
-				  </div>
-				   <div class="col-xs-6 col-md-2">
-				    <a href="#" class="thumbnail">
-				      <%= image_tag "CANADA_TRV.jpg",  :class=>"size-150" %>	
-				    </a>
-				  </div>
-				  <div class="col-xs-6 col-md-2">
-				    <a href="#" class="thumbnail">
-				      <%= image_tag "CANADA_TRV.jpg",  :class=>"size-150" %>	
-				    </a>
-				  </div>
-				</div>  
+         	<div id="tS1" class="jThumbnailScroller">
+					<div class="jTscrollerContainer">
+				        <div class="jTscroller">
+				        	 <% @visas_usa.each do |usa_v| %>
+				            <%= link_to visa_path(usa_v.id), :class=>"thumb-rel", :title => usa_v.name+". "+usa_v.shortdesc do %>
+						      	<%= image_tag usa_v.visa_cd+".jpg", :class=>"size-150" %>
+						      	<p class="p-bot-2"><b><%= truncate(usa_v.name, :length => 17)  %></b></p>
+						      <% end %>
+				          <% end %>	
+				        </div>
+				    </div>
+				    <%= link_to "", "", :class=>"jTscrollerPrevButton" %>
+				    <%= link_to "", "", :class=>"jTscrollerNextButton" %>
+				</div>
 		   </div>
 		</div>
 		<div class="row pad-top-bot-50 border-bot">
@@ -99,33 +82,25 @@
 	   	</div>
 		   <div class="col-md-9">
 				<div class="page-header-2">
-					 <h1>Визы в США</h1>
+					 <h1>Визы в Великобританию</h1>
 				</div>  
 				<p class="lead mar-top-30">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, 
 	          vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
 	         </p>
-	         <div class="row">
-				  <div class="col-xs-6 col-md-2">
-				    <a href="#" class="thumbnail">
-				      <%= image_tag "CANADA_TRV.jpg",  :class=>"size-150" %>	
-				    </a>
-				  </div>
-				  <div class="col-xs-6 col-md-2">
-				    <a href="#" class="thumbnail">
-				      <%= image_tag "CANADA_TRV.jpg",  :class=>"size-150" %>	
-				    </a>
-				  </div>
-				   <div class="col-xs-6 col-md-2">
-				    <a href="#" class="thumbnail">
-				      <%= image_tag "CANADA_TRV.jpg",  :class=>"size-150" %>	
-				    </a>
-				  </div>
-				  <div class="col-xs-6 col-md-2">
-				    <a href="#" class="thumbnail">
-				      <%= image_tag "CANADA_TRV.jpg",  :class=>"size-150" %>	
-				    </a>
-				  </div>
-				</div>  
+	         <div id="tS2" class="jThumbnailScroller">
+					<div class="jTscrollerContainer">
+				        <div class="jTscroller">
+				          <% @visas_uk.each do |uk_v| %>
+				            <%= link_to visa_path(uk_v.id), :class=>"thumb-rel", :title => uk_v.shortdesc do %>
+						      	<%= image_tag uk_v.visa_cd+".jpg", :class=>"size-150" %>
+						      	<p class="p-bot-2"><b><%= truncate(uk_v.name, :length => 17)  %></b></p>
+						      <% end %>	
+				          <% end %>	
+				        </div>
+				    </div>
+				    <%= link_to "", "", :class=>"jTscrollerPrevButton" %>
+				    <%= link_to "", "", :class=>"jTscrollerNextButton" %>
+				</div>
 		   </div>
 		</div>
 		<div class="row pad-top-bot-50 border-bot">
@@ -134,33 +109,25 @@
 	   	</div>
 		   <div class="col-md-9">
 				<div class="page-header-2">
-					 <h1>Визы в США</h1>
+					 <h1>Визы в Канаду</h1>
 				</div>  
 				<p class="lead mar-top-30">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, 
 	          vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
 	         </p>
-	         <div class="row">
-				  <div class="col-xs-6 col-md-2">
-				    <a href="#" class="thumbnail">
-				      <%= image_tag "CANADA_TRV.jpg",  :class=>"size-150" %>	
-				    </a>
-				  </div>
-				  <div class="col-xs-6 col-md-2">
-				    <a href="#" class="thumbnail">
-				      <%= image_tag "CANADA_TRV.jpg",  :class=>"size-150" %>	
-				    </a>
-				  </div>
-				   <div class="col-xs-6 col-md-2">
-				    <a href="#" class="thumbnail">
-				      <%= image_tag "CANADA_TRV.jpg",  :class=>"size-150" %>	
-				    </a>
-				  </div>
-				  <div class="col-xs-6 col-md-2">
-				    <a href="#" class="thumbnail">
-				      <%= image_tag "CANADA_TRV.jpg",  :class=>"size-150" %>	
-				    </a>
-				  </div>
-				</div>  
+	         <div id="tS3" class="jThumbnailScroller">
+					<div class="jTscrollerContainer">
+				        <div class="jTscroller">
+				          <% @visas_ca.each do |ca_v| %>
+				            <%= link_to visa_path(ca_v.id), :class=>"thumb-rel", :title => ca_v.shortdesc do %>
+						      	<%= image_tag ca_v.visa_cd+".jpg", :class=>"size-150" %>
+						      	<p class="p-bot-2"><b><%= truncate(ca_v.name, :length => 17)  %></b></p>
+						      <% end %>	
+				          <% end %>		
+				        </div>
+				    </div>
+				    <%= link_to "", "", :class=>"jTscrollerPrevButton" %>
+				    <%= link_to "", "", :class=>"jTscrollerNextButton" %>
+				</div>
 		   </div>
 		</div>
 		<div class="row pad-top-bot-50 border-bot">
@@ -169,39 +136,31 @@
 	   	</div>
 		   <div class="col-md-9">
 				<div class="page-header-2">
-					 <h1>Визы в США</h1>
+					 <h1>Визы в Австралию</h1>
 				</div>  
 				<p class="lead mar-top-30">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, 
 	          vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
 	         </p>
-	         <div class="row">
-				  <div class="col-xs-6 col-md-2">
-				    <a href="#" class="thumbnail">
-				      <%= image_tag "CANADA_TRV.jpg",  :class=>"size-150" %>	
-				    </a>
-				  </div>
-				  <div class="col-xs-6 col-md-2">
-				    <a href="#" class="thumbnail">
-				      <%= image_tag "CANADA_TRV.jpg",  :class=>"size-150" %>	
-				    </a>
-				  </div>
-				   <div class="col-xs-6 col-md-2">
-				    <a href="#" class="thumbnail">
-				      <%= image_tag "CANADA_TRV.jpg",  :class=>"size-150" %>	
-				    </a>
-				  </div>
-				  <div class="col-xs-6 col-md-2">
-				    <a href="#" class="thumbnail">
-				      <%= image_tag "CANADA_TRV.jpg",  :class=>"size-150" %>	
-				    </a>
-				  </div>
-				</div>  
+	        <div id="tS4" class="jThumbnailScroller">
+					<div class="jTscrollerContainer">
+				        <div class="jTscroller">
+				          <% @visas_au.each do |au_v| %>
+				            <%= link_to visa_path(au_v.id), :class=>"thumb-rel", :title => au_v.shortdesc do %>
+						      	<%= image_tag au_v.visa_cd+".jpg", :class=>"size-150" %>
+						      	<p class="p-bot-2"><b><%= truncate(au_v.name, :length => 17)  %></b></p>
+						      <% end %>
+				          <% end %>		
+				        </div>
+				    </div>
+				    <%= link_to "", "", :class=>"jTscrollerPrevButton" %>
+				    <%= link_to "", "", :class=>"jTscrollerNextButton" %>
+				</div>
 		   </div>
 		</div>
 </div>
  <script type="text/javascript" >
-	 //$('#intro').parallax("50%", 0.1);
-	 $("#intro").backstretch("<%= asset_path 'bg-image2.jpg' %>");
+ 	 //$("#intro").backstretch("<%= asset_path 'bg-image2.jpg' %>");
+	 $('#intro').parallax("50%", 0.1);
 	 $('#usa-features').parallax("50%", 0.1);
 	 $('#uk-features').parallax("50%", 0.1);
 	 $('#au-features').parallax("5%", 0.1);
@@ -209,11 +168,73 @@
 	 $('#nz-features').parallax("50%", 0.1);
     $(function ($) {  
      	var vH = $(window).height();
+     	$('#carousel').css('height', vH-50);
      	$('#intro').css('height', vH-50);
-     	$('.features').css('height', vH);
+     	$('.features').css('height', vH-50);
      });   
      $('body').scrollspy({ target: '.slide-nav' });
      $('.slide-nav').localScroll({
            target:'body'
      });
+</script>
+
+<script>
+window.onload=function(){ 
+	$("#tS1").thumbnailScroller({ 
+		scrollerType:"clickButtons", 
+		scrollerOrientation:"horizontal", 
+		scrollSpeed:2, 
+		scrollEasing:"easeOutCirc", 
+		scrollEasingAmount:600, 
+		acceleration:4, 
+		scrollSpeed:800, 
+		noScrollCenterSpace:10, 
+		autoScrolling:0, 
+		autoScrollingSpeed:2000, 
+		autoScrollingEasing:"easeInOutQuad", 
+		autoScrollingDelay:500 
+	});
+		$("#tS2").thumbnailScroller({ 
+		scrollerType:"clickButtons", 
+		scrollerOrientation:"horizontal", 
+		scrollSpeed:2, 
+		scrollEasing:"easeOutCirc", 
+		scrollEasingAmount:600, 
+		acceleration:4, 
+		scrollSpeed:800, 
+		noScrollCenterSpace:10, 
+		autoScrolling:0, 
+		autoScrollingSpeed:2000, 
+		autoScrollingEasing:"easeInOutQuad", 
+		autoScrollingDelay:500 
+	});
+		$("#tS3").thumbnailScroller({ 
+		scrollerType:"clickButtons", 
+		scrollerOrientation:"horizontal", 
+		scrollSpeed:2, 
+		scrollEasing:"easeOutCirc", 
+		scrollEasingAmount:600, 
+		acceleration:4, 
+		scrollSpeed:800, 
+		noScrollCenterSpace:10, 
+		autoScrolling:0, 
+		autoScrollingSpeed:2000, 
+		autoScrollingEasing:"easeInOutQuad", 
+		autoScrollingDelay:500 
+	});
+		$("#tS4").thumbnailScroller({ 
+		scrollerType:"clickButtons", 
+		scrollerOrientation:"horizontal", 
+		scrollSpeed:2, 
+		scrollEasing:"easeOutCirc", 
+		scrollEasingAmount:600, 
+		acceleration:4, 
+		scrollSpeed:800, 
+		noScrollCenterSpace:20, 
+		autoScrolling:0, 
+		autoScrollingSpeed:2000, 
+		autoScrollingEasing:"easeInOutQuad", 
+		autoScrollingDelay:500 
+	});
+}
 </script>

@@ -23,4 +23,6 @@
 //= require parallax-1.1.3
 //= require scrollto
 //= require localscroll
+//= require thumbnailScroller
+//= require jquery-ui-1.8.13.custom.min
 

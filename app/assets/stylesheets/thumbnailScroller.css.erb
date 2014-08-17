@@ -1,0 +1,27 @@
+@charset "utf-8";
+/*
+Thumbnail scroller jQuery plugin
+scrollers styling
+*/
+.jThumbnailScroller{position:relative; width:100%; height:172px; margin: 30px auto; padding:0; overflow:hidden;}
+.jThumbnailScroller .jTscrollerContainer{position:absolute;}
+.jThumbnailScroller .jTscroller{position:relative; height:100%; margin:0; left:0; top:0; display:inline-block; *display:inline;}
+.jThumbnailScroller .jTscrollerNextButton,.jThumbnailScroller .jTscrollerPrevButton{position:absolute; display:block; width:40px; height:40px; -moz-border-radius:20px; -webkit-border-radius:20px; border-radius:20px; opacity:0.7;}
+.jThumbnailScroller .jTscrollerNextButton{background:#000 url("<%= asset_path 'nextArrow.png' %>") center center;}
+.jThumbnailScroller .jTscrollerPrevButton{background:#000 url("<%= asset_path 'prevArrow.png' %>") center center;}
+.jThumbnailScroller .jTscrollerNextButton:hover,.jThumbnailScroller .jTscrollerPrevButton:hover{background-color:#4f9fcf; opacity:1;}
+.jThumbnailScroller .jTscroller a{display:block; float:left; border:5px solid #ddd; margin:6px 10px 6px 0; background:#fff;}
+.jThumbnailScroller .jTscroller a:hover{border-color:#ccc;}
+.jThumbnailScroller .jTscroller a:first-child{margin-left:10px;}
+.jThumbnailScroller .jTscroller a img{border:none;}
+/* different styled scrollers */
+.jThumbnailScroller .jTscrollerNextButton {
+	margin: -20px 10px 0 10px;
+	right: 0;
+	top: 50%;
+}
+.jThumbnailScroller .jTscrollerPrevButton {
+	margin: -20px 10px 0 10px;
+	left: 0;
+	top: 50%;
+}
