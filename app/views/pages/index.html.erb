@@ -173,10 +173,22 @@
 	 $('#nz-features').parallax("50%", 0.1);
     $(function ($) {  
      	var vH = $(window).height();
+     	var vW = $(window).width();
+     	var vS = 0;
+     	if (wH <= vW){
+     		vS = vH/2-392/2-40;
+     	}else{
+     		if(vW>=392-40){
+				vS = vW/2-392/2-40;
+			}else {
+				vS = 40;
+			}
+     	}  
+     	
      	$('#carousel').css('height', vH-50);
      	$('#intro').css('height', vH-50);
      	$('.features').css('height', vH-50);
-     	$('.intro-form').css('margin-top', vH/2-392/2-40);
+     	$('.intro-form').css('margin-top', vS);
      });   
      $('body').scrollspy({ target: '.slide-nav' });
      $('.slide-nav').localScroll({
