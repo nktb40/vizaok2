@@ -31,7 +31,7 @@
           <% end %>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav hidden-sm">
             <li <%= if current_page?(usa_visas_path) then 'class=active' end %> ><%= link_to "Визы в США", usa_visas_path %></li>  
 				<li <%= if current_page?(ca_visas_path) then 'class=active' end %> ><%= link_to "Визы в Канаду", ca_visas_path  %></li>    
 				<li <%= if current_page?(au_visas_path) then 'class=active' end %> ><%= link_to "Визы в Австралию", au_visas_path  %></li>
@@ -47,7 +47,29 @@
 					<% end %>    
             </li>
           </ul>
-        </div>
+          <div class="dropdown pull-right hidden-xs">
+				  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+				    Все визы
+				    <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+				      <li><%= link_to "Визы в США", usa_visas_path %></li>  
+						<li><%= link_to "Визы в Канаду", ca_visas_path  %></li>    
+						<li><%= link_to "Визы в Австралию", au_visas_path  %></li>
+						<li><%= link_to "Визы в Великобританию", uk_visas_path  %></li>     
+		            <li>
+		            	<%= link_to usa_migration_path do %>
+								<b>Миграция в США</b>      
+							<% end %>    
+		            </li>
+		             <li>
+		            	<%= link_to au_migration_path do %>
+								<b>Миграция в Австралию</b>    
+							<% end %>    
+		            </li>
+				  </ul>
+				</div>
+        </div>       
       </div>
     </div>
     

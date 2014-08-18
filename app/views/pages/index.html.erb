@@ -25,7 +25,7 @@
 			<div class="col-lg-2"></div>
 	 </div>	
 </div>
-<div class="container marketing border-bot">
+<div class="container marketing border-bot visible-md visible-lg">
       <!-- Three columns of text below the carousel -->
       <div class="row pad-top-bot-50">
         <div class="col-lg-4">
@@ -47,7 +47,7 @@
 <div class="container" >
 		<div class="row pad-top-bot-50 border-bot">
 			<div class="col-md-3 border-right1">
-				<%= image_tag "flag-usa.jpg", :class=>"image_responsive center-block img-circle size-200" %>	   	
+				<%= image_tag "flag-usa.jpg", :class=>"visible-md visible-lg image_responsive center-block img-circle size-200" %>	   	
 	   	</div>
 		   <div class="col-md-9">
 				<div class="page-header-2">
@@ -75,7 +75,7 @@
 		</div>
 		<div class="row pad-top-bot-50 border-bot">
 			<div class="col-md-3 border-right1">
-				<%= image_tag "flag-uk.jpg", :class=>"image_responsive center-block img-circle size-200" %>	   	
+				<%= image_tag "flag-uk.jpg", :class=>"visible-md visible-lg image_responsive center-block img-circle size-200" %>	   	
 	   	</div>
 		   <div class="col-md-9">
 				<div class="page-header-2">
@@ -105,7 +105,7 @@
 		</div>
 		<div class="row pad-top-bot-50 border-bot">
 			<div class="col-md-3 border-right1">
-				<%= image_tag "flag-ca.jpg", :class=>"image_responsive center-block img-circle size-200" %>	   	
+				<%= image_tag "flag-ca.jpg", :class=>"visible-md visible-lg image_responsive center-block img-circle size-200" %>	   	
 	   	</div>
 		   <div class="col-md-9">
 				<div class="page-header-2">
@@ -135,7 +135,7 @@
 		</div>
 		<div class="row pad-top-bot-50 border-bot">
 			<div class="col-md-3 border-right1">
-				<%= image_tag "flag-au.jpg", :class=>"image_responsive center-block img-circle size-200" %>	   	
+				<%= image_tag "flag-au.jpg", :class=>"visible-md visible-lg image_responsive center-block img-circle size-200" %>	   	
 	   	</div>
 		   <div class="col-md-9">
 				<div class="page-header-2">
@@ -176,6 +176,7 @@
      	$('#carousel').css('height', vH-50);
      	$('#intro').css('height', vH-50);
      	$('.features').css('height', vH-50);
+     	$('.intro-form').css('margin-top', vH/2-392/2-40);
      });   
      $('body').scrollspy({ target: '.slide-nav' });
      $('.slide-nav').localScroll({
