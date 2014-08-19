@@ -164,7 +164,6 @@
 		</div>
 </div>
  <script type="text/javascript" >
- 	 //$("#intro").backstretch("<%= asset_path 'bg-image2.jpg' %>");
 	 $('#intro').parallax("50%", 0.1);
 	 $('#usa-features').parallax("50%", 0.1);
 	 $('#uk-features').parallax("50%", 0.1);
@@ -173,22 +172,16 @@
 	 $('#nz-features').parallax("50%", 0.1);
     $(function ($) {  
      	var vH = $(window).height();
-     	var vW = $(window).width();
-     	var vS = 0;
-     	if (wH <= vW){
-     		vS = vH/2-392/2-40;
-     	}else{
-     		if(vW>=392-40){
-				vS = vW/2-392/2-40;
-			}else {
-				vS = 40;
-			}
-     	}  
-     	
+     	var vW = $(window).width(); 
+      if(vW<1000){ 	 
+ 	 		$("#intro").backstretch("<%= asset_path 'header.jpg' %>");
+ 	 		$('.intro-form').css('margin-top', '2%');
+ 	 	} else{
+			 $('.intro-form').css('margin-top', '10%');	 	
+ 	 	}
      	$('#carousel').css('height', vH-50);
      	$('#intro').css('height', vH-50);
      	$('.features').css('height', vH-50);
-     	$('.intro-form').css('margin-top', vS);
      });   
      $('body').scrollspy({ target: '.slide-nav' });
      $('.slide-nav').localScroll({
