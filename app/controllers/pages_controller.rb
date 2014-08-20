@@ -1,6 +1,7 @@
 # encoding: utf-8
 class PagesController < ApplicationController
 	def index
+		@order = Order.new
 		@countries = Country.all
 		@purposes = Purpose.all
 		@visas_usa = Visa.joins("LEFT JOIN countries c ON c.id = visas.country_id").where("c.country_cd = ?", "USA")

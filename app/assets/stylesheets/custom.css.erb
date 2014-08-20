@@ -8,6 +8,7 @@
 .mar-bot-10{margin-bottom:10px;}
 .mar-bot-100{margin-bottom:100px;}
 .mar-bot-50{margin-bottom:50px;}
+.mar-bot-30{margin-bottom:30px;}
 .mar-bot-0{margin-bottom:0;}
 
 .mar-left-0{margin-left:0;}
@@ -107,7 +108,7 @@ color: #4e5d6c;
 	color: #4e5d6c;
 }
 
-.panel-heading h1, h2, h3, .panel-heading a{
+.panel-heading h1, .panel-heading h2, .panel-heading h3, .panel-heading a{
  	font-size: 18px;
  	margin: 0;
  	color: #fff;
@@ -207,6 +208,7 @@ text-align: center;
 
 .panel{
 	background-color:#f5f5f5;
+	border: 1px solid #eee;
 }
 .panel-body{
 	color:#4e5d6c;
@@ -273,6 +275,11 @@ table>thead>tr>th, .table>thead>tr>th{
 .form-control{
 	border: 1px solid #D1D1D1;
 }
+
+.form-control:focus{
+	border-color: rgba(82,168,236,0.8);
+}
+
 .well{
 	background-color: #f5f5f5;
 }
@@ -367,6 +374,10 @@ body{
 }
 .intro-form {
 	//margin-top:10%;
+}
+.intro-form .form label{
+	color:#fff;
+	text-align:left;
 }
 .intro-form .form-inline{
 	width:690px;
@@ -536,6 +547,11 @@ label{
 	border-bottom: 2px solid #4e5d6c;
 }
 
+.page-header-2 a:hover{
+	text-decoration:none;
+	color: rgba(82,168,236,0.8);
+}
+
 .page-header-2 h1{
 	font-size: 32px;
 	margin-top: 0;
@@ -569,4 +585,17 @@ label{
 }
 u, ins {
 	text-decoration:none;
+}
+.lead {
+	font-size: 19px;
+}
+
+.form-panel h3{
+	color: #fff;
+	text-align:center;
+	font-size:16px;
+	}
+	
+.img-circle:hover{
+	border: 1px solid #428bca;
 }

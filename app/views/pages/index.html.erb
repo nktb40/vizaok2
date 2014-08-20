@@ -11,12 +11,12 @@
 						<div class="form-group">
 							<%= select_tag "countries", options_from_collection_for_select(@countries, "id", "name"),
 		        				:class=>"selectpicker", :data=>{:style=>"btn-info btn-lg"}, 
-		        				include_blank: true, prompt: "Все страны" %>
+		        				include_blank: true, prompt: "Страна" %>
 						</div>	
 						<div class="form-group">
 							<%= select_tag "purposes", options_from_collection_for_select(@purposes, "id", "name"),
 		        				:class=>"selectpicker", :data=>{:style=>"btn-info btn-lg"}, 
-		        				include_blank: true, prompt: "Все типы виз" %>	        						
+		        				include_blank: true, prompt: "Цель поездки" %>	        						
 						</div>
 						<%= submit_tag "Начать поиск", :class=>"btn btn-success btn-lg" %>
 					  <% end %>
@@ -28,17 +28,17 @@
 <div class="container marketing border-bot visible-md visible-lg">
       <!-- Three columns of text below the carousel -->
       <div class="row pad-top-bot-50">
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-sm-4">
           <span class="glyphicon glyphicon-tower icon-circle"></span>        
           <h2>Надежно</h2>
           <p>Мы не даем гарантии, что Вы получите визу со 100% вероятностью, <b>но мы даем гарантию</b>, что сделаем все от нас зависящее для того, чтобы <b>снизить риск отаза</b> по визе <b>до минимума.</b></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-sm-4">
         	 <span class="glyphicon glyphicon-flash icon-circle"></span> 
           <h2>Оперативно</h2>
-          <p>Благодаря <b>многолетнему опыту</b> наших специалистов, процесс оформления занимает <b>минимально возможное время</b>. Вы можете получить паспорт с визой <b>в течение 1-й рабочей недели</b>.</p>
+          <p>Благодаря <b>многолетнему опыту</b> наших специалистов, процесс оформления занимает <b>минимально возможное время</b>. Вы можете получить паспорт с визой <b>в течение одной рабочей недели</b>.</p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-sm-4">
            <span class="glyphicon glyphicon-usd icon-circle"></span><h2>Прозрачная цена</h2>
           <p>Вы платите <b>фиксированную сумму $120</b> и получаете за эти деньги <b>полное сопровождение</b> всего процесса оформления визы и <b>24 часовую поддержку</b> по любым вопросам, связанным с Вашей визой.</p>
         </div><!-- /.col-lg-4 -->
@@ -47,11 +47,13 @@
 <div class="container" >
 		<div class="row pad-top-bot-50 border-bot">
 			<div class="col-md-3 border-right1">
-				<%= image_tag "flag-usa.jpg", :class=>"visible-md visible-lg image_responsive center-block img-circle size-200" %>	   	
+				<%= link_to (image_tag "flag-usa.jpg", :class=>"visible-md visible-lg image_responsive center-block img-circle size-200"), usa_visas_path, :title => "Список виз в США" %>	   	
 	   	</div>
 		   <div class="col-md-9">
 				<div class="page-header-2">
-					 <h1>Визы в США</h1>
+				    <%= link_to usa_visas_path, :title => "Подробнее о визах в США" do %>
+					 	<h1>Визы в США</h1>
+					 <% end %>
 				</div>  
 				<p class="lead mar-top-30">
 					Наше агенство занимается оформлением всех видов <b>неиммиграционных виз в США</b>. Наибольшей популяностью среди наших клиентов пользуются <b>Туристические визы</b>, <b>Гостевые визы</b>, <b>Студенческие визы</b>, визы для <b>Деловых поездок</b> и пр.  <br><br>
@@ -75,11 +77,13 @@
 		</div>
 		<div class="row pad-top-bot-50 border-bot">
 			<div class="col-md-3 border-right1">
-				<%= image_tag "flag-uk.jpg", :class=>"visible-md visible-lg image_responsive center-block img-circle size-200" %>	   	
+				<%= link_to (image_tag "flag-uk.jpg", :class=>"visible-md visible-lg image_responsive center-block img-circle size-200"),  uk_visas_path, :title => "Список виз в Великобританию" %>	   	
 	   	</div>
 		   <div class="col-md-9">
 				<div class="page-header-2">
-					 <h1>Визы в Великобританию</h1>
+					 <%= link_to uk_visas_path, :title => "Подробнее о визах в Великобританию" do %>
+					 	<h1>Визы в Великобританию</h1>
+					 <% end %>
 				</div>  
 				<p class="lead mar-top-30">
 				 Процесс оформления визы в <b>Великобританию</b> считается одним из самых <b>сложных</b>, <b>трудоемких</b> и <b>длительных</b>. 
@@ -105,11 +109,13 @@
 		</div>
 		<div class="row pad-top-bot-50 border-bot">
 			<div class="col-md-3 border-right1">
-				<%= image_tag "flag-ca.jpg", :class=>"visible-md visible-lg image_responsive center-block img-circle size-200" %>	   	
+				<%= link_to (image_tag "flag-ca.jpg", :class=>"visible-md visible-lg image_responsive center-block img-circle size-200"), ca_visas_path, :title => "Список виз в Канаду" %>	   	
 	   	</div>
 		   <div class="col-md-9">
 				<div class="page-header-2">
-					 <h1>Визы в Канаду</h1>
+					 <%= link_to ca_visas_path, :title => "Подробнее о визах в Канаду" do %>
+					 	<h1>Визы в Канаду</h1>
+					 <% end %>
 				</div>  
 				<p class="lead mar-top-30">
 					<b>Канада</b> сочетает в себе огромные территории <b>нетронутой</b> человеком <b>природы</b> и современное <b>развитое общество</b>, поэтому Канада привлекает к себе <b>туристов</b> 
@@ -135,11 +141,13 @@
 		</div>
 		<div class="row pad-top-bot-50 border-bot">
 			<div class="col-md-3 border-right1">
-				<%= image_tag "flag-au.jpg", :class=>"visible-md visible-lg image_responsive center-block img-circle size-200" %>	   	
+				<%= link_to (image_tag "flag-au.jpg", :class=>"visible-md visible-lg image_responsive center-block img-circle size-200"), au_visas_path, :title => "Список виз в Австралию" %>	   	
 	   	</div>
 		   <div class="col-md-9">
 				<div class="page-header-2">
-					 <h1>Визы в Австралию</h1>
+					 <%= link_to au_visas_path, :title => "Подробнее о визах в Австралию" do %>
+					 	<h1>Визы в Австралию</h1>
+					 <% end %>
 				</div>  
 				<p class="lead mar-top-30">
 				 	Наше агенство занимается оформлением всех видов <b>неиммиграционных виз в Австралию</b>. Наибольшей популяностью среди наших клиентов пользуются <b>Туристические визы</b>, <b>Гостевые визы</b>, <b>Студенческие визы</b>, визы для <b>Деловых поездок</b> и пр.  <br><br>

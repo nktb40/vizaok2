@@ -41,13 +41,13 @@
 						<b>Миграция в США</b>      
 					<% end %>    
             </li>
-             <li <%= if current_page?(au_migration_path) then 'class=active' end %>>
+             <!-- <li <%= if current_page?(au_migration_path) then 'class=active' end %>>
             	<%= link_to au_migration_path do %>
 						<b>Миграция в Австралию</b>    
 					<% end %>    
-            </li>
+            </li> -->
           </ul>
-          <div class="dropdown pull-right hidden-xs">
+          <div class="dropdown pull-right visible-sm">
 				  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
 				    Все визы
 				    <span class="caret"></span>
@@ -62,11 +62,11 @@
 								<b>Миграция в США</b>      
 							<% end %>    
 		            </li>
-		             <li>
-		            	<%= link_to au_migration_path do %>
+		             <!--<li>
+		            	<%= link_to au_migration_path do >
 								<b>Миграция в Австралию</b>    
 							<% end %>    
-		            </li>
+		            </li> -->
 				  </ul>
 				</div>
         </div>       

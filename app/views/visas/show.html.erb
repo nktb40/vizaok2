@@ -1,14 +1,14 @@
 <div class="container  pad-top-bot-50">
  <div class="row"> 
- 	<div class="col-lg-9">
+ 	<div class="col-lg-9 col-sm-9">
 		<div class="panel panel-default">
 	       <div class="panel-heading">
 	       <h3>
-	       	 <span class="glyphicon glyphicon-globe"> </span>
+	       	 <span class="glyphicon glyphicon-globe"> </span>&nbsp;
 		       <%= link_to "Виза в "+@visa.country.name, "" %>
 	       </h3></div>
 	       <div class="panel-body panel-grey">
-	       	 <div class="row col-lg-6 mar-left-0">
+	       	 <div class="row col-lg-6 col-sm-6 mar-left-0">
 	       	 		<div class="well pad-0 panel-grey">
     	 					<h1 class="mar-0"><span class="text-underline" ><%= @visa.name %></span></h1>
        	 			</div>
@@ -19,13 +19,9 @@
        	 			</p>
        	 			<p><b class="text-underline">Описание</b>: <%= raw @visa.description %></p>
 	       	 </div>
-	       	 <div class="row col-lg-6 mar-left-20">
+	       	 <div class="row col-lg-6 col-sm-6 mar-left-20">
 				   	<p><%= image_tag @visa.visa_cd+".jpg", :class=> "img-responsive" %></p>
 				   	<p>
-							<%= link_to new_order_path, :class=>"btn btn-success btn-block" do %>
-								<span class="glyphicon glyphicon-envelope"></span>	
-								Оставить заявку		
-					       <% end %> 
 							<%= link_to "", :class=>"btn btn-warning btn-block" do %>
 								<span class="glyphicon glyphicon-save"></span>	
 								Черновик анкеты		
@@ -34,10 +30,10 @@
 				 </div>
 	       </div>
 	    </div>
-    		<div class="panel panel-default">
+    		<div class="panel panel-success">
 	       	<div class="panel-heading">
 					<h3><span class="glyphicon glyphicon-folder-open"></span>&nbsp; Список необходимых документов</h3></div>
-	       	<div class="panel-body">
+	       	<div>
 	       		<table class="table table-striped">
 				      <tbody>
 				      	<% @cnt = 0 %>
@@ -51,33 +47,33 @@
 				    </table>
 	         </div>
     	   </div>
-    		<div class="panel panel-default">
+    		<div class="panel panel-warning">
 	       	<div class="panel-heading">
 					<h3><span class="glyphicon glyphicon-usd"></span>&nbsp; Расходы на получение визы</h3></div>
-	       	<div class="panel-body">
+	       	<div>
 	       		<table class="table table-striped">
 				      <tbody>
 				      	<% @cnt = 0 %>
 				      	<% @visa.prices.each  do |cost| %>
 				      		<% @cnt += 1 %>
 				      		<tr class="font-s-17">
-					           <td class="col-lg-10"><b><%= @cnt %>. <%= cost.name %>:</b> <%= raw cost.description %></td>
-					           <td class="col-lg-2"><b><%= number_with_precision(cost.price,strip_insignificant_zeros: true) %> <%= cost.currency %></b></td>
+					           <td class="col-lg-10 col-sm-10"><b><%= @cnt %>. <%= cost.name %>:</b> <%= raw cost.description %></td>
+					           <td class="col-lg-2 col-sm-2"><b><%= number_with_precision(cost.price,strip_insignificant_zeros: true) %> <%= cost.currency %></b></td>
 					         </tr>
 				      	<% end %>
 				      </tbody>
 				    </table>
 	         </div>
     	   </div>
-    	   <div class="panel panel-default">
+    	   <div class="panel panel-info">
 	       	<div class="panel-heading">
 					<h3><span class="glyphicon glyphicon-paperclip"></span>&nbsp; Дополнительная информация</h3></div>
-	       	<div class="panel-body">
+	       	<div>
 	       		<table class="table table-striped">
 				      <tbody>
 				      	<% @visa.addinfos.each  do |info| %>
 				      		<tr class="font-s-17">
-					           <td class="col-lg-10"><b> <%= info.name %></b></br> <%= raw info.description %></td>
+					           <td class="col-lg-10 col-sm-10"><b> <%= info.name %></b></br> <%= raw info.description %></td>
 					         </tr>
 				      	<% end %>
 				      </tbody>
@@ -85,39 +81,32 @@
 	         </div>
     	   </div>
  	</div>
-	<div class="col-lg-3">
-		<div class="panel panel-default">
+	<div class="col-lg-3 col-sm-3">
+		<div class="panel panel-info mar-bot-50">
 			<div class="panel-heading">
-				<h3>Визы</h3>
+				<h3><span class="glyphicon glyphicon-info-sign"></span>	&nbsp;
+				Другие визы в <%= @visa.country.name %></h3>
 			</div>
-			<div class="panel-group" id="accordion">
-			 <% @countries.each do |country| %>
-			  <div class="panel panel-grey2">
-			    <div class="panel-heading">
-			      <h4 class="panel-title">
-			        <a data-toggle="collapse" data-parent="#accordion" href="#collapse<%= country.country_cd %>">
-			          <%= country.name %>
-			        </a>
-			      </h4>
-			    </div>
-			    <div id="collapse<%= country.country_cd %>" class="panel-collapse collapse <%= case country.id when @visa.country_id then 'in' end %>" >
-			      <div>
-			        	<ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
-						  <% country.visas.each do |visa| %>
-						  <li <%= case visa.id when @visa.id then 'class=active' end %> >
-						  		<%= link_to visa_path(visa.id), :title => visa.name do %>
-						  			<%= truncate(visa.name, :length => 25) %>
-						  			<span class="glyphicon glyphicon-chevron-right pull-right"></span>
-						  		<% end %>
-						  </li>
-						  <% end %>
-						</ul>
-			      </div>
-			    </div>
-			  </div>
-			 <% end %>
+			<div>
+	        	<ul class="nav nav-pills nav-stacked">
+				  <% @country_visas.each do |visa| %>
+				  <li <%= case visa.id when @visa.id then 'class=active' end %> >
+				  		<%= link_to visa_path(visa.id), :title => visa.name do %>
+				  			<%= truncate(visa.name, :length => 25) %>
+				  			<span class="glyphicon glyphicon-chevron-right pull-right"></span>
+				  		<% end %>
+				  </li>
+				  <% end %>
+				</ul>
+	      </div>
 		</div>
-		</div>
+		<div class="panel panel-success form-panel">
+			<div class="panel-heading"><h3><span class="glyphicon glyphicon-envelope"></span>&nbsp;
+				<b>Оставьте заявку и мы Вам перезвоним</b></h3></div>
+			<div class="panel-body">
+				<%= render :partial => "orders/form" %>	
+			</div>		
+		</div> 	
  	</div> 
  </div>
 </div>

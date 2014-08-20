@@ -1,8 +1,13 @@
 <div class="container pad-top-bot-50">
 	<div class="row">
-		<div class="col-lg-3">
-			<div class="panel panel-default">
-				<div class="panel-heading">Параметры</div>
+		<div class="col-lg-3 col-sm-3">
+			<div class="panel panel-default mar-bot-50">
+				<div class="panel-heading">
+				<h3>
+					<span class="glyphicon glyphicon-search"></span>&nbsp;
+					Параметры
+				</h3>
+				</div>
 				<div class="panel-body">
 				  <%= form_tag search_path, :remote => true do %>
 					<div class="form-group">
@@ -15,13 +20,23 @@
 					   <label for="exampleInputEmail1">Цель поездки</label>
 						<%= select_tag "purposes", options_from_collection_for_select(@purposes, "id", "name",@selected_purpose),
 	        				:class=>"selectpicker", :data=>{:style=>"btn-info"}, 
-	        				include_blank: true, prompt: "Все типы виз", :onchange=>"send_form();" %>	        						
+	        				include_blank: true, prompt: "Люая цель", :onchange=>"send_form();" %>	        						
 					</div>
 				  <% end %>
 				</div>
-			</div>		
+			</div>	
+			<div class="panel panel-success form-panel">
+				<div class="panel-heading">
+					<h3><span class="glyphicon glyphicon-info-sign"></span>	&nbsp;
+						 <b>Оставьте заявку и мы поможем Вам выбрать правильную визу!</b>
+					</h3>
+				</div>
+				<div class="panel-body">
+					<%= render :partial => "orders/form" %>	
+				</div>		
+			</div> 	
 		</div>
-		<div class="col-lg-9">
+		<div class="col-lg-9 col-sm-9">
 			<!-- @countries.each do |country| -->
 			<div class="panel panel-default">
 				<div class="panel-heading"><h3>Визы <!-- country.name --></h3></div>
