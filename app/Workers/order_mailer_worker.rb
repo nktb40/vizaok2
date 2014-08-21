@@ -4,6 +4,6 @@ class OrderMailerWorker
   def perform(order_id)
   	   @order = Order.find(order_id)
     	OrderMailer.send_order_delivery(@order,"help@vizaok.ru").deliver
-	 	OrderMailer.send_order_delivery(@order,"nktb40@gmail.com").deliver
+	 	#OrderMailer.send_order_delivery(@order,"nktb40@gmail.com").deliver
   end
 end

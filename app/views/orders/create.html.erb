@@ -1,28 +1,33 @@
 <div class="container  pad-top-bot-50">
  <div class="row"> 
- 	<div class="col-lg-3">
+ 	<div class="col-lg-3 col-md-3 col-sm-3">
  	</div>
- 	<div class="col-lg-6">
- 		<div class="alert alert-warning" role="alert">
-			<h3>Спасибо за Вашу заявку!</h3>
-			<p>Скоро мы с Вами свяжемся.</p> 
-			<div class="row mar-top-50"> 
-				<div class="col-lg-6">
-					<%= link_to "", :class=>"btn btn-success btn-block" do %>
-						<span class="glyphicon glyphicon-home"></span>
-						На главную
-					<% end %>
-				</div>
-				<div class="col-lg-6">
-					<%= link_to "", :class=>"btn btn-info btn-block" do %>
-						<span class="glyphicon glyphicon-search"></span>
-						Еще визы					
-					<% end %>
-				</div>	
-			</div>		
+ 	<div class="col-lg-6 col-md-6 col-sm-6">
+ 		<div class="panel panel-default">
+			<div class="panel-heading">
+				<span class="glyphicon glyphicon-info-sign"></span>&nbsp; Ваша заявка принята		
+			</div>
+			<div class="panel-body text-center">
+				<h3>Спасибо за Вашу заявку!</h3>
+				<p>Скоро мы с Вами свяжемся.</p> 
+				<div class="row mar-top-50"> 
+					<div class="col-lg-6">
+						<%= link_to root_path, :class=>"btn btn-success btn-block" do %>
+							<span class="glyphicon glyphicon-home"></span>
+							На главную
+						<% end %>
+					</div>
+					<div class="col-lg-6">
+						<%= link_to visas_path, :class=>"btn btn-info btn-block" do %>
+							<span class="glyphicon glyphicon-search"></span>
+							Еще визы					
+						<% end %>
+					</div>	
+				</div>					
+			</div> 		
  		</div>
  	</div>
- 	<div class="col-lg-3">
+ 	<div class="col-lg-3 col-md-3 col-sm-3">
  	</div>
  </div>
 </div>

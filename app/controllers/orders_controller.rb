@@ -60,6 +60,6 @@ class OrdersController < ApplicationController
 	private 
  	def order_params 
   		params.require(:order).permit(:name, :email, :phone, :address, 
-  		:visa_country, :skype, :user_ip, :visa_type)  
+  		:visa_country, :skype, :user_ip, :visa_type, :visa_purpose)  
  	end 
 end

@@ -1,5 +1,7 @@
 <h3 style="text-decoration: underline; text-align: center;">Номер заказа: #<%= @order.id %></h3>
 <p><b>Имя:</b> <%= @order.name %></p>
+<p><b>Нужна виза в страну:</b> <%= @order.visa_country %></p>
+<p><b>Тип визы:</b> <%= @order.visa_type %></p>
 <p><b>Телефон:</b> <%= @order.phone %></p>
 <p><b>E-mail:</b> <%= @order.email %></p>
 <p><b>Skype:</b> <%= @order.skype %></p>
