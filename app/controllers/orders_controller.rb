@@ -13,8 +13,8 @@ class OrdersController < ApplicationController
 	def create
 		@order = Order.new(order_params)
 		@order.user_ip = request.env["HTTP_X_FORWARDED_FOR"]
-		#@order.user_country = request.location.country
-		#@order.user_city = request.location.city
+		@order.user_country = Geocoder.search(@order.user_ip).first.country
+		@order.user_city = Geocoder.search(@order.user_ip).first.city
 		
 		if(@order.save)
 			OrderMailerWorker.perform_async(@order.id)
