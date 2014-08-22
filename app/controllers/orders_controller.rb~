@@ -13,6 +13,9 @@ class OrdersController < ApplicationController
 	def create
 		@order = Order.new(order_params)
 		@order.user_ip = request.env["HTTP_X_FORWARDED_FOR"]
+		@order.user_country = 
+		@order.user_city = 
+		
 		if(@order.save)
 			OrderMailerWorker.perform_async(@order.id)
 			logger.info "saving success"
@@ -62,6 +65,6 @@ class OrdersController < ApplicationController
 	private 
  	def order_params 
   		params.require(:order).permit(:name, :email, :phone, :address, 
-  		:visa_country, :skype, :user_ip, :visa_type, :visa_purpose)  
+  		:visa_country, :skype, :user_ip, :visa_type, :visa_purpose, :user_country, :user_city)  
  	end 
 end
