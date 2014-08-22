@@ -59,3 +59,7 @@ gem 'slim'
 gem "select2-rails"
 
 gem 'fancybox2-rails', '~> 0.2.8'
+
+#gem 'ipgeobase'
+
+gem 'geocoder'

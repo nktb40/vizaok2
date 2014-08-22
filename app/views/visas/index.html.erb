@@ -20,7 +20,7 @@
 					   <label for="exampleInputEmail1">Цель поездки</label>
 						<%= select_tag "purposes", options_from_collection_for_select(@purposes, "id", "name",@selected_purpose),
 	        				:class=>"selectpicker", :data=>{:style=>"btn-info"}, 
-	        				include_blank: true, prompt: "Люая цель", :onchange=>"send_form();" %>	        						
+	        				include_blank: true, prompt: "Любая цель", :onchange=>"send_form();" %>	        						
 					</div>
 				  <% end %>
 				</div>
