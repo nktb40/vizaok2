@@ -6,7 +6,7 @@
       	<p class="p-top"><b><%= visa.country.name %></b></p>
       <% end %>
       <div class="caption">
-        <h3 class="height-50"><%= link_to visa.name, visa_path(visa.id) %></h3>
+        <h3 class="height-50"><%= link_to visa.name, visa_path(visa.slug) %></h3>
         <p class="height-50" title = "<%= visa.shortdesc %>"><%= truncate(visa.shortdesc, :length => 80) %>
         </p>
         <p class="btn-absolute">

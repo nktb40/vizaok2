@@ -35,18 +35,18 @@ GShockShop::Application.routes.draw do
    
    post 'visas/search' => 'visas#search', as: :search
    
-   post 'start_search' => 'visas#start_search', as: :start_search
+   post 'poisk-vizy' => 'visas#start_search', as: :start_search
    
-	get "migration_to_usa" => 'pages#usa_migration', as: :usa_migration
+	get "immigratsiya-v-ssha" => 'pages#usa_migration', as: :usa_migration
 	
-	get "migration_to_australia" => 'pages#au_migration', as: :au_migration
+	get "immigratsiya-v-avstraliyu" => 'pages#au_migration', as: :au_migration
 	
 	post "visas_by_country" => "visas#visas_by_country", as: :visas_by_country
 	
-	get "usa_visas" => "visas#get_usa_visas", as: :usa_visas 	
-	get "canada_visas" => "visas#get_ca_visas", as: :ca_visas 
-	get "australia_visas" => "visas#get_au_visas", as: :au_visas 
-   get "great_britain_visas" => "visas#get_uk_visas", as: :uk_visas 
+	get "vizy-v-ssha" => "visas#get_usa_visas", as: :usa_visas 	
+	get "vizy-v-canadu" => "visas#get_ca_visas", as: :ca_visas 
+	get "vizy-v-avstraliyu" => "visas#get_au_visas", as: :au_visas 
+   get "vizy-v-velikobritaniyu" => "visas#get_uk_visas", as: :uk_visas 
 	
   # Example of regular route:
   #  get 'd917148ce012' => 'products#d917148ce012'
