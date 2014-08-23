@@ -1,5 +1,5 @@
-country_name,country_code
-США,USA
-Канада,CA
-Австралия,AU
-Великобритания,UK
+country_name,country_code,country_name2
+США,USA,США
+Канада,CA,Канаду
+Австралия,AU,Австралию
+Великобритания,UK,Великобританию

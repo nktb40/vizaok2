@@ -37,13 +37,15 @@
 				<li <%= if current_page?(au_visas_path) then 'class=active' end %> ><%= link_to "Визы в Австралию", au_visas_path  %></li>
 				<li <%= if current_page?(uk_visas_path) then 'class=active' end %> ><%= link_to "Визы в Великобританию", uk_visas_path  %></li>     
             <li <%= if current_page?(usa_migration_path) then 'class=active' end %>>
-            	<%= link_to usa_migration_path do %>
-						<b>Миграция в США</b>      
+            	<%= link_to usa_migration_path, :class=>"immigration" do %>
+						<b>Иммиграция в США</b>
+						<span class="glyphicon glyphicon-star"></span>      
 					<% end %>    
             </li>
              <!-- <li <%= if current_page?(au_migration_path) then 'class=active' end %>>
-            	<%= link_to au_migration_path do %>
-						<b>Миграция в Австралию</b>    
+            	<%= link_to au_migration_path, :class=>"immigration" do %>
+						<b>Миграция в Австралию</b>  
+						<span class="glyphicon glyphicon-star"></span>      
 					<% end %>    
             </li> -->
           </ul>

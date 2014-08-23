@@ -4,6 +4,7 @@ class Visa < ActiveRecord::Base
 	has_many :addinfos
 	has_many :links
 	has_many :lnk_visa_purposes
+	has_many :procedures
 	belongs_to :country
 	belongs_to :subtype
 	

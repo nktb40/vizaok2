@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  visa_id: 1
+  step: MyString
+  description: MyText
+
+two:
+  visa_id: 1
+  step: MyString
+  description: MyText
