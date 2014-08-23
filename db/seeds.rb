@@ -1,11 +1,12 @@
 require 'csv'
 
-
+=begin
 Country.delete_all
 CSV.foreach("data/vizaok2 - countries.csv", :headers => true) do |row|
   #puts row['country_name']+row['country_code']
   Country.create(name: row['country_name'], country_cd: row['country_code'])
 end
+=end
 
 =begin
 Visatype.delete_all
@@ -21,6 +22,7 @@ CSV.foreach("data/vizaok2 - subtypes.csv", :headers => true) do |row|
 end
 =end
 
+=begin
 Visa.delete_all
 CSV.foreach("data/vizaok2 - visas.csv", :headers => true) do |row|
   Visa.create(visa_cd: row['visa_cd'], name: row['visa_name'], 
@@ -64,14 +66,16 @@ CSV.foreach("data/vizaok2 - addinfo.csv", :headers => true) do |row|
   name: row['name'], description: row['description'])
 end
 
-=begin
+
 Link.delete_all
 CSV.foreach("data/vizaok2 - links.csv", :headers => true) do |row|
   Link.create(visa_id: Visa.where(:visa_cd => row['visa_cd']).first.id, 
   name: row['name'], link: row['link'])
 end
 
-countries = Country.create(name: 'Америка')
-types = VisaTypes.create(name: 'Студенческая виза для академического обучения')
-Visa.create(name: '', type: type.where(:name=>'Студенческая виза для академического обучения'))
 =end
+
+CSV.foreach("data/vizaok2 - visas.csv", :headers => true) do |row|
+	v = Visa.where(:visa_cd => row['visa_cd']).first
+	v.update_attribute :translit, row['translit']
+end

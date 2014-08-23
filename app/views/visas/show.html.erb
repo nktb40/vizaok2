@@ -91,7 +91,7 @@
 	        	<ul class="nav nav-pills nav-stacked">
 				  <% @country_visas.each do |visa| %>
 				  <li <%= case visa.id when @visa.id then 'class=active' end %> >
-				  		<%= link_to visa_path(visa.id), :title => visa.name do %>
+				  		<%= link_to visa_path(visa.slug), :title => visa.name do %>
 				  			<%= truncate(visa.name, :length => 25) %>
 				  			<span class="glyphicon glyphicon-chevron-right pull-right"></span>
 				  		<% end %>

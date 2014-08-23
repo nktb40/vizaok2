@@ -8,5 +8,5 @@ class Visa < ActiveRecord::Base
 	belongs_to :subtype
 	
 	extend FriendlyId
-	friendly_id :visa_cd, use: [:slugged, :finders]
+	friendly_id :translit, use: [:slugged, :finders]
 end
