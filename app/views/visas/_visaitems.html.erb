@@ -1,7 +1,7 @@
 <% @visas.each  do |visa| %>	
 	<div class="col-sm-6 col-md-4 col-lg-4">
     <div class="thumbnail thumb-rel pad-bot-50">
-      <%= link_to visa_path(visa.id), :title => visa.shortdesc do %>
+      <%= link_to visa_path(visa.slug), :title => visa.shortdesc do %>
       	<%= image_tag visa.visa_cd+".jpg", :class=> "img-responsive" %>
       	<p class="p-top"><b><%= visa.country.name %></b></p>
       <% end %>
@@ -10,7 +10,7 @@
         <p class="height-50" title = "<%= visa.shortdesc %>"><%= truncate(visa.shortdesc, :length => 80) %>
         </p>
         <p class="btn-absolute">
-        		<%= link_to "Подробнее", visa_path(visa.id), :class => "btn btn-success btn-block" %>
+        		<%= link_to "Подробнее", visa_path(visa.slug), :class => "btn btn-success btn-block" %>
         <p>
       </div>
     </div>

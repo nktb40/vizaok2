@@ -165,7 +165,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   fancybox2-rails (~> 0.2.8)
   font-awesome-rails
-  friendly_id
+  friendly_id (~> 5.0.1)
   geocoder
   jbuilder (~> 1.2)
   jquery-rails

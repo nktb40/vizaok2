@@ -64,4 +64,4 @@ gem 'fancybox2-rails', '~> 0.2.8'
 
 gem 'geocoder'
 
-gem 'friendly_id'
+gem 'friendly_id', '~> 5.0.1'
