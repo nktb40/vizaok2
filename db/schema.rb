@@ -129,9 +129,11 @@ ActiveRecord::Schema.define(version: 20140823220129) do
     t.integer  "subtype_id"
     t.string   "visa_cd"
     t.string   "shortdesc"
-    t.string   "translit"
     t.string   "slug"
+    t.string   "translit"
   end
+
+  add_index "visas", ["slug"], name: "index_visas_on_slug", using: :btree
 
   create_table "visatypes", force: true do |t|
     t.string   "name"
