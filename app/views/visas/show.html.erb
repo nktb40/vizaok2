@@ -106,12 +106,11 @@
 				Другие визы в <%= @visa.country.name2 %></h3>
 			</div>
 			<div>
-	        	<ul class="nav nav-pills nav-stacked">
+	        	<ul class="nav nav-pills nav-stacked panel-dark-grey">
 				  <% @country_visas.each do |visa| %>
 				  <li <%= case visa.id when @visa.id then 'class=active branch-name' else 'class=branch-name' end %> >
 				  		<%= link_to visa_path(visa.slug), :title => visa.name do %>
 				  			<%= visa.name %>
-				  			<span class="glyphicon glyphicon-chevron-right pull-right"></span>
 				  		<% end %>
 				  </li>
 				  <% end %>
