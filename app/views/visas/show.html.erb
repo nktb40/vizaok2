@@ -1,6 +1,6 @@
 <div class="container  pad-top-bot-50">
  <div class="row"> 
- 	<div class="col-lg-9 col-sm-9">
+ 	<div class="col-lg-9 col-md-9">
 		<div class="panel panel-default">
 	       <div class="panel-heading">
 	       <h3>
@@ -99,7 +99,7 @@
     	   </div>
     	   <% end %>
  	</div>
-	<div class="col-lg-3 col-sm-3">
+	<div class="col-lg-3 col-md-3">
 		<div class="panel panel-info mar-bot-50">
 			<div class="panel-heading">
 				<h3><span class="glyphicon glyphicon-info-sign"></span>	&nbsp;
@@ -108,9 +108,9 @@
 			<div>
 	        	<ul class="nav nav-pills nav-stacked">
 				  <% @country_visas.each do |visa| %>
-				  <li <%= case visa.id when @visa.id then 'class=active' end %> >
+				  <li <%= case visa.id when @visa.id then 'class=active branch-name' else 'class=branch-name' end %> >
 				  		<%= link_to visa_path(visa.slug), :title => visa.name do %>
-				  			<%= truncate(visa.name, :length => 25) %>
+				  			<%= visa.name %>
 				  			<span class="glyphicon glyphicon-chevron-right pull-right"></span>
 				  		<% end %>
 				  </li>
