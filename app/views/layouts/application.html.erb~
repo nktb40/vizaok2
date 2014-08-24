@@ -44,7 +44,8 @@
             </li>
              <!-- <li <%= if current_page?(au_migration_path) then 'class=active' end %>>
             	<%= link_to au_migration_path, :class=>"immigration" do %>
-						<b>Миграция в Австралию</b>    
+						<b>Миграция в Австралию</b>  
+						<span class="glyphicon glyphicon-star"></span>      
 					<% end %>    
             </li> -->
           </ul>
@@ -87,5 +88,24 @@
 </body>
  <script type="text/javascript" >
 		$('.selectpicker').selectpicker();
+		$('.certificate').fancybox({
+	  		helpers : {
+					title : {
+						type : 'over'
+					}
+				}
+		});
+		$('.fancybox-media').fancybox({
+					openEffect : 'none',
+					closeEffect : 'none',
+					prevEffect : 'none',
+					nextEffect : 'none',
+
+					arrows : false,
+					helpers : {
+						media : {},
+						buttons : {}
+					}
+				});
  </script>
 </html>
