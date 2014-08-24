@@ -71,7 +71,7 @@
 	       	<div>
 	       		<table class="table table-striped">
 				      <tbody>
-				      	<% @visa.procedures.each  do |proc| %>
+				      	<% @visa.procedures.order("procedures.step").each  do |proc| %>
 				      		<tr class="font-s-17">
 				      		  <td class="w-10"><b class="text-blue"> <%= proc.step %></b></td>
 					           <td class="col-lg-10 col-sm-10"><%= raw proc.description %></td>

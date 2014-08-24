@@ -87,7 +87,6 @@
   </div>
 </body>
  <script type="text/javascript" >
-		$('.selectpicker').selectpicker();
 		$('.certificate').fancybox({
 	  		helpers : {
 					title : {
@@ -107,5 +106,6 @@
 						buttons : {}
 					}
 				});
+						$('.selectpicker').selectpicker();
  </script>
 </html>
