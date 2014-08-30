@@ -7,7 +7,7 @@
 						<h1><span class="glyphicon glyphicon-globe"> </span> VizaOk.ru</h1>
 						<h2>Агенство по оформлению виз</h2>
 					</div>
-					 <%= form_tag start_search_path, :class=>"form-inline h-center" do %>
+					 <%= form_tag start_search_path, :method=>"GET", :class=>"form-inline h-center" do %>
 						<div class="form-group">
 							<%= select_tag "countries", options_from_collection_for_select(@countries, "id", "name"),
 		        				:class=>"selectpicker", :data=>{:style=>"btn-info btn-lg"}, 
@@ -18,7 +18,7 @@
 		        				:class=>"selectpicker", :data=>{:style=>"btn-info btn-lg"}, 
 		        				include_blank: true, prompt: "Цель поездки" %>	        						
 						</div>
-						<%= submit_tag "Начать поиск", :class=>"btn btn-success btn-lg" %>
+						<%= submit_tag "Начать поиск", :class=>"btn btn-success btn-lg", name: nil %>
 					  <% end %>
 				 </div>		
 			</div>
