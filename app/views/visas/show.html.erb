@@ -100,7 +100,14 @@
     	   <% end %>
  	</div>
 	<div class="col-lg-3 col-md-3">
-		<div class="panel panel-info mar-bot-50">
+	   <div class="panel panel-default form-panel mar-bot-50">
+			<div class="panel-heading"><h3><span class="glyphicon glyphicon-envelope"></span>&nbsp;
+				<b>Оставьте заявку и мы Вам перезвоним</b></h3></div>
+			<div class="panel-body">
+				<%= render :partial => "orders/form" %>	
+			</div>		
+		</div> 
+		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h3><span class="glyphicon glyphicon-info-sign"></span>	&nbsp;
 				Другие визы в <%= @visa.country.name2 %></h3>
@@ -117,16 +124,10 @@
 				</ul>
 	      </div>
 		</div>
-		<div class="panel panel-success form-panel">
-			<div class="panel-heading"><h3><span class="glyphicon glyphicon-envelope"></span>&nbsp;
-				<b>Оставьте заявку и мы Вам перезвоним</b></h3></div>
-			<div class="panel-body">
-				<%= render :partial => "orders/form" %>	
-			</div>		
-		</div> 	
  	</div> 
  </div>
 </div>
+
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
 (function (d, w, c) {
