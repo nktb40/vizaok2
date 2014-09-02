@@ -1,62 +1,7 @@
 <div class="container pad-top-bot-50">
-	<!-- div class="row row-media">
-		<div class="col-xs-4">
-			<div class="div-circle center-block mar-top-50">
-				<span class="text-sm"><b>от</b></span><br>
-				<span class="text-bg">5 дн.</span>
-			</div>
-			<div class="div-circle center-block mar-top-50">
-				<span class="text-sm"><b>от</b></span><br>
-				<span class="text-bg">4200р.</span>
-			</div>
-		</div>   
-		<!-- div class="row">
-		   	<div class="col-lg-6 ">
-		   		<div class="div-circle center-block mar-top-50">
-						<span class="text-sm"><b>от</b></span><br>
-						<span class="text-bg">5 дн.</span>
-					</div>
-		   	</div>
-		   	<div class="col-lg-6 ">
-				   <div class="div-circle center-block mar-top-50">
-						<span class="text-sm"><b>от</b></span><br>
-						<span class="text-bg">4200р.</span>
-					</div>
-		   	</div>
-		  </div> 
-	   <div class="col-xs-8 pad-r-0">
-			<div class="panel panel-info mar-bot-0 no-border">
-			   <div class="panel-heading">
-				 <h1><span class="header-text">Визы в <%= @selected_country.name2 %></span></h1>
-				</div>
-				<div class="panel-body">
-					<p class="lead mar-top-30">
-					 	Наше агенство занимается оформлением всех видов <b>неиммиграционных виз в Австралию</b>. Наибольшей популяностью среди наших клиентов пользуются <b>Туристические визы</b>, <b>Гостевые визы</b>, <b>Студенческие визы</b>, визы для <b>Деловых поездок</b> и пр.
-					</p>
-					 <%= link_to au_migration_path, :title => "Подробнее об иммиграции в Австралию" do %>
-					 	<h3>Иммиграция в Австралию</h3>
-					 <% end %>
-					<p class="lead">				 	
-						Наша компания обладает <b>большим опытом</b> в сфере <b>иммиграционного</b> законодательства Австралии и имеет <b>официальный</b> статус <b>иммиграционного агента Австралии</b>. Используя весь накопленный опыт, 
-						мы предоставляем нашим клиентам полный спектр услуг по <b>иммиграции в Австралию</b>.
-		         </p>
-				</div>				
-			</div>		   
-	   </div> 
-	</div-->
 	<div class="row">
 		<div class="col-lg-3 col-md-3">
-		   <div class="panel panel-default form-panel mar-bot-50">
-				<div class="panel-heading">
-					<h3><span class="glyphicon glyphicon-info-sign"></span>	&nbsp;
-						 Оставьте заявку и мы поможем Вам выбрать правильную визу!
-					</h3>
-				</div>
-				<div class="panel-body">
-					<%= render :partial => "orders/form" %>	
-				</div>		
-			</div> 	
-			<div class="panel panel-default">
+			<div class="panel panel-default mar-bot-50">
 				<div class="panel-heading">
 				<h3>
 					<span class="glyphicon glyphicon-search"></span>&nbsp;
@@ -79,60 +24,23 @@
 					</div>
 				  <% end %>
 				</div>
-			</div>	
+			</div>
+			<div class="panel panel-default form-panel">
+				<div class="panel-heading">
+					<h3><span class="glyphicon glyphicon-info-sign"></span>	&nbsp;
+						 Оставьте заявку и мы поможем Вам выбрать правильную визу!
+					</h3>
+				</div>
+				<div class="panel-body">
+					<%= render :partial => "orders/form" %>	
+				</div>		
+			</div> 		
 		</div>
 		<div class="col-lg-9 col-md-9">
 			<!-- @countries.each do |country| -->
 			<div class="panel panel-default">
 				<div class="panel-heading"><h3><%= @selected_country.name %></h3></div>
 				<div id="visas" class="panel-body">
-				   <div class="container-fluid mar-bot-50 border-bot">
-					   <div class="page-header-2"><h1>Визы в <%= @selected_country.name2 %></h1></div>  
-					   <p class="lead mar-top-30">
-					   	США - страна свободы, демократии, и неограниченных возможностей, визовый режим которой считается 
-							одним из наиболее строгих в мире. Однако, несмотря на это, ежегодно в США приезжают 44 миллиона туристов!
-							<br><br>
-							Наша компания занимается предоставлением услуг по оформлению любых типов иммиграционных и неиммиграционных 
-							виз в США.
-							<br><br>
-							Для того, чтобы узнать более подробную информацию о процедуре оформелния, списке документов и стоиости оформления
-							 выберите интересующий Вас тип визы из списка ниже. 
-						</p>	
-						<div class="row">
-						   <div class="col-xs-4">
-								<div class="alert alert-info">
-									<p>
-										<span class="glyphicon glyphicon-envelope"></span>&nbsp;
-										Оставьте заявку и мы поможем выбрать визу
-									</p><br>
-									<p>										
-										<%= link_to "Оставить заявку", new_order_path, :title => "Оставить заявку", :class=>"btn btn-default btn-sm" %>															
-									</p>					
-								</div>
-							</div>
-							 <div class="col-xs-4">
-								<div class="alert alert-warning">
-									<p>
-										<span class="glyphicon glyphicon-question-sign"></span>&nbsp;
-										Ответим на любые Ваши вопросы
-									</p><br>
-									<p>										
-										<%= link_to "Задать вопрос", new_order_path, :title => "Оставить заявку", :class=>"btn btn-default btn-sm" %>															
-									</p>					
-								</div>
-							</div>
-							<div class="col-xs-4">
-								<div class="alert alert-danger">
-									<p>
-										<span class="glyphicon glyphicon-flag"></span>&nbsp;
-										Интересует иммиграция в США, тогда Вам сюда:</p><br>
-									<p>										
-										<%= link_to "Иммиграция в США", usa_migration_path, :title => "Подробнее об иммиграции в США", :class=>"btn btn-default btn-sm" %>															
-									</p>								
-								</div>
-							</div>
-						</div>			   
-				   </div>
 					<%= render :partial => "visaitems" %>
 				</div>
 			</div>

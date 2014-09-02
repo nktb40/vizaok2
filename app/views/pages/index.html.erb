@@ -68,9 +68,9 @@
 					<div class="jTscrollerContainer">
 				        <div class="jTscroller">
 				        	 <% @visas_usa.each do |usa_v| %>
-				            <%= link_to visa_path(usa_v.slug), :class=>"thumb-rel", :title => usa_v.name+". "+usa_v.shortdesc do %>
+				            <%= link_to visa_path(usa_v.slug), :class=>"thumb-rel w-170", :title => usa_v.name+". "+usa_v.shortdesc do %>
 						      	<%= image_tag usa_v.visa_cd+".jpg", :class=>"size-150" %>
-						      	<p class="p-bot-2"><b><%= truncate(usa_v.name, :length => 17)  %></b></p>
+						      	<p class="p-bot-2"><b><%= usa_v.name  %></b></p>
 						      <% end %>
 				          <% end %>	
 				        </div>
@@ -100,9 +100,9 @@
 					<div class="jTscrollerContainer">
 				        <div class="jTscroller">
 				          <% @visas_uk.each do |uk_v| %>
-				            <%= link_to visa_path(uk_v.slug), :class=>"thumb-rel", :title => uk_v.shortdesc do %>
+				            <%= link_to visa_path(uk_v.slug), :class=>"thumb-rel w-170", :title => uk_v.shortdesc do %>
 						      	<%= image_tag uk_v.visa_cd+".jpg", :class=>"size-150" %>
-						      	<p class="p-bot-2"><b><%= truncate(uk_v.name, :length => 17)  %></b></p>
+						      	<p class="p-bot-2"><b><%= uk_v.name  %></b></p>
 						      <% end %>	
 				          <% end %>	
 				        </div>
@@ -132,9 +132,9 @@
 					<div class="jTscrollerContainer">
 				        <div class="jTscroller">
 				          <% @visas_ca.each do |ca_v| %>
-				            <%= link_to visa_path(ca_v.slug), :class=>"thumb-rel", :title => ca_v.shortdesc do %>
+				            <%= link_to visa_path(ca_v.slug), :class=>"thumb-rel w-170", :title => ca_v.shortdesc do %>
 						      	<%= image_tag ca_v.visa_cd+".jpg", :class=>"size-150" %>
-						      	<p class="p-bot-2"><b><%= truncate(ca_v.name, :length => 17)  %></b></p>
+						      	<p class="p-bot-2"><b><%= ca_v.name  %></b></p>
 						      <% end %>	
 				          <% end %>		
 				        </div>
@@ -168,9 +168,9 @@
 					<div class="jTscrollerContainer">
 				        <div class="jTscroller">
 				          <% @visas_au.each do |au_v| %>
-				            <%= link_to visa_path(au_v.slug), :class=>"thumb-rel", :title => au_v.shortdesc do %>
+				            <%= link_to visa_path(au_v.slug), :class=>"thumb-rel w-170", :title => au_v.shortdesc do %>
 						      	<%= image_tag au_v.visa_cd+".jpg", :class=>"size-150" %>
-						      	<p class="p-bot-2"><b><%= truncate(au_v.name, :length => 17)  %></b></p>
+						      	<p class="p-bot-2"><b><%= au_v.name  %></b></p>
 						      <% end %>
 				          <% end %>		
 				        </div>
