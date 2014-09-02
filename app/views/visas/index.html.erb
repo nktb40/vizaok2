@@ -12,7 +12,7 @@
 				  <%= form_tag search_path, :remote => true do %>
 					<div class="form-group">
 					   <label for="exampleInputEmail1">Страна</label>
-						<%= select_tag "countries", options_from_collection_for_select(@countries, "id", "name",@selected_country.id),
+						<%= select_tag "countries", options_from_collection_for_select(@countries, "id", "name", if !@selected_country.nil? then @selected_country.id else nil end),
 	        				:class=>"selectpicker", :data=>{:style=>"btn-info"}, 
 	        				include_blank: true, prompt: "Все страны", :onchange=>"send_form();" %>
 					</div>	
@@ -39,7 +39,7 @@
 		<div class="col-lg-9 col-md-9">
 			<!-- @countries.each do |country| -->
 			<div class="panel panel-default">
-				<div class="panel-heading"><h3><%= @selected_country.name %></h3></div>
+				<div class="panel-heading"><h3>Визы <%= if !@selected_country.nil? then 'в '+@selected_country.name2 else nil end %></h3></div>
 				<div id="visas" class="panel-body">
 					<%= render :partial => "visaitems" %>
 				</div>

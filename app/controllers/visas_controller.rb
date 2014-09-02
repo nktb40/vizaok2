@@ -99,7 +99,7 @@ class VisasController < ApplicationController
 	def start_search
 	   if params[:purposes].blank? and !params[:countries].blank?
 			@visas = Visa.joins("LEFT JOIN lnk_visa_purposes vp ON vp.visa_id = visas.id").where('visas.country_id = ?', params[:countries]).order("visas.name").uniq	
-			@selected_country = params[:countries]		
+			@selected_country = Country.find(params[:countries])		
 			@visa_country = Country.find(params[:countries]).name
 		elsif !params[:purposes].blank? and params[:countries].blank?
 			@visas = Visa.joins("LEFT JOIN lnk_visa_purposes vp ON vp.visa_id = visas.id").where('vp.purpose_id = ?', params[:purposes]).order("visas.country_id, visas.name")		
@@ -107,7 +107,7 @@ class VisasController < ApplicationController
 			@visa_purpose = Purpose.find(params[:purposes]).name
 		elsif !params[:purposes].blank? and !params[:countries].blank?
 			 @visas = Visa.joins("LEFT JOIN lnk_visa_purposes vp ON vp.visa_id = visas.id").where('vp.purpose_id = ? and visas.country_id = ?', params[:purposes], params[:countries]).order("visas.country_id, visas.name").uniq
-			 @selected_country = params[:countries]
+			 @selected_country = Country.find(params[:countries])	
 			 @selected_purpose = params[:purposes]	   
 			 @visa_country = Country.find(params[:countries]).name
 			 @visa_purpose = Purpose.find(params[:purposes]).name
