@@ -35,7 +35,7 @@ GShockShop::Application.routes.draw do
    
    post 'visas/search' => 'visas#search', as: :search
    
-   get 'poisk-vizy' => 'visas#start_search', as: :start_search
+   post 'poisk-vizy' => 'visas#start_search', as: :start_search
    
 	get "immigratsiya-v-ssha" => 'pages#usa_migration', as: :usa_migration
 	

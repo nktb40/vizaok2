@@ -3,10 +3,10 @@ class PagesController < ApplicationController
 	def index
 		@countries = Country.all
 		@purposes = Purpose.all
-		@visas_usa = Visa.joins("LEFT JOIN countries c ON c.id = visas.country_id").where("c.country_cd = ?", "USA")
-		@visas_uk = Visa.joins("LEFT JOIN countries c ON c.id = visas.country_id").where("c.country_cd = ?", "UK")
-		@visas_ca = Visa.joins("LEFT JOIN countries c ON c.id = visas.country_id").where("c.country_cd = ?", "CA")
-		@visas_au = Visa.joins("LEFT JOIN countries c ON c.id = visas.country_id").where("c.country_cd = ?", "AU")
+		@visas_usa = Visa.joins("LEFT JOIN countries c ON c.id = visas.country_id").where("c.country_cd = ?", "USA").order("visas.order")
+		@visas_uk = Visa.joins("LEFT JOIN countries c ON c.id = visas.country_id").where("c.country_cd = ?", "UK").order("visas.order")
+		@visas_ca = Visa.joins("LEFT JOIN countries c ON c.id = visas.country_id").where("c.country_cd = ?", "CA").order("visas.order")
+		@visas_au = Visa.joins("LEFT JOIN countries c ON c.id = visas.country_id").where("c.country_cd = ?", "AU").order("visas.order")
 	end
 	
 	def usa_migration

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140823220129) do
+ActiveRecord::Schema.define(version: 20140903193740) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -131,6 +131,7 @@ ActiveRecord::Schema.define(version: 20140823220129) do
     t.string   "shortdesc"
     t.string   "slug"
     t.string   "translit"
+    t.integer  "order"
   end
 
   add_index "visas", ["slug"], name: "index_visas_on_slug", using: :btree

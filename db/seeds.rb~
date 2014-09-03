@@ -1,6 +1,7 @@
+# encoding: utf-8
 require 'csv'
 
-
+=begin
 Country.delete_all
 CSV.foreach("data/vizaok2 - countries.csv", :headers => true) do |row|
   #puts row['country_name']+row['country_code']
@@ -68,7 +69,7 @@ CSV.foreach("data/vizaok2 - procedure.csv", :headers => true) do |row|
   Procedure.create(visa_id: Visa.where(:visa_cd => row['Виза']).first.id, 
   step: row['Шаг'], description: row['Процедура оформления'])
 end
-
+=end
 
 =begin
 CSV.foreach("data/vizaok2 - visas.csv", :headers => true) do |row|
@@ -83,3 +84,9 @@ CSV.foreach("data/vizaok2 - visas.csv", :headers => true) do |row|
 	v.update_attribute :name, row['visa_name']
 end
 =end
+
+CSV.foreach("data/vizaok2 - visas.csv", :headers => true) do |row|
+	v = Visa.where(:visa_cd => row['visa_cd']).first
+	v.update_attribute :order, row['Order']
+	v.save
+end
