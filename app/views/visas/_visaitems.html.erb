@@ -1,9 +1,17 @@
 <% @visas.each  do |visa| %>	
-	<div class="col-sm-6 col-md-4 col-lg-4">
+	<div class="col-sm-6 col-md-6 col-lg-4">
     <div class="thumbnail thumb-rel pad-bot-50">
-     <p class="p-mid img-responsive"><%= visa.name %></p>
       <%= link_to visa_path(visa.slug), :title => visa.shortdesc do %>
+      	<div class="position-relative">
       	<%= image_tag visa.visa_cd+".jpg", :class=> "img-responsive" %>
+      	<div class="p-top img-responsive">
+      		<p class="p-heading mar-bot-20"><%= visa.name %></p>
+      		<p class="text-left"><span class="glyphicon glyphicon-time"></span> <b>Оформление:</b> <%= visa.term1 %></p>
+      		<p class="text-left"><span class="glyphicon glyphicon-calendar"></span> <b>Срок действия:</b> <%= visa.term2 %></p>
+      		<p class="text-left"><span class="glyphicon glyphicon-usd"></span> <b>Сборы:</b> <%= visa.tax1 %></p>
+      		<p class="text-left"><span class="glyphicon glyphicon-usd"></span> <b>Оформление:</b> <%= visa.tax2 %></p>
+      	</div>
+      	</div>
       <% end %>
       <div class="caption">
         <p class="height-50" title = "<%= visa.shortdesc %>"><%= truncate(visa.shortdesc, :length => 80) %>

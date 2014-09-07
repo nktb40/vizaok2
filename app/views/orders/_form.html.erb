@@ -16,7 +16,7 @@
 	   	<%= f.text_field :email, :type=>"text", :class=>"form-control", :placeholder=>"Email" %>
 	   </div>	
 	   <div class="form-group last">
-     		<%= f.submit :'Отправить заявку', :class=>"btn btn-info btn-block", :id=>"order_submit" %>
+     		<%= f.submit :'Отправить заявку', :class=>"btn btn-success btn-block", :id=>"order_submit" %>
 		</div>
 		<%= f.hidden_field(:visa_country, :value => @visa_country) %>
 		<%= f.hidden_field(:visa_type, :value => @visa_type) %>

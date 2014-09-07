@@ -1,14 +1,22 @@
 <div class="container  pad-top-bot-50">
  <div class="row"> 
+  	<div class="col-lg-3">
+		<div class="panel panel-default">
+			<div class="panel-heading"><h3>Оставьте заявку</h3></div>
+			<div class="panel-body">
+				<%= render :partial => "orders/form" %>	
+			</div>		
+		</div> 	
+ 	</div>
  	<div class="col-lg-9">
  		<div class="panel panel-default">
-			<div class="panel-heading"><h1>Иммиграция в США</h1></div>
+			<div class="panel-heading"><h3>Иммиграция</h3></div>
 			<div class="panel-body">
 				 <div class="row col-lg-6">
 					 <div class="thumbnail panel-grey thumb-rel">
 			          <%= link_to "www.youtube.com/watch?v=wlaF3dVBJuM", :class => "fancybox-media", :title => "Смотреть видео" do %>
 			          	<%= image_tag "ghb-video.jpg", :class=>"img-responsive" %>						
-							<span class="glyphicon glyphicon-play"></span>
+							<span class="glyphicon glyphicon-play media-glyphicon"></span>
 							<p class="p-bot"><b>GHB & CO LAW, INC - юридическая фирма</b></p>	
 			          <% end %>
 			        </div>				 
@@ -113,14 +121,6 @@
 				<%= render :partial => "visas/visaitems" %>		
 			</div> 		
  		</div>
- 	</div>
- 	<div class="col-lg-3">
-		<div class="panel panel-default">
-			<div class="panel-heading"><h3>Оставьте заявку</h3></div>
-			<div class="panel-body">
-				<%= render :partial => "orders/form" %>	
-			</div>		
-		</div> 	
  	</div>
  </div>
 </div>

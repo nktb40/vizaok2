@@ -1,10 +1,18 @@
 <div class="container  pad-top-bot-50">
  <div class="row"> 
  <div class="col-lg-3 col-md-3">
-		<div class="panel panel-default  mar-bot-50">
+		<div class="panel panel-default form-panel mar-bot-50">
+			<div class="panel-heading"><h3><span class="glyphicon glyphicon-envelope"></span>&nbsp;
+				<b>Оставьте заявку и мы Вам перезвоним</b></h3></div>
+			<div class="panel-body">
+				<%= render :partial => "orders/form" %>	
+			</div>		
+		</div> 
+		<div class="panel panel-default">
 			<div class="panel-heading">
-				<h3><span class="glyphicon glyphicon-info-sign"></span>	&nbsp;
-				Визы в <%= @visa.country.name2 %></h3>
+				<h3>
+					Все визы в <%= @visa.country.name2 %>
+				</h3>
 			</div>
 			<div>
 	        	<ul class="nav nav-pills nav-stacked panel-dark-grey">
@@ -18,20 +26,15 @@
 				</ul>
 	      </div>
 		</div>
-		<div class="panel panel-default form-panel">
-			<div class="panel-heading"><h3><span class="glyphicon glyphicon-envelope"></span>&nbsp;
-				<b>Оставьте заявку и мы Вам перезвоним</b></h3></div>
-			<div class="panel-body">
-				<%= render :partial => "orders/form" %>	
-			</div>		
-		</div> 
  	</div> 
  	<div class="col-lg-9 col-md-9">
 		<div class="panel panel-default">
 	       <div class="panel-heading">
 	       <h3>
 	       	 <span class="glyphicon glyphicon-globe"> </span>&nbsp;
-		       <%= link_to "Виза в "+@visa.country.name2, "" %>
+	       	 <%= link_to "Визы в "+@visa.country.name2, usa_visas_path, :class=>"text-underline" %> 
+	       	 >
+		       <%= link_to @visa.name, "", :class=>"text-underline" %>
 	       </h3></div>
 	       <div class="panel-body panel-grey">
 	       	 <div class="row col-lg-6 col-sm-6 mar-left-0">
@@ -43,6 +46,10 @@
 								<span class="label label-info"><b><%= purpose.name %></b></span>
 							<% end %>       	 			
        	 			</p>
+       	 			<p class="text-left"><span class="glyphicon glyphicon-time"></span> <b>Время оформления:</b> <%= @visa.term1 %></p>
+      				<p class="text-left"><span class="glyphicon glyphicon-calendar"></span> <b>Срок действия:</b> <%= @visa.term2 %></p>
+      				<p class="text-left"><span class="glyphicon glyphicon-usd"></span> <b>Сумма сборов:</b> <%= @visa.tax1 %></p>
+      				<p class="text-left"><span class="glyphicon glyphicon-usd"></span> <b>Стоимость оформления:</b> <%= @visa.tax2 %></p>     	
        	 			<p><b class="text-underline">Описание</b>: <%= raw @visa.description %></p>
 	       	 </div>
 	       	 <div class="row col-lg-6 col-sm-6 mar-left-20">
@@ -51,8 +58,12 @@
 							<%= link_to "", :class=>"btn btn-warning btn-block" do %>
 								<span class="glyphicon glyphicon-save"></span>	
 								Черновик анкеты		
-					       <% end %> 
-						</p>
+					       <% end %>
+						   <%= link_to new_order_path, :class=>"btn btn-success btn-block" do %>
+								<span class="glyphicon glyphicon-mail"></span>	
+								Оставить заявку		
+					       <% end %> 					    
+					    </p>
 				 </div>
 	       </div>
 	    </div>

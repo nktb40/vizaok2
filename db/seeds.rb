@@ -83,9 +83,18 @@ CSV.foreach("data/vizaok2 - visas.csv", :headers => true) do |row|
 	v = Visa.where(:visa_cd => row['visa_cd']).first
 	v.update_attribute :name, row['visa_name']
 end
-=end
 
 CSV.foreach("data/vizaok2 - visas.csv", :headers => true) do |row|
 	v = Visa.where(:visa_cd => row['visa_cd']).first
 	v.update_attribute :order, row['Order']
+end
+=end
+
+CSV.foreach("data/vizaok2 - visas.csv", :headers => true) do |row|
+	v = Visa.where(:visa_cd => row['visa_cd']).first
+	v.update_attribute :name, row['visa_name']
+	v.update_attribute :term1, row['Срок оформления']
+	v.update_attribute :term2, row['Срок действия']
+	v.update_attribute :tax1, row['Стоимость сборов']
+	v.update_attribute :tax2, row['Стоимость оформления']
 end

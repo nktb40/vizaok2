@@ -48,7 +48,7 @@
 			<div class="col-md-3 border-right1">
 				<%= link_to (image_tag "flag-usa.jpg", :class=>"visible-md visible-lg image_responsive center-block img-circle size-200"), usa_visas_path, :title => "Список виз в США" %>	   	
 	   	</div>
-		   <div class="col-md-9">
+		   <div class="col-md-8">
 				<div class="page-header-2">
 				    <%= link_to usa_visas_path, :title => "Подробнее о визах в США" do %>
 					 	<h1>Визы в США</h1>
@@ -57,33 +57,29 @@
 				<p class="lead mar-top-30">
 					Наше агенство занимается оформлением всех видов <b>неиммиграционных виз в США</b>. Наибольшей популяностью среди наших клиентов пользуются <b>Туристические визы</b>, <b>Гостевые визы</b>, <b>Студенческие визы</b>, визы для <b>Деловых поездок</b> и пр.
 				</p>
+				<div class="row">
+					<div class="col-sm-4">
+						<%= link_to "Подробнее", usa_visas_path, :class=>"btn brn-lg btn-block btn-success", :title => "Подробнее о визах в США" %>
+					</div>            
+            </div>
 				 <%= link_to usa_migration_path, :title => "Подробнее об иммиграции в США" do %>
-				 	<h3>Иммиграция в США</h3>
+				 	<h3 class="mar-top-50">Иммиграция в США</h3>
 				 <% end %>
 				<p class="lead">	
 					Наша компания имеет команду юристов во Флориде (США) и обладает <b>10 летним опытом</b> в сфере <b>иммиграционного</b> законодательства США. Используя весь наш опыт, мы предоставляем нашим клиентам полный спектр услуг по <b>иммиграции в США</b>. 
 				</p>
-         	<div id="tS1" class="jThumbnailScroller">
-					<div class="jTscrollerContainer">
-				        <div class="jTscroller">
-				        	 <% @visas_usa.each do |usa_v| %>
-				            <%= link_to visa_path(usa_v.slug), :class=>"thumb-rel w-170", :title => usa_v.name+". "+usa_v.shortdesc do %>
-						      	<%= image_tag usa_v.visa_cd+".jpg", :class=>"size-150" %>
-						      	<p class="p-bot-2"><b><%= usa_v.name  %></b></p>
-						      <% end %>
-				          <% end %>	
-				        </div>
-				    </div>
-				    <%= link_to "", "", :class=>"jTscrollerPrevButton" %>
-				    <%= link_to "", "", :class=>"jTscrollerNextButton" %>
-				</div>
+            <div class="row">
+					<div class="col-sm-4">
+						<%= link_to "Подробнее", usa_migration_path, :class=>"btn brn-lg btn-block btn-success", :title => "Узнать больше об иммиграции США" %>
+					</div>            
+            </div>
 		   </div>
 		</div>
 		<div class="row pad-top-bot-50 border-bot">
 			<div class="col-md-3 border-right1">
 				<%= link_to (image_tag "flag-uk.jpg", :class=>"visible-md visible-lg image_responsive center-block img-circle size-200"),  uk_visas_path, :title => "Список виз в Великобританию" %>	   	
 	   	</div>
-		   <div class="col-md-9">
+		   <div class="col-md-8">
 				<div class="page-header-2">
 					 <%= link_to uk_visas_path, :title => "Подробнее о визах в Великобританию" do %>
 					 	<h1>Визы в Великобританию</h1>
@@ -95,27 +91,18 @@
 				 <b>по оформлению визы на себя</b>. <br> <br> 
 				 Наша компания занимается <b>оформлением</b> всех видов <b>неиммиграционных</b> виз в <b>Великобританию</b>. Наибольшей популярностью среди наших клиентов пользуются <b>Туристические визы</b>, 
 				 <b>Студенческие</b>, <b>Гостевые визы</b> и визы для <b>Деловых поездок</b>. Ниже Вы можете просмотреть весь список виз в <b>Великобританию</b>.</p>
-	         <div id="tS2" class="jThumbnailScroller">
-					<div class="jTscrollerContainer">
-				        <div class="jTscroller">
-				          <% @visas_uk.each do |uk_v| %>
-				            <%= link_to visa_path(uk_v.slug), :class=>"thumb-rel w-170", :title => uk_v.shortdesc do %>
-						      	<%= image_tag uk_v.visa_cd+".jpg", :class=>"size-150" %>
-						      	<p class="p-bot-2"><b><%= uk_v.name  %></b></p>
-						      <% end %>	
-				          <% end %>	
-				        </div>
-				    </div>
-				    <%= link_to "", "", :class=>"jTscrollerPrevButton" %>
-				    <%= link_to "", "", :class=>"jTscrollerNextButton" %>
-				</div>
+	         <div class="row">
+					<div class="col-sm-4">
+						<%= link_to "Подробнее", uk_visas_path, :class=>"btn brn-lg btn-block btn-success", :title => "Подробнее о визах в Великобританию" %>
+					</div>            
+            </div>
 		   </div>
 		</div>
 		<div class="row pad-top-bot-50 border-bot">
 			<div class="col-md-3 border-right1">
 				<%= link_to (image_tag "flag-ca.jpg", :class=>"visible-md visible-lg image_responsive center-block img-circle size-200"), ca_visas_path, :title => "Список виз в Канаду" %>	   	
 	   	</div>
-		   <div class="col-md-9">
+		   <div class="col-md-8">
 				<div class="page-header-2">
 					 <%= link_to ca_visas_path, :title => "Подробнее о визах в Канаду" do %>
 					 	<h1>Визы в Канаду</h1>
@@ -127,27 +114,18 @@
 					Наша компания занимается <b>оформлением</b> всех видов <b>неиммиграционных</b> виз в <b>Канаду</b>. Наибольшей популярностью среди наших клиентов пользуются <b>Туристические визы</b>, <b>Студенческие</b>, 
 					<b>Гостевые визы</b> и визы для <b>Деловых поездок</b>. Ниже Вы можете просмотреть весь список виз в <b>Канаду</b>.				
 				</p>
-	         <div id="tS3" class="jThumbnailScroller">
-					<div class="jTscrollerContainer">
-				        <div class="jTscroller">
-				          <% @visas_ca.each do |ca_v| %>
-				            <%= link_to visa_path(ca_v.slug), :class=>"thumb-rel w-170", :title => ca_v.shortdesc do %>
-						      	<%= image_tag ca_v.visa_cd+".jpg", :class=>"size-150" %>
-						      	<p class="p-bot-2"><b><%= ca_v.name  %></b></p>
-						      <% end %>	
-				          <% end %>		
-				        </div>
-				    </div>
-				    <%= link_to "", "", :class=>"jTscrollerPrevButton" %>
-				    <%= link_to "", "", :class=>"jTscrollerNextButton" %>
-				</div>
+	         <div class="row">
+					<div class="col-sm-4">
+						<%= link_to "Подробнее", ca_visas_path, :class=>"btn brn-lg btn-block btn-success", :title => "Подробнее о визах в Канаду" %>
+					</div>            
+            </div>
 		   </div>
 		</div>
 		<div class="row pad-top-bot-50 border-bot">
 			<div class="col-md-3 border-right1">
 				<%= link_to (image_tag "flag-au.jpg", :class=>"visible-md visible-lg image_responsive center-block img-circle size-200"), au_visas_path, :title => "Список виз в Австралию" %>	   	
 	   	</div>
-		   <div class="col-md-9">
+		   <div class="col-md-8">
 				<div class="page-header-2">
 					 <%= link_to au_visas_path, :title => "Подробнее о визах в Австралию" do %>
 					 	<h1>Визы в Австралию</h1>
@@ -156,27 +134,23 @@
 				<p class="lead mar-top-30">
 				 	Наше агенство занимается оформлением всех видов <b>неиммиграционных виз в Австралию</b>. Наибольшей популяностью среди наших клиентов пользуются <b>Туристические визы</b>, <b>Гостевые визы</b>, <b>Студенческие визы</b>, визы для <b>Деловых поездок</b> и пр.
 				</p>
-				 <!-- <%= link_to au_migration_path, :title => "Подробнее об иммиграции в Австралию" do %>
-				 	<h3>Иммиграция в Австралию</h3>
+				<div class="row">
+					<div class="col-sm-4">
+						<%= link_to "Подробнее", au_visas_path, :class=>"btn brn-lg btn-block btn-success", :title => "Подробнее о визах в Австралию" %>
+					</div>            
+            </div>
+				<%= link_to au_migration_path, :title => "Подробнее об иммиграции в Австралию" do %>
+				 	<h3 class="mar-top-50">Иммиграция в Австралию</h3>
 				 <% end %>
 				<p class="lead">				 	
 					Наша компания обладает <b>большим опытом</b> в сфере <b>иммиграционного</b> законодательства Австралии и имеет <b>официальный</b> статус <b>иммиграционного агента Австралии</b>. Используя весь накопленный опыт, 
 					мы предоставляем нашим клиентам полный спектр услуг по <b>иммиграции в Австралию</b>.
-	         </p> -->
-	        <div id="tS4" class="jThumbnailScroller">
-					<div class="jTscrollerContainer">
-				        <div class="jTscroller">
-				          <% @visas_au.each do |au_v| %>
-				            <%= link_to visa_path(au_v.slug), :class=>"thumb-rel w-170", :title => au_v.shortdesc do %>
-						      	<%= image_tag au_v.visa_cd+".jpg", :class=>"size-150" %>
-						      	<p class="p-bot-2"><b><%= au_v.name  %></b></p>
-						      <% end %>
-				          <% end %>		
-				        </div>
-				    </div>
-				    <%= link_to "", "", :class=>"jTscrollerPrevButton" %>
-				    <%= link_to "", "", :class=>"jTscrollerNextButton" %>
-				</div>
+	         </p>
+	        <div class="row">
+					<div class="col-sm-4">
+						<%= link_to "Подробнее", au_migration_path, :class=>"btn brn-lg btn-block btn-success", :title => "Узнать больше об иммиграции в Австралию" %>
+					</div>            
+            </div>
 		   </div>
 		</div>
 </div>

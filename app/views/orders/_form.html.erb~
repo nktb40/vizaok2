@@ -19,7 +19,7 @@
      		<%= f.submit :'Отправить заявку', :class=>"btn btn-info btn-block", :id=>"order_submit" %>
 		</div>
 		<%= f.hidden_field(:visa_country, :value => @visa_country) %>
-		<%= f.hidden_field(:visa_type :value => @visa_type) %>
+		<%= f.hidden_field(:visa_type, :value => @visa_type) %>
 		<%= f.hidden_field(:visa_purpose, :value => @visa_purpose) %>
 </fieldset>
 <% end %>
