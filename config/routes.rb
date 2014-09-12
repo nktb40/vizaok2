@@ -41,6 +41,8 @@ GShockShop::Application.routes.draw do
 	
 	get "immigratsiya-v-avstraliyu" => 'pages#au_migration', as: :au_migration
 	
+	get "immigratsiya-v-kanadu" => 'pages#ca_migration', as: :ca_migration
+	
 	post "visas_by_country" => "visas#visas_by_country", as: :visas_by_country
 	
 	get "vizy-v-ssha" => "visas#get_usa_visas", as: :usa_visas 	

@@ -22,4 +22,11 @@ class PagesController < ApplicationController
 		@visa_purpose = "Иммиграция"
 		@visas = Visa.joins("LEFT JOIN lnk_visa_purposes vp ON vp.visa_id = visas.id LEFT JOIN purposes p ON p.id = vp.purpose_id LEFT JOIN countries c ON c.id = visas.country_id").where("p.name = ? and c.name = ?", "Иммиграция", "Австралия")
 	end
+	
+	def ca_migration
+		@order = Order.new
+		@visa_country = "Австралия"
+		@visa_purpose = "Иммиграция"
+		@visas = Visa.joins("LEFT JOIN lnk_visa_purposes vp ON vp.visa_id = visas.id LEFT JOIN purposes p ON p.id = vp.purpose_id LEFT JOIN countries c ON c.id = visas.country_id").where("p.name = ? and c.name = ?", "Иммиграция", "Австралия")
+	end
 end

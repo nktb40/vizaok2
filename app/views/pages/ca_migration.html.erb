@@ -1,6 +1,6 @@
 <div class="container  pad-top-bot-50">
  <div class="row"> 
-  	<div class="col-lg-3">
+   <div class="col-lg-3">
 		<div class="panel panel-default">
 			<div class="panel-heading"><h3>Оставьте заявку</h3></div>
 			<div class="panel-body">
@@ -10,11 +10,11 @@
  	</div>
  	<div class="col-lg-9">
  		<div class="panel panel-default">
-			<div class="panel-heading"><h3>Иммиграция</h3></div>
+			<div class="panel-heading"><h3>Канада</h3></div>
 			<div class="panel-body">
-				 <div class="row col-lg-6 mar-left-10">
+			   <div class="row col-lg-6 mar-left-20">
 				   	<div class="well pad-0 panel-grey">
-    	 					<h1 class="mar-0"><span class="text-underline" >Иммиграция в США</span></h1>
+    	 					<h1 class="mar-0"><span class="text-underline" >Иммиграция в Канаду</span></h1>
        	 			</div>
        	 			<p>
        	 				Наша компания в сотрудничестве с юридической фирмой <b>GHB & LAW (Флорида, США)</b> предоставляет широкий набор услуг людям, желающим иммигрировать в США.
@@ -23,7 +23,7 @@
 							Помимо оказания помощи в оформлении иммграционнызх виз в США, мы  также оказываем услуги в <b>поиске работы</b>, <b>регистрации юридических лиц</b>, а также помогаем решать прочие вопросы связанные с миграцией в США.
        	 			</p>
 				 </div>
-				 <div class="row col-lg-6 mar-left-10">
+				 <div class="row col-lg-6">
 					 <div class="thumbnail panel-grey thumb-rel">
 			          <%= link_to "www.youtube.com/watch?v=wlaF3dVBJuM", :class => "fancybox-media", :title => "Смотреть видео" do %>
 			          	<%= image_tag "ghb-video.jpg", :class=>"img-responsive" %>						
@@ -31,7 +31,7 @@
 							<p class="p-bot"><b>GHB & CO LAW, INC - юридическая фирма</b></p>	
 			          <% end %>
 			        </div>				 
-				 </div>				
+				 </div>				 				
 			</div> 		
  		</div>
  		<div class="panel panel-default">
@@ -121,19 +121,22 @@
 				<%= render :partial => "visas/visaitems" %>		
 			</div> 		
  		</div>
- 	</div>
+ 	</div>	
  </div>
 </div>
 
- <script type="text/javascript" >
-		$('.certificate').fancybox({
+<script type="text/javascript" >
+	$(document).ready(function() {
+  		$(".certificate").fancybox({
 	  		helpers : {
 					title : {
 						type : 'over'
 					}
 				}
 		});
-		$('.fancybox-media').fancybox({
+	});
+	$('.fancybox-media')
+				.fancybox({
 					openEffect : 'none',
 					closeEffect : 'none',
 					prevEffect : 'none',
@@ -145,7 +148,7 @@
 						buttons : {}
 					}
 				});
- </script>
+</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
 (function (d, w, c) {

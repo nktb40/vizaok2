@@ -105,6 +105,8 @@ class VisasController < ApplicationController
    		redirect_to :action=>"get_uk_visas"
    	elsif params[:countries] == 'CA' && params[:purposes] == "0"
    		redirect_to :action=>"get_ca_visas"
+      elsif params[:countries] == 'CA' && params[:purposes] == "1"
+   		redirect_to :controller =>"pages", :action=>"ca_migration"
    	elsif params[:countries] == 'AU' && params[:purposes] == "0"
    		redirect_to :action=>"get_au_visas"
    	elsif params[:countries] == 'AU' && params[:purposes] == "1"
