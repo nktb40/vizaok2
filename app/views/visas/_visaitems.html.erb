@@ -6,10 +6,18 @@
       	<%= image_tag visa.visa_cd+".jpg", :class=> "img-responsive" %>
       	<div class="p-top img-responsive">
       		<p class="p-heading mar-bot-20"><%= visa.name %></p>
-      		<p class="text-left"><span class="glyphicon glyphicon-time"></span> <b>Оформление:</b> <%= visa.term1 %></p>
-      		<p class="text-left"><span class="glyphicon glyphicon-calendar"></span> <b>Срок действия:</b> <%= visa.term2 %></p>
-      		<p class="text-left"><span class="glyphicon glyphicon-usd"></span> <b>Сборы:</b> <%= visa.tax1 %></p>
-      		<p class="text-left"><span class="glyphicon glyphicon-usd"></span> <b>Оформление:</b> <%= visa.tax2 %></p>
+      		<% if visa.term1.present? %>
+      			<p class="text-left"><span class="glyphicon glyphicon-time"></span> <b>Оформление:</b> <%= visa.term1 %></p>
+			   <% end %> 
+			   <% if visa.term2.present? %>     		
+      			<p class="text-left"><span class="glyphicon glyphicon-calendar"></span> <b>Срок действия:</b> <%= visa.term2 %></p>
+				<% end %>      	
+				<% if visa.tax1.present? %> 	
+      			<p class="text-left"><span class="glyphicon glyphicon-usd"></span> <b>Сборы:</b> <%= visa.tax1 %></p>
+				<% end %> 
+				<% if visa.tax2.present? %>    		
+      			<p class="text-left"><span class="glyphicon glyphicon-usd"></span> <b>Оформление:</b> <%= visa.tax2 %></p>
+				<% end %>       	
       	</div>
       	</div>
       <% end %>

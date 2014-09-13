@@ -13,11 +13,14 @@ class VisasController < ApplicationController
 		@order = Order.new
 		@visa_country = @visa.country.name
 		@visa_type = @visa.name
+		@purposes = Purpose.joins(:lnk_visa_purposes).where("lnk_visa_purposes.visa_id = ?", @visa.id)
 		@migration_visas = LnkVisaPurpose.joins(:purpose).where("purposes.name = ?", "Иммиграция")
-		@country_visas = Visa.where("country_id = ? and id not in (?)", @visa.country_id, @migration_visas.map(&:visa_id)).order("visas.order")
+		if @purposes.map(&:name).include?("Иммиграция")
+			@country_visas = Visa.where("country_id = ? and id in (?)", @visa.country_id, @migration_visas.map(&:visa_id)).order("visas.order")
+		else			
+			@country_visas = Visa.where("country_id = ? and id not in (?)", @visa.country_id, @migration_visas.map(&:visa_id)).order("visas.order")
+		end		
 		#@purposes = Purpose.joins("LEFT JOIN lnk_visa_purposes vp ON vp.purpose_id = purposes.id LEFT JOIN visas v ON vp.visa_id = v.id")
-		@purposes = Purpose.joins(:lnk_visa_purposes)
-		#@purposes = Purpose.joins(:lnk_visa_purposes).where("lnk_visa_purposes.visa_id = ?", @visa.id)
 	end
 	
 	def visas_by_country
@@ -37,7 +40,7 @@ class VisasController < ApplicationController
 	   @migration_visas = LnkVisaPurpose.joins(:purpose).where("purposes.name = ?", "Иммиграция")
 		@visas = Visa.joins(:country).where("countries.country_cd = ? and visas.id not in (?)", 'USA',@migration_visas.map(&:visa_id)).order("visas.order").uniq
 		@selected_country = Country.where('country_cd = ?', 'USA').first
-		@purposes = Purpose.all
+		@purposes = Purpose.joins("JOIN LNK_VISA_PURPOSES VP ON VP.purpose_id = purposes.id JOIN Visas on vp.visa_id = visas.id").where("visas.country_id = ?", @selected_country.id).uniq
 		@countries = Country.all	
 		@order = Order.new
 		@visa_country = "США"
@@ -47,7 +50,7 @@ class VisasController < ApplicationController
 	def get_ca_visas
 		@visas = Visa.joins(:country).where('countries.country_cd = ?', 'CA').order("visas.order").uniq
 		@selected_country = Country.where('country_cd = ?', 'CA').first
-		@purposes = Purpose.all
+		@purposes = Purpose.joins("JOIN LNK_VISA_PURPOSES VP ON VP.purpose_id = purposes.id JOIN Visas on vp.visa_id = visas.id").where("visas.country_id = ?", @selected_country.id).uniq
 		@countries = Country.all	
 		@order = Order.new
 		@visa_country = "Канада"
@@ -59,7 +62,7 @@ class VisasController < ApplicationController
 		@visas = Visa.joins(:country).where("countries.country_cd = ? and visas.id not in (?)", 'AU',@migration_visas.map(&:visa_id)).order("visas.order").uniq
 		@selected_country = Country.where('country_cd = ?', 'AU').first
 		@selected_purpose = nil
-		@purposes = Purpose.all
+		@purposes = Purpose.joins("JOIN LNK_VISA_PURPOSES VP ON VP.purpose_id = purposes.id JOIN Visas on vp.visa_id = visas.id").where("visas.country_id = ?", @selected_country.id).uniq
 		@countries = Country.all	
 		@order = Order.new
 		@visa_country = "Австралия"
@@ -69,7 +72,7 @@ class VisasController < ApplicationController
 	def get_uk_visas
 		@visas = Visa.joins(:country).where('countries.country_cd = ?', 'UK').order("visas.id").uniq
 		@selected_country = Country.where('country_cd = ?', 'UK').first
-		@purposes = Purpose.all
+		@purposes = Purpose.joins("JOIN LNK_VISA_PURPOSES VP ON VP.purpose_id = purposes.id JOIN Visas on vp.visa_id = visas.id").where("visas.country_id = ?", @selected_country.id).order("purposes.id").uniq
 		@countries = Country.all	
 		@order = Order.new
 		@visa_country = "Великобритания"
@@ -78,21 +81,21 @@ class VisasController < ApplicationController
 	
 	def search
 		if params[:purposes].blank? and !params[:countries].blank?
-			@visas = Visa.joins("LEFT JOIN lnk_visa_purposes vp ON vp.visa_id = visas.id").where('visas.country_id = ?', params[:countries]).order("visas.name").uniq
+			@visas = Visa.joins("LEFT JOIN lnk_visa_purposes vp ON vp.visa_id = visas.id").where('visas.country_id = ?', params[:countries]).order("visas.order").uniq
 			@selected_country = params[:countries]
 			@visa_country = Country.find(params[:countries]).name
 		elsif !params[:purposes].blank? and params[:countries].blank?
-			@visas = Visa.joins("LEFT JOIN lnk_visa_purposes vp ON vp.visa_id = visas.id").where('vp.purpose_id = ?', params[:purposes]).order("visas.name")		
+			@visas = Visa.joins("LEFT JOIN lnk_visa_purposes vp ON vp.visa_id = visas.id").where('vp.purpose_id = ?', params[:purposes]).order("visas.order")		
 			@selected_purpose = params[:purposes]	
 			@visa_purpose = Purpose.find(params[:purposes]).name
 		elsif !params[:purposes].blank? and !params[:countries].blank?
-			 @visas = Visa.joins("LEFT JOIN lnk_visa_purposes vp ON vp.visa_id = visas.id").where('vp.purpose_id = ? and visas.country_id = ?', params[:purposes], params[:countries]).order("visas.country_id, visas.name").uniq
+			 @visas = Visa.joins("LEFT JOIN lnk_visa_purposes vp ON vp.visa_id = visas.id").where('vp.purpose_id = ? and visas.country_id = ?', params[:purposes], params[:countries]).order("visas.country_id, visas.order").uniq
 			 @selected_country = params[:countries]
 			 @selected_purpose = params[:purposes]		 
 			 @visa_country = Country.find(params[:countries]).name
 			 @visa_purpose = Purpose.find(params[:purposes]).name
 	   else 		
-	   	@visas = Visa.all.order("visas.country_id, visas.name").uniq
+	   	@visas = Visa.all.order("visas.country_id, visas.order").uniq
 	   end
 	end
 	

@@ -88,13 +88,44 @@ CSV.foreach("data/vizaok2 - visas.csv", :headers => true) do |row|
 	v = Visa.where(:visa_cd => row['visa_cd']).first
 	v.update_attribute :order, row['Order']
 end
-=end
 
 CSV.foreach("data/vizaok2 - visas.csv", :headers => true) do |row|
 	v = Visa.where(:visa_cd => row['visa_cd']).first
 	v.update_attribute :name, row['visa_name']
-	v.update_attribute :term1, row['visa_name']
-	v.update_attribute :term2, row['visa_name']
-	v.update_attribute :tax1, row['visa_name']
-	v.update_attribute :tax2, row['visa_name']
+	v.update_attribute :term1, row['Срок оформления']
+	v.update_attribute :term2, row['Срок действия']
+	v.update_attribute :tax1, row['Стоимость сборов']
+	v.update_attribute :tax2, row['Стоимость оформления']
+end
+=end
+
+CSV.foreach("data/vizaok2 - visas.csv", :headers => true) do |row|
+   if Visa.where(:visa_cd => row['visa_cd']).first.present?
+   	v = Visa.where(:visa_cd => row['visa_cd']).first
+   	v.update_attribute :term1, row['Срок оформления']
+		v.update_attribute :term2, row['Срок действия']
+		v.update_attribute :tax1, row['Стоимость сборов']
+		v.update_attribute :tax2, row['Стоимость оформления']
+		v.update_attribute :duration, row['Пребывние']
+   end
+end
+
+CSV.foreach("data/vizaok2 - prices.csv", :headers => true) do |row|
+    if Visa.where(:visa_cd => row['visa_cd']).first.present?
+      v = Visa.where(:visa_cd => row['visa_cd']).first
+      if Price.where("visa_id = ? and name = ?", v.id, row['name'] ).first.present?
+   		p = Price.where("visa_id = ? and name = ?", v.id, row['name'] ).first
+   		p.update_attribute :price, row['price']
+   		p.update_attribute :currency, row['currency']
+		else
+			p = Price.new
+			p.visa_id = v.id
+			p.name = row['name']
+			p.description = row['description'] 
+			p.price = row['price']
+			p.currency = row['currency']	
+			
+			p.save
+   	end
+    end
 end

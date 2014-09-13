@@ -11,17 +11,12 @@
 				<div class="panel-body">
 				  <%= form_tag search_path, :remote => true do %>
 					<div class="form-group">
-					   <label for="exampleInputEmail1">Страна</label>
-						<%= select_tag "countries", options_from_collection_for_select(@countries, "id", "name", if !@selected_country.nil? then @selected_country.id else nil end),
-	        				:class=>"selectpicker", :data=>{:style=>"btn-info"}, 
-	        				include_blank: true, prompt: "Все страны", :onchange=>"send_form();" %>
-					</div>	
-					<div class="form-group">
 					   <label for="exampleInputEmail1">Цель поездки</label>
 						<%= select_tag "purposes", options_from_collection_for_select(@purposes, "id", "name",@selected_purpose),
 	        				:class=>"selectpicker", :data=>{:style=>"btn-info"}, 
 	        				include_blank: true, prompt: "Любая цель", :onchange=>"send_form();" %>	        						
 					</div>
+					<%= hidden_field_tag(:countries, @selected_country.id) %>
 				  <% end %>
 				</div>
 			</div>
@@ -57,7 +52,7 @@
 		 $.ajax({
 		     type: "POST",
 	        url: "visas/search",
-	        data: {countries: $("#countries").find(":selected").val(), purposes: $("#purposes").find(":selected").val()},
+	        data: {countries: $("#countries").val(), purposes: $("#purposes").find(":selected").val()},
 	        dataType: "script"
 	    });
 	    return false; // prevents normal behaviour

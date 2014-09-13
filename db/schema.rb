@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140907174523) do
+ActiveRecord::Schema.define(version: 20140913123941) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -129,16 +129,15 @@ ActiveRecord::Schema.define(version: 20140907174523) do
     t.integer  "subtype_id"
     t.string   "visa_cd"
     t.string   "shortdesc"
-    t.string   "slug"
     t.string   "translit"
+    t.string   "slug"
     t.integer  "order"
     t.string   "term1"
     t.string   "term2"
     t.string   "tax1"
     t.string   "tax2"
+    t.string   "duration"
   end
-
-  add_index "visas", ["slug"], name: "index_visas_on_slug", using: :btree
 
   create_table "visatypes", force: true do |t|
     t.string   "name"

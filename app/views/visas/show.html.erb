@@ -1,14 +1,14 @@
 <div class="container  pad-top-bot-50">
  <div class="row"> 
  <div class="col-lg-3 col-md-3">
-		<div class="panel panel-default form-panel mar-bot-50">
+		<div class="panel panel-default form-panel mar-bot-30">
 			<div class="panel-heading"><h3><span class="glyphicon glyphicon-envelope"></span>&nbsp;
 				<b>Оставьте заявку и мы Вам перезвоним</b></h3></div>
 			<div class="panel-body">
 				<%= render :partial => "orders/form" %>	
 			</div>		
 		</div> 
-		<div class="panel panel-default">
+		<div class="panel panel-default  mar-bot-30">
 			<div class="panel-heading">
 				<h3>
 					Все визы в <%= @visa.country.name2 %>
@@ -26,13 +26,35 @@
 				</ul>
 	      </div>
 		</div>
+		<% if ["USA","AU","CA"].include?(@visa.country.country_cd) && !@purposes.map(&:name).include?("Иммиграция") then %>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3>
+					Иммиграция в <%= @visa.country.name2 %>
+				</h3>
+			</div>
+			<div class="panel-body">
+			   <div class="thumbnail thumb-rel">
+			      <%= image_tag (@visa.country.country_cd.downcase+"-immigration.jpg") %>	
+	        	   <%= link_to polymorphic_path(@visa.country.country_cd.downcase+"_migration"), :class => "btn btn-danger btn-rounded btn-abs-center" do %>       		
+	        		   <span class="glyphicon glyphicon-share-alt"></span>
+	        		   &nbsp;Подробнее	 
+	        	   <% end %>
+			   </div>
+	      </div>
+		</div>
+		<% end %>
  	</div> 
  	<div class="col-lg-9 col-md-9">
 		<div class="panel panel-default">
 	       <div class="panel-heading">
 	       <h3>
 	       	 <span class="glyphicon glyphicon-globe"> </span>&nbsp;
-	       	 <%= link_to "Визы в "+@visa.country.name2, usa_visas_path, :class=>"text-underline" %> 
+	       	 <% if @purposes.map(&:name).include?("Иммиграция") then %>
+	       	 	<%= link_to "Иммиграция в "+@visa.country.name2, polymorphic_path(@visa.country.country_cd.downcase+"_migration"), :class=>"text-underline" %>
+	       	 <% else %>
+	       	 	 <%= link_to "Визы в "+@visa.country.name2, polymorphic_path(@visa.country.country_cd.downcase+"_visas"), :class=>"text-underline" %>
+	       	 <% end %>
 	       	 >
 		       <%= link_to @visa.name, "", :class=>"text-underline" %>
 	       </h3></div>
@@ -42,12 +64,15 @@
     	 					<h1 class="mar-0"><span class="text-underline" ><%= @visa.name %></span></h1>
        	 			</div>
        	 			<p><b class="text-underline">Когда используется</b>:
-							<% @purposes.where("visa_id = ?", @visa.id).each do |purpose| %>
+							<% @purposes.each do |purpose| %>
 								<span class="label label-info"><b><%= purpose.name %></b></span>
 							<% end %>       	 			
        	 			</p>
        	 			<p class="text-left"><span class="glyphicon glyphicon-time"></span> <b>Время оформления:</b> <%= @visa.term1 %></p>
       				<p class="text-left"><span class="glyphicon glyphicon-calendar"></span> <b>Срок действия:</b> <%= @visa.term2 %></p>
+						<% if @visa.duration.present? %>      				
+      					<p class="text-left"><span class="glyphicon glyphicon-time"></span> <b>Продолжительность пребывания:</b> <%= @visa.duration %></p>
+      				<% end %>
       				<p class="text-left"><span class="glyphicon glyphicon-usd"></span> <b>Сумма сборов:</b> <%= @visa.tax1 %></p>
       				<p class="text-left"><span class="glyphicon glyphicon-usd"></span> <b>Стоимость оформления:</b> <%= @visa.tax2 %></p>     	
        	 			<p><b class="text-underline">Описание</b>: <%= raw @visa.description %></p>
