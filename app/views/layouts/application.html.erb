@@ -25,9 +25,10 @@
 	  <% if current_page?(start_search_path) then %>
 	  		<title>Поиск визы</title>
 	  <% end %>
+	  
 	  <% if controller.controller_name == 'visas' and controller.action_name == 'show' then %>
-	  		<title><%= @visa.name %></title>
-	  		<meta name="description" content="<%= @visa.description %>"/>
+	  		<title><%= @visa.title_tag %></title>
+	  		<meta name="description" content="<%= @visa.description_tag %>"/>
 	  <% end %>
   
   <%= favicon_link_tag(source='favicon.png', :rel=>"shortcut icon", :type=>"image/x-icon") %>

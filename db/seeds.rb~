@@ -97,18 +97,7 @@ CSV.foreach("data/vizaok2 - visas.csv", :headers => true) do |row|
 	v.update_attribute :tax1, row['Стоимость сборов']
 	v.update_attribute :tax2, row['Стоимость оформления']
 end
-=end
 
-CSV.foreach("data/vizaok2 - visas.csv", :headers => true) do |row|
-   if Visa.where(:visa_cd => row['visa_cd']).first.present?
-   	v = Visa.where(:visa_cd => row['visa_cd']).first
-   	v.update_attribute :term1, row['Срок оформления']
-		v.update_attribute :term2, row['Срок действия']
-		v.update_attribute :tax1, row['Стоимость сборов']
-		v.update_attribute :tax2, row['Стоимость оформления']
-		v.update_attribute :duration, row['Пребывние']
-   end
-end
 
 CSV.foreach("data/vizaok2 - prices.csv", :headers => true) do |row|
     if Visa.where(:visa_cd => row['visa_cd']).first.present?
@@ -123,9 +112,46 @@ CSV.foreach("data/vizaok2 - prices.csv", :headers => true) do |row|
 			p.name = row['name']
 			p.description = row['description'] 
 			p.price = row['price']
-			p.currency = row['currency']	
-			
+			p.currency = row['currency']				
 			p.save
    	end
     end
+end
+=end
+
+CSV.foreach("data/vizaok2 - visas.csv", :headers => true) do |row|
+   if Visa.where(:visa_cd => row['visa_cd']).first.present?
+   	v = Visa.where(:visa_cd => row['visa_cd']).first
+   	v.update_attribute :order, row['Order']
+   	v.update_attribute :translit, row['translit']
+   	c = Country.where(:country_cd => row['country_cd']).first
+   	v.update_attribute :country_id, c.id
+   	v.update_attribute :name, row['visa_name']
+   	v.update_attribute :shortdesc, row['brief_description']
+   	v.update_attribute :description, row['description']
+   	v.update_attribute :title_tag, row['title_tag']
+   	v.update_attribute :description_tag, row['description_tag']
+   	v.update_attribute :term1, row['Срок оформления']
+		v.update_attribute :term2, row['Срок действия']
+		v.update_attribute :tax1, row['Стоимость сборов']
+		v.update_attribute :tax2, row['Стоимость оформления']
+		v.update_attribute :duration, row['Пребывние']
+   else 
+   	v = Visa.new
+   	v.order = row['Order']
+   	v.translit = row['translit']
+   	c = Country.where(:country_cd => row['country_cd']).first
+   	v.country_id = c.id
+   	v.name = row['visa_name']
+   	v.shortdesc = row['brief_description']
+   	v.description = row['description']
+   	v.title_tag = row['title_tag']
+   	v.description_tag = row['description_tag']
+   	v.term1 = row['Срок оформления']
+		v.term2 = row['Срок действия']
+		v.tax1 = row['Стоимость сборов']
+		v.tax2 = row['Стоимость оформления']
+		v.duration = row['Пребывние']
+		v.save
+   end
 end

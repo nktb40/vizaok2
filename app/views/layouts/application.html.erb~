@@ -25,6 +25,7 @@
 	  <% if current_page?(start_search_path) then %>
 	  		<title>Поиск визы</title>
 	  <% end %>
+	  
 	  <% if controller.controller_name == 'visas' and controller.action_name == 'show' then %>
 	  		<title><%= @visa.name %></title>
 	  		<meta name="description" content="<%= @visa.description %>"/>
@@ -168,5 +169,5 @@ var h=d[g]('body')[0];
 h.appendChild(s);
 }})(window,document);
 </script>
-<div data-share-size="30" data-like-text-enable="false" data-background-alpha="0.0" data-pid="1291592" data-mode="share" data-background-color="ededed" data-share-shape="round-rectangle" data-icon-color="ffffff" data-share-counter-size="11" data-text-color="000000" data-buttons-color="ff9300" data-counter-background-color="ffffff" data-share-counter-type="common" data-orientation="horizontal" data-following-enable="false" data-sn-ids="fb.tw.ok.vk.gp.mr." data-selection-enable="true" data-share-style="1" data-counter-background-alpha="1.0" data-top-button="false" class="uptolike-buttons" ></div>
+<!--div data-share-size="30" data-like-text-enable="false" data-background-alpha="0.0" data-pid="1291592" data-mode="share" data-background-color="ededed" data-share-shape="round-rectangle" data-icon-color="ffffff" data-share-counter-size="11" data-text-color="000000" data-buttons-color="ff9300" data-counter-background-color="ffffff" data-share-counter-type="common" data-orientation="horizontal" data-following-enable="false" data-sn-ids="fb.tw.ok.vk.gp.mr." data-selection-enable="true" data-share-style="1" data-counter-background-alpha="1.0" data-top-button="false" class="uptolike-buttons" ></div-->
 </html>
