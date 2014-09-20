@@ -139,8 +139,8 @@ CSV.foreach("data/vizaok2 - visas.csv", :headers => true) do |row|
 =begin   
    else 
    	v = Visa.new
-   	v.order = row['Order']
    	v.visa_cd = row['visa_cd']
+   	v.order = row['Order']
    	v.translit = row['translit']
    	c = Country.where(:country_cd => row['country_cd']).first
    	v.country_id = c.id
@@ -157,4 +157,19 @@ CSV.foreach("data/vizaok2 - visas.csv", :headers => true) do |row|
 		v.save
 =end
    end
+end
+
+
+CSV.foreach("data/vizaok2 - procedure.csv", :headers => true) do |row|
+   if Visa.where(:visa_cd => row['Виза']).first.present?
+   	Procedure.create(visa_id: Visa.where(:visa_cd => row['Виза']).first.id, 
+  			step: row['Шаг'], description: row['Процедура оформления'])
+   end
+end
+
+CSV.foreach("data/vizaok2 - documents.csv", :headers => true) do |row|
+  if Visa.where(:visa_cd => row['visa_cd']).first.present?
+  		Document.create(visa_id: Visa.where(:visa_cd => row['visa_cd']).first.id, 
+  	   name: row['name'], description: row['description'])
+  end
 end

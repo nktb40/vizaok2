@@ -158,3 +158,19 @@ CSV.foreach("data/vizaok2 - visas.csv", :headers => true) do |row|
 =end
    end
 end
+
+Procedure.delete_all
+CSV.foreach("data/vizaok2 - procedure.csv", :headers => true) do |row|
+   if Visa.where(:visa_cd => row['Виза']).first.present?
+   	Procedure.create(visa_id: Visa.where(:visa_cd => row['Виза']).first.id, 
+  			step: row['Шаг'], description: row['Процедура оформления'])
+   end
+end
+
+Document.delete_all
+CSV.foreach("data/vizaok2 - documents.csv", :headers => true) do |row|
+  if Visa.where(:visa_cd => row['visa_cd']).first.present?
+  		Document.create(visa_id: Visa.where(:visa_cd => row['visa_cd']).first.id, 
+  	   name: row['name'], description: row['description'])
+  end
+end
