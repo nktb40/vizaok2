@@ -136,8 +136,10 @@ CSV.foreach("data/vizaok2 - visas.csv", :headers => true) do |row|
 		v.update_attribute :tax1, row['Стоимость сборов']
 		v.update_attribute :tax2, row['Стоимость оформления']
 		v.update_attribute :duration, row['Пребывние']
+=begin   
    else 
    	v = Visa.new
+   	v.visa_cd = row['visa_cd']
    	v.order = row['Order']
    	v.translit = row['translit']
    	c = Country.where(:country_cd => row['country_cd']).first
@@ -153,5 +155,6 @@ CSV.foreach("data/vizaok2 - visas.csv", :headers => true) do |row|
 		v.tax2 = row['Стоимость оформления']
 		v.duration = row['Пребывние']
 		v.save
+=end
    end
 end
