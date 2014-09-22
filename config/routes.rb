@@ -45,10 +45,15 @@ GShockShop::Application.routes.draw do
 	
 	post "visas_by_country" => "visas#visas_by_country", as: :visas_by_country
 	
-	get "vizy-v-ssha" => "visas#get_usa_visas", as: :usa_visas 	
-	get "vizy-v-canadu" => "visas#get_ca_visas", as: :ca_visas 
-	get "vizy-v-avstraliyu" => "visas#get_au_visas", as: :au_visas 
-   get "vizy-v-velikobritaniyu" => "visas#get_uk_visas", as: :uk_visas 
+	#get "vizy-v-ssha" => "visas#get_usa_visas", as: :usa_visas 	
+	#get "vizy-v-kanadu" => "visas#get_ca_visas", as: :ca_visas 
+	#get "vizy-v-avstraliyu" => "visas#get_au_visas", as: :au_visas 
+   #get "vizy-v-velikobritaniyu" => "visas#get_uk_visas", as: :uk_visas 
+   
+
+   resources :catalogs do
+       resources :visas
+   end
 	
   # Example of regular route:
   #  get 'd917148ce012' => 'products#d917148ce012'

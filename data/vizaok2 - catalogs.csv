@@ -1,0 +1,8 @@
+catalog_cd,country_cd,name,slug,title_tag,description_tag,description
+USA_VISAS,USA,Визы в США,vizy-v-ssha,Виза в США | Визы в Америку | Оформление визы в США,Оформление любых видов виз в США,
+CA_VISAS,CA,Визы в Канаду,vizy-v-kanadu,Визы в Канаду | Оформление канадской визы,Оформление любых видов виз в Канаду,
+UK_VISAS,UK,Визы в Великобританию,vizy-v-velikobritaniyu,Визы в Великобританию | Виза в Британию,Оформление любых видов виз в Великобританию,
+AU_VISAS,AU,Визы в Австралию,vizy-v-avstraliyu,Визы в Австралию,Оформление любых видов виз в Австралию,
+USA_IMMIGRATION,USA,Иммиграция в США,immigratsiya-v-ssha,Иммиграция в США,,
+AU_IMMIGRATION,AU,Иммиграция в Австралию,immigratsiya-v-avstraliyu,Иммиграция в Австралию,,
+CA_IMMIGRATION,CA,Иммиграция в Канаду,immigratsiya-v-kanadu,Иммиграция в Канаду,,

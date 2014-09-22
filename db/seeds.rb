@@ -119,6 +119,18 @@ CSV.foreach("data/vizaok2 - prices.csv", :headers => true) do |row|
 end
 =end
 
+Catalog.delete_all
+CSV.foreach("data/vizaok2 - catalogs.csv", :headers => true) do |row|
+     # puts row['country_cd']
+   	Catalog.create(name: row["name"],
+   	   catalog_cd: row["catalog_cd"],
+   	   country_id: Country.where(:country_cd => row['country_cd']).first.id,
+   		description: row["description"],
+   		title_tag: row["title_tag"],
+   		description_tag: row["description_tag"],
+   		slug: row["slug"])
+end
+
 CSV.foreach("data/vizaok2 - visas.csv", :headers => true) do |row|
    if Visa.where(:visa_cd => row['visa_cd']).first.present?
    	v = Visa.where(:visa_cd => row['visa_cd']).first
@@ -136,6 +148,7 @@ CSV.foreach("data/vizaok2 - visas.csv", :headers => true) do |row|
 		v.update_attribute :tax1, row['Стоимость сборов']
 		v.update_attribute :tax2, row['Стоимость оформления']
 		v.update_attribute :duration, row['Пребывние']
+		v.update_attribute :catalog_id,  Catalog.where(:catalog_cd => row['catalog_cd']).first.id
 =begin   
    else 
    	v = Visa.new
@@ -159,6 +172,7 @@ CSV.foreach("data/vizaok2 - visas.csv", :headers => true) do |row|
    end
 end
 
+=begin
 Procedure.delete_all
 CSV.foreach("data/vizaok2 - procedure.csv", :headers => true) do |row|
    if Visa.where(:visa_cd => row['Виза']).first.present?
@@ -174,3 +188,5 @@ CSV.foreach("data/vizaok2 - documents.csv", :headers => true) do |row|
   	   name: row['name'], description: row['description'])
   end
 end
+
+=end

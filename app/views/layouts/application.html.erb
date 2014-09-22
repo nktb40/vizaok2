@@ -1,29 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-     <% if current_page?(root_path) then %>
-  		 <title>Визовое агентство - Vizaok.ru. Помощь в оформлении виз в США, Великобританию, Канаду и Австралию</title>
-	  <% end %>	  
-	  <% if current_page?(usa_visas_path) then %>
-	  		<title>Визы в США</title>
-	  <% end %>	 	  
-	  <% if current_page?(ca_visas_path) then %>
-	  		<title>Визы в Канаду | Оформление канадской визы</title>
-	  <% end %>	 	  
-	  <% if current_page?(uk_visas_path) then %>
-	  		<title>Визы в Великобританию | Виза в Британию</title>
-	  <% end %>
-	  <% if current_page?(au_visas_path) then %>
-	  		<title>Визы в Австралию</title>
-	  <% end %>
-	  <% if current_page?(usa_migration_path) then %>
-	  		<title>Иммиграция в США</title>
-	  <% end %>
-	  <% if current_page?(au_migration_path) then %>
-	  		<title>Иммиграция в Австралию</title>
-	  <% end %>
-	  <% if current_page?(start_search_path) then %>
-	  		<title>Поиск визы</title>
+
+	  <% if controller.controller_name == 'catalog' and controller.action_name == 'show' then %>
+	  		<title><%= @catalog.title_tag %></title>
+	  		<meta name="description" content="<%= @catalog.description_tag %>"/>
 	  <% end %>
 	  
 	  <% if controller.controller_name == 'visas' and controller.action_name == 'show' then %>

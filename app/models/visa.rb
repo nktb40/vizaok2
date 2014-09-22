@@ -7,6 +7,7 @@ class Visa < ActiveRecord::Base
 	has_many :procedures
 	belongs_to :country
 	belongs_to :subtype
+	belongs_to :catalog
 	
 	extend FriendlyId
 	friendly_id :translit, use: [:slugged, :finders]

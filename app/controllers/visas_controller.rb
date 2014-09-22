@@ -2,10 +2,11 @@
 class VisasController < ApplicationController
 	respond_to :html, :json, only: [:index, :show, :search]
 	def index
-		@visas = Visa.all
-		@purposes = Purpose.all
-		@countries = Country.all
-		@order = Order.new
+		#@visas = Visa.all
+		#@purposes = Purpose.all
+		#@countries = Country.all
+		#@order = Order.new
+		redirect_to :controller =>"pages", :action=>"index"
 	end
 	
 	def show

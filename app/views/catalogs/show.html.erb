@@ -36,7 +36,7 @@
 			<div class="panel panel-default">
 				<div class="panel-heading"><h3>Визы <%= if !@selected_country.nil? then 'в '+@selected_country.name2 else nil end %></h3></div>
 				<div id="visas" class="panel-body">
-					<%= render :partial => "visaitems" %>
+					<%= render :partial => "visas/visaitems" %>
 				</div>
 			</div>
 			<!-- end -->		

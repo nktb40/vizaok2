@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140916190438) do
+ActiveRecord::Schema.define(version: 20140921192313) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,20 @@ ActiveRecord::Schema.define(version: 20140916190438) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "catalogs", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.text     "title_tag"
+    t.text     "description_tag"
+    t.string   "slug"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "catalog_cd"
+    t.integer  "country_id"
+  end
+
+  add_index "catalogs", ["slug"], name: "index_catalogs_on_slug", using: :btree
 
   create_table "countries", force: true do |t|
     t.string   "name"
@@ -129,8 +143,8 @@ ActiveRecord::Schema.define(version: 20140916190438) do
     t.integer  "subtype_id"
     t.string   "visa_cd"
     t.string   "shortdesc"
-    t.string   "translit"
     t.string   "slug"
+    t.string   "translit"
     t.integer  "order"
     t.string   "term1"
     t.string   "term2"
@@ -139,7 +153,10 @@ ActiveRecord::Schema.define(version: 20140916190438) do
     t.string   "duration"
     t.text     "description_tag"
     t.text     "title_tag"
+    t.integer  "catalog_id"
   end
+
+  add_index "visas", ["slug"], name: "index_visas_on_slug", using: :btree
 
   create_table "visatypes", force: true do |t|
     t.string   "name"
